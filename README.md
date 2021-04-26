@@ -1,5 +1,3 @@
-![ScreenShoot Apps](docs/image/ss_banner.png?raw=true)
-
 # About This Project
 General Framework aplikasi Nutrisi, Skripsi S1 Muhammad Faisal Amir
 
