@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.frogobox.generalframework">
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.frogobox.generalframework"
+    android:targetSandboxVersion="1"
+    tools:targetApi="o">
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -8,6 +13,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+        android:usesCleartextTraffic="true"
         android:theme="@style/Theme.GeneralFramework">
         <activity android:name=".MainActivity">
             <intent-filter>
@@ -16,6 +22,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="@string/admob_publisher_id" />
+
     </application>
 
 </manifest>
