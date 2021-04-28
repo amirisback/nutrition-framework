@@ -4,11 +4,11 @@ General Framework aplikasi Nutrisi, Skripsi S1 Muhammad Faisal Amir
 ## Version Release
 This Is Latest Release
 
-    $version_release = * Comming Soon *
+    $version_release = * Coming Soon *
 
 What's New??
 
-    * Comming Soon *
+    * Coming Soon *
 
 ## Documentation
 - Guide [Click Here](https://github.com/amirisback/general-framework/tree/master/docs/guide)
@@ -54,11 +54,12 @@ Min API level is set to 21, so the presented approach is suitable for over 94% o
 -   [Retrofit](https://square.github.io/retrofit/)  - type-safe HTTP client.
 -   [Glide](https://github.com/bumptech/glide)  - image loading and caching library
 
-## Helper Sample Link
+## My own library
 - Admob Sample https://github.com/amirisback/admob-helper-implementation
 - MVVM Sample https://github.com/amirisback/android-architecture-by-amirisback
 - frogo-recycler-view https://github.com/amirisback/frogo-recycler-view
 - Awesome API Implemented https://github.com/amirisback/awesome-frogo-consumable-apps
+- Kick Start Template https://github.com/amirisback/android-kick-start-project-template
 
 ## Attention !!!
 - Please enjoy and don't forget fork and give a star
