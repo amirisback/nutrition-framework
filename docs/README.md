@@ -1,4 +1,5 @@
-# Menentukan Permasalahan dengan metode design thinking
+# Resume
+## Menentukan Permasalahan dengan Metode Design Thinking
 Hasil yang di dapat dari metode design thinking, yaitu General Framework untuk Pengembangan Aplikasi Penghitungan Kebutuhan Gizi dengan menggunakan Platform Android
 
 # Metode Design Thinking
@@ -32,7 +33,16 @@ Membuat Aplikasi Android, karena jaman sekarang, android sudah menjadi gadget ke
 Rekomendasi makanan / obat, rekomendasi penanganan
 
 # Resource
+Kajian pustaka yang di perlukan untuk pengembangan aplikasi seputar nutrisi
 
-## Jenis Nutrisi
+## Framework
 
-## Aplikasi sejenis yang sudah ada
+## Jenis Gizi
+
+## Penyakit yang disebabkan oleh Permasalahan Gizi
+
+## Android
+
+
+
+## Aplikasi Sejenis
