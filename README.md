@@ -1,7 +1,7 @@
-# About This Project
+## About This Project
 General Framework aplikasi Nutrisi, Skripsi S1 Muhammad Faisal Amir
 
-# Version Release
+## Version Release
 This Is Latest Release
 
     $version_release = * Comming Soon *
@@ -10,12 +10,20 @@ What's New??
 
     * Comming Soon *
 
-# Documentation
+## Documentation
 - Design [Click Here](https://www.figma.com/file/Ons8XY0YvxecwC71Aa92Qj/TA?node-id=0%3A1)
 - Document
 - Presentation
 
-# Android Library Version (build.gradle)
+## Problem
+Membuat beberapa aplikasi tentang beberapa nutrisi. <br>
+- Self assesment (Penyakit bawaan / tidak, profiling orang untuk aplikasi,
+- Kategori (Contoh : Vitamin D, sehat perlu suplemen)
+- Rekomendasi makanan / obat, rekomendasi penangan
+- 1 Aplikasi bisa di edit / customize dengan berbagai macam keluhan
+- Jika di website yaitu bootstrap
+
+## Android Library Version (build.gradle)
 - ext.kotlin_version = '1.4.10'
 - classpath 'com.android.tools.build:gradle:4.1.0'
 - compileSdkVersion 30
@@ -50,6 +58,6 @@ Min API level is set to 21, so the presented approach is suitable for over 94% o
 - frogo-recycler-view https://github.com/amirisback/frogo-recycler-view
 - Awesome API Implemented https://github.com/amirisback/awesome-frogo-consumable-apps
 
-# Attention !!!
+## Attention !!!
 - Please enjoy and don't forget fork and give a star
 - Don't Forget Follow My Github Account
