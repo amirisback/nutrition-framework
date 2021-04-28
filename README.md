@@ -11,9 +11,9 @@ What's New??
     * Comming Soon *
 
 ## Documentation
+- Guide [Click Here](https://github.com/amirisback/general-framework/tree/master/docs/guide)
 - Design [Click Here](https://www.figma.com/file/Ons8XY0YvxecwC71Aa92Qj/TA?node-id=0%3A1)
-- Document
-- Presentation
+- Proposal [Click Here](https://github.com/amirisback/general-framework/tree/master/docs)
 
 ## Problem
 Membuat beberapa aplikasi tentang beberapa nutrisi. <br>
@@ -24,8 +24,8 @@ Membuat beberapa aplikasi tentang beberapa nutrisi. <br>
 - Jika di website yaitu bootstrap
 
 ## Android Library Version (build.gradle)
-- ext.kotlin_version = '1.4.10'
-- classpath 'com.android.tools.build:gradle:4.1.0'
+- ext.kotlin_version = '1.4.32'
+- classpath 'com.android.tools.build:gradle:4.1.3'
 - compileSdkVersion 30
 - buildToolsVersion "30.0.2"
 - minSdkVersion 21
