@@ -13,6 +13,8 @@ What's New??
 ## Documentation
 - Guide [Click Here](https://github.com/amirisback/general-framework/tree/master/docs/guide)
 - Design [Click Here](https://www.figma.com/file/Ons8XY0YvxecwC71Aa92Qj/TA?node-id=0%3A1)
+- Journal [Click Here](https://github.com/amirisback/general-framework/tree/master/docs/journal)
+- Theory [Click Here](https://github.com/amirisback/general-framework/tree/master/docs/theory)
 - Proposal [Click Here](https://github.com/amirisback/general-framework/tree/master/docs)
 
 ## Problem
