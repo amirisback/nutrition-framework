@@ -1,4 +1,4 @@
-## About This Project
+## About This Project (work-in-progress 👷🔧️👷‍♀️⛏)
 General Framework for Application Development Around Nutrition Using the Android Platform, Skripsi S1 Muhammad Faisal Amir from Telkom University
 
 ## Version Release
