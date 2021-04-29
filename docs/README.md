@@ -43,6 +43,4 @@ Kajian pustaka yang di perlukan untuk pengembangan aplikasi seputar nutrisi
 
 ## Android
 
-
-
 ## Aplikasi Sejenis

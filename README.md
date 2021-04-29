@@ -1,5 +1,5 @@
 ## About This Project
-General Framework aplikasi Nutrisi, Skripsi S1 Muhammad Faisal Amir
+General Framework for Application Development Around Nutrition Using the Android Platform, Skripsi S1 Muhammad Faisal Amir from Telkom University
 
 ## Version Release
 This Is Latest Release
@@ -15,7 +15,12 @@ What's New??
 - Journal [Click Here](https://github.com/amirisback/general-framework/tree/master/docs/journal)
 - Theory [Click Here](https://github.com/amirisback/general-framework/tree/master/docs/theory)
 - Proposal [Click Here](https://github.com/amirisback/general-framework/tree/master/docs)
+- Slide [Click Here](https://docs.google.com/presentation/d/1TbJjrjXdieSdqo_dSz0N_umAgeT6euGOWp-nYOHS3g8/edit?usp=sharing)
 - Design, Flowchart on Figma [Click Here](https://www.figma.com/file/Ons8XY0YvxecwC71Aa92Qj/TA?node-id=0%3A1)
+
+## Telkom University Lecturers
+- Dana Sulistyo Kusumo, S.T., M.T., PhD.
+- Shinta Yulia Puspitasari, S.T., M.T.
 
 ## Problem
 Membuat beberapa aplikasi tentang beberapa nutrisi. <br>
