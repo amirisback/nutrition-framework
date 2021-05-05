@@ -35,6 +35,8 @@ Rekomendasi makanan / obat, rekomendasi penanganan
 # Resource
 Kajian pustaka yang di perlukan untuk pengembangan aplikasi seputar nutrisi
 
+## Template Methode (Design Pattern) (3 Jurnal)
+
 ## Framework
 
 ## Jenis Gizi
