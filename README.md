@@ -1,19 +1,26 @@
-## About This Project
-General Framework aplikasi Nutrisi, Skripsi S1 Muhammad Faisal Amir
+## About This Project (work-in-progress 👷🔧️👷‍♀️⛏)
+General Framework for Application Development Around Nutrition Using the Android Platform, Skripsi S1 Muhammad Faisal Amir from Telkom University
 
 ## Version Release
 This Is Latest Release
 
-    $version_release = * Comming Soon *
+    $version_release = * Coming Soon *
 
 What's New??
 
-    * Comming Soon *
+    * Coming Soon *
 
 ## Documentation
-- Design [Click Here](https://www.figma.com/file/Ons8XY0YvxecwC71Aa92Qj/TA?node-id=0%3A1)
-- Document
-- Presentation
+- Guide [Click Here](https://github.com/amirisback/general-framework/tree/master/docs/guide)
+- Journal [Click Here](https://github.com/amirisback/general-framework/tree/master/docs/journal)
+- Theory [Click Here](https://github.com/amirisback/general-framework/tree/master/docs/theory)
+- Proposal [Click Here](https://github.com/amirisback/general-framework/tree/master/docs)
+- Slide [Click Here](https://docs.google.com/presentation/d/1TbJjrjXdieSdqo_dSz0N_umAgeT6euGOWp-nYOHS3g8/edit?usp=sharing)
+- Design, Flowchart on Figma [Click Here](https://www.figma.com/file/Ons8XY0YvxecwC71Aa92Qj/TA?node-id=0%3A1)
+
+## Telkom University Lecturers
+- Dana Sulistyo Kusumo, S.T., M.T., PhD.
+- Shinta Yulia Puspitasari, S.T., M.T.
 
 ## Problem
 Membuat beberapa aplikasi tentang beberapa nutrisi. <br>
@@ -24,8 +31,8 @@ Membuat beberapa aplikasi tentang beberapa nutrisi. <br>
 - Jika di website yaitu bootstrap
 
 ## Android Library Version (build.gradle)
-- ext.kotlin_version = '1.4.10'
-- classpath 'com.android.tools.build:gradle:4.1.0'
+- ext.kotlin_version = '1.4.32'
+- classpath 'com.android.tools.build:gradle:4.1.3'
 - compileSdkVersion 30
 - buildToolsVersion "30.0.2"
 - minSdkVersion 21
@@ -52,11 +59,12 @@ Min API level is set to 21, so the presented approach is suitable for over 94% o
 -   [Retrofit](https://square.github.io/retrofit/)  - type-safe HTTP client.
 -   [Glide](https://github.com/bumptech/glide)  - image loading and caching library
 
-## Helper Sample Link
+## My own library
 - Admob Sample https://github.com/amirisback/admob-helper-implementation
 - MVVM Sample https://github.com/amirisback/android-architecture-by-amirisback
 - frogo-recycler-view https://github.com/amirisback/frogo-recycler-view
 - Awesome API Implemented https://github.com/amirisback/awesome-frogo-consumable-apps
+- Kick Start Template https://github.com/amirisback/android-kick-start-project-template
 
 ## Attention !!!
 - Please enjoy and don't forget fork and give a star
