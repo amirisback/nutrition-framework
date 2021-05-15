@@ -3,6 +3,7 @@ package com.frogobox.generalframework.mvvm.main
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import android.widget.TextView
 import com.bumptech.glide.Glide
 import com.frogobox.generalframework.R
 import com.frogobox.generalframework.base.view.ui.BaseActivity
@@ -11,7 +12,6 @@ import com.frogobox.generalframework.mvvm.detail.DetailActivity
 import com.frogobox.generalframework.source.model.Article
 import com.frogobox.recycler.core.IFrogoViewAdapter
 import com.google.gson.Gson
-import kotlinx.android.synthetic.main.list_news_article_vertical.view.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class MainActivity : BaseActivity() {
@@ -58,10 +58,10 @@ class MainActivity : BaseActivity() {
             }
 
             override fun setupInitComponent(view: View, data: Article) {
-                view.tv_title.text = data.title
-                view.tv_description.text = data.publishedAt
-                view.tv_published.text = data.description
-                Glide.with(view.context).load(data.urlToImage).into(view.iv_url)
+                view.findViewById<TextView>(R.id.tv_title).text = data.title
+                view.findViewById<TextView>(R.id.tv_description).text = data.description
+                view.findViewById<TextView>(R.id.tv_published).text = data.publishedAt
+                Glide.with(view.context).load(data.urlToImage).into(view.findViewById(R.id.iv_url))
             }
         }
 
