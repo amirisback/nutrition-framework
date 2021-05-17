@@ -31,10 +31,10 @@ Membuat beberapa aplikasi tentang beberapa nutrisi. <br>
 - Jika di website yaitu bootstrap
 
 ## Android Library Version (build.gradle)
-- ext.kotlin_version = '1.4.32'
-- classpath 'com.android.tools.build:gradle:4.1.3'
+- ext.kotlin_version = '1.5.0'
+- classpath 'com.android.tools.build:gradle:4.2.1'
 - compileSdkVersion 30
-- buildToolsVersion "30.0.2"
+- buildToolsVersion "30.0.3"
 - minSdkVersion 21
 - targetSdkVersion 30
 
