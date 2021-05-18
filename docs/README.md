@@ -38,6 +38,24 @@ Kajian pustaka yang di perlukan untuk pengembangan aplikasi seputar nutrisi
 ## Template Methode (Design Pattern) (3 Jurnal)
 
 ## Framework
+### Framework PHP terdiri dari
+- Laravel
+- Yii
+- Code Igniter
+- Symfoni
+- Zend Framework
+- Cake PHP
+- Fuel PHP
+- DLL
+
+### Framework Desain terdiri dari
+- Bootstrap
+- Gumby
+- Foundation
+- Less Framework
+- JQuery UI
+- Unsemantic
+- Blue Print CSS
 
 ## Jenis Gizi
 Makan makanan yang bergizi harus dilakukan guna memenuhi kebutuhan energi di dalam tubuh agar dapat melakukan aktivitas secara optimal. Energi diperoleh dari makanan/minuman yang dikonsumsi. Melewatkan makan dapat membuat membuat tidak berenergi karena perut kosong sehingga menjadi susah untuk memfokuskan pikiran.
