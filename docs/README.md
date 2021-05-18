@@ -57,6 +57,12 @@ Kajian pustaka yang di perlukan untuk pengembangan aplikasi seputar nutrisi
 - Unsemantic
 - Blue Print CSS
 
+### Android
+- MVC
+- MVP
+- MVVM
+- MVI
+
 ## Jenis Gizi
 Makan makanan yang bergizi harus dilakukan guna memenuhi kebutuhan energi di dalam tubuh agar dapat melakukan aktivitas secara optimal. Energi diperoleh dari makanan/minuman yang dikonsumsi. Melewatkan makan dapat membuat membuat tidak berenergi karena perut kosong sehingga menjadi susah untuk memfokuskan pikiran.
 Makanan yang disajikan seringkali didominasi pada satu jenis makanan dengan sumber karbohidrat terbanyak. Padahal, kesesuaian antara jumlah karbohidrat, protein dan lemak dalam tubuh merupakan hal yang sangat penting. Kecukupan gizi tidak akan terpenuhi apabila didominasi satu jenis makanan yang dikonsumsi dalam kurun waktu terus-menerus (Kemenkes RI, 2014).
