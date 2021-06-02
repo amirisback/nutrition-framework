@@ -168,7 +168,7 @@ dependencies {
 
     implementation 'com.github.amirisback:frogo-recycler-view:3.5.0'
     implementation 'com.github.amirisback:frogo-ui-kit:1.0.5'
-    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    implementation 'com.github.bumptech.glide:glide:4.12.0'
 
     implementation "com.facebook.stetho:stetho:1.5.1"
     implementation "com.readystatesoftware.chuck:library:1.1.0"
@@ -179,8 +179,8 @@ dependencies {
     implementation "org.koin:koin-androidx-viewmodel:2.1.5"
 
     api "com.google.dagger:dagger:2.28.3"
-    api "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.1"
-    api "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.4.1"
+    api "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.3"
+    api "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.4.3"
 
     kapt "androidx.lifecycle:lifecycle-compiler:2.4.0-alpha01"
     kapt "androidx.room:room-compiler:2.3.0"
