@@ -17,6 +17,7 @@ What's New??
 - Proposal [Click Here](https://github.com/amirisback/general-framework/tree/master/docs)
 - Slide [Click Here](https://docs.google.com/presentation/d/1TbJjrjXdieSdqo_dSz0N_umAgeT6euGOWp-nYOHS3g8/edit?usp=sharing)
 - Design, Flowchart on Figma [Click Here](https://www.figma.com/file/Ons8XY0YvxecwC71Aa92Qj/TA?node-id=0%3A1)
+- Sheet Feedback [Click Here](https://docs.google.com/spreadsheets/d/1P8U2lu8odQJwLPD3QiSJGJXAgocdc_H5j7PdT23lPZc/edit#gid=0)
 
 ## Telkom University Lecturers
 - Dana Sulistyo Kusumo, S.T., M.T., PhD.
@@ -29,14 +30,6 @@ Membuat beberapa aplikasi tentang beberapa nutrisi. <br>
 - Rekomendasi makanan / obat, rekomendasi penangan
 - 1 Aplikasi bisa di edit / customize dengan berbagai macam keluhan
 - Jika di website yaitu bootstrap
-
-## Android Library Version (build.gradle)
-- ext.kotlin_version = '1.5.0'
-- classpath 'com.android.tools.build:gradle:4.2.1'
-- compileSdkVersion 30
-- buildToolsVersion "30.0.3"
-- minSdkVersion 21
-- targetSdkVersion 30
 
 ## Architecture
 -   Pattern  [Model-View-ViewModel](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93viewmodel)  (MVVM) facilitating a [separation](https://en.wikipedia.org/wiki/Separation_of_concerns) of development of the graphical user interface.
