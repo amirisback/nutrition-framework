@@ -11,16 +11,17 @@ What's New??
     * Coming Soon *
 
 ## Documentation
-- Guide [Click Here](https://github.com/amirisback/framework-nutrition/tree/master/docs/guide)
-- Journal [Click Here](https://github.com/amirisback/framework-nutrition/tree/master/docs/journal)
-- Theory [Click Here](https://github.com/amirisback/framework-nutrition/tree/master/docs/theory)
-- Proposal [Click Here](https://github.com/amirisback/framework-nutrition/tree/master/docs)
+- Guide [Click Here](https://github.com/amirisback/android-framework-nutrition/tree/master/docs/guide)
+- Guidance [Click Here](https://github.com/amirisback/android-framework-nutrition/tree/master/docs/guidance)
+- Journal [Click Here](https://github.com/amirisback/android-framework-nutrition/tree/master/docs/journal)
+- Theory [Click Here](https://github.com/amirisback/android-framework-nutrition/tree/master/docs/theory)
+- Proposal [Click Here](https://github.com/amirisback/android-framework-nutrition/tree/master/docs)
 - Slide [Click Here](https://docs.google.com/presentation/d/1TbJjrjXdieSdqo_dSz0N_umAgeT6euGOWp-nYOHS3g8/edit?usp=sharing)
 - Design, Flowchart on Figma [Click Here](https://www.figma.com/file/Ons8XY0YvxecwC71Aa92Qj/TA?node-id=0%3A1)
 - Sheet Feedback [Click Here](https://docs.google.com/spreadsheets/d/1P8U2lu8odQJwLPD3QiSJGJXAgocdc_H5j7PdT23lPZc/edit#gid=0)
 
 ## Telkom University Lecturers
-- Dana Sulistyo Kusumo, S.T., M.T., PhD.
+- Dana Sulistyo Kusumo, S.T., M.T., PhD. - danakusumo@telkomuniversity.ac.id
 - Shinta Yulia Puspitasari, S.T., M.T.
 
 ## Problem
