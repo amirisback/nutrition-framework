@@ -1,5 +1,6 @@
 ## About This Project (work-in-progress 👷🔧️👷‍♀️⛏)
-General Framework for Application Development Around Nutrition Using the Android Platform, Skripsi S1 Muhammad Faisal Amir from Telkom University
+- Pengembang Framework untuk Membuat Aplikasi Seputar Permasalahan Gizi berbasis Platform Android
+- General Framework for Application Development Around Nutrition Using the Android Platform, Skripsi S1 Muhammad Faisal Amir from Telkom University
 
 ## Version Release
 This Is Latest Release
