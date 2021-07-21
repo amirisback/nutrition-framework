@@ -12,7 +12,7 @@ android {
 
     def appDomain = "com"
     def appDevConsole = "frogobox"
-    def appName = "generalframework"
+    def appName = "app"
 
     def projectApplicationId = "$appDomain.$appDevConsole.$appName"
     def projectVersionCode = (versionMajor * 100) + (versionMinor * 10) + (versionPatch * 1)
