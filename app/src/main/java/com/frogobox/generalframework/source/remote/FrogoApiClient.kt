@@ -1,9 +1,9 @@
-package com.frogobox.generalframework.source.remote.network
+package com.frogobox.generalframework.source.remote
 
 import android.content.Context
-import com.frogobox.generalframework.source.model.ArticleResponse
-import com.frogobox.generalframework.source.model.SourceResponse
-import com.frogobox.generalframework.util.helper.ConstHelper
+import com.frogobox.generalframework.model.ArticleResponse
+import com.frogobox.generalframework.model.SourceResponse
+import com.frogobox.generalframework.util.Constant
 import com.readystatesoftware.chuck.ChuckInterceptor
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -34,41 +34,41 @@ import java.util.concurrent.TimeUnit
 interface FrogoApiClient {
 
     // Get Top Headline
-    @GET(ConstHelper.ApiUrl.NEWS_URL_TOP_HEADLINE)
+    @GET(Constant.ApiUrl.NEWS_URL_TOP_HEADLINE)
     suspend fun getTopHeadline(
-        @Query(ConstHelper.NewsConstant.QUERY_API_KEY) apiKey: String,
-        @Query(ConstHelper.NewsConstant.QUERY_Q) q: String?,
-        @Query(ConstHelper.NewsConstant.QUERY_SOURCES) sources: String?,
-        @Query(ConstHelper.NewsConstant.QUERY_CATEGORY) category: String?,
-        @Query(ConstHelper.NewsConstant.QUERY_COUNTRY) country: String?,
-        @Query(ConstHelper.NewsConstant.QUERY_PAGE_SIZE) pageSize: Int?,
-        @Query(ConstHelper.NewsConstant.QUERY_PAGE) page: Int?
+        @Query(Constant.NewsConstant.QUERY_API_KEY) apiKey: String,
+        @Query(Constant.NewsConstant.QUERY_Q) q: String?,
+        @Query(Constant.NewsConstant.QUERY_SOURCES) sources: String?,
+        @Query(Constant.NewsConstant.QUERY_CATEGORY) category: String?,
+        @Query(Constant.NewsConstant.QUERY_COUNTRY) country: String?,
+        @Query(Constant.NewsConstant.QUERY_PAGE_SIZE) pageSize: Int?,
+        @Query(Constant.NewsConstant.QUERY_PAGE) page: Int?
     ): Response<ArticleResponse>
 
     // Get Everythings
-    @GET(ConstHelper.ApiUrl.NEWS_URL_EVERYTHING)
+    @GET(Constant.ApiUrl.NEWS_URL_EVERYTHING)
     fun getEverythings(
-        @Query(ConstHelper.NewsConstant.QUERY_API_KEY) apiKey: String,
-        @Query(ConstHelper.NewsConstant.QUERY_Q) q: String?,
-        @Query(ConstHelper.NewsConstant.QUERY_FROM) from: String?,
-        @Query(ConstHelper.NewsConstant.QUERY_TO) to: String?,
-        @Query(ConstHelper.NewsConstant.QUERY_Q_IN_TITLE) qInTitle: String?,
-        @Query(ConstHelper.NewsConstant.QUERY_SOURCES) sources: String?,
-        @Query(ConstHelper.NewsConstant.QUERY_DOMAINS) domains: String?,
-        @Query(ConstHelper.NewsConstant.QUERY_EXCLUDE_DOMAINS) excludeDomains: String?,
-        @Query(ConstHelper.NewsConstant.QUERY_LANGUAGE) language: String?,
-        @Query(ConstHelper.NewsConstant.QUERY_SORT_BY) sortBy: String?,
-        @Query(ConstHelper.NewsConstant.QUERY_PAGE_SIZE) pageSize: Int?,
-        @Query(ConstHelper.NewsConstant.QUERY_PAGE) page: Int?
+        @Query(Constant.NewsConstant.QUERY_API_KEY) apiKey: String,
+        @Query(Constant.NewsConstant.QUERY_Q) q: String?,
+        @Query(Constant.NewsConstant.QUERY_FROM) from: String?,
+        @Query(Constant.NewsConstant.QUERY_TO) to: String?,
+        @Query(Constant.NewsConstant.QUERY_Q_IN_TITLE) qInTitle: String?,
+        @Query(Constant.NewsConstant.QUERY_SOURCES) sources: String?,
+        @Query(Constant.NewsConstant.QUERY_DOMAINS) domains: String?,
+        @Query(Constant.NewsConstant.QUERY_EXCLUDE_DOMAINS) excludeDomains: String?,
+        @Query(Constant.NewsConstant.QUERY_LANGUAGE) language: String?,
+        @Query(Constant.NewsConstant.QUERY_SORT_BY) sortBy: String?,
+        @Query(Constant.NewsConstant.QUERY_PAGE_SIZE) pageSize: Int?,
+        @Query(Constant.NewsConstant.QUERY_PAGE) page: Int?
     ): Response<ArticleResponse>
 
     // Get Sources
-    @GET(ConstHelper.ApiUrl.NEWS_URL_SOURCES)
+    @GET(Constant.ApiUrl.NEWS_URL_SOURCES)
     fun getSources(
-        @Query(ConstHelper.NewsConstant.QUERY_API_KEY) apiKey: String,
-        @Query(ConstHelper.NewsConstant.QUERY_LANGUAGE) language: String,
-        @Query(ConstHelper.NewsConstant.QUERY_COUNTRY) country: String,
-        @Query(ConstHelper.NewsConstant.QUERY_CATEGORY) category: String
+        @Query(Constant.NewsConstant.QUERY_API_KEY) apiKey: String,
+        @Query(Constant.NewsConstant.QUERY_LANGUAGE) language: String,
+        @Query(Constant.NewsConstant.QUERY_COUNTRY) country: String,
+        @Query(Constant.NewsConstant.QUERY_CATEGORY) category: String
     ): Response<SourceResponse>
 
     companion object Factory {
@@ -78,7 +78,7 @@ interface FrogoApiClient {
 
         fun usingChuckInterceptor(context: Context) {
             isUsingChuckInterceptor = true
-            this.context = context
+            Factory.context = context
         }
 
 
@@ -101,7 +101,7 @@ interface FrogoApiClient {
             }
 
             Retrofit.Builder()
-                .baseUrl(ConstHelper.ApiUrl.NEWS_BASE_URL)
+                .baseUrl(Constant.ApiUrl.NEWS_BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(mClient)
                 .build().create(FrogoApiClient::class.java)

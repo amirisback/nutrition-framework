@@ -1,12 +1,12 @@
-package com.frogobox.generalframework.base.view.ui
+package com.frogobox.generalframework.core
 
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import androidx.fragment.app.Fragment
-import com.frogobox.generalframework.base.util.BaseHelper
 import com.google.android.gms.ads.AdView
+import com.google.gson.Gson
 
 /**
  * Created by Faisal Amir
@@ -25,8 +25,8 @@ import com.google.android.gms.ads.AdView
  * com.frogobox.basemusicplayer.activity
  *
  */
-open class BaseFragment : Fragment(),
-    BaseFragmentView {
+abstract class BaseFragment : Fragment(),
+    IBaseFragment {
 
     lateinit var mBaseActivity: BaseActivity
 
@@ -75,7 +75,7 @@ open class BaseFragment : Fragment(),
     }
 
     override fun <Model> baseNewInstance(argsKey: String, data: Model) {
-        val argsData = BaseHelper().baseToJson(data)
+        val argsData = Gson().toJson(data)
         val bundleArgs = Bundle().apply {
             putString(argsKey, argsData)
         }
@@ -84,8 +84,7 @@ open class BaseFragment : Fragment(),
 
     protected inline fun <reified Model> baseGetInstance(argsKey: String): Model {
         val argsData = this.arguments?.getString(argsKey)
-        val instaceData = BaseHelper().baseFromJson<Model>(argsData)
-        return instaceData
+        return Gson().fromJson(argsData, Model::class.java)
     }
 
     protected inline fun <reified ClassActivity> baseStartActivity() {
@@ -97,7 +96,7 @@ open class BaseFragment : Fragment(),
         data: Model
     ) {
         val intent = Intent(context, ClassActivity::class.java)
-        val extraData = BaseHelper().baseToJson(data)
+        val extraData = Gson().toJson(data)
         intent.putExtra(extraKey, extraData)
         this.startActivity(intent)
     }

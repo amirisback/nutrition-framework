@@ -1,6 +1,5 @@
-package com.frogobox.generalframework.base.util
+package com.frogobox.generalframework.core
 
-import com.frogobox.generalframework.base.data.BaseApiModel
 import com.google.gson.Gson
 import io.reactivex.SingleObserver
 import io.reactivex.disposables.Disposable

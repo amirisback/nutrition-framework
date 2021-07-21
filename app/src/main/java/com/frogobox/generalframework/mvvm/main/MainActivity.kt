@@ -6,10 +6,10 @@ import android.view.View
 import android.widget.TextView
 import com.bumptech.glide.Glide
 import com.frogobox.generalframework.R
-import com.frogobox.generalframework.base.view.ui.BaseActivity
+import com.frogobox.generalframework.core.BaseActivity
 import com.frogobox.generalframework.databinding.ActivityMainBinding
 import com.frogobox.generalframework.mvvm.detail.DetailActivity
-import com.frogobox.generalframework.source.model.Article
+import com.frogobox.generalframework.model.Article
 import com.frogobox.recycler.core.IFrogoViewAdapter
 import com.google.gson.Gson
 import org.koin.androidx.viewmodel.ext.android.viewModel

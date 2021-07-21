@@ -1,4 +1,4 @@
-package com.frogobox.generalframework.util.helper
+package com.frogobox.generalframework.util
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
@@ -21,7 +21,6 @@ import androidx.fragment.app.FragmentPagerAdapter
  * com.frogobox.basemusicplayer.util.helper
  *
  */
-@Suppress("DEPRECATION")
 class PagerHelper(fragmentManager: FragmentManager): FragmentPagerAdapter(fragmentManager){
 
     private val fragments = ArrayList<Fragment>()
@@ -31,7 +30,7 @@ class PagerHelper(fragmentManager: FragmentManager): FragmentPagerAdapter(fragme
 
     override fun getCount(): Int = fragments.size
 
-    override fun getPageTitle(position: Int): CharSequence? = titles[position]
+    override fun getPageTitle(position: Int): CharSequence = titles[position]
 
     fun setupPagerFragment(fragment: Fragment, title: String) {
         fragments.add(fragment)

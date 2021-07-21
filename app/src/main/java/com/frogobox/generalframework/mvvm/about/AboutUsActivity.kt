@@ -2,7 +2,7 @@ package com.frogobox.generalframework.mvvm.about
 
 import android.os.Bundle
 import com.frogobox.generalframework.R
-import com.frogobox.generalframework.base.view.ui.BaseActivity
+import com.frogobox.generalframework.core.BaseActivity
 
 class AboutUsActivity : BaseActivity() {
 

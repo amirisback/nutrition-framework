@@ -2,17 +2,14 @@ package com.frogobox.generalframework.source.local
 
 import android.content.Context
 import android.content.SharedPreferences
-import com.frogobox.generalframework.base.util.BaseCallback
-import com.frogobox.generalframework.source.model.ArticleResponse
-import com.frogobox.generalframework.source.model.Favorite
-import com.frogobox.generalframework.source.model.SourceResponse
+import com.frogobox.generalframework.model.ArticleResponse
+import com.frogobox.generalframework.model.Favorite
+import com.frogobox.generalframework.model.SourceResponse
 import com.frogobox.generalframework.source.FrogoDataSource
 import com.frogobox.generalframework.source.local.dao.FavoriteDao
 import com.frogobox.generalframework.util.AppExecutors
-import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.disposables.Disposable
-import io.reactivex.schedulers.Schedulers
 
 /**
  * Created by Faisal Amir

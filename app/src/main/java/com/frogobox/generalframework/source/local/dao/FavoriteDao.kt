@@ -3,8 +3,8 @@ package com.frogobox.generalframework.source.local.dao
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
-import com.frogobox.generalframework.source.model.Favorite
-import com.frogobox.generalframework.util.helper.ConstHelper.RoomDatabase.TABLE_NAME_FAVORITE
+import com.frogobox.generalframework.model.Favorite
+import com.frogobox.generalframework.util.Constant.RoomDatabase.TABLE_NAME_FAVORITE
 import io.reactivex.Single
 
 /**

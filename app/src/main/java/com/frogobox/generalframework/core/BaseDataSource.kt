@@ -1,4 +1,4 @@
-package com.frogobox.generalframework.base.data
+package com.frogobox.generalframework.core
 
 /**
  * Created by Faisal Amir

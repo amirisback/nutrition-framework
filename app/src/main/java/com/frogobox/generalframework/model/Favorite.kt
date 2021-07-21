@@ -1,9 +1,9 @@
-package com.frogobox.generalframework.source.model
+package com.frogobox.generalframework.model
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import com.frogobox.generalframework.util.helper.ConstHelper.RoomDatabase.TABLE_NAME_FAVORITE
+import com.frogobox.generalframework.util.Constant.RoomDatabase.TABLE_NAME_FAVORITE
 
 /**
  * Created by Faisal Amir

@@ -1,8 +1,7 @@
-package com.frogobox.generalframework.base.view.ui
+package com.frogobox.generalframework.core
 
 import android.view.View
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModel
 
 /*
  * Created by Faisal Amir on 13/05/2020
@@ -17,7 +16,7 @@ import androidx.lifecycle.ViewModel
  *
  */
 
-interface BaseActivityView {
+interface IBaseActivity {
 
     fun setupDetailActivity(title: String)
 

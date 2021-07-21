@@ -1,6 +1,7 @@
-package com.frogobox.generalframework.source.model
+package com.frogobox.generalframework.model
 
 import com.google.gson.annotations.SerializedName
+
 
 /**
  * Created by Faisal Amir
@@ -19,13 +20,17 @@ import com.google.gson.annotations.SerializedName
  * com.frogobox.frogonewsapi.data.model
  *
  */
-data class Source(
 
-    @SerializedName("id")
-    var id: String? = null,
+data class Article(
 
-    @SerializedName("name")
-    var name: String? = null,
+    @SerializedName("source")
+    var source: Source? = null,
+
+    @SerializedName("author")
+    var author: String? = null,
+
+    @SerializedName("title")
+    var title: String? = null,
 
     @SerializedName("description")
     var description: String? = null,
@@ -33,13 +38,12 @@ data class Source(
     @SerializedName("url")
     var url: String? = null,
 
-    @SerializedName("category")
-    var category: String? = null,
+    @SerializedName("urlToImage")
+    var urlToImage: String? = null,
 
-    @SerializedName("language")
-    var language: String? = null,
+    @SerializedName("publishedAt")
+    var publishedAt: String? = null,
 
-    @SerializedName("country")
-    var country: String? = null
-
+    @SerializedName("content")
+    var content: String? = null
 )

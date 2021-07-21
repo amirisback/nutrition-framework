@@ -1,12 +1,11 @@
 package com.frogobox.generalframework.source.remote
 
 import android.content.Context
-import com.frogobox.generalframework.source.model.ArticleResponse
-import com.frogobox.generalframework.source.model.Favorite
-import com.frogobox.generalframework.source.model.SourceResponse
+import com.frogobox.generalframework.model.ArticleResponse
+import com.frogobox.generalframework.model.Favorite
+import com.frogobox.generalframework.model.SourceResponse
 import com.frogobox.generalframework.source.FrogoDataSource
-import com.frogobox.generalframework.source.remote.network.FrogoApiClient
-import com.frogobox.generalframework.util.helper.FunHelper.Func.noAction
+import com.frogobox.generalframework.util.SingleFunc.Func.noAction
 
 /**
  * Created by Faisal Amir

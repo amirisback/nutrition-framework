@@ -1,15 +1,13 @@
-package com.frogobox.generalframework.base.util
+package com.frogobox.generalframework.core
 
-import android.app.Application
-import androidx.lifecycle.AndroidViewModel
-import com.frogobox.generalframework.util.SingleLiveEvent
+import com.google.gson.annotations.SerializedName
 
 /**
  * Created by Faisal Amir
  * FrogoBox Inc License
  * =========================================
  * Kick-Start-Template
- * Copyright (C) 18/08/2019.
+ * Copyright (C) 21/08/2019.
  * All rights reserved
  * -----------------------------------------
  * Name     : Muhammad Faisal Amir
@@ -21,7 +19,9 @@ import com.frogobox.generalframework.util.SingleLiveEvent
  * com.frogobox.basemusicplayer.base
  *
  */
-open class BaseViewModel(application: Application) : AndroidViewModel(application) {
-    var eventShowProgress = SingleLiveEvent<Boolean>()
-    var eventIsEmpty = SingleLiveEvent<Boolean>()
-}
+data class BaseApiModel<T>(
+    @SerializedName("code") val code: Int,
+    @SerializedName("message") val message: String,
+    @SerializedName("status") val status: String,
+    @SerializedName("data") val data: T? = null
+)

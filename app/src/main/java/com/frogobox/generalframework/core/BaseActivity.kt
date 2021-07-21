@@ -1,4 +1,4 @@
-package com.frogobox.generalframework.base.view.ui
+package com.frogobox.generalframework.core
 
 import android.content.Intent
 import android.os.Bundle
@@ -8,10 +8,8 @@ import android.view.MenuItem
 import android.view.View
 import android.widget.Toast
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModel
-import androidx.lifecycle.ViewModelProvider
-import com.frogobox.generalframework.base.admob.AdmobActivity
-import com.frogobox.generalframework.base.util.BaseHelper
+import com.frogobox.admob.ui.FrogoAdmobActivity
+import com.google.gson.Gson
 
 /**
  * Created by Faisal Amir
@@ -30,8 +28,7 @@ import com.frogobox.generalframework.base.util.BaseHelper
  * com.frogobox.basemusicplayer.base
  *
  */
-open class BaseActivity : AdmobActivity(),
-    BaseActivityView {
+abstract class BaseActivity : FrogoAdmobActivity(), IBaseActivity {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -105,15 +102,14 @@ open class BaseActivity : AdmobActivity(),
         data: Model
     ) {
         val intent = Intent(this, ClassActivity::class.java)
-        val extraData = BaseHelper().baseToJson(data)
+        val extraData = Gson().toJson(data)
         intent.putExtra(extraKey, extraData)
         this.startActivity(intent)
     }
 
     protected inline fun <reified Model> baseGetExtraData(extraKey: String): Model {
         val extraIntent = intent.getStringExtra(extraKey)
-        val extraData = BaseHelper().baseFromJson<Model>(extraIntent)
-        return extraData
+        return Gson().fromJson(extraIntent, Model::class.java)
     }
 
     protected fun baseLayoutInflater() : LayoutInflater {

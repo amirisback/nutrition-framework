@@ -2,9 +2,9 @@ package com.frogobox.generalframework.source
 
 
 import android.content.Context
-import com.frogobox.generalframework.source.model.ArticleResponse
-import com.frogobox.generalframework.source.model.Favorite
-import com.frogobox.generalframework.source.model.SourceResponse
+import com.frogobox.generalframework.model.ArticleResponse
+import com.frogobox.generalframework.model.Favorite
+import com.frogobox.generalframework.model.SourceResponse
 import com.frogobox.generalframework.source.local.FrogoLocalDataSource
 import com.frogobox.generalframework.source.remote.FrogoRemoteDataSource
 

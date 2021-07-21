@@ -2,12 +2,12 @@ package com.frogobox.generalframework.mvvm.main
 
 import android.app.Application
 import androidx.lifecycle.viewModelScope
-import com.frogobox.generalframework.base.util.BaseViewModel
-import com.frogobox.generalframework.source.model.ArticleResponse
+import com.frogobox.generalframework.core.BaseViewModel
+import com.frogobox.generalframework.model.ArticleResponse
 import com.frogobox.generalframework.source.FrogoDataRepository
 import com.frogobox.generalframework.source.FrogoDataSource
 import com.frogobox.generalframework.util.SingleLiveEvent
-import com.frogobox.generalframework.util.helper.ConstHelper
+import com.frogobox.generalframework.util.Constant
 import kotlinx.coroutines.launch
 
 /*
@@ -37,11 +37,11 @@ class MainViewModel(private val context: Application, private val repository: Fr
     fun getTopHeadline() {
         viewModelScope.launch {
             repository.getTopHeadline(
-                ConstHelper.ApiUrl.NEWS_API_KEY,
+                Constant.ApiUrl.NEWS_API_KEY,
                 null,
                 null,
                 null,
-                ConstHelper.NewsConstant.COUNTRY_ID,
+                Constant.NewsConstant.COUNTRY_ID,
                 null,
                 null,
                 object : FrogoDataSource.GetRemoteCallback<ArticleResponse> {

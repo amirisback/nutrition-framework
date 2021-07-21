@@ -1,10 +1,10 @@
 package com.frogobox.generalframework.source
 
 import android.content.Context
-import com.frogobox.generalframework.base.data.BaseDataSource
-import com.frogobox.generalframework.source.model.ArticleResponse
-import com.frogobox.generalframework.source.model.Favorite
-import com.frogobox.generalframework.source.model.SourceResponse
+import com.frogobox.generalframework.core.BaseDataSource
+import com.frogobox.generalframework.model.ArticleResponse
+import com.frogobox.generalframework.model.Favorite
+import com.frogobox.generalframework.model.SourceResponse
 
 /**
  * Created by Faisal Amir

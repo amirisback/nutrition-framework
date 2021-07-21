@@ -1,4 +1,4 @@
-package com.frogobox.generalframework.source.remote.network
+package com.frogobox.generalframework.source.remote
 
 import io.reactivex.Observer
 import io.reactivex.disposables.Disposable

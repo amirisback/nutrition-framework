@@ -1,4 +1,4 @@
-package com.frogobox.generalframework.base.view.ui
+package com.frogobox.generalframework.core
 
 import android.view.View
 import androidx.fragment.app.Fragment
@@ -17,7 +17,7 @@ import com.google.android.gms.ads.AdView
  *
  */
 
-interface BaseFragmentView {
+interface IBaseFragment {
 
     fun setupShowAdsInterstitial()
 

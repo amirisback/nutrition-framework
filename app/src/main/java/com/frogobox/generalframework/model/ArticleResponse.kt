@@ -1,4 +1,4 @@
-package com.frogobox.generalframework.source.model
+package com.frogobox.generalframework.model
 
 import com.google.gson.annotations.SerializedName
 
