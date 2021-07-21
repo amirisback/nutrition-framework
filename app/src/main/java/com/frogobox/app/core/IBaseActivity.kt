@@ -30,6 +30,6 @@ interface IBaseActivity {
 
     fun checkExtra(extraKey: String): Boolean
 
-    fun <Model> baseFragmentNewInstance(fragment: BaseFragment, argumentKey: String, extraDataResult: Model)
+    fun <Model> baseFragmentNewInstance(fragment: BaseFragment<*>, argumentKey: String, extraDataResult: Model)
 
 }

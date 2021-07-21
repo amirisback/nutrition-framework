@@ -1,14 +1,22 @@
 package com.frogobox.app.mvvm.about
 
 import android.os.Bundle
-import com.frogobox.app.R
 import com.frogobox.app.core.BaseActivity
+import com.frogobox.app.databinding.ActivityAboutUsBinding
 
-class AboutUsActivity : BaseActivity() {
+class AboutUsActivity : BaseActivity<ActivityAboutUsBinding>() {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_about_us)
+    override fun setupViewBinding(): ActivityAboutUsBinding {
+        return ActivityAboutUsBinding.inflate(layoutInflater)
+    }
+
+    override fun setupViewModel() {
+    }
+
+    override fun setupUI(savedInstanceState: Bundle?) {
         setupDetailActivity("")
+        binding.apply {
+
+        }
     }
 }

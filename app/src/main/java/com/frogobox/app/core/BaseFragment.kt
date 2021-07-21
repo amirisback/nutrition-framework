@@ -2,9 +2,12 @@ package com.frogobox.app.core
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.LayoutInflater
 import android.view.View
+import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.viewbinding.ViewBinding
 import com.google.android.gms.ads.AdView
 import com.google.gson.Gson
 
@@ -25,22 +28,49 @@ import com.google.gson.Gson
  * com.frogobox.basemusicplayer.activity
  *
  */
-abstract class BaseFragment : Fragment(),
-    IBaseFragment {
+abstract class BaseFragment<VB : ViewBinding> : Fragment(), IBaseFragment {
 
-    lateinit var mBaseActivity: BaseActivity
+    protected lateinit var mActivity: BaseActivity<*>
+
+    protected var binding : VB? = null
+
+    abstract fun setupViewBinding(inflater: LayoutInflater, container: ViewGroup): VB
+
+    abstract fun setupViewModel()
+
+    abstract fun setupUI(savedInstanceState: Bundle?)
+
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        binding = container?.let { setupViewBinding(inflater, it) }
+        setupViewModel()
+        return binding?.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        setupUI(savedInstanceState)
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        binding = null
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        mBaseActivity = (activity as BaseActivity)
+        mActivity = (activity as BaseActivity<*>)
     }
 
     override fun setupShowAdsInterstitial() {
-        mBaseActivity.setupShowAdsInterstitial()
+        mActivity.setupShowAdsInterstitial()
     }
 
     override fun setupShowAdsBanner(mAdView: AdView) {
-        mBaseActivity.setupShowAdsBanner(mAdView)
+        mActivity.setupShowAdsBanner(mAdView)
     }
 
     override fun setupChildFragment(frameId: Int, fragment: Fragment) {

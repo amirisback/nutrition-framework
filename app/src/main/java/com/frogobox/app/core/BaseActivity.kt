@@ -2,13 +2,14 @@ package com.frogobox.app.core
 
 import android.content.Intent
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.viewbinding.ViewBinding
 import com.frogobox.admob.ui.FrogoAdmobActivity
+import com.frogobox.app.R
 import com.google.gson.Gson
 
 /**
@@ -28,11 +29,31 @@ import com.google.gson.Gson
  * com.frogobox.basemusicplayer.base
  *
  */
-abstract class BaseActivity : FrogoAdmobActivity(), IBaseActivity {
+abstract class BaseActivity<VB: ViewBinding> : FrogoAdmobActivity(), IBaseActivity {
+
+    protected lateinit var binding: VB
+
+    abstract fun setupViewBinding(): VB
+
+    abstract fun setupViewModel()
+
+    abstract fun setupUI(savedInstanceState: Bundle?)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        // AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_AUTO)
+        binding = setupViewBinding()
+        setContentView(binding.root)
+        setupViewModel()
+        setupUI(savedInstanceState)
+        setupAdmob()
+    }
+
+    private fun setupAdmob() {
+        setupAdsPublisher(getString(R.string.admob_publisher_id))
+        setupAdsBanner(getString(R.string.admob_banner))
+        setupAdsInterstitial(getString(R.string.admob_interstitial))
+        setupAdsRewarded(getString(R.string.admob_rewarded))
+        setupAdsRewardedInterstitial(getString(R.string.admob_rewarded_interstitial))
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -86,7 +107,7 @@ abstract class BaseActivity : FrogoAdmobActivity(), IBaseActivity {
     }
 
     override fun <Model> baseFragmentNewInstance(
-        fragment: BaseFragment,
+        fragment: BaseFragment<*>,
         argumentKey: String,
         extraDataResult: Model
     ) {
@@ -110,10 +131,6 @@ abstract class BaseActivity : FrogoAdmobActivity(), IBaseActivity {
     protected inline fun <reified Model> baseGetExtraData(extraKey: String): Model {
         val extraIntent = intent.getStringExtra(extraKey)
         return Gson().fromJson(extraIntent, Model::class.java)
-    }
-
-    protected fun baseLayoutInflater() : LayoutInflater {
-        return LayoutInflater.from(this)
     }
 
 }

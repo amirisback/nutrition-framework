@@ -14,19 +14,15 @@ import com.frogobox.recycler.core.IFrogoViewAdapter
 import com.google.gson.Gson
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
-class MainActivity : BaseActivity() {
+class MainActivity : BaseActivity<ActivityMainBinding>() {
 
-    private lateinit var activityMainBinding: ActivityMainBinding
     private val mainViewModel: MainViewModel by viewModel()
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        activityMainBinding = ActivityMainBinding.inflate(baseLayoutInflater())
-        setContentView(activityMainBinding.root)
-        setupViewModel()
+    override fun setupViewBinding(): ActivityMainBinding {
+        return ActivityMainBinding.inflate(layoutInflater)
     }
 
-    private fun setupViewModel() {
+    override fun setupViewModel() {
         mainViewModel.apply {
 
             usingChuck()
@@ -36,12 +32,20 @@ class MainActivity : BaseActivity() {
             })
 
             eventShowProgress.observe(this@MainActivity, {
-                setupEventProgressView(activityMainBinding.progressView, it)
+                setupEventProgressView(binding.progressView, it)
             })
 
         }
 
     }
+
+    override fun setupUI(savedInstanceState: Bundle?) {
+        binding.apply {
+
+        }
+    }
+
+
 
     private fun setupRvNews(data: List<Article>) {
 
@@ -65,7 +69,7 @@ class MainActivity : BaseActivity() {
             }
         }
 
-        activityMainBinding.rvNews
+        binding.rvNews
             .injector<Article>()
             .addData(data)
             .addCustomView(R.layout.list_news_article_vertical)
