@@ -65,3 +65,5 @@ Min API level is set to 21, so the presented approach is suitable for over 94% o
 ## Attention !!!
 - Please enjoy and don't forget fork and give a star
 - Don't Forget Follow My Github Account
+
+![ScreenShoot Apps](docs/image/mad_score.png?raw=true)
