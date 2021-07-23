@@ -18,7 +18,7 @@ What's New??
 - Proposal [Click Here](https://github.com/amirisback/android-framework-nutrition/tree/master/docs)
 - Guidance [Click Here](https://github.com/amirisback/android-framework-nutrition/tree/master/docs/guidance)
 - Image [Click Here](https://github.com/amirisback/android-framework-nutrition/tree/master/docs/image)
-- Slide [Click Here](https://docs.google.com/presentation/d/1TbJjrjXdieSdqo_dSz0N_umAgeT6euGOWp-nYOHS3g8/edit?usp=sharing)
+- Slide Seminar Proposal [Click Here](https://docs.google.com/presentation/d/1TbJjrjXdieSdqo_dSz0N_umAgeT6euGOWp-nYOHS3g8/edit?usp=sharing)
 - Design, Flowchart on Figma [Click Here](https://www.figma.com/file/Ons8XY0YvxecwC71Aa92Qj/TA?node-id=0%3A1)
 - Sheet Feedback [Click Here](https://docs.google.com/spreadsheets/d/1P8U2lu8odQJwLPD3QiSJGJXAgocdc_H5j7PdT23lPZc/edit#gid=0)
 
