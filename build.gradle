@@ -4,14 +4,13 @@ buildscript {
     ext {
 
         // project settings
-
         def appDomain = "com"
         def appDevConsole = "frogobox"
         def appName = "app"
 
-        def versionMajor = 3
-        def versionMinor = 8
-        def versionPatch = 2
+        def versionMajor = 1
+        def versionMinor = 0
+        def versionPatch = 0
 
         projectCompileSdk = 30
         projectMinSdk = 21
@@ -24,6 +23,7 @@ buildscript {
         nameApp = "General Framework"
         nameAPK = nameApp.toLowerCase().replace(" ", "-")
 
+        // dependencies version
         kotlin_version = '1.5.20'
         koin_version = "3.1.1"
 
@@ -38,7 +38,7 @@ buildscript {
 
     dependencies {
         classpath 'com.android.tools.build:gradle:7.0.0'
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.5.21"
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files

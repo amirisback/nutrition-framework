@@ -1,2 +1,3 @@
+rootProject.name = "NutritionFramework"
 include ':app'
-rootProject.name = "GeneralFramework"
+include ':framework'
