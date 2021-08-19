@@ -1,3 +1,5 @@
+![ScreenShoot Apps](docs/image/banner.png?raw=true)
+
 ## About This Project (work-in-progress 👷🔧️👷‍♀️⛏)
 - Pengembang Framework untuk Membuat Aplikasi Seputar Permasalahan Gizi berbasis Platform Android
 - General Framework for Application Development Around Nutrition Using the Android Platform, Skripsi S1 Muhammad Faisal Amir from Telkom University
@@ -12,16 +14,16 @@ What's New??
     * Coming Soon *
 
 ## Documentation
-- Guide [Click Here](https://github.com/amirisback/android-framework-nutrition/tree/master/docs/guide)
-- Journal [Click Here](https://github.com/amirisback/android-framework-nutrition/tree/master/docs/journal)
-- Theory [Click Here](https://github.com/amirisback/android-framework-nutrition/tree/master/docs/theory)
-- Proposal [Click Here](https://github.com/amirisback/android-framework-nutrition/tree/master/docs)
-- Guidance [Click Here](https://github.com/amirisback/android-framework-nutrition/tree/master/docs/guidance)
-- Image [Click Here](https://github.com/amirisback/android-framework-nutrition/tree/master/docs/image)
+- Guide [Click Here](https://github.com/amirisback/nutrition-framework/tree/master/docs/guide)
+- Journal [Click Here](https://github.com/amirisback/nutrition-framework/tree/master/docs/journal)
+- Theory [Click Here](https://github.com/amirisback/nutrition-framework/tree/master/docs/theory)
+- Proposal [Click Here](https://github.com/amirisback/nutrition-framework/tree/master/docs)
+- Guidance [Click Here](https://github.com/amirisback/nutrition-framework/tree/master/docs/guidance)
+- Image [Click Here](https://github.com/amirisback/nutrition-framework/tree/master/docs/image)
 - Slide Seminar Proposal [Click Here](https://docs.google.com/presentation/d/1TbJjrjXdieSdqo_dSz0N_umAgeT6euGOWp-nYOHS3g8/edit?usp=sharing)
 - Design, Flowchart on Figma [Click Here](https://www.figma.com/file/Ons8XY0YvxecwC71Aa92Qj/TA?node-id=0%3A1)
 - Sheet Feedback [Click Here](https://docs.google.com/spreadsheets/d/1P8U2lu8odQJwLPD3QiSJGJXAgocdc_H5j7PdT23lPZc/edit#gid=0)
-- Record Revision [Click Here](https://github.com/amirisback/android-framework-nutrition/tree/master/docs/record)
+- Record Revision [Click Here](https://github.com/amirisback/nutrition-framework/tree/master/docs/record)
 
 ## Telkom University Lecturers
 - Dana Sulistyo Kusumo, S.T., M.T., PhD. - danakusumo@telkomuniversity.ac.id
@@ -57,11 +59,11 @@ Min API level is set to 21, so the presented approach is suitable for over 94% o
 -   [Glide](https://github.com/bumptech/glide)  - image loading and caching library
 
 ## My own library
-- Admob Sample https://github.com/amirisback/admob-helper-implementation
-- MVVM Sample https://github.com/amirisback/android-architecture-by-amirisback
-- frogo-recycler-view https://github.com/amirisback/frogo-recycler-view
-- Awesome API Implemented https://github.com/amirisback/awesome-frogo-consumable-apps
-- Kick Start Template https://github.com/amirisback/android-kick-start-project-template
+- frogo-admob [Click Here](https://github.com/amirisback/frogo-admob)
+- frogo-recycler-view [Click Here](https://github.com/amirisback/frogo-recycler-view)
+- Awesome API Implemented [Click Here](https://github.com/frogobox/frogo-consume-api)
+- Kick Start Modular [Click Here](https://github.com/amirisback/android-kick-start-modular)
+- Kick Start [Click Here](https://github.com/amirisback/android-kick-start)
 
 ## Attention !!!
 - Please enjoy and don't forget fork and give a star
