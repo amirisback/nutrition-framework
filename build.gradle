@@ -2,11 +2,13 @@
 buildscript {
 
     ext {
+        nameApp = "Nutrition Framework"
 
         // project settings
         def appDomain = "com"
         def appDevConsole = "frogobox"
-        def appName = "app"
+        def appName = "appnutrition"
+        def library = "framework"
 
         def versionMajor = 1
         def versionMinor = 0
@@ -17,14 +19,14 @@ buildscript {
         projectTargetSdk = projectCompileSdk
 
         projectApplicationId = "$appDomain.$appDevConsole.$appName"
+        projectLibraryId = "$appDomain.$appDevConsole.$library"
         projectVersionCode = (versionMajor * 100) + (versionMinor * 10) + (versionPatch * 1)
         projectVersionName = "$versionMajor.$versionMinor.$versionPatch"
 
-        nameApp = "General Framework"
         nameAPK = nameApp.toLowerCase().replace(" ", "-")
 
         // dependencies version
-        kotlin_version = '1.5.20'
+        kotlin_version = '1.5.21'
         koin_version = "3.1.1"
 
         activity_ktx_version = "1.3.1"
@@ -37,8 +39,8 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:7.0.0'
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.5.21"
+        classpath 'com.android.tools.build:gradle:7.0.1'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files

@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.frogobox.app"
+    package="com.frogobox.appnutrition"
     android:targetSandboxVersion="1"
     tools:targetApi="o">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-        android:name="com.frogobox.app.FrogoApplication"
+        android:name="com.frogobox.appnutrition.FrogoApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -18,9 +18,9 @@
         android:theme="@style/Theme.KickStart"
         android:usesCleartextTraffic="true"
         tools:targetApi="n">
-        <activity android:name="com.frogobox.app.mvvm.detail.DetailActivity" />
-        <activity android:name="com.frogobox.app.mvvm.about.AboutUsActivity" />
-        <activity android:name="com.frogobox.app.mvvm.main.MainActivity">
+        <activity android:name="com.frogobox.appnutrition.mvvm.detail.DetailActivity" />
+        <activity android:name="com.frogobox.appnutrition.mvvm.about.AboutUsActivity" />
+        <activity android:name="com.frogobox.appnutrition.mvvm.main.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
