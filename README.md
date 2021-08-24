@@ -1,17 +1,40 @@
 ![ScreenShoot Apps](docs/image/banner.png?raw=true)
 
 ## About This Project (work-in-progress 👷🔧️👷‍♀️⛏)
+[![JitPack](https://jitpack.io/v/amirisback/nutrition-framework.svg?style=flat-square)](https://jitpack.io/#amirisback/nutrition-framework)
 - Pengembang Framework untuk Membuat Aplikasi Seputar Permasalahan Gizi berbasis Platform Android
 - General Framework for Application Development Around Nutrition Using the Android Platform, Skripsi S1 Muhammad Faisal Amir from Telkom University
 
 ## Version Release
 This Is Latest Release
 
-    $version_release = * Coming Soon *
+    ~ Beta Release
+    $version_release = 0.0.1
 
 What's New??
 
-    * Coming Soon *
+    * Beta Release *
+
+
+## Download this project
+
+### Step 1. Add the JitPack repository to your build file (build.gradle : Project)
+
+    Add it in your root build.gradle at the end of repositories:
+
+    	allprojects {
+    		repositories {
+    			...
+    			maven { url 'https://jitpack.io' }
+    		}
+    	}
+
+### Step 2. Add the dependency (build.gradle : Module)
+
+    dependencies {
+            // library nutrition-framework
+            implementation 'com.github.amirisback:nutrition-framework:0.0.1'
+    }
 
 ## Documentation
 - Guide [Click Here](https://github.com/amirisback/nutrition-framework/tree/master/docs/guide)

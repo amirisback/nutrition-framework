@@ -10,9 +10,9 @@ buildscript {
         def appName = "appnutrition"
         def library = "framework"
 
-        def versionMajor = 1
+        def versionMajor = 0
         def versionMinor = 0
-        def versionPatch = 0
+        def versionPatch = 1
 
         projectCompileSdk = 30
         projectMinSdk = 21
