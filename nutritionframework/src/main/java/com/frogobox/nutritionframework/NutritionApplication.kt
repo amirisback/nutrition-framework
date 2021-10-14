@@ -1,4 +1,4 @@
-package com.frogobox.framework
+package com.frogobox.nutritionframework
 
 /*
  * Created by faisalamir on 19/08/21

@@ -1,4 +1,4 @@
-package com.frogobox.framework.ui
+package com.frogobox.nutritioncore.core
 
 /*
  * Created by faisalamir on 19/08/21
@@ -12,5 +12,5 @@ package com.frogobox.framework.ui
  * All rights reserved
  *
  */
-class NutritionUI {
+class NutritionCore {
 }

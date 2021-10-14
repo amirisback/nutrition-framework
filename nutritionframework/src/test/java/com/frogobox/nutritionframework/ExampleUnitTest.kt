@@ -1,4 +1,4 @@
-package com.frogobox.framework
+package com.frogobox.nutritionframework
 
 import org.junit.Test
 
