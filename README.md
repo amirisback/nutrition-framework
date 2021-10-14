@@ -9,31 +9,55 @@
 This Is Latest Release
 
     ~ Beta Release
-    $version_release = 0.0.1
+    $version_release = 0.0.2-alpha02
 
 What's New??
 
     * Beta Release *
-
+    * Multi Platform Library *
 
 ## Download this project
 
 ### Step 1. Add the JitPack repository to your build file (build.gradle : Project)
 
-    Add it in your root build.gradle at the end of repositories:
+#### <Option 1> Groovy Gradle (build.gradle)
 
-    	allprojects {
-    		repositories {
-    			...
-    			maven { url 'https://jitpack.io' }
-    		}
-    	}
+    // Add it in your root build.gradle at the end of repositories:
+
+    allprojects {
+        repositories {
+            ...
+            maven { url 'https://jitpack.io' }
+        }
+    }
+
+#### <Option 2> Kotlin DSL Gradle (build.gradle.kts / settings.gradle.kts)
+
+```kotlin
+// Add it in your root build.gradle.kts at the end of repositories:
+
+allprojects {
+    repositories {
+        ...
+        maven { url = uri("https://jitpack.io") }
+    }
+}
+```
 
 ### Step 2. Add the dependency (build.gradle : Module)
 
+#### <Option 1> Groovy Gradle
+
     dependencies {
-            // library nutrition-framework
-            implementation 'com.github.amirisback:nutrition-framework:0.0.1'
+        // library nutrition-framework
+        implementation 'com.github.amirisback:nutrition-framework:0.0.2-alpha02'
+    }
+
+#### <Option 2> Kotlin DSL Gradle
+
+    dependencies {
+        // library nutrition-framework
+        implementation("com.github.amirisback:nutrition-framework:0.0.2-alpha02")
     }
 
 ## Documentation
