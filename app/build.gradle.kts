@@ -148,6 +148,10 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.0-rc01")
     implementation("androidx.lifecycle:lifecycle-extensions:2.2.0")
 
+    implementation("androidx.compose.ui:ui:${Dependency.COMPOSE_VERSION}")
+    implementation("androidx.compose.material:material:${Dependency.COMPOSE_VERSION}")
+    implementation("androidx.compose.ui:ui-tooling-preview:${Dependency.COMPOSE_VERSION}")
+
     implementation("androidx.activity:activity-ktx:${Dependency.ACTIVITY_KTX_VERSION}")
     implementation("androidx.fragment:fragment-ktx:${Dependency.FRAGMENT_KTX_VERSION}")
 
@@ -205,5 +209,8 @@ dependencies {
     androidTestImplementation("androidx.arch.core:core-testing:2.1.0")
     androidTestImplementation("androidx.test:runner:1.4.0")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.4.0")
+
+    androidTestImplementation("androidx.compose.ui:ui-test-junit4:${Dependency.COMPOSE_VERSION}")
+    debugImplementation("androidx.compose.ui:ui-tooling:${Dependency.COMPOSE_VERSION}")
 
 }
