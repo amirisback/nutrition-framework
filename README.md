@@ -18,7 +18,7 @@ What's New??
 
 ## Download this project
 
-### Step 1. Add the JitPack repository to your build file (build.gradle : Project)
+### Step 1. Add the JitPack repository to your build file (build.gradle : Project / Root)
 
 #### <Option 1> Groovy Gradle (build.gradle)
 
@@ -46,14 +46,14 @@ allprojects {
 
 ### Step 2. Add the dependency (build.gradle : Module)
 
-#### <Option 1> Groovy Gradle
+#### <Option 1> Groovy Gradle (build.gradle)
 
     dependencies {
         // library nutrition-framework
         implementation 'com.github.amirisback:nutrition-framework:0.0.2-alpha02'
     }
 
-#### <Option 2> Kotlin DSL Gradle
+#### <Option 2> Kotlin DSL Gradle (build.gradle.kts)
 
     dependencies {
         // library nutrition-framework
