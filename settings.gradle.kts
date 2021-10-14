@@ -1,2 +1,2 @@
 rootProject.name = "NutritionFramework"
-include(":app", ":framework", ":core")
+include(":nutritionapp", ":nutritionframework", ":nutritioncore")
