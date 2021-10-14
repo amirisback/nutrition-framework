@@ -1,4 +1,4 @@
-package com.frogobox.framework.core
+package com.frogobox.core.data
 
 /*
  * Created by faisalamir on 19/08/21
@@ -12,5 +12,5 @@ package com.frogobox.framework.core
  * All rights reserved
  *
  */
-class NutritionCore {
+class NutritionData {
 }

@@ -23,7 +23,8 @@ object ProjectSetting {
     const val APP_PLAY_CONSOLE = "frogobox"
     const val APP_NAME = "appnutrition"
 
-    const val LIBRARY_NAME = "framework"
+    const val LIBRARY_NAME_FRAMEWORK = "framework"
+    const val LIBRARY_NAME_CORE = "framework"
 
     const val VERSION_MAJOR = 1
     const val VERSION_MINOR = 0
@@ -34,7 +35,9 @@ object ProjectSetting {
     const val PROJECT_TARGET_SDK = PROJECT_COMPILE_SDK
 
     const val PROJECT_APP_ID = "$APP_DOMAIN.$APP_PLAY_CONSOLE.$APP_NAME"
-    const val PROJECT_LIB_ID = "$APP_DOMAIN.$APP_PLAY_CONSOLE.$LIBRARY_NAME"
+    const val PROJECT_LIB_ID_FRAMEWORK = "$APP_DOMAIN.$APP_PLAY_CONSOLE.$LIBRARY_NAME_FRAMEWORK"
+    const val PROJECT_LIB_ID_CORE = "$APP_DOMAIN.$APP_PLAY_CONSOLE.$LIBRARY_NAME_CORE"
+
     const val PROJECT_VERSION_CODE = (VERSION_MAJOR * 100) + (VERSION_MINOR * 10) + (VERSION_PATCH * 1)
     const val PROJECT_VERSION_NAME = "$VERSION_MAJOR.$VERSION_MINOR.$VERSION_PATCH"
 
