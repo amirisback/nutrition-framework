@@ -18,23 +18,29 @@
         android:theme="@style/Theme.KickStart"
         android:usesCleartextTraffic="true"
         tools:targetApi="n">
-        <activity android:name=".mvvm.detail.DetailActivity" />
-        <activity android:name=".mvvm.about.AboutUsActivity" />
         <activity
-            android:name=".mvvm.main.MainActivity"
-            android:exported="true">
+            android:name=".DummyActivity"
+            android:exported="true"
+            android:label="@string/title_activity_dummy"
+            android:theme="@style/Theme.KickStart.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
 
+        </activity>
+        <activity android:name=".mvvm.detail.DetailActivity" />
+        <activity android:name=".mvvm.about.AboutUsActivity" />
+        <activity
+            android:name=".mvvm.main.MainActivity"
+            android:exported="true">
+
+        </activity>
 
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="@string/admob_publisher_id" />
-
     </application>
 
 </manifest>

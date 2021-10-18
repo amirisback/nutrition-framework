@@ -2,6 +2,7 @@ plugins {
     id("com.android.application")
     kotlin("android")
     id("kotlin-kapt")
+    id("org.jetbrains.compose") version Dependency.COMPOSE_MULTIPLATFORM_VERSION
 }
 
 android {
@@ -116,21 +117,13 @@ android {
         targetCompatibility = JavaVersion.VERSION_11
     }
 
-    composeOptions {
-        kotlinCompilerExtensionVersion = Dependency.COMPOSE_VERSION
-        kotlinCompilerVersion = Dependency.KOTLIN_VERSION
-    }
-
-    tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
-        kotlinOptions {
-            jvmTarget = JavaVersion.VERSION_11.toString()
-            useIR = true
-        }
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_11.toString()
+        useIR = true
     }
 
     packagingOptions {
-        exclude("META-INF/AL2.0")
-        exclude("META-INF/LGPL2.1")
+        exclude("META-INF/*")
     }
 
 }
@@ -138,6 +131,13 @@ android {
 dependencies {
 
     implementation("org.jetbrains.kotlin:kotlin-stdlib:${Dependency.KOTLIN_VERSION}")
+
+    implementation(compose.ui)
+    implementation(compose.runtime)
+    implementation(compose.material)
+    implementation(compose.materialIconsExtended)
+
+    implementation(project(":nutritioncore"))
 
     implementation("androidx.appcompat:appcompat:1.3.1")
     implementation("androidx.core:core-ktx:1.6.0")
@@ -147,11 +147,10 @@ dependencies {
 
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.0-rc01")
     implementation("androidx.lifecycle:lifecycle-extensions:2.2.0")
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.3.1")
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.3.1")
 
-    implementation("androidx.compose.ui:ui:${Dependency.COMPOSE_VERSION}")
-    implementation("androidx.compose.material:material:${Dependency.COMPOSE_VERSION}")
-    implementation("androidx.compose.ui:ui-tooling-preview:${Dependency.COMPOSE_VERSION}")
-
+    implementation("androidx.activity:activity-compose:1.3.1")
     implementation("androidx.activity:activity-ktx:${Dependency.ACTIVITY_KTX_VERSION}")
     implementation("androidx.fragment:fragment-ktx:${Dependency.FRAGMENT_KTX_VERSION}")
 
@@ -186,9 +185,8 @@ dependencies {
     implementation("com.readystatesoftware.chuck:library:1.1.0")
 
     api("com.google.dagger:dagger:2.38.1")
-    api("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.2-native-mt")
-    api("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.1")
-    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.3.1")
+    api("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.2")
+    api("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.2")
 
     kapt("androidx.lifecycle:lifecycle-compiler:2.4.0-rc01")
     kapt("androidx.room:room-compiler:2.3.0")
@@ -210,7 +208,6 @@ dependencies {
     androidTestImplementation("androidx.test:runner:1.4.0")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.4.0")
 
-    androidTestImplementation("androidx.compose.ui:ui-test-junit4:${Dependency.COMPOSE_VERSION}")
-    debugImplementation("androidx.compose.ui:ui-tooling:${Dependency.COMPOSE_VERSION}")
+    debugImplementation(compose.ui)
 
 }
