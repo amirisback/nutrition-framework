@@ -106,13 +106,27 @@ Min API level is set to 21, so the presented approach is suitable for over 94% o
 -   [Dagger2](https://dagger.dev/)  - dependency injector for replacement all Factory classes.
 -   [Retrofit](https://square.github.io/retrofit/)  - type-safe HTTP client.
 -   [Glide](https://github.com/bumptech/glide)  - image loading and caching library
+-   [Compose](https://www.jetbrains.com/lp/compose/) - Compose for Desktop simplifies and accelerates UI development for desktop applications, and allows extensive UI code sharing between Android and desktop applications. Currently in alpha.
 
-## My own library
-- frogo-admob [Click Here](https://github.com/amirisback/frogo-admob)
-- frogo-recycler-view [Click Here](https://github.com/amirisback/frogo-recycler-view)
-- Awesome API Implemented [Click Here](https://github.com/frogobox/frogo-consume-api)
-- Kick Start Modular [Click Here](https://github.com/amirisback/android-kick-start-modular)
-- Kick Start [Click Here](https://github.com/amirisback/android-kick-start)
+## Inpiration
+- frogo-log ( [Muhammad Faisal Amir](https://github.com/amirisback) - [Project](https://github.com/amirisback/frogo-log) )
+- frogo-admob ( [Muhammad Faisal Amir](https://github.com/amirisback) - [Project](https://github.com/amirisback/frogo-admob) )
+- frogo-recycler-view ( [Muhammad Faisal Amir](https://github.com/amirisback) - [Project](https://github.com/amirisback/frogo-recycler-view) )
+- frogo-notification ( [Muhammad Faisal Amir](https://github.com/amirisback) - [Project](https://github.com/amirisback/frogo-notification) )
+
+- android-kick-start ( [Muhammad Faisal Amir](https://github.com/amirisback) - [Project](https://github.com/amirisback/android-kick-start) )
+- android-kick-start-modular ( [Muhammad Faisal Amir](https://github.com/amirisback) - [Project](https://github.com/amirisback/android-kick-start-modular) )
+- desktop-experimental-catalgoue ( [Muhammad Faisal Amir](https://github.com/amirisback) - [Project](https://github.com/amirisback/desktop-experimental-catalgoue) )
+- jitpack-library-kotlin-dsl-guide( [Muhammad Faisal Amir](https://github.com/amirisback) - [Project](https://github.com/amirisback/jitpack-library-kotlin-dsl-guide) )
+
+- frogo-android-sdk ( [Frogobox](https://github.com/frogobox) - [Project](https://github.com/frogobox/frogo-android-sdk) )
+- frogo-android-ui-kit ( [Frogobox](https://github.com/frogobox) - [Project](https://github.com/frogobox/frogo-android-ui-kit) )
+- frogo-consume-api ( [Frogobox](https://github.com/frogobox) - [Project](https://github.com/frogobox/frogo-consume-api) )
+
+- color-console ( [Nazmul Idris](https://github.com/nazmulidris) - [Project](https://github.com/nazmulidris/color-console) )
+- ComposeReorderable ( [Andre Claßen](https://github.com/aclassen) - [Project](https://github.com/aclassen/ComposeReorderable) )
+- ComposeCookBook ( [Gurupreet Singh](https://github.com/Gurupreet) - [Project](https://github.com/Gurupreet/ComposeCookBook) )
+- PeopleInSpace ( [John O'Reilly](https://github.com/joreilly) - [Project](https://github.com/joreilly/PeopleInSpace) )
 
 ## Attention !!!
 - Please enjoy and don't forget fork and give a star
