@@ -7,7 +7,7 @@
 
     <com.frogobox.recycler.widget.FrogoRecyclerView
         android:id="@+id/rv_news"
-        android:paddingTop="@dimen/frogo_dimen_16dp"
+        android:paddingTop="@dimen/nutri_dimen_16dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:clipToPadding="false"

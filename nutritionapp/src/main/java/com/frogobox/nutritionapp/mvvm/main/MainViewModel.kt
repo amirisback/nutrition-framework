@@ -2,12 +2,12 @@ package com.frogobox.nutritionapp.mvvm.main
 
 import android.app.Application
 import androidx.lifecycle.viewModelScope
-import com.frogobox.nutritionapp.core.BaseViewModel
-import com.frogobox.nutritionapp.model.ArticleResponse
-import com.frogobox.nutritionapp.source.FrogoDataRepository
-import com.frogobox.nutritionapp.source.FrogoDataSource
-import com.frogobox.nutritionapp.util.SingleLiveEvent
+import com.frogobox.nutritioncore.model.ArticleResponse
+import com.frogobox.nutritionapp.source.DataRepository
+import com.frogobox.nutritionapp.source.DataSource
 import com.frogobox.nutritionapp.util.Constant
+import com.frogobox.nutritionframework.core.NutriViewModel
+import com.frogobox.nutritionframework.util.NutriSingleLiveEvent
 import kotlinx.coroutines.launch
 
 /*
@@ -25,10 +25,10 @@ import kotlinx.coroutines.launch
  * com.frogobox.generalframework.viewmodel
  * 
  */
-class MainViewModel(private val context: Application, private val repository: FrogoDataRepository) :
-    BaseViewModel(context) {
+class MainViewModel(private val context: Application, private val repository: DataRepository) :
+    NutriViewModel(context) {
 
-    var topHeadlineLive = SingleLiveEvent<ArticleResponse>()
+    var topHeadlineLive = NutriSingleLiveEvent<ArticleResponse>()
 
     fun usingChuck() {
         repository.usingChuckInterceptor(context)
@@ -44,26 +44,22 @@ class MainViewModel(private val context: Application, private val repository: Fr
                 Constant.NewsConstant.COUNTRY_ID,
                 null,
                 null,
-                object : FrogoDataSource.GetRemoteCallback<ArticleResponse> {
-                    override fun onShowProgressDialog() {
+                object : DataSource.GetRemoteCallback<ArticleResponse> {
+                    override fun onShowProgress() {
                         eventShowProgress.postValue(true)
                     }
 
-                    override fun onHideProgressDialog() {
+                    override fun onHideProgress() {
                         eventShowProgress.postValue(false)
                     }
+
+                    override fun onEmpty() {}
 
                     override fun onSuccess(data: ArticleResponse) {
                         topHeadlineLive.postValue(data)
                     }
 
-                    override fun onEmpty() {
-
-                    }
-
-                    override fun onFailed(statusCode: Int, errorMessage: String?) {
-
-                    }
+                    override fun onFailed(statusCode: Int, errorMessage: String?) {}
                 }
             )
         }

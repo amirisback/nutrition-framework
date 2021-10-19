@@ -1,11 +1,11 @@
 package com.frogobox.nutritionapp.di
 
 import androidx.preference.PreferenceManager
-import com.frogobox.nutritionapp.source.FrogoDataRepository
-import com.frogobox.nutritionapp.source.local.FrogoAppDatabase
-import com.frogobox.nutritionapp.source.local.FrogoLocalDataSource
-import com.frogobox.nutritionapp.source.remote.FrogoRemoteDataSource
-import com.frogobox.nutritionapp.util.AppExecutors
+import com.frogobox.nutritionapp.source.DataRepository
+import com.frogobox.nutritionapp.source.local.AppDatabase
+import com.frogobox.nutritionapp.source.local.LocalDataSource
+import com.frogobox.nutritionapp.source.remote.RemoteDataSource
+import com.frogobox.nutritionframework.util.AppExecutors
 import org.koin.android.ext.koin.androidContext
 import org.koin.dsl.module
 
@@ -25,11 +25,11 @@ import org.koin.dsl.module
 val repositoryModule = module {
 
     single {
-        FrogoDataRepository(FrogoRemoteDataSource, get())
+        DataRepository(RemoteDataSource, get())
     }
 
     single {
-        FrogoLocalDataSource(AppExecutors(), get(), get())
+        LocalDataSource(AppExecutors(), get(), get())
     }
 
     single {
@@ -38,7 +38,7 @@ val repositoryModule = module {
 
 
     single {
-        FrogoAppDatabase.getInstance(androidContext()).favoriteScriptDao()
+        AppDatabase.getInstance(androidContext()).favoriteScriptDao()
     }
 
 

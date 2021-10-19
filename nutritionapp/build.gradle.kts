@@ -175,11 +175,7 @@ dependencies {
     implementation("io.reactivex.rxjava2:rxjava:2.2.21")
 
     implementation("com.github.amirisback:frogo-recycler-view:3.8.8")
-    implementation("com.github.amirisback:frogo-log:2.0.4")
     implementation("com.github.amirisback:frogo-admob:4.1.2")
-    implementation("com.github.amirisback:frogo-ui-kit:2.1.0")
-    implementation("com.github.amirisback:frogo-notification:1.0.7")
-    implementation("com.github.amirisback:consumable-code-news-api:1.0.7")
     implementation("com.github.bumptech.glide:glide:4.12.0")
 
     implementation("com.facebook.stetho:stetho:1.5.1")

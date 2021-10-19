@@ -9,7 +9,7 @@ import com.frogobox.nutritionapp.R
 import com.frogobox.nutritionapp.core.BaseActivity
 import com.frogobox.nutritionapp.databinding.ActivityMainBinding
 import com.frogobox.nutritionapp.mvvm.detail.DetailActivity
-import com.frogobox.nutritionapp.model.Article
+import com.frogobox.nutritioncore.model.Article
 import com.frogobox.recycler.core.IFrogoViewAdapter
 import com.google.gson.Gson
 import org.koin.androidx.viewmodel.ext.android.viewModel
