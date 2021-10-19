@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+ * Created by 
+ * FrogoBox Inc License
+ * =========================================
+ * 
+ * Copyright (C) .      
+ * All rights reserved
+ * 
+ * Name     : Muhammad Faisal Amir
+ * E-mail   : faisalamircs@gmail.com
+ * Github   : github.com/amirisback
+ * LinkedIn : linkedin.com/in/faisalamircs
+ * 
+ * FrogoBox Software Industries
+ * 
+ -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/nutri_rv_empty_root_linear_layout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/nutri_rv_empty_iv_poster"
+        android:layout_width="@dimen/nutri_dimen_150dp"
+        android:layout_height="@dimen/nutri_dimen_150dp"
+        android:src="@drawable/nutri_ic_empty_view" />
+
+    <TextView
+        android:id="@+id/nutri_rv_empty_tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/nutri_dimen_8dp"
+        android:text="@string/nutri_no_data_found"
+        android:textAllCaps="true"
+        android:textColor="@color/nutriColorBlack"
+        android:textSize="@dimen/nutri_dimen_font_20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/nutri_rv_empty_tv_subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/nutri_please_insert_data" />
+
+</LinearLayout>
