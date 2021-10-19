@@ -9,7 +9,7 @@
 This Is Latest Release
 
     ~ Beta Release
-    $version_release = 0.0.2-alpha03
+    $version_release = 0.0.2-alpha04
 
 What's New??
 
@@ -51,14 +51,14 @@ allprojects {
 
     dependencies {
         // library nutrition-framework
-        implementation 'com.github.amirisback:nutrition-framework:0.0.2-alpha03'
+        implementation 'com.github.amirisback:nutrition-framework:0.0.2-alpha04'
     }
 
 #### <Option 2> Kotlin DSL Gradle (build.gradle.kts)
 
     dependencies {
         // library nutrition-framework
-        implementation("com.github.amirisback:nutrition-framework:0.0.2-alpha03")
+        implementation("com.github.amirisback:nutrition-framework:0.0.2-alpha04")
     }
 
 ## Documentation
