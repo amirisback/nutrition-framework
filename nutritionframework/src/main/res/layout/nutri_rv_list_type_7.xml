@@ -24,7 +24,7 @@
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/nutri_rv_list_type_7_civ_poster"
-        style="@style/frogoArea48dp"
+        style="@style/nutriArea48dp"
         android:layout_centerVertical="true"
         android:contentDescription="@string/nutri_dummy_content_description"
         tools:src="@tools:sample/avatars"/>
