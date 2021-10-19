@@ -1,8 +1,8 @@
-package com.frogobox.nutritionframework.ui
+package com.frogobox.nutritionframework.lib.sdk
 
 /*
- * Created by faisalamir on 19/08/21
- * NutritionFramework
+ * Created by faisalamir on 23/08/21
+ * FrogoSDK
  * -----------------------------------------
  * Name     : Muhammad Faisal Amir
  * E-mail   : faisalamircs@gmail.com
@@ -12,5 +12,6 @@ package com.frogobox.nutritionframework.ui
  * All rights reserved
  *
  */
-class NutritionUI {
+interface INutriComposeActivity {
+
 }

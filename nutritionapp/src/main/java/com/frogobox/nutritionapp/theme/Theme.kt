@@ -5,7 +5,8 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.material.darkColors
 import androidx.compose.material.lightColors
 import androidx.compose.runtime.Composable
-import com.frogobox.nutritioncore.ui.*
+import com.frogobox.nutritioncore.compose.ui.*
+import kotlin.text.Typography
 
 private val DarkColorPalette = darkColors(
     primary = Purple200,
@@ -41,7 +42,7 @@ fun NutritionFrameworkTheme(
 
     MaterialTheme(
         colors = colors,
-        typography = Typography,
+        typography = com.frogobox.nutritioncore.compose.ui.Typography,
         shapes = Shapes,
         content = content
     )

@@ -23,4 +23,39 @@
     <string name="nutri_dummy_subtitle">Lorem Ipsum is simply dummy text</string>
     <string name="nutri_dummy_desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book</string>
 
+    <string name="nutri_content_title">Frogo Content Title</string>
+    <string name="nutri_content_text">Frogo Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries</string>
+    <string name="nutri_subtext">Frogo Sub Text</string>
+
+    <string name="ads_size_banner">BANNER</string> <!-- 320x50dp -->
+    <string name="ads_size_large_banner">LARGE_BANNER</string> <!-- 320x100dp -->
+    <string name="ads_size_medium_rectangle">MEDIUM_RECTANGLE</string> <!-- 300x250dp -->
+    <string name="ads_size_full_banner">FULL_BANNER</string> <!-- 468x60dp -->
+    <string name="ads_size_leader_board">LEADERBOARD</string> <!-- 728x90dp -->
+    <string name="ads_size_smart_banner">SMART_BANNER</string> <!-- match_parent -->
+
+    <string name="read_signature">Read APK signature</string>
+    <string name="verify_signature">Verify using the APK signature</string>
+    <string name="verify_installer_id">Verify using the Installer ID</string>
+    <string name="verify_unauthorized_apps">Verify unauthorized apps: Lucky Patcher, Freedom, CreeHack and HappyMod</string>
+    <string name="verify_stores">Verify third-party stores: Aptoide, BlackMart, 1Mobile, GetApk, etc</string>
+    <string name="verify_debug">Verify if app is a debug build</string>
+    <string name="verify_emulator">Verify if app is being run in an emulator</string>
+
+    <string name="about_frogobox">Frogobox Id</string>
+    <string name="about_copyright">© Copyright</string>
+    <string name="about_all_right_reserved">All Right Reserved</string>
+
+    <string name="title_about_us">toolbar_about_us</string>
+    <string name="title_copyright">Copyright</string>
+
+    <string name="dummyLong">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam veniam similiquevoluptates odit, ipsum laborum architecto distinctio harum, provident fugiat praesentium ex quod doloreslaudantium aliquid quidem placeat incidunt vitae!</string>
+    <string name="dummy">Dummy</string>
+
+    <string name="dialog_button_yes">Yes</string>
+    <string name="dialog_button_no">No</string>
+    <string name="dialog_title_delete">Delete Data</string>
+    <string name="dialog_message_delete">Are you sure you want to delete data?</string>
+
+
 </resources>

@@ -138,6 +138,7 @@ dependencies {
     implementation(compose.materialIconsExtended)
 
     implementation(project(":nutritioncore"))
+    implementation(project(":nutritionframework"))
 
     implementation("androidx.appcompat:appcompat:1.3.1")
     implementation("androidx.core:core-ktx:1.6.0")

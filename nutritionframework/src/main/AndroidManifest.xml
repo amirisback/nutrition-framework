@@ -2,10 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.frogobox.nutritionframework">
 
-    <application>
-        <activity
-            android:name=".ui.MainActivity"
-            android:exported="false" />
-    </application>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
 
 </manifest>

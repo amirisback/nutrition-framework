@@ -1,8 +1,10 @@
-package com.frogobox.nutritioncore
+package com.frogobox.nutritionframework.lib.sdk
+
+import androidx.activity.ComponentActivity
 
 /*
- * Created by faisalamir on 19/08/21
- * NutritionFramework
+ * Created by faisalamir on 23/08/21
+ * FrogoSDK
  * -----------------------------------------
  * Name     : Muhammad Faisal Amir
  * E-mail   : faisalamircs@gmail.com
@@ -12,5 +14,6 @@ package com.frogobox.nutritioncore
  * All rights reserved
  *
  */
-class NutritionCore {
+class NutriComposeActivity : ComponentActivity(), INutriComposeActivity {
+
 }

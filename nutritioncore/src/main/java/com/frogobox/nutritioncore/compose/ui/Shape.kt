@@ -1,4 +1,4 @@
-package com.frogobox.nutritioncore.ui
+package com.frogobox.nutritioncore.compose.ui
 
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Shapes

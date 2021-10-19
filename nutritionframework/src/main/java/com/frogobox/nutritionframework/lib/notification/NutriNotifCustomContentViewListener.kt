@@ -1,8 +1,11 @@
-package com.frogobox.nutritioncore
+package com.frogobox.nutritionframework.lib.notification
+
+import android.content.Context
+import android.widget.RemoteViews
 
 /*
  * Created by faisalamir on 19/08/21
- * NutritionFramework
+ * FrogoNotification
  * -----------------------------------------
  * Name     : Muhammad Faisal Amir
  * E-mail   : faisalamircs@gmail.com
@@ -12,5 +15,10 @@ package com.frogobox.nutritioncore
  * All rights reserved
  *
  */
-class NutritionData {
+interface NutriNotifCustomContentViewListener {
+
+    fun setupCustomView() : Int
+
+    fun setupComponent(context: Context, customView: RemoteViews)
+
 }
