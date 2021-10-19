@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+ * Created by Faisal Amir
+ * 
+ * Name     : Muhammad Faisal Amir
+ * E-mail   : faisalamircs@gmail.com
+ * Github   : github.com/amirisback
+ * 
+ * Copyright (C) 2021 nutriBox Inc.      
+ * All rights reserved
+ *
+ -->
+
+<resources>
+    <!-- Util -->
+
+    <style name="nutriBaseAreaWrapContent">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="nutriBaseAreaMatchParent">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="nutriBaseAreaWidthMatchParent">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="nutriBaseAreaHeightMatchParent">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="nutriArea64dp">
+        <item name="android:layout_width">@dimen/nutri_dimen_64dp</item>
+        <item name="android:layout_height">@dimen/nutri_dimen_64dp</item>
+    </style>
+
+    <style name="nutriArea48dp">
+        <item name="android:layout_width">@dimen/nutri_dimen_48dp</item>
+        <item name="android:layout_height">@dimen/nutri_dimen_48dp</item>
+    </style>
+
+    <!-- TextView -->
+
+    <style name="nutriTvListTitle" parent="nutriBaseAreaWrapContent">
+        <item name="android:maxLines">1</item>
+        <item name="android:textColor">@color/nutriColorPrimaryDark</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/nutri_dimen_font_16sp</item>
+    </style>
+
+    <style name="nutriTvListSubTitle" parent="nutriBaseAreaWrapContent">
+        <item name="android:maxLines">1</item>
+        <item name="android:textSize">@dimen/nutri_dimen_font_12sp</item>
+    </style>
+
+    <style name="nutriTvListDescription" parent="nutriBaseAreaWrapContent">
+        <item name="android:maxLines">3</item>
+        <item name="android:textColor">@color/nutriColorBlack</item>
+        <item name="android:textSize">@dimen/nutri_dimen_font_11sp</item>
+    </style>
+
+    <!-- Layout Container -->
+
+    <style name="nutriLayoutList8dp" parent="nutriBaseAreaWidthMatchParent">
+        <item name="android:layout_marginStart">@dimen/nutri_dimen_16dp</item>
+        <item name="android:layout_marginEnd">@dimen/nutri_dimen_16dp</item>
+        <item name="android:layout_marginBottom">@dimen/nutri_dimen_16dp</item>
+        <item name="android:elevation">@dimen/nutri_dimen_2dp</item>
+        <item name="android:padding">@dimen/nutri_dimen_16dp</item>
+        <item name="android:background">@drawable/nutri_bg_card_8dp</item>
+    </style>
+
+    <style name="nutriLayoutListWrap8dp" parent="nutriBaseAreaWrapContent">
+        <item name="android:layout_marginStart">@dimen/nutri_dimen_16dp</item>
+        <item name="android:layout_marginEnd">@dimen/nutri_dimen_16dp</item>
+        <item name="android:layout_marginBottom">@dimen/nutri_dimen_16dp</item>
+        <item name="android:elevation">@dimen/nutri_dimen_2dp</item>
+        <item name="android:padding">@dimen/nutri_dimen_16dp</item>
+        <item name="android:background">@drawable/nutri_bg_card_8dp</item>
+    </style>
+
+    <style name="nutriLayoutGrid8dp" parent="nutriBaseAreaWidthMatchParent">
+        <item name="android:layout_marginEnd">@dimen/nutri_dimen_16dp</item>
+        <item name="android:layout_marginBottom">@dimen/nutri_dimen_16dp</item>
+        <item name="android:elevation">@dimen/nutri_dimen_2dp</item>
+        <item name="android:padding">@dimen/nutri_dimen_16dp</item>
+        <item name="android:background">@drawable/nutri_bg_card_8dp</item>
+    </style>
+
+    <!-- Image -->
+
+</resources>

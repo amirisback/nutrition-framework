@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+ * Created by Faisal Amir
+ * 
+ * Name     : Muhammad Faisal Amir
+ * E-mail   : faisalamircs@gmail.com
+ * Github   : github.com/amirisback
+ * 
+ * Copyright (C) 2021 FrogoBox Inc.      
+ * All rights reserved
+ *
+ -->
+
+<resources>
+
+    <color name="nutriColorPrimary">#6200EE</color>
+    <color name="nutriColorPrimaryDark">#3700B3</color>
+    <color name="nutriColorAccent">#03DAC5</color>
+    
+    <color name="nutriColorWhite">#FFFFFF</color>
+    <color name="nutriColorBlack">#000000</color>
+    <color name="nutriColorRed">#F44336</color>
+    <color name="nutriColorPink">#E91E63</color>
+    <color name="nutriColorPurple">#9C27B0</color>
+    <color name="nutriColorDeepPurple">#673AB7</color>
+    <color name="nutriColorIndigo">#3F51B5</color>
+    <color name="nutriColorBlue">#2196F3</color>
+    <color name="nutriColorLightBlue">#03A9F4</color>
+    <color name="nutriColorCyan">#00BCD4</color>
+    <color name="nutriColorTeal">#009688</color>
+    <color name="nutriColorGreen">#4CAF50</color>
+    <color name="nutriColorLightGreen">#8BC34A</color>
+    <color name="nutriColorLime">#CDDC39</color>
+    <color name="nutriColorYellowLime">#CDDC39</color>
+    <color name="nutriColorYellow">#FFEB3B</color>
+    <color name="nutriColorDarkYellow">#FFC107</color>
+    <color name="nutriColorAmber">#FF9800</color>
+    <color name="nutriColorOrange">#FF5722</color>
+    
+</resources>
