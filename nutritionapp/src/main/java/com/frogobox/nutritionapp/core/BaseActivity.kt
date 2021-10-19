@@ -8,7 +8,7 @@ import android.view.View
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.viewbinding.ViewBinding
-import com.frogobox.admob.ui.FrogoAdmobActivity
+import com.frogobox.nutritionframework.admob.NutriAdmobActivity
 import com.frogobox.nutritionapp.R
 import com.google.gson.Gson
 
@@ -29,7 +29,7 @@ import com.google.gson.Gson
  * com.frogobox.basemusicplayer.base
  *
  */
-abstract class BaseActivity<VB: ViewBinding> : FrogoAdmobActivity(), IBaseActivity {
+abstract class BaseActivity<VB: ViewBinding> : NutriAdmobActivity(), IBaseActivity {
 
     protected lateinit var binding: VB
 

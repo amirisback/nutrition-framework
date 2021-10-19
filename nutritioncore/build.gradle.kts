@@ -2,7 +2,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
     java
-    id("kotlin")
+    kotlin("jvm")
     id("org.jetbrains.compose") version Dependency.COMPOSE_MULTIPLATFORM_VERSION
     `maven-publish`
 }
@@ -29,7 +29,7 @@ dependencies {
     implementation("com.google.code.gson:gson:2.8.8")
 
     implementation("com.squareup.okhttp3:okhttp:5.0.0-alpha.2")
-    implementation("com.squareup.okhttp3:logging-interceptor:4.9.1")
+    implementation("com.squareup.okhttp3:logging-interceptor:4.9.2")
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
     implementation("com.squareup.retrofit2:adapter-rxjava:2.9.0")

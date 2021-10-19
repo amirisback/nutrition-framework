@@ -165,7 +165,7 @@ dependencies {
     implementation("com.google.android.gms:play-services-ads:20.4.0")
 
     implementation("com.squareup.okhttp3:okhttp:5.0.0-alpha.2")
-    implementation("com.squareup.okhttp3:logging-interceptor:4.9.1")
+    implementation("com.squareup.okhttp3:logging-interceptor:4.9.2")
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
     implementation("com.squareup.retrofit2:adapter-rxjava:2.9.0")
@@ -175,9 +175,9 @@ dependencies {
     implementation("io.reactivex.rxjava2:rxjava:2.2.21")
 
     implementation("com.github.amirisback:frogo-recycler-view:3.8.8")
-    implementation("com.github.amirisback:frogo-admob:4.1.2")
     implementation("com.github.bumptech.glide:glide:4.12.0")
 
+    implementation("de.hdodenhof:circleimageview:3.1.0")
     implementation("com.facebook.stetho:stetho:1.5.1")
     implementation("com.readystatesoftware.chuck:library:1.1.0")
 

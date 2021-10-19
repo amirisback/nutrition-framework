@@ -27,9 +27,9 @@ object ProjectSetting {
     const val LIBRARY_NAME_FRAMEWORK = "nutritionframework"
     const val LIBRARY_NAME_CORE = "nutritioncore"
 
-    const val VERSION_MAJOR = 1
+    const val VERSION_MAJOR = 0
     const val VERSION_MINOR = 0
-    const val VERSION_PATCH = 0
+    const val VERSION_PATCH = 2
 
     const val PROJECT_COMPILE_SDK = 31
     const val PROJECT_MIN_SDK = 21

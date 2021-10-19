@@ -1,7 +1,7 @@
 package com.frogobox.nutritionapp.source.remote
 
 import android.content.Context
-import com.frogobox.api.news.util.NewsUrl
+import com.frogobox.nutritioncore.util.NewsUrl
 import com.frogobox.nutritionapp.model.Favorite
 import com.frogobox.nutritionapp.source.DataSource
 import com.frogobox.nutritioncore.core.NutriApiCallback

@@ -1,6 +1,6 @@
 package com.frogobox.nutritioncore.sources
 
-import com.frogobox.api.news.util.NewsUrl
+import com.frogobox.nutritioncore.util.NewsUrl
 import com.frogobox.nutritioncore.core.NutriApiCallback
 import com.frogobox.nutritioncore.core.NutriApiClient
 import com.frogobox.nutritioncore.core.NutriResponse
