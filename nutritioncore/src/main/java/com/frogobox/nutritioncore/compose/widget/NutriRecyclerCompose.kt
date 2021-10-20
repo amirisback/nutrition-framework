@@ -1,4 +1,4 @@
-package com.frogobox.nutritionframework.recycler.compose
+package com.frogobox.nutritioncore.compose.widget
 
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.gestures.FlingBehavior
@@ -11,24 +11,21 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import com.frogobox.nutritionframework.log.NLog
-import com.frogobox.nutritionframework.recycler.core.NutriRvConstant.NUTRI_RV_COMPOSE_TAG
-
 /*
  * Created by faisalamir on 21/08/21
- * FrogoRecyclerView
+ * NutriRecyclerView
  * -----------------------------------------
  * Name     : Muhammad Faisal Amir
  * E-mail   : faisalamircs@gmail.com
  * Github   : github.com/amirisback
  * -----------------------------------------
- * Copyright (C) 2021 FrogoBox Inc.      
+ * Copyright (C) 2021 NutriBox Inc.      
  * All rights reserved
  *
  */
 
 @Composable
-fun <T> FrogoLazyColumn(
+fun <T> NutriLazyColumn(
     data: List<T>,
     modifier: Modifier = Modifier,
     state: LazyListState = rememberLazyListState(),
@@ -41,8 +38,6 @@ fun <T> FrogoLazyColumn(
     content: @Composable() LazyItemScope.(data: T) -> Unit
 
 ) {
-    NLog.d("$NUTRI_RV_COMPOSE_TAG - FrogoLazyColumn")
-    NLog.d("$NUTRI_RV_COMPOSE_TAG - sum data : ${data.size}")
     LazyColumn(
         modifier = modifier,
         state = state,
@@ -53,14 +48,13 @@ fun <T> FrogoLazyColumn(
         reverseLayout = reverseLayout
     ) {
         items(data.size) { index ->
-            NLog.d("$NUTRI_RV_COMPOSE_TAG - list data $index : ${data[index]}")
             content(data[index])
         }
     }
 }
 
 @Composable
-fun <T> FrogoLazyRow(
+fun <T> NutriLazyRow(
     data: List<T>,
     modifier: Modifier = Modifier,
     state: LazyListState = rememberLazyListState(),
@@ -72,8 +66,6 @@ fun <T> FrogoLazyRow(
     flingBehavior: FlingBehavior = ScrollableDefaults.flingBehavior(),
     content: @Composable() LazyItemScope.(data: T) -> Unit
 ) {
-    NLog.d("$NUTRI_RV_COMPOSE_TAG - FrogoLazyRow")
-    NLog.d("$NUTRI_RV_COMPOSE_TAG - sum data : ${data.size}")
     LazyRow(
         modifier = modifier,
         state = state,
@@ -84,7 +76,6 @@ fun <T> FrogoLazyRow(
         reverseLayout = reverseLayout
     ) {
         items(data.size) { index ->
-            NLog.d("$NUTRI_RV_COMPOSE_TAG - list data : ${data[index]}")
             content(data[index])
         }
     }
@@ -92,7 +83,7 @@ fun <T> FrogoLazyRow(
 
 @ExperimentalFoundationApi
 @Composable
-fun <T> FrogoLazyFixedGrid(
+fun <T> NutriLazyFixedGrid(
     data: List<T>,
     spanCount: Int,
     modifier: Modifier = Modifier,
@@ -100,8 +91,6 @@ fun <T> FrogoLazyFixedGrid(
     contentPadding: PaddingValues = PaddingValues(0.dp),
     content: @Composable() LazyGridScope.(data: T) -> Unit
 ) {
-    NLog.d("$NUTRI_RV_COMPOSE_TAG - FrogoLazyFixedGrid")
-    NLog.d("$NUTRI_RV_COMPOSE_TAG - sum data : ${data.size}")
     LazyVerticalGrid(
         modifier = modifier,
         state = state,
@@ -109,7 +98,6 @@ fun <T> FrogoLazyFixedGrid(
         cells = GridCells.Fixed(spanCount)
     ) {
         items(data.size) { index ->
-            NLog.d("$NUTRI_RV_COMPOSE_TAG - list data : ${data[index]}")
             content(data[index])
         }
     }
@@ -117,7 +105,7 @@ fun <T> FrogoLazyFixedGrid(
 
 @ExperimentalFoundationApi
 @Composable
-fun <T> FrogoLazyAdaptiveGrid(
+fun <T> NutriLazyAdaptiveGrid(
     data: List<T>,
     minSize: Dp,
     modifier: Modifier = Modifier,
@@ -125,8 +113,6 @@ fun <T> FrogoLazyAdaptiveGrid(
     contentPadding: PaddingValues = PaddingValues(0.dp),
     content: @Composable() LazyGridScope.(data: T) -> Unit
 ) {
-    NLog.d("$NUTRI_RV_COMPOSE_TAG - FrogoLazyAdaptiveGrid")
-    NLog.d("$NUTRI_RV_COMPOSE_TAG - sum data : ${data.size}")
     LazyVerticalGrid(
         modifier = modifier,
         state = state,
@@ -134,7 +120,6 @@ fun <T> FrogoLazyAdaptiveGrid(
         cells = GridCells.Adaptive(minSize)
     ) {
         items(data.size) { index ->
-            NLog.d("$NUTRI_RV_COMPOSE_TAG - list data : ${data[index]}")
             content(data[index])
         }
     }
