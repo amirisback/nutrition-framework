@@ -78,8 +78,7 @@ dependencies {
     implementation("com.github.javiersantos:PiracyChecker:1.2.8")
     implementation("com.github.bumptech.glide:glide:4.12.0")
     implementation("de.hdodenhof:circleimageview:3.1.0")
-
-    implementation("com.github.amirisback:frogo-recycler-view:3.8.8")
+    implementation("com.facebook.shimmer:shimmer:0.5.0")
 
     implementation("com.facebook.stetho:stetho:1.5.1")
     implementation("com.readystatesoftware.chuck:library:1.1.0")

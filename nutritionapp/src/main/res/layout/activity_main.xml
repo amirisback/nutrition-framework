@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     tools:context=".mvvm.main.MainActivity">
 
-    <com.frogobox.recycler.widget.FrogoRecyclerView
+    <com.frogobox.nutritionframework.recycler.widget.NutriRecyclerView
         android:id="@+id/rv_news"
         android:paddingTop="@dimen/nutri_dimen_16dp"
         android:layout_width="match_parent"

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+ * Created by Muhammad Faisal Amir
+ * Project Source Code
+ * =========================================
+ * Name     : Muhammad Faisal Amir
+ * E-mail   : faisalamircs@gmail.com
+ * Github   : github.com/amirisback
+ * =========================================
+ * Copyright (C) FrogoBox Inc.      
+ * All rights reserved
+ *
+ -->
+
+<resources>
+
+    <!-- frogo_recycler_view attrs -->
+    <declare-styleable name="nutri_recycler_view">
+        <attr name="frvPaddingTop" format="dimension" />
+        <attr name="frvPaddingRight" format="dimension" />
+        <attr name="frvPaddingBottom" format="dimension" />
+        <attr name="frvPaddingLeft" format="dimension" />
+        <attr name="frvClipToPadding" format="boolean" />
+        <attr name="frvlayoutManager" format="string"/>
+    </declare-styleable>
+
+    <!-- frogo_recycler_view attrs -->
+    <declare-styleable name="nutri_empty_view">
+        <attr name="frv_empty_image_width" format="dimension" />
+        <attr name="frv_empty_image_height" format="dimension" />
+        <attr name="frv_empty_image_src" format="reference|color" />
+        <attr name="frv_empty_title_text" format="string" />
+        <attr name="frv_empty_title_color" format="reference|color" />
+        <attr name="frv_empty_subtitle_text" format="string" />
+        <attr name="frv_empty_subtitle_color" format="reference|color" />
+    </declare-styleable>
+
+    <!-- frogo_recycler_view attrs -->
+    <declare-styleable name="nutri_progress_bar">
+        <attr name="frvProgressHeight" format="dimension"/>
+        <attr name="frvProgressWidth" format="dimension"/>
+        <attr name="frvProgressVisibility" format="integer"/>
+    </declare-styleable>
+
+</resources>

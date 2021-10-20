@@ -7,9 +7,9 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.frogobox.nutritionframework.admob.NutriAdmobConstant.RECYCLER_VIEW_TYPE_BANNER_AD
 import com.frogobox.nutritionframework.admob.NutriAdmobConstant.RECYCLER_VIEW_TYPE_MENU_ITEM
-import com.frogobox.recycler.R
-import com.frogobox.recycler.core.FrogoHolder
-import com.frogobox.recycler.core.FrogoRecyclerViewListener
+import com.frogobox.nutritionframework.R
+import com.frogobox.nutritionframework.recycler.core.NutriHolder
+import com.frogobox.nutritionframework.recycler.core.NutriRecyclerViewListener
 
 
 /**
@@ -33,16 +33,16 @@ import com.frogobox.recycler.core.FrogoRecyclerViewListener
 abstract class NutriAdmobViewAdapter<T> : RecyclerView.Adapter<NutriAdmobViewHolder<T>>() {
 
     protected var viewCallback: INutriAdmobViewAdapter<T>? = null
-    protected var viewListener: FrogoRecyclerViewListener<T>? = null
+    protected var viewListener: NutriRecyclerViewListener<T>? = null
 
-    protected val frogoHolder = mutableListOf<FrogoHolder<T>>()
+    protected val frogoHolder = mutableListOf<NutriHolder<T>>()
     protected val listData = mutableListOf<T>()
     protected var listCount = 0
 
     protected var hasEmptyView = false
     protected var layoutRv: Int = 0
     protected var customLayoutRestId: Int = 0
-    protected var emptyLayoutResId: Int = R.layout.frogo_container_empty_view
+    protected var emptyLayoutResId: Int = R.layout.nutri_container_empty_view
 
     override fun getItemCount(): Int {
         return if (hasEmptyView) {
@@ -111,7 +111,6 @@ abstract class NutriAdmobViewAdapter<T> : RecyclerView.Adapter<NutriAdmobViewHol
 
     private fun emptyViewHandle() {
         layoutHandle()
-        notifyDataSetChanged()
     }
 
     fun setupEmptyView(emptyView: Int?) {
@@ -125,7 +124,7 @@ abstract class NutriAdmobViewAdapter<T> : RecyclerView.Adapter<NutriAdmobViewHol
     fun setupRequirement(
             customViewInt: Int,
             listData: List<T>?,
-            listener: FrogoRecyclerViewListener<T>?
+            listener: NutriRecyclerViewListener<T>?
     ) {
 
         if (listener != null) {

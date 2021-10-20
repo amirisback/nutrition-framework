@@ -2,7 +2,7 @@ package com.frogobox.nutritionframework.admob
 
 import android.view.View
 import android.view.ViewGroup
-import com.frogobox.recycler.core.FrogoRecyclerViewHolder
+import com.frogobox.nutritionframework.recycler.core.NutriRecyclerViewHolder
 import com.google.android.gms.ads.AdView
 
 /**
@@ -23,7 +23,7 @@ import com.google.android.gms.ads.AdView
  *
  */
 
-abstract class NutriAdmobViewHolder<T>(view: View) : FrogoRecyclerViewHolder<T>(view) {
+abstract class NutriAdmobViewHolder<T>(view: View) : NutriRecyclerViewHolder<T>(view) {
 
     fun bindItemAdView(data: T) {
         val adView = data as AdView
