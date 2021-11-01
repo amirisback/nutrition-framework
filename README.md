@@ -62,16 +62,16 @@ allprojects {
     }
 
 ## Documentation
+- General [Click Here](https://github.com/amirisback/nutrition-framework/tree/master/docs)
+- Bundle [Click Here](https://github.com/amirisback/nutrition-framework/tree/master/docs/bundle)
 - Guide [Click Here](https://github.com/amirisback/nutrition-framework/tree/master/docs/guide)
 - Journal [Click Here](https://github.com/amirisback/nutrition-framework/tree/master/docs/journal)
 - Theory [Click Here](https://github.com/amirisback/nutrition-framework/tree/master/docs/theory)
-- Proposal [Click Here](https://github.com/amirisback/nutrition-framework/tree/master/docs)
+- Proposal [Click Here](https://github.com/amirisback/nutrition-framework/tree/master/docs/proposal)
 - Guidance [Click Here](https://github.com/amirisback/nutrition-framework/tree/master/docs/guidance)
 - Image [Click Here](https://github.com/amirisback/nutrition-framework/tree/master/docs/image)
-- Slide Seminar Proposal [Click Here](https://docs.google.com/presentation/d/1TbJjrjXdieSdqo_dSz0N_umAgeT6euGOWp-nYOHS3g8/edit?usp=sharing)
 - Design, Flowchart on Figma [Click Here](https://www.figma.com/file/Ons8XY0YvxecwC71Aa92Qj/TA?node-id=0%3A1)
 - Sheet Feedback [Click Here](https://docs.google.com/spreadsheets/d/1P8U2lu8odQJwLPD3QiSJGJXAgocdc_H5j7PdT23lPZc/edit#gid=0)
-- Record Revision [Click Here](https://github.com/amirisback/nutrition-framework/tree/master/docs/record)
 - SK TA [Click Here](https://github.com/amirisback/nutrition-framework/raw/master/docs/Muhammad%20Faisal%20Amir_1301198497_SK_TA.pdf)
 
 ## Telkom University Lecturers

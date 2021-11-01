@@ -37,5 +37,6 @@
     <color name="nutriColorDarkYellow">#FFC107</color>
     <color name="nutriColorAmber">#FF9800</color>
     <color name="nutriColorOrange">#FF5722</color>
-    
+    <color name="nutriColorGrey">#919191</color>
+
 </resources>
