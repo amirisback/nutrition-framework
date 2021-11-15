@@ -1,4 +1,4 @@
-package com.frogobox.nutritioncore.model
+package com.frogobox.nutritioncore.model.news
 
 import com.google.gson.annotations.SerializedName
 

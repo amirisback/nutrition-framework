@@ -5,7 +5,7 @@ import androidx.lifecycle.viewModelScope
 import com.frogobox.nutritionapp.source.DataRepository
 import com.frogobox.nutritionapp.source.DataSource
 import com.frogobox.nutritionapp.util.Constant
-import com.frogobox.nutritioncore.model.ArticleResponse
+import com.frogobox.nutritioncore.model.news.ArticleResponse
 import com.frogobox.nutritionframework.core.NutriViewModel
 import com.frogobox.nutritionframework.util.NutriSingleLiveEvent
 import kotlinx.coroutines.launch

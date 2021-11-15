@@ -9,12 +9,13 @@ import com.frogobox.nutritionapp.R
 import com.frogobox.nutritionapp.core.BaseActivity
 import com.frogobox.nutritionapp.databinding.ActivityNutritionArticleBinding
 import com.frogobox.nutritionapp.util.Constant
-import com.frogobox.nutritioncore.model.Article
+import com.frogobox.nutritionapp.util.Constant.Extra.EXTRA_ARTICLE_DETAIL
+import com.frogobox.nutritioncore.model.news.Article
 import com.frogobox.nutritionframework.recycler.core.INutriViewAdapter
 import com.google.gson.Gson
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
-class NutritionArticleActivity  : BaseActivity<ActivityNutritionArticleBinding>() {
+class NutritionArticleActivity : BaseActivity<ActivityNutritionArticleBinding>() {
 
     private val nutritionArticleViewModel: NutritionArticleViewModel by viewModel()
 
@@ -47,14 +48,16 @@ class NutritionArticleActivity  : BaseActivity<ActivityNutritionArticleBinding>(
     }
 
 
-
     private fun setupRvNews(data: List<Article>) {
 
         val newsAdapter = object : INutriViewAdapter<Article> {
             override fun onItemClicked(data: Article) {
-                val intent = Intent(this@NutritionArticleActivity, NutritionArticleDetailActivity::class.java)
+                val intent = Intent(
+                    this@NutritionArticleActivity,
+                    NutritionArticleDetailActivity::class.java
+                )
                 val extraData = Gson().toJson(data)
-                intent.putExtra("EXTRA_DATA_ARTICLE", extraData)
+                intent.putExtra(EXTRA_ARTICLE_DETAIL, extraData)
                 startActivity(intent)
             }
 

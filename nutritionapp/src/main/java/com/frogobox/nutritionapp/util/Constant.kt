@@ -31,11 +31,7 @@ object Constant {
 
     object Extra {
         const val BASE_EXTRA = BuildConfig.APPLICATION_ID
-        const val EXTRA_OPTION = "$BASE_EXTRA.EXTRA_OPTION"
-        const val EXTRA_FASHION = "$BASE_EXTRA.EXTRA_FASHION"
-        const val EXTRA_FAVORITE_SCRIPT = "$BASE_EXTRA.EXTRA_FAVORITE_SCRIPT"
-        const val EXTRA_EXAMPLE_SCRIPT = "$BASE_EXTRA.EXTRA_EXAMPLE_SCRIPT"
-        const val EXTRA_CATEGORY = "$BASE_EXTRA.EXTRA_CATEGORY"
+        const val EXTRA_ARTICLE_DETAIL = "$BASE_EXTRA.EXTRA_ARTICLE_DETAIL"
     }
 
     object Const {

@@ -1,4 +1,4 @@
-package com.frogobox.nutritioncore.util
+package com.frogobox.nutritioncore.util.news
 
 /*
  * Created by faisalamir on 27/07/21

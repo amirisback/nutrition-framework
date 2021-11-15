@@ -1,4 +1,4 @@
-package com.frogobox.nutritioncore
+package com.frogobox.nutritioncore.method.function
 
 
 /*
@@ -14,5 +14,5 @@ package com.frogobox.nutritioncore
  *
  */
 
-interface INutritionApi {
+class NutritionApi {
 }

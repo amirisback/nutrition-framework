@@ -1,13 +1,13 @@
 package com.frogobox.nutritionapp.source.remote
 
 import android.content.Context
-import com.frogobox.nutritioncore.util.NewsUrl
+import com.frogobox.nutritioncore.util.news.NewsUrl
 import com.frogobox.nutritionapp.model.Favorite
 import com.frogobox.nutritionapp.source.DataSource
 import com.frogobox.nutritioncore.core.NutriApiCallback
-import com.frogobox.nutritioncore.model.ArticleResponse
-import com.frogobox.nutritioncore.model.SourceResponse
-import com.frogobox.nutritioncore.sources.NewsApiService
+import com.frogobox.nutritioncore.model.news.ArticleResponse
+import com.frogobox.nutritioncore.model.news.SourceResponse
+import com.frogobox.nutritioncore.sources.news.NewsApiService
 import com.frogobox.nutritionframework.core.NutriApiClient
 import com.frogobox.nutritionframework.util.NutriSingleFunc.noAction
 import io.reactivex.android.schedulers.AndroidSchedulers

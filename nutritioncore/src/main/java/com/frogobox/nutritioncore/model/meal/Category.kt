@@ -1,4 +1,4 @@
-package com.frogobox.nutritioncore.model
+package com.frogobox.nutritioncore.model.meal
 
 import com.google.gson.annotations.SerializedName
 
@@ -6,7 +6,7 @@ import com.google.gson.annotations.SerializedName
  * Created by Faisal Amir
  * FrogoBox Inc License
  * =========================================
- * NewsApi
+ * TheMealsAPI
  * Copyright (C) 15/03/2020.
  * All rights reserved
  * -----------------------------------------
@@ -16,15 +16,21 @@ import com.google.gson.annotations.SerializedName
  * LinkedIn : linkedin.com/in/faisalamircs
  * -----------------------------------------
  * FrogoBox Software Industries
- * com.frogobox.frogoconsumeapi.news.data.response
+ * com.frogobox.frogoconsumeapi.meal.data.model
  *
  */
-data class SourceResponse(
+data class Category(
 
-    @SerializedName("status")
-    var status: String? = null,
+    @SerializedName("idCategory")
+    var idCategory: String? = null,
 
-    @SerializedName("sources")
-    var sources: List<Source>? = null
+    @SerializedName("strCategory")
+    var strCategory: String? = null,
+
+    @SerializedName("strCategoryThumb")
+    var strCategoryThumb: String? = null,
+
+    @SerializedName("strCategoryDescription")
+    var strCategoryDescription: String? = null
 
 )

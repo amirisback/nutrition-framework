@@ -2,9 +2,9 @@ package com.frogobox.nutritionapp.source.local
 
 import android.content.Context
 import android.content.SharedPreferences
-import com.frogobox.nutritioncore.model.ArticleResponse
+import com.frogobox.nutritioncore.model.news.ArticleResponse
 import com.frogobox.nutritionapp.model.Favorite
-import com.frogobox.nutritioncore.model.SourceResponse
+import com.frogobox.nutritioncore.model.news.SourceResponse
 import com.frogobox.nutritionapp.source.DataSource
 import com.frogobox.nutritionapp.source.local.dao.FavoriteDao
 import com.frogobox.nutritionframework.util.AppExecutors

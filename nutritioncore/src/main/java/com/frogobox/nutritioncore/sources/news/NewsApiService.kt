@@ -1,11 +1,11 @@
-package com.frogobox.nutritioncore.sources
+package com.frogobox.nutritioncore.sources.news
 
-import com.frogobox.nutritioncore.model.ArticleResponse
-import com.frogobox.nutritioncore.model.SourceResponse
-import com.frogobox.nutritioncore.util.NewsConstant
-import com.frogobox.nutritioncore.util.NewsUrl.URL_EVERYTHING
-import com.frogobox.nutritioncore.util.NewsUrl.URL_SOURCES
-import com.frogobox.nutritioncore.util.NewsUrl.URL_TOP_HEADLINE
+import com.frogobox.nutritioncore.model.news.ArticleResponse
+import com.frogobox.nutritioncore.model.news.SourceResponse
+import com.frogobox.nutritioncore.util.news.NewsConstant
+import com.frogobox.nutritioncore.util.news.NewsUrl.URL_EVERYTHING
+import com.frogobox.nutritioncore.util.news.NewsUrl.URL_SOURCES
+import com.frogobox.nutritioncore.util.news.NewsUrl.URL_TOP_HEADLINE
 import io.reactivex.Observable
 import retrofit2.http.GET
 import retrofit2.http.Query

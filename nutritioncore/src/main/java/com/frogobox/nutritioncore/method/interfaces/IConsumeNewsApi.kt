@@ -1,8 +1,8 @@
-package com.frogobox.nutritioncore
+package com.frogobox.nutritioncore.method.interfaces
 
 import com.frogobox.nutritioncore.core.NutriResponse
-import com.frogobox.nutritioncore.model.ArticleResponse
-import com.frogobox.nutritioncore.model.SourceResponse
+import com.frogobox.nutritioncore.model.news.ArticleResponse
+import com.frogobox.nutritioncore.model.news.SourceResponse
 
 
 /**

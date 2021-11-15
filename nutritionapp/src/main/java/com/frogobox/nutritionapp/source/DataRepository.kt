@@ -2,9 +2,9 @@ package com.frogobox.nutritionapp.source
 
 
 import android.content.Context
-import com.frogobox.nutritioncore.model.ArticleResponse
+import com.frogobox.nutritioncore.model.news.ArticleResponse
 import com.frogobox.nutritionapp.model.Favorite
-import com.frogobox.nutritioncore.model.SourceResponse
+import com.frogobox.nutritioncore.model.news.SourceResponse
 import com.frogobox.nutritionapp.source.local.LocalDataSource
 import com.frogobox.nutritionapp.source.remote.RemoteDataSource
 

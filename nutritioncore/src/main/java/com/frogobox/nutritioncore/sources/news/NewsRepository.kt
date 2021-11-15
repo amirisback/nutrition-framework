@@ -1,11 +1,11 @@
-package com.frogobox.nutritioncore.sources
+package com.frogobox.nutritioncore.sources.news
 
-import com.frogobox.nutritioncore.util.NewsUrl
+import com.frogobox.nutritioncore.util.news.NewsUrl
 import com.frogobox.nutritioncore.core.NutriApiCallback
 import com.frogobox.nutritioncore.core.NutriApiClient
 import com.frogobox.nutritioncore.core.NutriResponse
-import com.frogobox.nutritioncore.model.ArticleResponse
-import com.frogobox.nutritioncore.model.SourceResponse
+import com.frogobox.nutritioncore.model.news.ArticleResponse
+import com.frogobox.nutritioncore.model.news.SourceResponse
 import io.reactivex.schedulers.Schedulers
 
 /**

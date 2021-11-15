@@ -1,4 +1,4 @@
-package com.frogobox.nutritioncore.util
+package com.frogobox.nutritioncore.util.news
 
 /**
  * Created by Faisal Amir

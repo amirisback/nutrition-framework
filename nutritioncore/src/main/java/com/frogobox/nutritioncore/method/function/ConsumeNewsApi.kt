@@ -1,9 +1,10 @@
-package com.frogobox.nutritioncore
+package com.frogobox.nutritioncore.method.function
 
 import com.frogobox.nutritioncore.core.NutriResponse
-import com.frogobox.nutritioncore.model.ArticleResponse
-import com.frogobox.nutritioncore.model.SourceResponse
-import com.frogobox.nutritioncore.sources.NewsRepository
+import com.frogobox.nutritioncore.method.interfaces.IConsumeNewsApi
+import com.frogobox.nutritioncore.model.news.ArticleResponse
+import com.frogobox.nutritioncore.model.news.SourceResponse
+import com.frogobox.nutritioncore.sources.news.NewsRepository
 
 /**
  * Created by Faisal Amir
