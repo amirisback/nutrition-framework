@@ -35,6 +35,11 @@ object Constant {
 
         const val ACTIVITY_MEAL = "Daftar Resep Makanan"
 
+        const val ACTIVITY_VITAMIN = "Vitamin"
+        const val ACTIVITY_VITAMIN_INFORMATION = "Informasi Seputar Vitamin"
+        const val ACTIVITY_VITAMIN_PROBLEM = "Permasalahan Seputar Vitamin"
+        const val ACTIVITY_VITAMIN_SOLVE = "Penyelesaian Masalah Vitamin"
+
     }
 
     object Extra {

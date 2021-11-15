@@ -10,6 +10,7 @@ import com.frogobox.nutritionapp.databinding.ActivityMainBinding
 import com.frogobox.nutritionapp.model.Menu
 import com.frogobox.nutritionapp.mvvm.nutrition.article.NutritionArticleActivity
 import com.frogobox.nutritionapp.mvvm.nutrition.calculator.CalculatorNutritionActivity
+import com.frogobox.nutritionapp.mvvm.nutrition.category.vitamins.VitaminActivity
 import com.frogobox.nutritionapp.mvvm.nutrition.meal.NutritionMealActivity
 import com.frogobox.nutritionapp.mvvm.uixml.UiXmlActivity
 import com.frogobox.nutritionapp.util.Constant
@@ -35,7 +36,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
                     }
 
                     override fun onItemLongClicked(data: Menu) {}
-                    override fun setupInitComponent(view: View, data: Menu) {
+                    override    fun setupInitComponent(view: View, data: Menu) {
                         view.findViewById<TextView>(R.id.nutri_rv_list_type_1_tv_title).text =
                             data.name
                     }
@@ -51,6 +52,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
         data.add(Menu(Constant.TitleActivity.ACTIVITY_NUTRITION_ARTICLE, Intent(this, NutritionArticleActivity::class.java)))
         data.add(Menu(Constant.TitleActivity.ACTIVITY_CALCULATOR, Intent(this, CalculatorNutritionActivity::class.java)))
         data.add(Menu(Constant.TitleActivity.ACTIVITY_MEAL, Intent(this, NutritionMealActivity::class.java)))
+        data.add(Menu(Constant.TitleActivity.ACTIVITY_VITAMIN, Intent(this, VitaminActivity::class.java)))
         return data
     }
 

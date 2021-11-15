@@ -141,17 +141,17 @@ dependencies {
     implementation(project(":nutritionframework"))
 
     implementation("androidx.appcompat:appcompat:1.3.1")
-    implementation("androidx.core:core-ktx:1.6.0")
+    implementation("androidx.core:core-ktx:1.7.0")
     implementation("androidx.preference:preference-ktx:1.1.1")
     implementation("androidx.constraintlayout:constraintlayout:2.1.1")
     implementation("androidx.legacy:legacy-support-v4:1.0.0")
 
-    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.0-rc01")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.0")
     implementation("androidx.lifecycle:lifecycle-extensions:2.2.0")
-    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.3.1")
-    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.3.1")
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.4.0")
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.4.0")
 
-    implementation("androidx.activity:activity-compose:1.3.1")
+    implementation("androidx.activity:activity-compose:1.4.0")
     implementation("androidx.activity:activity-ktx:${Dependency.ACTIVITY_KTX_VERSION}")
     implementation("androidx.fragment:fragment-ktx:${Dependency.FRAGMENT_KTX_VERSION}")
 
@@ -184,7 +184,7 @@ dependencies {
     api("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.2")
     api("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.2")
 
-    kapt("androidx.lifecycle:lifecycle-compiler:2.4.0-rc01")
+    kapt("androidx.lifecycle:lifecycle-compiler:2.4.0")
     kapt("androidx.room:room-compiler:2.3.0")
     kapt("com.google.dagger:dagger-compiler:2.37")
     kapt("com.github.bumptech.glide:compiler:4.11.0")

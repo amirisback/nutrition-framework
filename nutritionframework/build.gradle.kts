@@ -52,12 +52,12 @@ dependencies {
 
     implementation(project(":nutritioncore"))
 
-    implementation("androidx.core:core-ktx:1.6.0")
+    implementation("androidx.core:core-ktx:1.7.0")
     implementation("androidx.appcompat:appcompat:1.3.1")
     implementation("androidx.constraintlayout:constraintlayout:2.1.1")
 
-    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.3.1")
-    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.0-rc01")
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.4.0")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.0")
     implementation("androidx.lifecycle:lifecycle-extensions:2.2.0")
 
     implementation("com.google.code.gson:gson:2.8.8")
@@ -87,7 +87,7 @@ dependencies {
     api("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.2")
     api("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.2")
 
-    kapt("androidx.lifecycle:lifecycle-compiler:2.4.0-rc01")
+    kapt("androidx.lifecycle:lifecycle-compiler:2.4.0")
     kapt("androidx.room:room-compiler:2.3.0")
     kapt("com.google.dagger:dagger-compiler:2.37")
     kapt("com.github.bumptech.glide:compiler:4.11.0")
