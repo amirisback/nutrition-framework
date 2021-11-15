@@ -1,4 +1,4 @@
-package com.frogobox.nutritionapp.mvvm.main
+package com.frogobox.nutritionapp.mvvm.nutrition.calculator
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,26 +6,27 @@ import android.view.View
 import android.widget.TextView
 import com.frogobox.nutritionapp.R
 import com.frogobox.nutritionapp.core.BaseActivity
-import com.frogobox.nutritionapp.databinding.ActivityMainBinding
+import com.frogobox.nutritionapp.databinding.ActivityCalculatorNutritionBinding
 import com.frogobox.nutritionapp.model.Menu
-import com.frogobox.nutritionapp.mvvm.nutrition.article.NutritionArticleActivity
-import com.frogobox.nutritionapp.mvvm.nutrition.calculator.CalculatorNutritionActivity
-import com.frogobox.nutritionapp.mvvm.uixml.UiXmlActivity
+import com.frogobox.nutritionapp.mvvm.nutrition.calculator.function.BeratBadanIdealActivity
+import com.frogobox.nutritionapp.mvvm.nutrition.calculator.function.IndexMasaTubuhActivity
+import com.frogobox.nutritionapp.mvvm.nutrition.calculator.function.KebutuhanEnergiActivity
 import com.frogobox.nutritionapp.util.Constant
 import com.frogobox.nutritionframework.recycler.core.INutriViewAdapter
 
-class MainActivity : BaseActivity<ActivityMainBinding>() {
+class CalculatorNutritionActivity : BaseActivity<ActivityCalculatorNutritionBinding>() {
 
-    override fun setupViewBinding(): ActivityMainBinding {
-        return ActivityMainBinding.inflate(layoutInflater)
+    override fun setupViewBinding(): ActivityCalculatorNutritionBinding {
+        return ActivityCalculatorNutritionBinding.inflate(layoutInflater)
     }
 
     override fun setupViewModel() {
     }
 
     override fun setupUI(savedInstanceState: Bundle?) {
+        setupDetailActivity(Constant.TitleActivity.ACTIVITY_CALCULATOR)
         binding.apply {
-            mainNutriRv.injector<Menu>()
+            calculatorNutriRv.injector<Menu>()
                 .addCustomView(R.layout.nutri_rv_list_type_1)
                 .addData(data())
                 .addCallback(object : INutriViewAdapter<Menu> {
@@ -46,9 +47,9 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
 
     private fun data(): MutableList<Menu> {
         val data = mutableListOf<Menu>()
-        data.add(Menu(Constant.TitleActivity.ACTIVITY_UI_XML, Intent(this, UiXmlActivity::class.java)))
-        data.add(Menu(Constant.TitleActivity.ACTIVITY_NUTRITION_ARTICLE, Intent(this, NutritionArticleActivity::class.java)))
-        data.add(Menu(Constant.TitleActivity.ACTIVITY_CALCULATOR, Intent(this, CalculatorNutritionActivity::class.java)))
+        data.add(Menu(Constant.TitleActivity.ACTIVITY_CALCULATOR_KEBUTUHAN_ENERGI, Intent(this, KebutuhanEnergiActivity::class.java)))
+        data.add(Menu(Constant.TitleActivity.ACTIVITY_CALCULATOR_INDEX_MASA_TUBUH, Intent(this, IndexMasaTubuhActivity::class.java)))
+        data.add(Menu(Constant.TitleActivity.ACTIVITY_CALCULATOR_BERAT_BADAN_IDEAL, Intent(this, BeratBadanIdealActivity::class.java)))
         return data
     }
 

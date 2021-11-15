@@ -19,12 +19,23 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="n">
         <activity
+            android:name=".mvvm.nutrition.calculator.function.BeratBadanIdealActivity"
+            android:exported="false" />
+        <activity
+            android:name=".mvvm.nutrition.calculator.function.IndexMasaTubuhActivity"
+            android:exported="false" />
+        <activity
+            android:name=".mvvm.nutrition.calculator.function.KebutuhanEnergiActivity"
+            android:exported="false" />
+        <activity
+            android:name=".mvvm.nutrition.calculator.CalculatorNutritionActivity"
+            android:exported="false" />
+        <activity
             android:name=".mvvm.nutrition.article.NutritionArticleActivity"
             android:exported="false" />
         <activity
             android:name=".mvvm.uixml.UiXmlActivity"
-            android:exported="true">
-        </activity>
+            android:exported="true" />
         <activity android:name=".mvvm.uixml.UiXmlRvActivity" />
         <activity android:name=".mvvm.uixml.UiXmlRvDetailActivity" />
         <activity

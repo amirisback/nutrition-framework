@@ -27,6 +27,10 @@ object Constant {
         const val ACTIVITY_UI_XML = "UI XML"
         const val ACTIVITY_NUTRITION_ARTICLE = "Artikel Nutrisi"
         const val ACTIVITY_NUTRITION_ARTICLE_DETAIL = "Detail Artikel Nutrisi"
+        const val ACTIVITY_CALCULATOR = "Kalkulator Nutrisi"
+        const val ACTIVITY_CALCULATOR_BERAT_BADAN_IDEAL = "Berat Badan Ideal"
+        const val ACTIVITY_CALCULATOR_KEBUTUHAN_ENERGI = "Kebutuhan Energi"
+        const val ACTIVITY_CALCULATOR_INDEX_MASA_TUBUH = "Index Masa Tubuh"
     }
 
     object Extra {
