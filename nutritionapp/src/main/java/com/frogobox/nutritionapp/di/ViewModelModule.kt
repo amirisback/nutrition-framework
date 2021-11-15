@@ -1,6 +1,7 @@
 package com.frogobox.nutritionapp.di
 
 import com.frogobox.nutritionapp.mvvm.nutrition.article.NutritionArticleViewModel
+import com.frogobox.nutritionapp.mvvm.nutrition.meal.NutritionMealViewModel
 import org.koin.android.ext.koin.androidApplication
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
@@ -22,6 +23,10 @@ val viewModelModule = module {
 
     viewModel {
         NutritionArticleViewModel(androidApplication(), get())
+    }
+
+    viewModel {
+        NutritionMealViewModel(androidApplication(), get())
     }
 
 }

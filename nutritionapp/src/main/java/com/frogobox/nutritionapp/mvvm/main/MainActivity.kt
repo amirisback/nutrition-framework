@@ -10,6 +10,7 @@ import com.frogobox.nutritionapp.databinding.ActivityMainBinding
 import com.frogobox.nutritionapp.model.Menu
 import com.frogobox.nutritionapp.mvvm.nutrition.article.NutritionArticleActivity
 import com.frogobox.nutritionapp.mvvm.nutrition.calculator.CalculatorNutritionActivity
+import com.frogobox.nutritionapp.mvvm.nutrition.meal.NutritionMealActivity
 import com.frogobox.nutritionapp.mvvm.uixml.UiXmlActivity
 import com.frogobox.nutritionapp.util.Constant
 import com.frogobox.nutritionframework.recycler.core.INutriViewAdapter
@@ -49,6 +50,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
         data.add(Menu(Constant.TitleActivity.ACTIVITY_UI_XML, Intent(this, UiXmlActivity::class.java)))
         data.add(Menu(Constant.TitleActivity.ACTIVITY_NUTRITION_ARTICLE, Intent(this, NutritionArticleActivity::class.java)))
         data.add(Menu(Constant.TitleActivity.ACTIVITY_CALCULATOR, Intent(this, CalculatorNutritionActivity::class.java)))
+        data.add(Menu(Constant.TitleActivity.ACTIVITY_MEAL, Intent(this, NutritionMealActivity::class.java)))
         return data
     }
 
