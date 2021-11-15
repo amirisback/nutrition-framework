@@ -8,8 +8,11 @@ import android.view.View
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.viewbinding.ViewBinding
+import androidx.viewpager2.widget.ViewPager2
 import com.frogobox.nutritionframework.admob.NutriAdmobActivity
 import com.frogobox.nutritionapp.R
+import com.google.android.material.tabs.TabLayout
+import com.google.android.material.tabs.TabLayoutMediator
 import com.google.gson.Gson
 
 /**
@@ -73,6 +76,7 @@ abstract class BaseActivity<VB: ViewBinding> : NutriAdmobActivity(), IBaseActivi
     override fun setupDetailActivity(title: String) {
         supportActionBar?.title = title
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.elevation = 0f
     }
 
     override fun setupChildFragment(frameId: Int, fragment: Fragment) {
@@ -131,6 +135,16 @@ abstract class BaseActivity<VB: ViewBinding> : NutriAdmobActivity(), IBaseActivi
     protected inline fun <reified Model> baseGetExtraData(extraKey: String): Model {
         val extraIntent = intent.getStringExtra(extraKey)
         return Gson().fromJson(extraIntent, Model::class.java)
+    }
+
+    protected fun setupTabTitles(
+        tabLayout: TabLayout,
+        viewPager2: ViewPager2,
+        titles: MutableList<String>
+    ) {
+        TabLayoutMediator(tabLayout, viewPager2) { tab: TabLayout.Tab, position: Int ->
+            tab.text = titles[position]
+        }.attach()
     }
 
 }

@@ -11,7 +11,8 @@ class MainFragment : BaseFragment<FragmentMainBinding>() {
 
     override fun setupViewBinding(
         inflater: LayoutInflater,
-        container: ViewGroup
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
     ): FragmentMainBinding {
         return FragmentMainBinding.inflate(inflater, container, false)
     }
@@ -19,7 +20,7 @@ class MainFragment : BaseFragment<FragmentMainBinding>() {
     override fun setupViewModel() {}
 
     override fun setupUI(savedInstanceState: Bundle?) {
-        binding?.apply {
+        binding.apply {
 
         }
     }

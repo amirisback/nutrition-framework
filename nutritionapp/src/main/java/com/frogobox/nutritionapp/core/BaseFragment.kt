@@ -32,9 +32,10 @@ abstract class BaseFragment<VB : ViewBinding> : Fragment(), IBaseFragment {
 
     protected lateinit var mActivity: BaseActivity<*>
 
-    protected var binding : VB? = null
+    private var _binding: VB? = null
+    protected val binding: VB get() = _binding!!
 
-    abstract fun setupViewBinding(inflater: LayoutInflater, container: ViewGroup): VB
+    abstract fun setupViewBinding(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): VB
 
     abstract fun setupViewModel()
 
@@ -45,9 +46,9 @@ abstract class BaseFragment<VB : ViewBinding> : Fragment(), IBaseFragment {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = container?.let { setupViewBinding(inflater, it) }
+        _binding = setupViewBinding(inflater, container, savedInstanceState)
         setupViewModel()
-        return binding?.root
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -57,7 +58,7 @@ abstract class BaseFragment<VB : ViewBinding> : Fragment(), IBaseFragment {
 
     override fun onDestroy() {
         super.onDestroy()
-        binding = null
+        _binding = null
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
