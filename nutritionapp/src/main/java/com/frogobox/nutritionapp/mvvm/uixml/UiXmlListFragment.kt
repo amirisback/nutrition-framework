@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import com.frogobox.nutritionapp.model.Layout
+import com.frogobox.nutritionapp.model.LayoutUiXml
 import com.frogobox.nutritionapp.R
 import com.frogobox.nutritionapp.core.BaseFragment
 import com.frogobox.nutritionapp.databinding.FragmentUiXmlRvListBinding
@@ -32,7 +32,7 @@ class UiXmlListFragment : BaseFragment<FragmentUiXmlRvListBinding>() {
         setupRecyclerView()
     }
 
-    private fun intentToLayoutSample(data: Layout) {
+    private fun intentToLayoutSample(data: LayoutUiXml) {
         val dataString = Gson().toJson(data)
         val intent = Intent(mActivity, UiXmlRvDetailActivity::class.java)
         intent.putExtra("EXTRA_DATA", dataString)
@@ -40,13 +40,13 @@ class UiXmlListFragment : BaseFragment<FragmentUiXmlRvListBinding>() {
     }
 
     private fun setupRecyclerView() {
-        binding.nutriRv.injector<Layout>()
+        binding.nutriRv.injector<LayoutUiXml>()
             .addCustomView(R.layout.nutri_rv_list_type_1)
             .addData(UiXmlRvConstant.dataRvList())
-            .addCallback(object : INutriViewAdapter<Layout> {
-                override fun onItemClicked(data: Layout) { intentToLayoutSample(data) }
-                override fun onItemLongClicked(data: Layout) {}
-                override fun setupInitComponent(view: View, data: Layout) {
+            .addCallback(object : INutriViewAdapter<LayoutUiXml> {
+                override fun onItemClicked(data: LayoutUiXml) { intentToLayoutSample(data) }
+                override fun onItemLongClicked(data: LayoutUiXml) {}
+                override fun setupInitComponent(view: View, data: LayoutUiXml) {
                     view.findViewById<TextView>(R.id.nutri_rv_list_type_1_tv_title).text = data.name
                 }
             })

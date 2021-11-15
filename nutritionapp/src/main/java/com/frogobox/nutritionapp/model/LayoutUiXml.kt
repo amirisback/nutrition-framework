@@ -13,7 +13,7 @@ package com.frogobox.nutritionapp.model
  *
  */
 
-data class Layout(
+data class LayoutUiXml(
     val name: String,
     val type: String,
     val layout: Int,

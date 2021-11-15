@@ -5,7 +5,7 @@ import androidx.core.view.updatePadding
 import com.frogobox.nutritionapp.mvvm.uixml.UiXmlRvConstant.TYPE_GRID
 import com.frogobox.nutritionapp.mvvm.uixml.UiXmlRvConstant.dummyData
 import com.frogobox.nutritionapp.mvvm.uixml.UiXmlRvAdapter.frogoRvAdaper
-import com.frogobox.nutritionapp.model.Layout
+import com.frogobox.nutritionapp.model.LayoutUiXml
 import com.frogobox.nutritionapp.core.BaseActivity
 import com.frogobox.nutritionapp.databinding.ActivityUiXmlRvDetailBinding
 import com.frogobox.nutritionframework.recycler.core.INutriViewAdapter
@@ -25,9 +25,9 @@ class UiXmlRvDetailActivity : BaseActivity<ActivityUiXmlRvDetailBinding>() {
         setupRecyclerView(frogoRv())
     }
 
-    private fun extraData() : Layout {
+    private fun extraData() : LayoutUiXml {
         val extra = intent.getStringExtra("EXTRA_DATA")
-        return Gson().fromJson(extra, Layout::class.java)
+        return Gson().fromJson(extra, LayoutUiXml::class.java)
     }
 
     private fun frogoRv() : INutriViewAdapter<String> {

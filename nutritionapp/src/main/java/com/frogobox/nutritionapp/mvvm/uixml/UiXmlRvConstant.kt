@@ -1,6 +1,6 @@
 package com.frogobox.nutritionapp.mvvm.uixml
 
-import com.frogobox.nutritionapp.model.Layout
+import com.frogobox.nutritionapp.model.LayoutUiXml
 import com.frogobox.nutritionapp.R
 
 /*
@@ -28,32 +28,32 @@ object UiXmlRvConstant {
         return data
     }
     
-    fun dataRvList() : MutableList<Layout> {
-        val data = mutableListOf<Layout>()
-        data.add(Layout("nutri_rv_list_type_1", TYPE_LIST, R.layout.nutri_rv_list_type_1))
-        data.add(Layout("nutri_rv_list_type_2", TYPE_LIST, R.layout.nutri_rv_list_type_2))
-        data.add(Layout("nutri_rv_list_type_3", TYPE_LIST, R.layout.nutri_rv_list_type_3))
-        data.add(Layout("nutri_rv_list_type_4", TYPE_LIST, R.layout.nutri_rv_list_type_4))
-        data.add(Layout("nutri_rv_list_type_5", TYPE_LIST, R.layout.nutri_rv_list_type_5))
-        data.add(Layout("nutri_rv_list_type_6", TYPE_LIST, R.layout.nutri_rv_list_type_6))
-        data.add(Layout("nutri_rv_list_type_7", TYPE_LIST, R.layout.nutri_rv_list_type_7))
-        data.add(Layout("nutri_rv_list_type_8", TYPE_LIST, R.layout.nutri_rv_list_type_8))
-        data.add(Layout("nutri_rv_list_type_9", TYPE_LIST, R.layout.nutri_rv_list_type_9))
-        data.add(Layout("nutri_rv_list_type_10", TYPE_LIST, R.layout.nutri_rv_list_type_10))
-        data.add(Layout("nutri_rv_list_type_11", TYPE_LIST, R.layout.nutri_rv_list_type_11))
-        data.add(Layout("nutri_rv_list_type_12", TYPE_LIST, R.layout.nutri_rv_list_type_12))
+    fun dataRvList() : MutableList<LayoutUiXml> {
+        val data = mutableListOf<LayoutUiXml>()
+        data.add(LayoutUiXml("nutri_rv_list_type_1", TYPE_LIST, R.layout.nutri_rv_list_type_1))
+        data.add(LayoutUiXml("nutri_rv_list_type_2", TYPE_LIST, R.layout.nutri_rv_list_type_2))
+        data.add(LayoutUiXml("nutri_rv_list_type_3", TYPE_LIST, R.layout.nutri_rv_list_type_3))
+        data.add(LayoutUiXml("nutri_rv_list_type_4", TYPE_LIST, R.layout.nutri_rv_list_type_4))
+        data.add(LayoutUiXml("nutri_rv_list_type_5", TYPE_LIST, R.layout.nutri_rv_list_type_5))
+        data.add(LayoutUiXml("nutri_rv_list_type_6", TYPE_LIST, R.layout.nutri_rv_list_type_6))
+        data.add(LayoutUiXml("nutri_rv_list_type_7", TYPE_LIST, R.layout.nutri_rv_list_type_7))
+        data.add(LayoutUiXml("nutri_rv_list_type_8", TYPE_LIST, R.layout.nutri_rv_list_type_8))
+        data.add(LayoutUiXml("nutri_rv_list_type_9", TYPE_LIST, R.layout.nutri_rv_list_type_9))
+        data.add(LayoutUiXml("nutri_rv_list_type_10", TYPE_LIST, R.layout.nutri_rv_list_type_10))
+        data.add(LayoutUiXml("nutri_rv_list_type_11", TYPE_LIST, R.layout.nutri_rv_list_type_11))
+        data.add(LayoutUiXml("nutri_rv_list_type_12", TYPE_LIST, R.layout.nutri_rv_list_type_12))
         return data
     }
 
-    fun dataRvGrid() : MutableList<Layout> {
-        val data = mutableListOf<Layout>()
-        data.add(Layout("nutri_rv_grid_type_1", TYPE_GRID, R.layout.nutri_rv_grid_type_1))
-        data.add(Layout("nutri_rv_grid_type_2", TYPE_GRID, R.layout.nutri_rv_grid_type_2))
-        data.add(Layout("nutri_rv_grid_type_3", TYPE_GRID, R.layout.nutri_rv_grid_type_3))
-        data.add(Layout("nutri_rv_grid_type_4", TYPE_GRID, R.layout.nutri_rv_grid_type_4))
-        data.add(Layout("nutri_rv_grid_type_5", TYPE_GRID, R.layout.nutri_rv_grid_type_5))
-        data.add(Layout("nutri_rv_grid_type_6", TYPE_GRID, R.layout.nutri_rv_grid_type_6))
-        data.add(Layout("nutri_rv_grid_type_7", TYPE_GRID, R.layout.nutri_rv_grid_type_7))
+    fun dataRvGrid() : MutableList<LayoutUiXml> {
+        val data = mutableListOf<LayoutUiXml>()
+        data.add(LayoutUiXml("nutri_rv_grid_type_1", TYPE_GRID, R.layout.nutri_rv_grid_type_1))
+        data.add(LayoutUiXml("nutri_rv_grid_type_2", TYPE_GRID, R.layout.nutri_rv_grid_type_2))
+        data.add(LayoutUiXml("nutri_rv_grid_type_3", TYPE_GRID, R.layout.nutri_rv_grid_type_3))
+        data.add(LayoutUiXml("nutri_rv_grid_type_4", TYPE_GRID, R.layout.nutri_rv_grid_type_4))
+        data.add(LayoutUiXml("nutri_rv_grid_type_5", TYPE_GRID, R.layout.nutri_rv_grid_type_5))
+        data.add(LayoutUiXml("nutri_rv_grid_type_6", TYPE_GRID, R.layout.nutri_rv_grid_type_6))
+        data.add(LayoutUiXml("nutri_rv_grid_type_7", TYPE_GRID, R.layout.nutri_rv_grid_type_7))
         return data
     }
 

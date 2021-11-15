@@ -19,26 +19,20 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="n">
         <activity
+            android:name=".mvvm.nutrition.article.NutritionArticleActivity"
+            android:exported="false" />
+        <activity
             android:name=".mvvm.uixml.UiXmlActivity"
             android:exported="true">
-
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-
         </activity>
-
-        <activity android:name=".mvvm.uixml.UiXmlRvActivity"/>
-        <activity android:name=".mvvm.uixml.UiXmlRvDetailActivity"/>
-
+        <activity android:name=".mvvm.uixml.UiXmlRvActivity" />
+        <activity android:name=".mvvm.uixml.UiXmlRvDetailActivity" />
         <activity
             android:name=".DummyActivity"
             android:exported="true"
             android:label="@string/title_activity_dummy"
             android:theme="@style/Theme.KickStart.NoActionBar" />
-        <activity android:name=".mvvm.detail.DetailActivity" />
+        <activity android:name=".mvvm.nutrition.article.NutritionArticleDetailActivity" />
         <activity android:name=".mvvm.about.AboutUsActivity" />
         <activity
             android:name=".mvvm.main.MainActivity"

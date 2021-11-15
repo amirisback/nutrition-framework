@@ -2,10 +2,9 @@ package com.frogobox.nutritionapp.model
 
 import android.content.Intent
 
-
 /*
- * Created by faisalamir on 15/11/21
- * NutritionFramework
+ * Created by faisalamir on 21/05/21
+ * FrogoUIKit
  * -----------------------------------------
  * Name     : Muhammad Faisal Amir
  * E-mail   : faisalamircs@gmail.com
@@ -15,8 +14,7 @@ import android.content.Intent
  * All rights reserved
  *
  */
-
-data class Main(
+data class UiXml(
     val name: String,
     val intent: Intent
 )

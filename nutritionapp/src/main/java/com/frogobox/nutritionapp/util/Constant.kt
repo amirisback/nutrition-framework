@@ -23,6 +23,12 @@ import com.frogobox.nutritionapp.BuildConfig
  */
 object Constant {
 
+    object TitleActivity {
+        const val ACTIVITY_UI_XML = "UI XML"
+        const val ACTIVITY_NUTRITION_ARTICLE = "Artikel Nutrisi"
+        const val ACTIVITY_NUTRITION_ARTICLE_DETAIL = "Detail Artikel Nutrisi"
+    }
+
     object Extra {
         const val BASE_EXTRA = BuildConfig.APPLICATION_ID
         const val EXTRA_OPTION = "$BASE_EXTRA.EXTRA_OPTION"

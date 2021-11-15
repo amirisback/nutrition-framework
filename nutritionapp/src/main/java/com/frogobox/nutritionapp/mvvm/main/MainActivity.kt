@@ -4,79 +4,50 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.TextView
-import com.bumptech.glide.Glide
 import com.frogobox.nutritionapp.R
 import com.frogobox.nutritionapp.core.BaseActivity
 import com.frogobox.nutritionapp.databinding.ActivityMainBinding
-import com.frogobox.nutritionapp.mvvm.detail.DetailActivity
-import com.frogobox.nutritioncore.model.Article
+import com.frogobox.nutritionapp.model.Main
+import com.frogobox.nutritionapp.mvvm.nutrition.article.NutritionArticleActivity
+import com.frogobox.nutritionapp.mvvm.uixml.UiXmlActivity
+import com.frogobox.nutritionapp.util.Constant
 import com.frogobox.nutritionframework.recycler.core.INutriViewAdapter
-import com.google.gson.Gson
-import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class MainActivity : BaseActivity<ActivityMainBinding>() {
-
-    private val mainViewModel: MainViewModel by viewModel()
 
     override fun setupViewBinding(): ActivityMainBinding {
         return ActivityMainBinding.inflate(layoutInflater)
     }
 
     override fun setupViewModel() {
-        mainViewModel.apply {
+    }
 
-            usingChuck()
-            getTopHeadline()
-            topHeadlineLive.observe(this@MainActivity, {
-                it.articles?.let { it1 -> setupRvNews(it1) }
-            })
-
-            eventShowProgress.observe(this@MainActivity, {
-                setupEventProgressView(binding.progressView, it)
-            })
-
-        }
-
+    private fun data(): MutableList<Main> {
+        val data = mutableListOf<Main>()
+        data.add(Main(Constant.TitleActivity.ACTIVITY_UI_XML, Intent(this, UiXmlActivity::class.java)))
+        data.add(Main(Constant.TitleActivity.ACTIVITY_NUTRITION_ARTICLE, Intent(this, NutritionArticleActivity::class.java)))
+        return data
     }
 
     override fun setupUI(savedInstanceState: Bundle?) {
         binding.apply {
+            mainNutriRv.injector<Main>()
+                .addCustomView(R.layout.nutri_rv_list_type_1)
+                .addData(data())
+                .addCallback(object : INutriViewAdapter<Main> {
+                    override fun onItemClicked(data: Main) {
+                        startActivity(data.intent)
+                    }
 
+                    override fun onItemLongClicked(data: Main) {}
+                    override fun setupInitComponent(view: View, data: Main) {
+                        view.findViewById<TextView>(R.id.nutri_rv_list_type_1_tv_title).text =
+                            data.name
+                    }
+                })
+                .createLayoutLinearVertical(false)
+                .build()
         }
-    }
-
-
-
-    private fun setupRvNews(data: List<Article>) {
-
-        val newsAdapter = object : INutriViewAdapter<Article> {
-            override fun onItemClicked(data: Article) {
-                val intent = Intent(this@MainActivity, DetailActivity::class.java)
-                val extraData = Gson().toJson(data)
-                intent.putExtra("EXTRA_DATA_ARTICLE", extraData)
-                startActivity(intent)
-            }
-
-            override fun onItemLongClicked(data: Article) {
-
-            }
-
-            override fun setupInitComponent(view: View, data: Article) {
-                view.findViewById<TextView>(R.id.tv_title).text = data.title
-                view.findViewById<TextView>(R.id.tv_description).text = data.description
-                view.findViewById<TextView>(R.id.tv_published).text = data.publishedAt
-                Glide.with(view.context).load(data.urlToImage).into(view.findViewById(R.id.iv_url))
-            }
-        }
-
-        binding.rvNews
-            .injector<Article>()
-            .addData(data)
-            .addCustomView(R.layout.list_news_article_vertical)
-            .addEmptyView(null)
-            .addCallback(newsAdapter)
-            .createLayoutLinearVertical(false)
-            .build()
     }
 
 }
