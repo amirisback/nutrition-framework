@@ -26,59 +26,59 @@ class ConsumeTheMealDbApi(private val apiKey: String) : IConsumeTheMealDbApi {
 
     private val repository = MealRepository
 
-    override fun searchMeal(mealName: String, callback: NutriResponse.DataResponse<MealResponse<Meal>>) {
+    override suspend fun searchMeal(mealName: String, callback: NutriResponse.DataResponse<MealResponse<Meal>>) {
         repository.searchMeal(apiKey, mealName, callback)
     }
 
-    override fun listAllMeal(
+    override suspend fun listAllMeal(
         firstLetter: String,
         callback: NutriResponse.DataResponse<MealResponse<Meal>>
     ) {
         repository.listAllMeal(apiKey, firstLetter, callback)
     }
 
-    override fun lookupFullMeal(
+    override suspend fun lookupFullMeal(
         idMeal: String,
         callback: NutriResponse.DataResponse<MealResponse<Meal>>
     ) {
         repository.lookupFullMeal(apiKey, idMeal, callback)
     }
 
-    override fun lookupRandomMeal(callback: NutriResponse.DataResponse<MealResponse<Meal>>) {
+    override suspend fun lookupRandomMeal(callback: NutriResponse.DataResponse<MealResponse<Meal>>) {
         repository.lookupRandomMeal(apiKey, callback)
     }
 
-    override fun listMealCategories(callback: NutriResponse.DataResponse<CategoryResponse>) {
+    override suspend fun listMealCategories(callback: NutriResponse.DataResponse<CategoryResponse>) {
         repository.listMealCategories(apiKey, callback)
     }
 
-    override fun listAllCateories(callback: NutriResponse.DataResponse<MealResponse<Category>>) {
+    override suspend fun listAllCateories(callback: NutriResponse.DataResponse<MealResponse<Category>>) {
         repository.listAllCateories(apiKey, callback)
     }
 
-    override fun listAllArea(callback: NutriResponse.DataResponse<MealResponse<Area>>) {
+    override suspend fun listAllArea(callback: NutriResponse.DataResponse<MealResponse<Area>>) {
         repository.listAllArea(apiKey, callback)
     }
 
-    override fun listAllIngredients(callback: NutriResponse.DataResponse<MealResponse<Ingredient>>) {
+    override suspend fun listAllIngredients(callback: NutriResponse.DataResponse<MealResponse<Ingredient>>) {
         repository.listAllIngredients(apiKey, callback)
     }
 
-    override fun filterByIngredient(
+    override suspend fun filterByIngredient(
         ingredient: String,
         callback: NutriResponse.DataResponse<MealResponse<MealFilter>>
     ) {
         repository.filterByIngredient(apiKey, ingredient, callback)
     }
 
-    override fun filterByCategory(
+    override suspend fun filterByCategory(
         category: String,
         callback: NutriResponse.DataResponse<MealResponse<MealFilter>>
     ) {
         repository.filterByCategory(apiKey, category, callback)
     }
 
-    override fun filterByArea(
+    override suspend fun filterByArea(
         area: String,
         callback: NutriResponse.DataResponse<MealResponse<MealFilter>>
     ) {

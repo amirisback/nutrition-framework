@@ -2,10 +2,10 @@ package com.frogobox.nutritionapp.mvvm.nutrition.article
 
 import android.app.Application
 import androidx.lifecycle.viewModelScope
-import com.frogobox.nutritionapp.source.DataRepository
 import com.frogobox.nutritionapp.source.DataSource
-import com.frogobox.nutritionapp.util.Constant
+import com.frogobox.nutritioncore.method.function.ConsumeNewsApi
 import com.frogobox.nutritioncore.model.news.ArticleResponse
+import com.frogobox.nutritioncore.util.news.NewsConstant
 import com.frogobox.nutritionframework.core.NutriViewModel
 import com.frogobox.nutritionframework.util.NutriSingleLiveEvent
 import kotlinx.coroutines.launch
@@ -26,20 +26,15 @@ import kotlinx.coroutines.launch
 
 class NutritionArticleViewModel(
     private val context: Application,
-    private val repository: DataRepository
+    private val consumeNewsApi: ConsumeNewsApi
 ) :
     NutriViewModel(context) {
 
     var topHeadlineLive = NutriSingleLiveEvent<ArticleResponse>()
 
-    fun usingChuck() {
-        repository.usingChuckInterceptor(context)
-    }
-
-    fun getTopHeadline() {
+    fun getEverythings() {
         viewModelScope.launch {
-            repository.getEverythings(
-                Constant.ApiUrl.NEWS_API_KEY,
+            consumeNewsApi.getEverythings(
                 "Nutrisi",
                 null,
                 null,
@@ -47,7 +42,7 @@ class NutritionArticleViewModel(
                 null,
                 null,
                 null,
-                Constant.NewsConstant.COUNTRY_ID,
+                NewsConstant.COUNTRY_ID,
                 null,
                 null,
                 null,

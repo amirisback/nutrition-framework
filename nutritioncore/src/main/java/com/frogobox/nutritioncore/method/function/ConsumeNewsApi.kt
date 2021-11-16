@@ -27,7 +27,7 @@ class ConsumeNewsApi(private val apiKey: String) : IConsumeNewsApi {
 
     private val newsRepository = NewsRepository
 
-    override fun getTopHeadline(
+    override suspend fun getTopHeadline(
         q: String?,
         sources: String?,
         category: String?,
@@ -48,7 +48,7 @@ class ConsumeNewsApi(private val apiKey: String) : IConsumeNewsApi {
         )
     }
 
-    override fun getEverythings(
+    override suspend fun getEverythings(
         q: String?,
         from: String?,
         to: String?,
@@ -79,7 +79,7 @@ class ConsumeNewsApi(private val apiKey: String) : IConsumeNewsApi {
         )
     }
 
-    override fun getSources(
+    override suspend fun getSources(
         language: String,
         country: String,
         category: String,

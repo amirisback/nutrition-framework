@@ -27,46 +27,7 @@ interface DataSource {
 
     // API Server ----------------------------------------------------------------------------------
 
-    // Switch For Using Chuck Interceptor
-    fun usingChuckInterceptor(context: Context)
 
-    // Get Top Headline
-    suspend fun getTopHeadline(
-        apiKey: String,
-        q: String?,
-        sources: String?,
-        category: String?,
-        country: String?,
-        pageSize: Int?,
-        page: Int?,
-        callback: GetRemoteCallback<ArticleResponse>
-    )
-
-    // Get Everythings
-    suspend fun getEverythings(
-        apiKey: String,
-        q: String?,
-        from: String?,
-        to: String?,
-        qInTitle: String?,
-        sources: String?,
-        domains: String?,
-        excludeDomains: String?,
-        language: String?,
-        sortBy: String?,
-        pageSize: Int?,
-        page: Int?,
-        callback: GetRemoteCallback<ArticleResponse>
-    )
-
-    // Get Sources
-    suspend fun getSources(
-        apiKey: String,
-        language: String,
-        country: String,
-        category: String,
-        callback: GetRemoteCallback<SourceResponse>
-    )
 
     // Room Database -------------------------------------------------------------------------------
 

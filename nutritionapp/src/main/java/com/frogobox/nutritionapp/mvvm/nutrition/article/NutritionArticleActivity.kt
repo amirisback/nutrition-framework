@@ -26,8 +26,7 @@ class NutritionArticleActivity : BaseActivity<ActivityNutritionArticleBinding>()
     override fun setupViewModel() {
         nutritionArticleViewModel.apply {
 
-            usingChuck()
-            getTopHeadline()
+            getEverythings()
             topHeadlineLive.observe(this@NutritionArticleActivity, {
                 it.articles?.let { it1 -> setupRvNews(it1) }
             })

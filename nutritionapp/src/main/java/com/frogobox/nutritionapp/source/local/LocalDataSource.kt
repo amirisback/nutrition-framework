@@ -34,50 +34,6 @@ class LocalDataSource(
     private val favoriteDao: FavoriteDao
 ) : DataSource {
 
-    override fun usingChuckInterceptor(context: Context) {
-    }
-
-    override suspend fun getTopHeadline(
-        apiKey: String,
-        q: String?,
-        sources: String?,
-        category: String?,
-        country: String?,
-        pageSize: Int?,
-        page: Int?,
-        callback: DataSource.GetRemoteCallback<ArticleResponse>
-    ) {
-
-    }
-
-    override suspend fun getEverythings(
-        apiKey: String,
-        q: String?,
-        from: String?,
-        to: String?,
-        qInTitle: String?,
-        sources: String?,
-        domains: String?,
-        excludeDomains: String?,
-        language: String?,
-        sortBy: String?,
-        pageSize: Int?,
-        page: Int?,
-        callback: DataSource.GetRemoteCallback<ArticleResponse>
-    ) {
-
-    }
-
-    override suspend fun getSources(
-        apiKey: String,
-        language: String,
-        country: String,
-        category: String,
-        callback: DataSource.GetRemoteCallback<SourceResponse>
-    ) {
-
-    }
-
     override fun saveRoomFavorite(data: Favorite): Boolean {
         return true
     }

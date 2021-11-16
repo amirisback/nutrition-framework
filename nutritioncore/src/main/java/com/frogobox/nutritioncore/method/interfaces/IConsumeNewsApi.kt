@@ -25,7 +25,7 @@ import com.frogobox.nutritioncore.model.news.SourceResponse
 interface IConsumeNewsApi {
 
     // Get Top Headline
-    fun getTopHeadline(
+    suspend fun getTopHeadline(
         q: String?,
         sources: String?,
         category: String?,
@@ -36,7 +36,7 @@ interface IConsumeNewsApi {
     )
 
     // Get Everythings
-    fun getEverythings(
+    suspend fun getEverythings(
         q: String?,
         from: String?,
         to: String?,
@@ -52,7 +52,7 @@ interface IConsumeNewsApi {
     )
 
     // Get Sources
-    fun getSources(
+    suspend fun getSources(
         language: String,
         country: String,
         category: String,

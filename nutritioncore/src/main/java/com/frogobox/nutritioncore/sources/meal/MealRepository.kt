@@ -30,7 +30,7 @@ object MealRepository : MealDataSource {
     private val TAG = MealRepository::class.java.simpleName
     private var mealApiService = NutriApiClient.create<MealApiService>(MealUrl.BASE_URL)
 
-    override fun searchMeal(
+    override suspend fun searchMeal(
         apiKey: String,
         mealName: String,
         callback: NutriResponse.DataResponse<MealResponse<Meal>>
@@ -54,7 +54,7 @@ object MealRepository : MealDataSource {
 
     }
 
-    override fun listAllMeal(
+    override suspend fun listAllMeal(
         apiKey: String,
         firstLetter: String,
         callback: NutriResponse.DataResponse<MealResponse<Meal>>
@@ -77,7 +77,7 @@ object MealRepository : MealDataSource {
             })
     }
 
-    override fun lookupFullMeal(
+    override suspend fun lookupFullMeal(
         apiKey: String,
         idMeal: String,
         callback: NutriResponse.DataResponse<MealResponse<Meal>>
@@ -100,7 +100,7 @@ object MealRepository : MealDataSource {
             })
     }
 
-    override fun lookupRandomMeal(
+    override suspend fun lookupRandomMeal(
         apiKey: String,
         callback: NutriResponse.DataResponse<MealResponse<Meal>>
     ) {
@@ -122,7 +122,7 @@ object MealRepository : MealDataSource {
             })
     }
 
-    override fun listMealCategories(
+    override suspend fun listMealCategories(
         apiKey: String,
         callback: NutriResponse.DataResponse<CategoryResponse>
     ) {
@@ -144,7 +144,7 @@ object MealRepository : MealDataSource {
             })
     }
 
-    override fun listAllCateories(
+    override suspend fun listAllCateories(
         apiKey: String,
         callback: NutriResponse.DataResponse<MealResponse<Category>>
     ) {
@@ -166,7 +166,7 @@ object MealRepository : MealDataSource {
             })
     }
 
-    override fun listAllArea(
+    override suspend fun listAllArea(
         apiKey: String,
         callback: NutriResponse.DataResponse<MealResponse<Area>>
     ) {
@@ -190,7 +190,7 @@ object MealRepository : MealDataSource {
             })
     }
 
-    override fun listAllIngredients(
+    override suspend fun listAllIngredients(
         apiKey: String,
         callback: NutriResponse.DataResponse<MealResponse<Ingredient>>
     ) {
@@ -212,7 +212,7 @@ object MealRepository : MealDataSource {
             })
     }
 
-    override fun filterByIngredient(
+    override suspend fun filterByIngredient(
         apiKey: String,
         ingredient: String,
         callback: NutriResponse.DataResponse<MealResponse<MealFilter>>
@@ -235,7 +235,7 @@ object MealRepository : MealDataSource {
             })
     }
 
-    override fun filterByCategory(
+    override suspend fun filterByCategory(
         apiKey: String,
         category: String,
         callback: NutriResponse.DataResponse<MealResponse<MealFilter>>
@@ -258,7 +258,7 @@ object MealRepository : MealDataSource {
             })
     }
 
-    override fun filterByArea(
+    override suspend fun filterByArea(
         apiKey: String,
         area: String,
         callback: NutriResponse.DataResponse<MealResponse<MealFilter>>

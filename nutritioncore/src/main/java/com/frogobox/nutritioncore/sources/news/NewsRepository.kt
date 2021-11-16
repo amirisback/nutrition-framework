@@ -30,7 +30,7 @@ object NewsRepository : NewsDataSource {
     private val TAG = NewsRepository::class.java.simpleName
     private var newsApiService = NutriApiClient.create<NewsApiService>(NewsUrl.BASE_URL)
 
-    override fun getTopHeadline(
+    override suspend fun getTopHeadline(
         apiKey: String,
         q: String?,
         sources: String?,
@@ -56,7 +56,7 @@ object NewsRepository : NewsDataSource {
             })
     }
 
-    override fun getEverythings(
+    override suspend fun getEverythings(
         apiKey: String,
         q: String?,
         from: String?,
@@ -100,7 +100,7 @@ object NewsRepository : NewsDataSource {
             })
     }
 
-    override fun getSources(
+    override suspend fun getSources(
         apiKey: String,
         language: String,
         country: String,

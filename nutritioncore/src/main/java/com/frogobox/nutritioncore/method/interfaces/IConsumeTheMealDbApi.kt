@@ -24,36 +24,36 @@ import com.frogobox.nutritioncore.model.meal.*
 interface IConsumeTheMealDbApi {
 
     // Search meal by name
-    fun searchMeal(mealName: String, callback: NutriResponse.DataResponse<MealResponse<Meal>>)
+    suspend fun searchMeal(mealName: String, callback: NutriResponse.DataResponse<MealResponse<Meal>>)
 
     // List all meals by first letter
-    fun listAllMeal(firstLetter: String, callback: NutriResponse.DataResponse<MealResponse<Meal>>)
+    suspend fun listAllMeal(firstLetter: String, callback: NutriResponse.DataResponse<MealResponse<Meal>>)
 
     // Lookup full meal details by id
-    fun lookupFullMeal(idMeal: String, callback: NutriResponse.DataResponse<MealResponse<Meal>>)
+    suspend fun lookupFullMeal(idMeal: String, callback: NutriResponse.DataResponse<MealResponse<Meal>>)
 
     // Lookup a single random meal
-    fun lookupRandomMeal(callback: NutriResponse.DataResponse<MealResponse<Meal>>)
+    suspend fun lookupRandomMeal(callback: NutriResponse.DataResponse<MealResponse<Meal>>)
 
     // List all meal categories
-    fun listMealCategories(callback: NutriResponse.DataResponse<CategoryResponse>)
+    suspend fun listMealCategories(callback: NutriResponse.DataResponse<CategoryResponse>)
 
     // List all Categories
-    fun listAllCateories(callback: NutriResponse.DataResponse<MealResponse<Category>>)
+    suspend fun listAllCateories(callback: NutriResponse.DataResponse<MealResponse<Category>>)
 
     // List all Area
-    fun listAllArea(callback: NutriResponse.DataResponse<MealResponse<Area>>)
+    suspend fun listAllArea(callback: NutriResponse.DataResponse<MealResponse<Area>>)
 
     // List all Ingredients
-    fun listAllIngredients(callback: NutriResponse.DataResponse<MealResponse<Ingredient>>)
+    suspend fun listAllIngredients(callback: NutriResponse.DataResponse<MealResponse<Ingredient>>)
 
     // Filter by main ingredient
-    fun filterByIngredient(ingredient: String, callback: NutriResponse.DataResponse<MealResponse<MealFilter>>)
+    suspend fun filterByIngredient(ingredient: String, callback: NutriResponse.DataResponse<MealResponse<MealFilter>>)
 
     // Filter by Category
-    fun filterByCategory(category: String, callback: NutriResponse.DataResponse<MealResponse<MealFilter>>)
+    suspend fun filterByCategory(category: String, callback: NutriResponse.DataResponse<MealResponse<MealFilter>>)
 
     // Filter by Area
-    fun filterByArea(area: String, callback: NutriResponse.DataResponse<MealResponse<MealFilter>>)
+    suspend fun filterByArea(area: String, callback: NutriResponse.DataResponse<MealResponse<MealFilter>>)
 
 }
