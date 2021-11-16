@@ -9,7 +9,7 @@
 This Is Latest Release
 
     ~ Beta Release
-    $version_release = 0.0.2-alpha05
+    $version_release = 0.0.2-alpha06
 
 What's New??
 
@@ -51,15 +51,18 @@ allprojects {
 
     dependencies {
         // library nutrition-framework
-        implementation 'com.github.amirisback:nutrition-framework:0.0.2-alpha05'
+        implementation 'com.github.amirisback:nutrition-framework:0.0.2-alpha06'
     }
 
 #### <Option 2> Kotlin DSL Gradle (build.gradle.kts)
 
     dependencies {
         // library nutrition-framework
-        implementation("com.github.amirisback:nutrition-framework:0.0.2-alpha05")
+        implementation("com.github.amirisback:nutrition-framework:0.0.2-alpha06")
     }
+
+## Application Framework
+![ScreenShoot Apps](docs/image/skeleton-component.png?raw=true)
 
 ## Documentation
 - SK TA [Click Here](https://github.com/amirisback/nutrition-framework/raw/master/docs/bundle/Muhammad%20Faisal%20Amir_1301198497_SK_TA.pdf)
