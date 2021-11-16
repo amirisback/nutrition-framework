@@ -15,4 +15,7 @@ package com.frogobox.nutritioncore.method.interfaces
  */
 
 interface INutritionApi {
+
+
+
 }

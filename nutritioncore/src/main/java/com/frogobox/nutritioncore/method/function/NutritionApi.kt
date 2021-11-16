@@ -1,5 +1,7 @@
 package com.frogobox.nutritioncore.method.function
 
+import com.frogobox.nutritioncore.method.interfaces.INutritionApi
+
 
 /*
  * Created by faisalamir on 12/11/21
@@ -14,5 +16,7 @@ package com.frogobox.nutritioncore.method.function
  *
  */
 
-class NutritionApi {
+class NutritionApi : INutritionApi {
+
+
 }
