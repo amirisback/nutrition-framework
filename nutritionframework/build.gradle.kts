@@ -1,6 +1,6 @@
 plugins {
     id("com.android.library")
-    kotlin("android")
+    id("kotlin-android")
     id("kotlin-kapt")
     id("org.jetbrains.compose") version Dependency.COMPOSE_MULTIPLATFORM_VERSION
     `maven-publish`
