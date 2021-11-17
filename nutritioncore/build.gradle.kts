@@ -23,6 +23,8 @@ dependencies {
 
     implementation(compose.ui)
     implementation(compose.runtime)
+    implementation(compose.preview)
+    implementation(compose.uiTooling)
     implementation(compose.material)
     implementation(compose.materialIconsExtended)
 

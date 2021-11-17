@@ -119,7 +119,6 @@ android {
 
     kotlinOptions {
         jvmTarget = JavaVersion.VERSION_11.toString()
-        useIR = true
     }
 
     packagingOptions {
@@ -134,6 +133,8 @@ dependencies {
 
     implementation(compose.ui)
     implementation(compose.runtime)
+    implementation(compose.preview)
+    implementation(compose.uiTooling)
     implementation(compose.material)
     implementation(compose.materialIconsExtended)
 
@@ -205,5 +206,6 @@ dependencies {
     androidTestImplementation("androidx.test.espresso:espresso-core:3.4.0")
 
     debugImplementation(compose.ui)
+    debugImplementation(compose.uiTooling)
 
 }

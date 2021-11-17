@@ -18,6 +18,7 @@
         android:theme="@style/Theme.KickStart"
         android:usesCleartextTraffic="true"
         tools:targetApi="n">
+
         <activity
             android:name=".mvvm.nutrition.category.vitamins.VitaminSolveActivity"
             android:exported="false" />
