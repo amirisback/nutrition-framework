@@ -4,6 +4,8 @@
 [![JitPack](https://jitpack.io/v/amirisback/nutrition-framework.svg?style=flat-square)](https://jitpack.io/#amirisback/nutrition-framework)
 - Pengembang Framework untuk Membuat Aplikasi Seputar Permasalahan Gizi berbasis Platform Android
 - General Framework for Application Development Around Nutrition Using the Android Platform, Skripsi S1 Muhammad Faisal Amir from Telkom University
+- Consumer android from nutrition-framework API [Click Here](https://github.com/amirisback/nutrition-framework-app)
+- Consumer desktop from nutrition-framework API [Click Here](https://github.com/amirisback/nutrition-framework-desktop)
 
 ## Version Release
 This Is Latest Release
