@@ -11,13 +11,14 @@
 This Is Latest Release
 
     ~ Beta Release
-    $version_release = 0.0.2-alpha07
+    $version_release = 0.0.2-alpha08
 
 What's New??
 
     * Beta Release *
     * Multi Platform Library *
     * Compose UI Multi Platform *
+    * Update Compose Component *
 
 ## Screen Shoot Apps
 
@@ -59,14 +60,14 @@ allprojects {
 
     dependencies {
         // library nutrition-framework
-        implementation 'com.github.amirisback:nutrition-framework:0.0.2-alpha07'
+        implementation 'com.github.amirisback:nutrition-framework:0.0.2-alpha08'
     }
 
 #### <Option 2> Kotlin DSL Gradle (build.gradle.kts)
 
     dependencies {
         // library nutrition-framework
-        implementation("com.github.amirisback:nutrition-framework:0.0.2-alpha07")
+        implementation("com.github.amirisback:nutrition-framework:0.0.2-alpha08")
     }
 
 ## Application Framework
