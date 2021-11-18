@@ -58,17 +58,20 @@
             android:name=".DummyActivity"
             android:exported="true"
             android:label="@string/title_activity_dummy"
-            android:theme="@style/Theme.KickStart.NoActionBar" />
-        <activity android:name=".mvvm.nutrition.article.NutritionArticleDetailActivity" />
-        <activity android:name=".mvvm.about.AboutUsActivity" />
-        <activity
-            android:name=".mvvm.main.MainActivity"
-            android:exported="true">
+            android:theme="@style/Theme.KickStart.NoActionBar" >
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
+        </activity>
+        <activity android:name=".mvvm.nutrition.article.NutritionArticleDetailActivity" />
+        <activity android:name=".mvvm.about.AboutUsActivity" />
+        <activity
+            android:name=".mvvm.main.MainActivity"
+            android:exported="true">
         </activity>
 
         <meta-data

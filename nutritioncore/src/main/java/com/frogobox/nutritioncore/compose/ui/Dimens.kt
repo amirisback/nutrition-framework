@@ -1,6 +1,7 @@
 package com.frogobox.nutritioncore.compose.ui
 
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 
 /*
  * Created by faisalamir on 29/07/21
@@ -14,6 +15,10 @@ import androidx.compose.ui.unit.dp
  * All rights reserved
  *
  */
+
+// -------------------------------------------------------------------------------------------------
+// Dimen Size
+// -------------------------------------------------------------------------------------------------
 
 val nutri_dimen_0dp = 0.dp
 val nutri_dimen_1dp = 1.dp
@@ -76,3 +81,18 @@ val nutri_dimen_94dp = 94.dp
 val nutri_dimen_96dp = 96.dp
 val nutri_dimen_98dp = 98.dp
 val nutri_dimen_100dp = 100.dp
+
+// -------------------------------------------------------------------------------------------------
+// Font Size
+// -------------------------------------------------------------------------------------------------
+
+val nutri_font_dimen_2sp = 2.sp
+val nutri_font_dimen_3sp = 3.sp
+val nutri_font_dimen_4sp = 4.sp
+val nutri_font_dimen_6sp = 6.sp
+val nutri_font_dimen_8sp = 8.sp
+val nutri_font_dimen_10sp = 10.sp
+val nutri_font_dimen_11sp = 11.sp
+val nutri_font_dimen_12sp = 12.sp
+val nutri_font_dimen_14sp = 14.sp
+val nutri_font_dimen_16sp = 16.sp
