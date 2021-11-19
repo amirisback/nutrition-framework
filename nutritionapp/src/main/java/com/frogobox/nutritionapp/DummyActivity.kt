@@ -13,10 +13,7 @@ import com.frogobox.nutritionapp.mvvm.nutrition.article.NutritionArticleViewMode
 import com.frogobox.nutritionapp.theme.NutritionFrameworkTheme
 import com.frogobox.nutritioncore.compose.ui.nutri_dimen_16dp
 import com.frogobox.nutritioncore.compose.ui.nutri_dimen_4dp
-import com.frogobox.nutritioncore.compose.widget.NutriCircularProgressIndicator
-import com.frogobox.nutritioncore.compose.widget.NutriLazyColumn
-import com.frogobox.nutritioncore.compose.widget.NutriListType1
-import com.frogobox.nutritioncore.compose.widget.NutriSimpleTopAppBar
+import com.frogobox.nutritioncore.compose.widget.*
 import com.frogobox.nutritioncore.model.news.Article
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -72,7 +69,14 @@ fun UiRv(listData: List<Article>) {
             data = listData,
             contentPadding = PaddingValues(bottom = nutri_dimen_16dp)
         ) {
-            it.title?.let { it1 -> NutriListType1(textContent = it1) }
+            it.title?.let { it1 ->
+                it.author?.let { it2 ->
+                    NutriListType2(
+                        titleTextContent = it1,
+                        subTitleTextContent = it2
+                    )
+                }
+            }
         }
     }
 }

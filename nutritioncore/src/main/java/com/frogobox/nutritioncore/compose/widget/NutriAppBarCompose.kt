@@ -3,11 +3,9 @@ package com.frogobox.nutritioncore.compose.widget
 import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
-import androidx.compose.material.icons.filled.Settings
-import androidx.compose.material.icons.filled.Share
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.unit.Dp
-import androidx.compose.ui.unit.dp
+import com.frogobox.nutritioncore.compose.ui.nutri_dimen_0dp
 
 
 /*
@@ -29,12 +27,23 @@ import androidx.compose.ui.unit.dp
 
 @Composable
 fun NutriSimpleTopAppBar(titleContent: String, elevationContent: Dp?) {
-    TopAppBar(
-        elevation = 4.dp,
-        title = {
-            Text(text = titleContent)
-        },
-        backgroundColor = MaterialTheme.colors.primarySurface)
+    if (elevationContent != null) {
+        TopAppBar(
+            elevation = elevationContent,
+            title = {
+                Text(text = titleContent)
+            },
+            backgroundColor = MaterialTheme.colors.primarySurface
+        )
+    } else {
+        TopAppBar(
+            elevation = nutri_dimen_0dp,
+            title = {
+                Text(text = titleContent)
+            },
+            backgroundColor = MaterialTheme.colors.primarySurface
+        )
+    }
 }
 
 
@@ -44,19 +53,32 @@ fun NutriSimpleTopAppBar(titleContent: String, elevationContent: Dp?) {
 
 @Composable
 fun NutriDetailTopAppBar(titleContent: String, elevationContent: Dp?) {
-    TopAppBar(
-        elevation = 4.dp,
-        title = {
-            Text(text = titleContent)
-        },
-        backgroundColor = MaterialTheme.colors.primarySurface,
-        navigationIcon = {
-            IconButton(onClick = {/* Do Something*/ }) {
-                Icon(Icons.Filled.ArrowBack, null)
-            }
-        })
+    if (elevationContent != null) {
+        TopAppBar(
+            elevation = elevationContent,
+            title = {
+                Text(text = titleContent)
+            },
+            backgroundColor = MaterialTheme.colors.primarySurface,
+            navigationIcon = {
+                IconButton(onClick = {/* Do Something*/ }) {
+                    Icon(Icons.Filled.ArrowBack, null)
+                }
+            })
+    } else {
+        TopAppBar(
+            elevation = nutri_dimen_0dp,
+            title = {
+                Text(text = titleContent)
+            },
+            backgroundColor = MaterialTheme.colors.primarySurface,
+            navigationIcon = {
+                IconButton(onClick = {/* Do Something*/ }) {
+                    Icon(Icons.Filled.ArrowBack, null)
+                }
+            })
+    }
 }
-
 
 
 //@Composable
