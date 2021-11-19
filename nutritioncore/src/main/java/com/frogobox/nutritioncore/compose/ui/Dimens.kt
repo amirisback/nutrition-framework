@@ -86,13 +86,21 @@ val nutri_dimen_100dp = 100.dp
 // Font Size
 // -------------------------------------------------------------------------------------------------
 
-val nutri_font_dimen_2sp = 2.sp
-val nutri_font_dimen_3sp = 3.sp
-val nutri_font_dimen_4sp = 4.sp
-val nutri_font_dimen_6sp = 6.sp
-val nutri_font_dimen_8sp = 8.sp
-val nutri_font_dimen_10sp = 10.sp
-val nutri_font_dimen_11sp = 11.sp
-val nutri_font_dimen_12sp = 12.sp
-val nutri_font_dimen_14sp = 14.sp
-val nutri_font_dimen_16sp = 16.sp
+val nutri_dimen_font_2sp = 2.sp
+val nutri_dimen_font_3sp = 3.sp
+val nutri_dimen_font_4sp = 4.sp
+val nutri_dimen_font_6sp = 6.sp
+val nutri_dimen_font_8sp = 8.sp
+val nutri_dimen_font_10sp = 10.sp
+val nutri_dimen_font_11sp = 11.sp
+val nutri_dimen_font_12sp = 12.sp
+val nutri_dimen_font_14sp = 14.sp
+val nutri_dimen_font_16sp = 16.sp
+val nutri_dimen_font_18sp = 18.sp
+val nutri_dimen_font_20sp = 20.sp
+val nutri_dimen_font_22sp = 22.sp
+val nutri_dimen_font_24sp = 24.sp
+val nutri_dimen_font_26sp = 26.sp
+val nutri_dimen_font_28sp = 28.sp
+val nutri_dimen_font_30sp = 30.sp
+val nutri_dimen_font_32sp = 32.sp

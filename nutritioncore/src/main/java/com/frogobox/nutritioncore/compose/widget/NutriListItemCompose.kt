@@ -24,6 +24,10 @@ import com.frogobox.nutritioncore.compose.ui.nutri_dimen_8dp
  *
  */
 
+// -------------------------------------------------------------------------------------------------
+// Nutri List Type 1
+// -------------------------------------------------------------------------------------------------
+
 @Composable
 fun NutriListType1(textContent: String) {
     Card(
@@ -32,9 +36,12 @@ fun NutriListType1(textContent: String) {
             .padding(start = nutri_dimen_16dp, end = nutri_dimen_16dp, top = nutri_dimen_16dp)
             .fillMaxWidth()
     ) {
-        Box(modifier = Modifier
-            .padding(nutri_dimen_16dp)) {
-            NutriTextTitle(textContent)
+        Box(
+            modifier = Modifier
+                .padding(nutri_dimen_16dp)
+        ) {
+            NutriTextTitle(textContent = textContent)
         }
     }
 }
+

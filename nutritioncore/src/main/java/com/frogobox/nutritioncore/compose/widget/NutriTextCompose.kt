@@ -2,9 +2,9 @@ package com.frogobox.nutritioncore.compose.widget
 
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
-import com.frogobox.nutritioncore.compose.ui.NutriColorPrimaryDark
-import com.frogobox.nutritioncore.compose.ui.nutri_font_dimen_16sp
+import com.frogobox.nutritioncore.compose.ui.*
 
 
 /*
@@ -20,14 +20,72 @@ import com.frogobox.nutritioncore.compose.ui.nutri_font_dimen_16sp
  *
  */
 
-@Composable
-fun NutriTextTitle(content: String) {
+// -------------------------------------------------------------------------------------------------
+// Nutri Text Title
+// -------------------------------------------------------------------------------------------------
 
+@Composable
+fun NutriTextTitle(textContent: String) {
     Text(
-        text = content,
+        text = textContent,
         color = NutriColorPrimaryDark,
         fontWeight = FontWeight.Bold,
-        fontSize = nutri_font_dimen_16sp
+        fontSize = nutri_dimen_font_16sp
     )
+}
 
+@Composable
+fun NutriTextTitle(textContent: String, colorContent: Color) {
+    Text(
+        text = textContent,
+        color = colorContent,
+        fontWeight = FontWeight.Bold,
+        fontSize = nutri_dimen_font_16sp
+    )
+}
+
+
+// -------------------------------------------------------------------------------------------------
+// Nutri Text Sub Title
+// -------------------------------------------------------------------------------------------------
+
+@Composable
+fun NutriTextSubTitle(textContent: String) {
+    Text(
+        text = textContent,
+        color = NutriColorBlack,
+        fontSize = nutri_dimen_font_12sp
+    )
+}
+
+@Composable
+fun NutriTextSubTitle(textContent: String, colorContent: Color) {
+    Text(
+        text = textContent,
+        color = colorContent,
+        fontSize = nutri_dimen_font_12sp
+    )
+}
+
+
+// -------------------------------------------------------------------------------------------------
+// Nutri Text Description
+// -------------------------------------------------------------------------------------------------
+
+@Composable
+fun NutriTextDescription(textContent: String) {
+    Text(
+        text = textContent,
+        color = NutriColorBlack,
+        fontSize = nutri_dimen_font_11sp
+    )
+}
+
+@Composable
+fun NutriTextDescription(textContent: String, colorContent: Color) {
+    Text(
+        text = textContent,
+        color = colorContent,
+        fontSize = nutri_dimen_font_11sp
+    )
 }

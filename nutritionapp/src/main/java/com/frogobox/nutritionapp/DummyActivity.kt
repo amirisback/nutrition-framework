@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.PaddingValues
+import androidx.compose.material.CircularProgressIndicator
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.runtime.*
@@ -11,6 +12,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.frogobox.nutritionapp.mvvm.nutrition.article.NutritionArticleViewModel
 import com.frogobox.nutritionapp.theme.NutritionFrameworkTheme
 import com.frogobox.nutritioncore.compose.ui.nutri_dimen_16dp
+import com.frogobox.nutritioncore.compose.widget.NutriCircularProgressIndicator
 import com.frogobox.nutritioncore.compose.widget.NutriLazyColumn
 import com.frogobox.nutritioncore.compose.widget.NutriListType1
 import com.frogobox.nutritioncore.model.news.Article
@@ -24,20 +26,31 @@ class DummyActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
 
-            var newsState: List<Article> by remember { mutableStateOf(emptyList()) }
+            var dataState: List<Article> by remember { mutableStateOf(emptyList()) }
+            var progressState: Boolean by remember { mutableStateOf(false)}
 
             nutritionArticleViewModel.apply {
 
                 getEverythings()
                 topHeadlineLive.observe(this@DummyActivity, {
-                    it.articles?.let { it1 -> newsState = it1 }
+                    it.articles?.let { it1 -> dataState = it1 }
+                })
+
+                eventShowProgress.observe(this@DummyActivity, {
+                    progressState = it
                 })
             }
 
             NutritionFrameworkTheme {
                 // A surface container using the 'background' color from the theme
                 Surface(color = MaterialTheme.colors.background) {
-                    UiRv(listData = newsState)
+
+                    if (progressState) {
+                        NutriCircularProgressIndicator()
+                    } else {
+                        UiRv(listData = dataState)
+                    }
+
                 }
             }
         }
