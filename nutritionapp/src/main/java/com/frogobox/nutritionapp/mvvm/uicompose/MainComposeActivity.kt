@@ -1,4 +1,4 @@
-package com.frogobox.nutritionapp
+package com.frogobox.nutritionapp.mvvm.uicompose
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -19,7 +19,7 @@ import com.frogobox.nutritioncore.model.news.Article
 import com.frogobox.nutritionframework.compose.widget.NutriGridType3
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
-class DummyActivity : ComponentActivity() {
+class MainComposeActivity : ComponentActivity() {
 
     private val nutritionArticleViewModel: NutritionArticleViewModel by viewModel()
 
@@ -34,11 +34,11 @@ class DummyActivity : ComponentActivity() {
             nutritionArticleViewModel.apply {
 
                 getEverythings()
-                topHeadlineLive.observe(this@DummyActivity, {
+                topHeadlineLive.observe(this@MainComposeActivity, {
                     it.articles?.let { it1 -> dataState = it1 }
                 })
 
-                eventShowProgress.observe(this@DummyActivity, {
+                eventShowProgress.observe(this@MainComposeActivity, {
                     progressState = it
                 })
             }
