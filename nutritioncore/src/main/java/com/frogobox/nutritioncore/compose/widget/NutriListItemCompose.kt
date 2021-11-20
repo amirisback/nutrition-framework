@@ -7,9 +7,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
-import com.frogobox.nutritioncore.compose.ui.nutri_dimen_16dp
-import com.frogobox.nutritioncore.compose.ui.nutri_dimen_48dp
-import com.frogobox.nutritioncore.compose.ui.nutri_dimen_8dp
+import androidx.compose.ui.unit.dp
+import com.frogobox.nutritioncore.compose.ui.*
 
 
 /*
@@ -168,7 +167,12 @@ fun NutriListType5(imageUrlContent: String, titleTextContent: String, subTitleTe
 // -------------------------------------------------------------------------------------------------
 
 @Composable
-fun NutriListType6(titleTextContent: String) {
+fun NutriListType6(
+    imageUrlContent: String,
+    titleTextContent: String,
+    subTitleTextContent: String,
+    descTitleTextContent: String
+) {
     Card(
         shape = RoundedCornerShape(nutri_dimen_8dp),
         modifier = Modifier
@@ -179,7 +183,21 @@ fun NutriListType6(titleTextContent: String) {
             modifier = Modifier
                 .padding(nutri_dimen_16dp)
         ) {
-            //
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                NutriImageUrlDesktop(
+                    url = imageUrlContent,
+                    contentDescription = null,
+                    modifier = Modifier.size(width = nutri_dimen_72dp, height = nutri_dimen_96dp),
+                    contentScale = ContentScale.Crop
+                )
+                Spacer(modifier = Modifier.size(nutri_dimen_16dp))
+                Column {
+                    NutriTextTitle(titleTextContent)
+                    NutriTextSubTitle(subTitleTextContent)
+                    Spacer(modifier = Modifier.size(nutri_dimen_16dp))
+                    NutriTextDescription(descTitleTextContent)
+                }
+            }
         }
     }
 }
@@ -189,7 +207,7 @@ fun NutriListType6(titleTextContent: String) {
 // -------------------------------------------------------------------------------------------------
 
 @Composable
-fun NutriListType7(titleTextContent: String) {
+fun NutriListType7(imageUrlContent: String, titleTextContent: String) {
     Card(
         shape = RoundedCornerShape(nutri_dimen_8dp),
         modifier = Modifier
@@ -200,7 +218,16 @@ fun NutriListType7(titleTextContent: String) {
             modifier = Modifier
                 .padding(nutri_dimen_16dp)
         ) {
-            //
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                NutriImageUrlDesktop(
+                    url = imageUrlContent,
+                    contentDescription = null,
+                    modifier = Modifier.size(nutri_dimen_48dp),
+                    contentScale = ContentScale.Crop
+                )
+                Spacer(modifier = Modifier.size(nutri_dimen_16dp))
+                NutriTextTitle(titleTextContent)
+            }
         }
     }
 }
@@ -210,7 +237,7 @@ fun NutriListType7(titleTextContent: String) {
 // -------------------------------------------------------------------------------------------------
 
 @Composable
-fun NutriListType8(titleTextContent: String) {
+fun NutriListType8(imageUrlContent: String, titleTextContent: String, subTitleTextContent: String) {
     Card(
         shape = RoundedCornerShape(nutri_dimen_8dp),
         modifier = Modifier
@@ -221,7 +248,19 @@ fun NutriListType8(titleTextContent: String) {
             modifier = Modifier
                 .padding(nutri_dimen_16dp)
         ) {
-            //
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                NutriImageUrlDesktop(
+                    url = imageUrlContent,
+                    contentDescription = null,
+                    modifier = Modifier.size(nutri_dimen_48dp),
+                    contentScale = ContentScale.Crop
+                )
+                Spacer(modifier = Modifier.size(nutri_dimen_16dp))
+                Column {
+                    NutriTextTitle(titleTextContent)
+                    NutriTextSubTitle(subTitleTextContent)
+                }
+            }
         }
     }
 }
@@ -231,7 +270,7 @@ fun NutriListType8(titleTextContent: String) {
 // -------------------------------------------------------------------------------------------------
 
 @Composable
-fun NutriListType9(titleTextContent: String) {
+fun NutriListType9(imageUrlContent: String, titleTextContent: String) {
     Card(
         shape = RoundedCornerShape(nutri_dimen_8dp),
         modifier = Modifier
@@ -242,7 +281,16 @@ fun NutriListType9(titleTextContent: String) {
             modifier = Modifier
                 .padding(nutri_dimen_16dp)
         ) {
-            //
+            Column {
+                NutriImageUrlDesktop(
+                    url = imageUrlContent,
+                    contentDescription = null,
+                    modifier = Modifier.height(150.dp).fillMaxWidth(),
+                    contentScale = ContentScale.Crop
+                )
+                Spacer(modifier = Modifier.size(nutri_dimen_8dp))
+                NutriTextTitle(titleTextContent)
+            }
         }
     }
 }
@@ -252,7 +300,11 @@ fun NutriListType9(titleTextContent: String) {
 // -------------------------------------------------------------------------------------------------
 
 @Composable
-fun NutriListType10(titleTextContent: String) {
+fun NutriListType10(
+    imageUrlContent: String,
+    titleTextContent: String,
+    subTitleTextContent: String
+) {
     Card(
         shape = RoundedCornerShape(nutri_dimen_8dp),
         modifier = Modifier
@@ -263,7 +315,17 @@ fun NutriListType10(titleTextContent: String) {
             modifier = Modifier
                 .padding(nutri_dimen_16dp)
         ) {
-            //
+            Column {
+                NutriImageUrlDesktop(
+                    url = imageUrlContent,
+                    contentDescription = null,
+                    modifier = Modifier.height(150.dp).fillMaxWidth(),
+                    contentScale = ContentScale.Crop
+                )
+                Spacer(modifier = Modifier.size(nutri_dimen_8dp))
+                NutriTextTitle(titleTextContent)
+                NutriTextSubTitle(subTitleTextContent)
+            }
         }
     }
 }
@@ -273,7 +335,12 @@ fun NutriListType10(titleTextContent: String) {
 // -------------------------------------------------------------------------------------------------
 
 @Composable
-fun NutriListType11(titleTextContent: String) {
+fun NutriListType11(
+    imageUrlContent: String,
+    titleTextContent: String,
+    subTitleTextContent: String,
+    descTitleTextContent: String
+) {
     Card(
         shape = RoundedCornerShape(nutri_dimen_8dp),
         modifier = Modifier
@@ -284,7 +351,19 @@ fun NutriListType11(titleTextContent: String) {
             modifier = Modifier
                 .padding(nutri_dimen_16dp)
         ) {
-            //
+            Column {
+                NutriImageUrlDesktop(
+                    url = imageUrlContent,
+                    contentDescription = null,
+                    modifier = Modifier.height(150.dp).fillMaxWidth(),
+                    contentScale = ContentScale.Crop
+                )
+                Spacer(modifier = Modifier.size(nutri_dimen_8dp))
+                NutriTextTitle(titleTextContent)
+                NutriTextSubTitle(subTitleTextContent)
+                Spacer(modifier = Modifier.size(nutri_dimen_8dp))
+                NutriTextDescription(descTitleTextContent)
+            }
         }
     }
 }
@@ -299,13 +378,12 @@ fun NutriListType12(titleTextContent: String) {
         shape = RoundedCornerShape(nutri_dimen_8dp),
         modifier = Modifier
             .padding(start = nutri_dimen_16dp, end = nutri_dimen_16dp, top = nutri_dimen_16dp)
-            .fillMaxWidth()
     ) {
         Box(
             modifier = Modifier
                 .padding(nutri_dimen_16dp)
         ) {
-            //
+            NutriTextTitle(titleTextContent)
         }
     }
 }

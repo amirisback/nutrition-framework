@@ -18,7 +18,7 @@ import com.frogobox.nutritioncore.compose.widget.NutriLazyColumn
 import com.frogobox.nutritioncore.compose.widget.NutriListType1
 import com.frogobox.nutritioncore.compose.widget.NutriSimpleTopAppBar
 import com.frogobox.nutritioncore.model.news.Article
-import com.frogobox.nutritionframework.compose.widget.NutriListType5
+import com.frogobox.nutritionframework.compose.widget.NutriListType11
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class DummyActivity : ComponentActivity() {
@@ -76,12 +76,15 @@ fun UiRv(listData: List<Article>) {
             it.urlToImage?.let { it1 ->
                 it.title?.let { it2 ->
                     it.author?.let { it3 ->
-                        NutriListType5(
-                            imageUrlContent = it1,
-                            titleTextContent = it2,
-                            subTitleTextContent = it3,
-                            isAndroid = true
-                        )
+                        it.content?.let { it4 ->
+                            NutriListType11(
+                                imageUrlContent = it1,
+                                titleTextContent = it2,
+                                subTitleTextContent = it3,
+                                descTitleTextContent = it4,
+                                isAndroid = true
+                            )
+                        }
                     }
                 }
             }
