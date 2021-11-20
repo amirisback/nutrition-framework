@@ -6,6 +6,7 @@ import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.unit.Dp
 import com.frogobox.nutritioncore.compose.ui.nutri_dimen_0dp
+import com.frogobox.nutritioncore.compose.ui.nutri_dimen_font_18sp
 
 
 /*
@@ -22,6 +23,15 @@ import com.frogobox.nutritioncore.compose.ui.nutri_dimen_0dp
  */
 
 // -------------------------------------------------------------------------------------------------
+// Nutri Text Top App Bar
+// -------------------------------------------------------------------------------------------------
+
+@Composable
+fun NutriTextTopAppBar(titleContent: String) {
+    Text(text = titleContent, fontSize = nutri_dimen_font_18sp)
+}
+
+// -------------------------------------------------------------------------------------------------
 // Nutri Simple Top App Bar
 // -------------------------------------------------------------------------------------------------
 
@@ -31,7 +41,7 @@ fun NutriSimpleTopAppBar(titleContent: String, elevationContent: Dp?) {
         TopAppBar(
             elevation = elevationContent,
             title = {
-                Text(text = titleContent)
+                NutriTextTopAppBar(titleContent)
             },
             backgroundColor = MaterialTheme.colors.primarySurface
         )
@@ -39,7 +49,7 @@ fun NutriSimpleTopAppBar(titleContent: String, elevationContent: Dp?) {
         TopAppBar(
             elevation = nutri_dimen_0dp,
             title = {
-                Text(text = titleContent)
+                NutriTextTopAppBar(titleContent)
             },
             backgroundColor = MaterialTheme.colors.primarySurface
         )
@@ -57,7 +67,7 @@ fun NutriDetailTopAppBar(titleContent: String, elevationContent: Dp?) {
         TopAppBar(
             elevation = elevationContent,
             title = {
-                Text(text = titleContent)
+                NutriTextTopAppBar(titleContent)
             },
             backgroundColor = MaterialTheme.colors.primarySurface,
             navigationIcon = {
@@ -69,7 +79,7 @@ fun NutriDetailTopAppBar(titleContent: String, elevationContent: Dp?) {
         TopAppBar(
             elevation = nutri_dimen_0dp,
             title = {
-                Text(text = titleContent)
+                NutriTextTopAppBar(titleContent)
             },
             backgroundColor = MaterialTheme.colors.primarySurface,
             navigationIcon = {
