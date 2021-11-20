@@ -4,8 +4,11 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Card
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.layout.ContentScale
 import com.frogobox.nutritioncore.compose.ui.nutri_dimen_16dp
+import com.frogobox.nutritioncore.compose.ui.nutri_dimen_48dp
 import com.frogobox.nutritioncore.compose.ui.nutri_dimen_8dp
 
 
@@ -72,7 +75,11 @@ fun NutriListType2(titleTextContent: String, subTitleTextContent: String) {
 // -------------------------------------------------------------------------------------------------
 
 @Composable
-fun NutriListType3(titleTextContent: String, subTitleTextContent: String, descTitleTextContent: String) {
+fun NutriListType3(
+    titleTextContent: String,
+    subTitleTextContent: String,
+    descTitleTextContent: String
+) {
     Card(
         shape = RoundedCornerShape(nutri_dimen_8dp),
         modifier = Modifier
@@ -94,11 +101,11 @@ fun NutriListType3(titleTextContent: String, subTitleTextContent: String, descTi
 }
 
 // -------------------------------------------------------------------------------------------------
-// Nutri List Type 4
+// Nutri List Type 4 Desktop
 // -------------------------------------------------------------------------------------------------
 
 @Composable
-fun NutriListType4(titleTextContent: String) {
+fun NutriListType4(imageUrlContent: String, titleTextContent: String) {
     Card(
         shape = RoundedCornerShape(nutri_dimen_8dp),
         modifier = Modifier
@@ -109,17 +116,26 @@ fun NutriListType4(titleTextContent: String) {
             modifier = Modifier
                 .padding(nutri_dimen_16dp)
         ) {
-            //
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                NutriImageUrlDesktop(
+                    url = imageUrlContent,
+                    contentDescription = null,
+                    modifier = Modifier.size(nutri_dimen_48dp),
+                    contentScale = ContentScale.Crop
+                )
+                Spacer(modifier = Modifier.size(nutri_dimen_16dp))
+                NutriTextTitle(titleTextContent)
+            }
         }
     }
 }
 
 // -------------------------------------------------------------------------------------------------
-// Nutri List Type 5
+// Nutri List Type 5 Desktop
 // -------------------------------------------------------------------------------------------------
 
 @Composable
-fun NutriListType5(titleTextContent: String) {
+fun NutriListType5(imageUrlContent: String, titleTextContent: String, subTitleTextContent: String) {
     Card(
         shape = RoundedCornerShape(nutri_dimen_8dp),
         modifier = Modifier
@@ -130,13 +146,25 @@ fun NutriListType5(titleTextContent: String) {
             modifier = Modifier
                 .padding(nutri_dimen_16dp)
         ) {
-            //
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                NutriImageUrlDesktop(
+                    url = imageUrlContent,
+                    contentDescription = null,
+                    modifier = Modifier.size(nutri_dimen_48dp),
+                    contentScale = ContentScale.Crop
+                )
+                Spacer(modifier = Modifier.size(nutri_dimen_16dp))
+                Column {
+                    NutriTextTitle(titleTextContent)
+                    NutriTextSubTitle(subTitleTextContent)
+                }
+            }
         }
     }
 }
 
 // -------------------------------------------------------------------------------------------------
-// Nutri List Type 6
+// Nutri List Type 6 Desktop
 // -------------------------------------------------------------------------------------------------
 
 @Composable
@@ -157,7 +185,7 @@ fun NutriListType6(titleTextContent: String) {
 }
 
 // -------------------------------------------------------------------------------------------------
-// Nutri List Type 7
+// Nutri List Type 7 Desktop
 // -------------------------------------------------------------------------------------------------
 
 @Composable
@@ -178,7 +206,7 @@ fun NutriListType7(titleTextContent: String) {
 }
 
 // -------------------------------------------------------------------------------------------------
-// Nutri List Type 8
+// Nutri List Type 8 Desktop
 // -------------------------------------------------------------------------------------------------
 
 @Composable
@@ -199,7 +227,7 @@ fun NutriListType8(titleTextContent: String) {
 }
 
 // -------------------------------------------------------------------------------------------------
-// Nutri List Type 9
+// Nutri List Type 9 Desktop
 // -------------------------------------------------------------------------------------------------
 
 @Composable
@@ -220,7 +248,7 @@ fun NutriListType9(titleTextContent: String) {
 }
 
 // -------------------------------------------------------------------------------------------------
-// Nutri List Type 10
+// Nutri List Type 10 Desktop
 // -------------------------------------------------------------------------------------------------
 
 @Composable
@@ -241,7 +269,7 @@ fun NutriListType10(titleTextContent: String) {
 }
 
 // -------------------------------------------------------------------------------------------------
-// Nutri List Type 11
+// Nutri List Type 11 Desktop
 // -------------------------------------------------------------------------------------------------
 
 @Composable
@@ -262,7 +290,7 @@ fun NutriListType11(titleTextContent: String) {
 }
 
 // -------------------------------------------------------------------------------------------------
-// Nutri List Type 12
+// Nutri List Type 12 Desktop
 // -------------------------------------------------------------------------------------------------
 
 @Composable

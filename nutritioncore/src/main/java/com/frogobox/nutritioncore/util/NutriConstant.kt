@@ -30,17 +30,6 @@ object NutriConstant {
         const val VALUE_SENSOR_ORIENTATION_INVERSE_DEGREES = 270
     }
 
-    object Tag {
-        const val TAG_ACTIVITY_EDIT = 300
-        const val TAG_ACTIVITY_CREATE = 301
-        const val TAG_ACTIVITY_DETAIL = 302
-
-        const val TAG_FROM_ACTIVITY = 801
-        const val TAG_FROM_FRAGMENT = 800
-
-        const val TAG_CAMERA_VIDEO = "Camera2VideoFragment"
-    }
-
     object Ext {
         const val MP4 = ".mp4"
         const val PNG = ".png"

@@ -188,13 +188,14 @@ dependencies {
     kapt("androidx.lifecycle:lifecycle-compiler:2.4.0")
     kapt("androidx.room:room-compiler:2.3.0")
     kapt("com.google.dagger:dagger-compiler:2.37")
-    kapt("com.github.bumptech.glide:compiler:4.11.0")
+    kapt("com.github.bumptech.glide:compiler:4.12.0")
 
     implementation("io.insert-koin:koin-core:${Dependency.KOIN_VERSION}") // Koin core features
     implementation("io.insert-koin:koin-android:${Dependency.KOIN_VERSION}") // Koin main features for Android (Scope,ViewModel ...)
     implementation("io.insert-koin:koin-android-compat:${Dependency.KOIN_VERSION}") // Koin Java Compatibility
     implementation("io.insert-koin:koin-androidx-workmanager:${Dependency.KOIN_VERSION}") // Koin for Jetpack WorkManager
     implementation("io.insert-koin:koin-androidx-compose:${Dependency.KOIN_VERSION}") // Koin for Jetpack Compose
+    implementation("io.coil-kt:coil-compose:1.4.0")
 
     testImplementation("junit:junit:4.13.2")
     testImplementation("androidx.room:room-testing:2.3.0")

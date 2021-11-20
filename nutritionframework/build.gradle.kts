@@ -75,6 +75,7 @@ dependencies {
 
     implementation("io.reactivex.rxjava2:rxandroid:2.1.1")
     implementation("io.reactivex.rxjava2:rxjava:2.2.21")
+    implementation("io.coil-kt:coil-compose:1.4.0")
 
     implementation("com.github.javiersantos:PiracyChecker:1.2.8")
     implementation("com.github.bumptech.glide:glide:4.12.0")
@@ -91,7 +92,7 @@ dependencies {
     kapt("androidx.lifecycle:lifecycle-compiler:2.4.0")
     kapt("androidx.room:room-compiler:2.3.0")
     kapt("com.google.dagger:dagger-compiler:2.37")
-    kapt("com.github.bumptech.glide:compiler:4.11.0")
+    kapt("com.github.bumptech.glide:compiler:4.12.0")
 
 
     testImplementation("junit:junit:4.13.2")

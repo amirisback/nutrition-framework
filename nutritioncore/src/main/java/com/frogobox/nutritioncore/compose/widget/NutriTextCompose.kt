@@ -30,7 +30,8 @@ fun NutriTextTitle(textContent: String) {
         text = textContent,
         color = NutriColorPrimaryDark,
         fontWeight = FontWeight.Bold,
-        fontSize = nutri_dimen_font_16sp
+        fontSize = nutri_dimen_font_16sp,
+        maxLines = 1
     )
 }
 
@@ -40,7 +41,8 @@ fun NutriTextTitle(textContent: String, colorContent: Color) {
         text = textContent,
         color = colorContent,
         fontWeight = FontWeight.Bold,
-        fontSize = nutri_dimen_font_16sp
+        fontSize = nutri_dimen_font_16sp,
+        maxLines = 1
     )
 }
 
@@ -54,7 +56,8 @@ fun NutriTextSubTitle(textContent: String) {
     Text(
         text = textContent,
         color = NutriColorBlack,
-        fontSize = nutri_dimen_font_12sp
+        fontSize = nutri_dimen_font_12sp,
+        maxLines = 1
     )
 }
 
@@ -63,7 +66,8 @@ fun NutriTextSubTitle(textContent: String, colorContent: Color) {
     Text(
         text = textContent,
         color = colorContent,
-        fontSize = nutri_dimen_font_12sp
+        fontSize = nutri_dimen_font_12sp,
+        maxLines = 1
     )
 }
 
@@ -77,7 +81,8 @@ fun NutriTextDescription(textContent: String) {
     Text(
         text = textContent,
         color = NutriColorBlack,
-        fontSize = nutri_dimen_font_11sp
+        fontSize = nutri_dimen_font_11sp,
+        maxLines = 3
     )
 }
 
@@ -86,6 +91,7 @@ fun NutriTextDescription(textContent: String, colorContent: Color) {
     Text(
         text = textContent,
         color = colorContent,
-        fontSize = nutri_dimen_font_11sp
+        fontSize = nutri_dimen_font_11sp,
+        maxLines = 3
     )
 }
