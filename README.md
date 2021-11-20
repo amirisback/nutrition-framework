@@ -19,6 +19,7 @@ What's New??
     * Multi Platform Library *
     * Compose UI Multi Platform *
     * Update Compose Component *
+    * List Item Compose Dekstop and Android *
 
 ## Screen Shoot Apps - Android
 
