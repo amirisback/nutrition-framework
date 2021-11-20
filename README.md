@@ -20,7 +20,7 @@ What's New??
     * Compose UI Multi Platform *
     * Update Compose Component *
 
-## Screen Shoot Apps
+## Screen Shoot Apps - Android
 
 | SS 1 | SS 2 | SS 3 | SS 4 |
 |:----:|:----:|:----:|:----:|
@@ -100,6 +100,9 @@ Membuat beberapa aplikasi tentang beberapa nutrisi. <br>
 - Rekomendasi makanan / obat, rekomendasi penangan
 - 1 Aplikasi bisa di edit / customize dengan berbagai macam keluhan
 - Jika di website yaitu bootstrap
+
+## Screen Shoot Apps - Desktop
+![ScreenShoot Apps](docs/image/ss/ss-desktop.png?raw=true)
 
 ## Architecture
 -   Pattern  [Model-View-ViewModel](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93viewmodel)  (MVVM) facilitating a [separation](https://en.wikipedia.org/wiki/Separation_of_concerns) of development of the graphical user interface.
