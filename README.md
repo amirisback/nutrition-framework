@@ -11,7 +11,7 @@
 This Is Latest Release
 
     ~ Beta Release
-    $version_release = 0.0.2-alpha09
+    $version_release = 0.0.2-alpha10
 
 What's New??
 
@@ -60,14 +60,14 @@ allprojects {
 
     dependencies {
         // library nutrition-framework
-        implementation 'com.github.amirisback:nutrition-framework:0.0.2-alpha09'
+        implementation 'com.github.amirisback:nutrition-framework:0.0.2-alpha10'
     }
 
 #### <Option 2> Kotlin DSL Gradle (build.gradle.kts)
 
     dependencies {
         // library nutrition-framework
-        implementation("com.github.amirisback:nutrition-framework:0.0.2-alpha09")
+        implementation("com.github.amirisback:nutrition-framework:0.0.2-alpha10")
     }
 
 ## Application Framework
@@ -125,6 +125,7 @@ Min API level is set to 21, so the presented approach is suitable for over 94% o
 -   [Retrofit](https://square.github.io/retrofit/)  - type-safe HTTP client.
 -   [Glide](https://github.com/bumptech/glide)  - image loading and caching library
 -   [Compose](https://www.jetbrains.com/lp/compose/) - Compose for Desktop simplifies and accelerates UI development for desktop applications, and allows extensive UI code sharing between Android and desktop applications. Currently in alpha.
+-   [Coil](https://coil-kt.github.io/coil/) - Coroutine Image Loader
 
 ## Inpiration
 - frogo-log ( [Muhammad Faisal Amir](https://github.com/amirisback) - [Project](https://github.com/amirisback/frogo-log) )
