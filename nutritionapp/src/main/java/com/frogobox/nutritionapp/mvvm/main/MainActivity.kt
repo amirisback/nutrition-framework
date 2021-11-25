@@ -36,7 +36,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
                     }
 
                     override fun onItemLongClicked(data: Menu) {}
-                    override    fun setupInitComponent(view: View, data: Menu) {
+                    override fun setupInitComponent(view: View, data: Menu) {
                         view.findViewById<TextView>(R.id.nutri_rv_list_type_1_tv_title).text =
                             data.name
                     }
