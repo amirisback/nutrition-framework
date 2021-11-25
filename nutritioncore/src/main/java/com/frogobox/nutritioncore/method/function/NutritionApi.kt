@@ -18,5 +18,4 @@ import com.frogobox.nutritioncore.method.interfaces.INutritionApi
 
 class NutritionApi : INutritionApi {
 
-
 }

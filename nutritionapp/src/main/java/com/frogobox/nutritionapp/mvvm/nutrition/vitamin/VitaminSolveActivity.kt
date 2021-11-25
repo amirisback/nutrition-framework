@@ -1,6 +1,5 @@
-package com.frogobox.nutritionapp.mvvm.nutrition.category.vitamins
+package com.frogobox.nutritionapp.mvvm.nutrition.vitamin
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.frogobox.nutritionapp.core.BaseActivity
 import com.frogobox.nutritionapp.databinding.ActivityVitaminSolveBinding

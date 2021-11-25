@@ -24,7 +24,7 @@ import kotlinx.coroutines.launch
  *
  */
 
-class NutritionArticleViewModel(
+class ArticleViewModel(
     private val context: Application,
     private val consumeNewsApi: ConsumeNewsApi
 ) :
@@ -32,10 +32,10 @@ class NutritionArticleViewModel(
 
     var topHeadlineLive = NutriSingleLiveEvent<ArticleResponse>()
 
-    fun getEverythings() {
+    fun getEverythings(query: String) {
         viewModelScope.launch {
             consumeNewsApi.getEverythings(
-                "Nutrisi",
+                query,
                 null,
                 null,
                 null,

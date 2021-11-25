@@ -1,4 +1,4 @@
-package com.frogobox.nutritionapp.mvvm.nutrition.calculator.function
+package com.frogobox.nutritionapp.mvvm.nutrition.general
 
 import android.os.Bundle
 import com.frogobox.nutritionapp.core.BaseActivity

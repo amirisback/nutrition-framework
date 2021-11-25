@@ -8,9 +8,8 @@ import com.frogobox.nutritionapp.R
 import com.frogobox.nutritionapp.core.BaseActivity
 import com.frogobox.nutritionapp.databinding.ActivityMainBinding
 import com.frogobox.nutritionapp.model.Menu
-import com.frogobox.nutritionapp.mvvm.nutrition.article.NutritionArticleActivity
-import com.frogobox.nutritionapp.mvvm.nutrition.calculator.CalculatorNutritionActivity
-import com.frogobox.nutritionapp.mvvm.nutrition.category.vitamins.VitaminActivity
+import com.frogobox.nutritionapp.mvvm.nutrition.article.ArticleActivity
+import com.frogobox.nutritionapp.mvvm.nutrition.general.CalculatorNutritionActivity
 import com.frogobox.nutritionapp.mvvm.nutrition.meal.NutritionMealActivity
 import com.frogobox.nutritionapp.mvvm.uixml.UiXmlActivity
 import com.frogobox.nutritionapp.util.Constant
@@ -49,10 +48,10 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
     private fun data(): MutableList<Menu> {
         val data = mutableListOf<Menu>()
         data.add(Menu(Constant.TitleActivity.ACTIVITY_UI_XML, Intent(this, UiXmlActivity::class.java)))
-        data.add(Menu(Constant.TitleActivity.ACTIVITY_NUTRITION_ARTICLE, Intent(this, NutritionArticleActivity::class.java)))
-        data.add(Menu(Constant.TitleActivity.ACTIVITY_CALCULATOR, Intent(this, CalculatorNutritionActivity::class.java)))
+        data.add(Menu(Constant.TitleActivity.ACTIVITY_ARTICLE, Intent(this, ArticleActivity::class.java)))
         data.add(Menu(Constant.TitleActivity.ACTIVITY_MEAL, Intent(this, NutritionMealActivity::class.java)))
-        data.add(Menu(Constant.TitleActivity.ACTIVITY_VITAMIN, Intent(this, VitaminActivity::class.java)))
+        data.add(Menu(Constant.TitleActivity.ACTIVITY_CALCULATOR, Intent(this, CalculatorNutritionActivity::class.java)))
+
         return data
     }
 

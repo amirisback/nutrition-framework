@@ -24,27 +24,41 @@ import com.frogobox.nutritionapp.BuildConfig
 object Constant {
 
     object TitleActivity {
-        const val ACTIVITY_UI_XML = "UI XML"
-        const val ACTIVITY_NUTRITION_ARTICLE = "Artikel Nutrisi"
-        const val ACTIVITY_NUTRITION_ARTICLE_DETAIL = "Detail Artikel Nutrisi"
+        const val ACTIVITY_UI_XML = "UI XML Component Layout"
+
+        const val ACTIVITY_ARTICLE = "Informasi Seputar Gizi"
+
+        const val ACTIVITY_NUTRITION_ARTICLE = "Informasi Seputar Nutrisi"
+        const val ACTIVITY_NUTRITION_ARTICLE_DETAIL = "Detail Informasi Nutrisi"
 
         const val ACTIVITY_CALCULATOR = "Kalkulator Nutrisi"
         const val ACTIVITY_CALCULATOR_BERAT_BADAN_IDEAL = "Berat Badan Ideal"
         const val ACTIVITY_CALCULATOR_KEBUTUHAN_ENERGI = "Kebutuhan Energi"
         const val ACTIVITY_CALCULATOR_INDEX_MASA_TUBUH = "Index Masa Tubuh"
 
-        const val ACTIVITY_MEAL = "Daftar Resep Makanan"
+        const val ACTIVITY_MEAL = "Informasi Resep Makanan"
 
         const val ACTIVITY_VITAMIN = "Vitamin"
-        const val ACTIVITY_VITAMIN_INFORMATION = "Informasi Seputar Vitamin"
+        const val ACTIVITY_VITAMIN_ARTICLE = "Informasi Seputar Vitamin"
+        const val ACTIVITY_VITAMIN_ARTICLE_A = "Informasi Seputar Vitamin A"
+        const val ACTIVITY_VITAMIN_ARTICLE_C = "Informasi Seputar Vitamin C"
+        const val ACTIVITY_VITAMIN_ARTICLE_E = "Informasi Seputar Vitamin E"
+        const val ACTIVITY_VITAMIN_ARTICLE_DETAIL = "Detail Informasi Vitamin"
         const val ACTIVITY_VITAMIN_PROBLEM = "Permasalahan Seputar Vitamin"
         const val ACTIVITY_VITAMIN_SOLVE = "Penyelesaian Masalah Vitamin"
+
+        const val ACTIVITY_CALORIE_ARTICLE = "Informasi Seputar Kalori"
+        const val ACTIVITY_CALORIE_ARTICLE_DETAIL = "Detail Informasi Kalori"
 
     }
 
     object Extra {
         const val BASE_EXTRA = BuildConfig.APPLICATION_ID
         const val EXTRA_ARTICLE_DETAIL = "$BASE_EXTRA.EXTRA_ARTICLE_DETAIL"
+        const val EXTRA_ARTICLE_DETAIL_TITLE = "$BASE_EXTRA.EXTRA_ARTICLE_DETAIL_TITLE"
+        const val EXTRA_ARTICLE = "$BASE_EXTRA.EXTRA_ARTICLE"
+        const val EXTRA_ARTICLE_TITLE = "$BASE_EXTRA.EXTRA_ARTICLE_TITLE"
+
     }
 
     object Const {

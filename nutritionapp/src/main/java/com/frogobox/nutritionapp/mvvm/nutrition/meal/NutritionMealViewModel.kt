@@ -2,12 +2,10 @@ package com.frogobox.nutritionapp.mvvm.nutrition.meal
 
 import android.app.Application
 import androidx.lifecycle.viewModelScope
-import com.frogobox.nutritionapp.source.DataRepository
 import com.frogobox.nutritioncore.core.NutriResponse
 import com.frogobox.nutritioncore.method.function.ConsumeTheMealDbApi
 import com.frogobox.nutritioncore.model.meal.Meal
 import com.frogobox.nutritioncore.model.meal.MealResponse
-import com.frogobox.nutritioncore.util.meal.MealUrl
 import com.frogobox.nutritionframework.core.NutriViewModel
 import com.frogobox.nutritionframework.util.NutriSingleLiveEvent
 import kotlinx.coroutines.launch

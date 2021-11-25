@@ -19,36 +19,32 @@
         android:theme="@style/Theme.KickStart"
         android:usesCleartextTraffic="true"
         tools:targetApi="n">
-
         <activity
-            android:name=".mvvm.nutrition.category.vitamins.VitaminSolveActivity"
+            android:name=".mvvm.nutrition.article.ArticleCategoryActivity"
             android:exported="false" />
         <activity
-            android:name=".mvvm.nutrition.category.vitamins.VitaminProblemActivity"
+            android:name=".mvvm.nutrition.vitamin.VitaminSolveActivity"
             android:exported="false" />
         <activity
-            android:name=".mvvm.nutrition.category.vitamins.VitaminInformationActivity"
-            android:exported="false" />
-        <activity
-            android:name=".mvvm.nutrition.category.vitamins.VitaminActivity"
+            android:name=".mvvm.nutrition.vitamin.VitaminProblemActivity"
             android:exported="false" />
         <activity
             android:name=".mvvm.nutrition.meal.NutritionMealActivity"
             android:exported="false" />
         <activity
-            android:name=".mvvm.nutrition.calculator.function.BeratBadanIdealActivity"
+            android:name=".mvvm.nutrition.general.BeratBadanIdealActivity"
             android:exported="false" />
         <activity
-            android:name=".mvvm.nutrition.calculator.function.IndexMasaTubuhActivity"
+            android:name=".mvvm.nutrition.general.IndexMasaTubuhActivity"
             android:exported="false" />
         <activity
-            android:name=".mvvm.nutrition.calculator.function.KebutuhanEnergiActivity"
+            android:name=".mvvm.nutrition.general.KebutuhanEnergiActivity"
             android:exported="false" />
         <activity
-            android:name=".mvvm.nutrition.calculator.CalculatorNutritionActivity"
+            android:name=".mvvm.nutrition.general.CalculatorNutritionActivity"
             android:exported="false" />
         <activity
-            android:name=".mvvm.nutrition.article.NutritionArticleActivity"
+            android:name=".mvvm.nutrition.article.ArticleActivity"
             android:exported="false" />
         <activity
             android:name=".mvvm.uixml.UiXmlActivity"
@@ -59,7 +55,7 @@
             android:name=".mvvm.uicompose.MainComposeActivity"
             android:exported="true"
             android:theme="@style/Theme.KickStart.NoActionBar" />
-        <activity android:name=".mvvm.nutrition.article.NutritionArticleDetailActivity" />
+        <activity android:name=".mvvm.nutrition.article.ArticleDetailActivity" />
         <activity android:name=".mvvm.about.AboutUsActivity" />
         <activity
             android:name=".mvvm.main.MainActivity"

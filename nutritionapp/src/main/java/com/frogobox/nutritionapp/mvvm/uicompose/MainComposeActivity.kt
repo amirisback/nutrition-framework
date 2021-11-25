@@ -10,7 +10,7 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.runtime.*
 import androidx.compose.ui.tooling.preview.Preview
-import com.frogobox.nutritionapp.mvvm.nutrition.article.NutritionArticleViewModel
+import com.frogobox.nutritionapp.mvvm.nutrition.article.ArticleViewModel
 import com.frogobox.nutritionapp.theme.NutritionFrameworkTheme
 import com.frogobox.nutritioncore.compose.ui.nutri_dimen_16dp
 import com.frogobox.nutritioncore.compose.ui.nutri_dimen_4dp
@@ -21,7 +21,7 @@ import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class MainComposeActivity : ComponentActivity() {
 
-    private val nutritionArticleViewModel: NutritionArticleViewModel by viewModel()
+    private val articleViewModel: ArticleViewModel by viewModel()
 
     @OptIn(ExperimentalFoundationApi::class)
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,9 +31,9 @@ class MainComposeActivity : ComponentActivity() {
             var dataState: List<Article> by remember { mutableStateOf(emptyList()) }
             var progressState: Boolean by remember { mutableStateOf(false) }
 
-            nutritionArticleViewModel.apply {
+            articleViewModel.apply {
 
-                getEverythings()
+                getEverythings("Nutrisi")
                 topHeadlineLive.observe(this@MainComposeActivity, {
                     it.articles?.let { it1 -> dataState = it1 }
                 })

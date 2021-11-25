@@ -1,4 +1,4 @@
-package com.frogobox.nutritionapp.mvvm.nutrition.category.vitamins
+package com.frogobox.nutritionapp.mvvm.nutrition.vitamin
 
 import android.os.Bundle
 import com.frogobox.nutritionapp.core.BaseActivity
