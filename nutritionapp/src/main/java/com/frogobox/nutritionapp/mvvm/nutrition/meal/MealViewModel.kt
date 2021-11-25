@@ -24,7 +24,7 @@ import kotlinx.coroutines.launch
  *
  */
 
-class NutritionMealViewModel(
+class MealViewModel(
     private val context: Application,
     private val consumeTheMealDbApi: ConsumeTheMealDbApi
 ) : NutriViewModel(context) {

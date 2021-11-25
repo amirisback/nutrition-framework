@@ -1,38 +1,42 @@
 package com.frogobox.nutritionapp.mvvm.nutrition.meal
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import com.bumptech.glide.Glide
 import com.frogobox.nutritionapp.core.BaseActivity
-import com.frogobox.nutritionapp.databinding.ActivityNutritionMealBinding
+import com.frogobox.nutritionapp.databinding.ActivityMealBinding
+import com.frogobox.nutritionapp.databinding.ItemMealCategoryBinding
 import com.frogobox.nutritionapp.util.Constant
 import com.frogobox.nutritioncore.model.meal.Meal
+import com.frogobox.nutritioncore.util.NutriFunc
 import com.frogobox.nutritionframework.databinding.NutriRvGridType2Binding
 import com.frogobox.nutritionframework.recycler.core.INutriBindingAdapter
+import com.google.gson.Gson
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
-class NutritionMealActivity : BaseActivity<ActivityNutritionMealBinding>() {
+class MealActivity : BaseActivity<ActivityMealBinding>() {
 
-    private val mealViewModel: NutritionMealViewModel by viewModel()
-    
-    override fun setupViewBinding(): ActivityNutritionMealBinding {
-        return ActivityNutritionMealBinding.inflate(layoutInflater)
+    private val mealViewModel: MealViewModel by viewModel()
+
+    override fun setupViewBinding(): ActivityMealBinding {
+        return ActivityMealBinding.inflate(layoutInflater)
     }
 
     override fun setupViewModel() {
         mealViewModel.apply {
             getListMeals("b")
 
-            eventShowProgress.observe(this@NutritionMealActivity, {
+            eventShowProgress.observe(this@MealActivity, {
                 setupEventProgressView(binding.progressBar, it)
             })
 
-            eventFailed.observe(this@NutritionMealActivity, {
+            eventFailed.observe(this@MealActivity, {
                 showToast(it)
             })
 
-            listData.observe(this@NutritionMealActivity, {
+            listData.observe(this@MealActivity, {
                 setupRv(it)
             })
 
@@ -42,8 +46,39 @@ class NutritionMealActivity : BaseActivity<ActivityNutritionMealBinding>() {
     override fun setupUI(savedInstanceState: Bundle?) {
         setupDetailActivity(Constant.TitleActivity.ACTIVITY_MEAL)
         binding.apply {
-
+            setupRvCategory()
         }
+    }
+
+    private fun setupRvCategory() {
+        val adapterCallback = object : INutriBindingAdapter<String, ItemMealCategoryBinding> {
+            override fun setViewBinding(parent: ViewGroup): ItemMealCategoryBinding {
+                return ItemMealCategoryBinding.inflate(
+                    LayoutInflater.from(parent.context),
+                    parent,
+                    false
+                )
+            }
+
+            override fun setupInitComponent(binding: ItemMealCategoryBinding, data: String) {
+                binding.nutriRvListType12TvTitle.text = data
+            }
+
+            override fun onItemClicked(data: String) {
+                mealViewModel.getListMeals(data)
+            }
+
+            override fun onItemLongClicked(data: String) {
+                //
+            }
+        }
+
+        binding.frogoRvAbjad.injectorBinding<String, ItemMealCategoryBinding>()
+            .addData(NutriFunc.arrayAbjad())
+            .addCallback(adapterCallback)
+            .createLayoutLinearHorizontal(false)
+            .build()
+
     }
 
     private fun setupRv(data: List<Meal>) {
@@ -67,7 +102,10 @@ class NutritionMealActivity : BaseActivity<ActivityNutritionMealBinding>() {
             }
 
             override fun onItemClicked(data: Meal) {
-                data.strMeal?.let { showToast(it) }
+                val extraData = Gson().toJson(data)
+                val intent = Intent(this@MealActivity, MealDetailActivity::class.java)
+                    .putExtra(Constant.Extra.EXTRA_MEAL_DETAIL, extraData)
+                startActivity(intent)
             }
 
             override fun onItemLongClicked(data: Meal) {

@@ -37,6 +37,7 @@ object Constant {
         const val ACTIVITY_CALCULATOR_INDEX_MASA_TUBUH = "Index Masa Tubuh"
 
         const val ACTIVITY_MEAL = "Informasi Resep Makanan"
+        const val ACTIVITY_MEAL_DETAIL = "Detail Resep Makanan"
 
         const val ACTIVITY_VITAMIN = "Vitamin"
         const val ACTIVITY_VITAMIN_ARTICLE = "Informasi Seputar Vitamin"
@@ -54,11 +55,13 @@ object Constant {
 
     object Extra {
         const val BASE_EXTRA = BuildConfig.APPLICATION_ID
+
         const val EXTRA_ARTICLE_DETAIL = "$BASE_EXTRA.EXTRA_ARTICLE_DETAIL"
         const val EXTRA_ARTICLE_DETAIL_TITLE = "$BASE_EXTRA.EXTRA_ARTICLE_DETAIL_TITLE"
         const val EXTRA_ARTICLE = "$BASE_EXTRA.EXTRA_ARTICLE"
         const val EXTRA_ARTICLE_TITLE = "$BASE_EXTRA.EXTRA_ARTICLE_TITLE"
 
+        const val EXTRA_MEAL_DETAIL = "$BASE_EXTRA.EXTRA_MEAL_DETAIL"
     }
 
     object Const {
@@ -95,7 +98,7 @@ object Constant {
     }
 
     object RoomDatabase {
-        val DATABASE_NAME = {BuildConfig.DATABASE_NAME}
+        val DATABASE_NAME = { BuildConfig.DATABASE_NAME }
         const val BASE_TABLE_NAME = "table"
         const val TABLE_NAME_FAVORITE = "favorite"
     }
@@ -111,7 +114,8 @@ object Constant {
     object Code {
         const val CODE_NAME = 1
         const val CODE_REQUEST_VIDEO_PERMISSIONS = 1
-        val CODE_VIDEO_PERMISSIONS = arrayOf(Manifest.permission.CAMERA, Manifest.permission.RECORD_AUDIO)
+        val CODE_VIDEO_PERMISSIONS =
+            arrayOf(Manifest.permission.CAMERA, Manifest.permission.RECORD_AUDIO)
 
     }
 

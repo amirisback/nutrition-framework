@@ -20,6 +20,9 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="n">
         <activity
+            android:name=".mvvm.nutrition.meal.MealDetailActivity"
+            android:exported="false" />
+        <activity
             android:name=".mvvm.nutrition.article.ArticleCategoryActivity"
             android:exported="false" />
         <activity
@@ -29,7 +32,7 @@
             android:name=".mvvm.nutrition.vitamin.VitaminProblemActivity"
             android:exported="false" />
         <activity
-            android:name=".mvvm.nutrition.meal.NutritionMealActivity"
+            android:name=".mvvm.nutrition.meal.MealActivity"
             android:exported="false" />
         <activity
             android:name=".mvvm.nutrition.general.BeratBadanIdealActivity"
