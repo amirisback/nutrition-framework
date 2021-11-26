@@ -9,6 +9,7 @@ import com.frogobox.nutritionapp.core.BaseActivity
 import com.frogobox.nutritionapp.databinding.ActivityAndroidMethodBinding
 import com.frogobox.nutritionapp.model.Menu
 import com.frogobox.nutritionapp.mvvm.androidmethod.admob.NutriAdmobSampleActivity
+import com.frogobox.nutritionapp.mvvm.androidmethod.recycler.NutriRecyclerSampleActivity
 import com.frogobox.nutritionapp.mvvm.uicomponent.uixml.UiXmlRvActivity
 import com.frogobox.nutritionapp.util.Constant
 import com.frogobox.nutritionframework.recycler.core.INutriViewAdapter
@@ -29,7 +30,7 @@ class AndroidMethodActivity : BaseActivity<ActivityAndroidMethodBinding>() {
 
     private fun data() : MutableList<Menu> {
         val data = mutableListOf<Menu>()
-        data.add(Menu(Constant.TitleActivity.ACTIVITY_ANDROID_METHOD_RV, Intent(this, UiXmlRvActivity::class.java)))
+        data.add(Menu(Constant.TitleActivity.ACTIVITY_ANDROID_METHOD_RV, Intent(this, NutriRecyclerSampleActivity::class.java)))
         data.add(Menu(Constant.TitleActivity.ACTIVITY_ANDROID_METHOD_LOG, Intent(this, UiXmlRvActivity::class.java)))
         data.add(Menu(Constant.TitleActivity.ACTIVITY_ANDROID_METHOD_NOTIF, Intent(this, UiXmlRvActivity::class.java)))
         data.add(Menu(Constant.TitleActivity.ACTIVITY_ANDROID_METHOD_ADMOB, Intent(this, NutriAdmobSampleActivity::class.java)))

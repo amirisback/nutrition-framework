@@ -6,7 +6,7 @@ import com.frogobox.nutritionframework.recycler.core.NutriRvConstant.NUTRI_RV_TA
 
 /*
  * Created by Faisal Amir on 04/06/2020
- * FrogoRecyclerView Source Code
+ * NutriRecyclerView Source Code
  * -----------------------------------------
  * Name     : Muhammad Faisal Amir
  * E-mail   : faisalamircs@gmail.com

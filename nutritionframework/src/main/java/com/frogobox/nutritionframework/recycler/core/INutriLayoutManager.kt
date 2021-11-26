@@ -5,7 +5,7 @@ import androidx.recyclerview.widget.*
 
 /*
  * Created by faisalamir on 23/07/21
- * FrogoRecyclerView
+ * NutriRecyclerView
  * -----------------------------------------
  * Name     : Muhammad Faisal Amir
  * E-mail   : faisalamircs@gmail.com

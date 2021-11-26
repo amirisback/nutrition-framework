@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/button_shimmer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/nutri_dimen_16dp"
+        android:layout_marginTop="@dimen/nutri_dimen_16dp"
+        android:layout_marginRight="@dimen/nutri_dimen_16dp"
+        android:background="@drawable/nutri_bg_amber_4dp"
+        android:text="CLICK ME FOR HANDLE SHIMMER" />
+
+    <com.frogobox.nutritionframework.recycler.widget.NutriShimmerRecyclerView
+        android:id="@+id/rv_shimmer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:frvClipToPadding="false"
+        app:frvPaddingTop="@dimen/nutri_dimen_16dp" />
+
+</LinearLayout>

@@ -19,6 +19,22 @@
         android:theme="@style/Theme.KickStart"
         android:usesCleartextTraffic="true"
         tools:targetApi="n">
+        <activity android:name=".mvvm.androidmethod.recycler.kotlin.noadapter.progress.KotlinProgressActivity" />
+        <activity android:name=".mvvm.androidmethod.recycler.kotlin.usingadapter.nested.KotlinNestedActivity" />
+        <activity android:name=".mvvm.androidmethod.recycler.java.noadapter.multiview.JavaNoAdapterMultiViewActivity" />
+        <activity android:name=".mvvm.androidmethod.recycler.java.noadapter.simple.JavaNoAdapterActivity" />
+        <activity android:name=".mvvm.androidmethod.recycler.java.usingadapter.JavaSampleActivity" />
+        <activity android:name=".mvvm.androidmethod.recycler.kotlin.noadapter.shimmer.KotlinShimmerActivity" />
+        <activity android:name=".mvvm.androidmethod.recycler.kotlin.noadapter.multiview.KotlinNoAdapterMultiVewActivity" />
+        <activity android:name=".mvvm.androidmethod.recycler.kotlin.noadapter.simple.KotlinNoAdapterActivity" />
+        <activity android:name=".mvvm.androidmethod.recycler.kotlin.usingadapter.simple.KotlinSampleActivity" />
+        <activity android:name=".mvvm.androidmethod.recycler.kotlin.usingadapter.nested.KotlinSimpleNestedActivity" />
+        <activity
+            android:name=".mvvm.androidmethod.recycler.kotlin.compose.RecyclerComposeActivity"
+            android:exported="true" />
+        <activity
+            android:name=".mvvm.androidmethod.recycler.NutriRecyclerSampleActivity"
+            android:exported="false" />
         <activity
             android:name=".mvvm.androidmethod.admob.NutriAdmobComposeActivity"
             android:exported="false"

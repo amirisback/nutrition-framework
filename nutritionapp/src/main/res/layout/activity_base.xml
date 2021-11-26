@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+ * Created by Faisal Amir
+ * 
+ * Name     : Muhammad Faisal Amir
+ * E-mail   : faisalamircs@gmail.com
+ * Github   : github.com/amirisback
+ * 
+ * Copyright (C) 2021 FrogoBox Inc.      
+ * All rights reserved
+ *
+ -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="@dimen/nutri_dimen_8dp">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_r"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/nutri_dimen_8dp"
+            android:layout_weight="1"
+            android:background="@drawable/nutri_bg_teal_4dp"
+            android:text="R Class"
+            android:textColor="@color/nutriColorWhite" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_binding"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/nutri_dimen_8dp"
+            android:layout_weight="1"
+            android:background="@drawable/nutri_bg_amber_4dp"
+            android:text="View Binding"
+            android:textColor="@color/nutriColorWhite" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_r_builder"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/nutri_dimen_8dp"
+            android:layout_weight="1"
+            android:background="@drawable/nutri_bg_orange_4dp"
+            android:text="R Class Builder"
+            android:textColor="@color/nutriColorWhite" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_binding_builder"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/nutri_bg_deep_purple_4dp"
+            android:text="Binding Builder"
+            android:textColor="@color/nutriColorWhite" />
+
+    </LinearLayout>
+
+    <com.frogobox.nutritionframework.recycler.widget.NutriRecyclerView
+        android:id="@+id/nutri_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/nutriColorWhite"
+        android:clipToPadding="false"
+        android:paddingTop="@dimen/nutri_dimen_16dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/nutri_rv_list_type_1" />
+</LinearLayout>

@@ -11,7 +11,7 @@ import com.frogobox.nutritionframework.recycler.widget.NutriRecyclerView
 
 /*
  * Created by faisalamir on 31/05/21
- * FrogoRecyclerView
+ * NutriRecyclerView
  * -----------------------------------------
  * Name     : Muhammad Faisal Amir
  * E-mail   : faisalamircs@gmail.com

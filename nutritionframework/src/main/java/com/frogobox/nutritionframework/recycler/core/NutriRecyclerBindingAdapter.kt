@@ -8,7 +8,7 @@ import com.frogobox.nutritionframework.recycler.core.NutriRvConstant.NUTRI_RV_TA
 /*
  * Created by Faisal Amir
  * =========================================
- * FrogoRecyclerViewAdapter
+ * NutriRecyclerViewAdapter
  * Copyright (C) 29/04/2020.      
  * All rights reserved
  * -----------------------------------------

@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 
 /*
  * Created by faisalamir on 23/07/21
- * FrogoRecyclerView
+ * NutriRecyclerView
  * -----------------------------------------
  * Name     : Muhammad Faisal Amir
  * E-mail   : faisalamircs@gmail.com
@@ -18,7 +18,7 @@ import androidx.recyclerview.widget.RecyclerView
  */
 interface INutriBuilderRv<T> {
 
-    // Setup data FrogoRecyclerView
+    // Setup data NutriRecyclerView
     fun setupData(): List<T>
 
     // Setup Custom View
@@ -27,7 +27,7 @@ interface INutriBuilderRv<T> {
     // Setup Empty View
     fun setupEmptyView(): Int?
 
-    // Setup Layout Manager of FrogoRecyclerView
+    // Setup Layout Manager of NutriRecyclerView
     fun setupLayoutManager(context: Context): RecyclerView.LayoutManager
 
     // Setup Init Component on ViewHolder

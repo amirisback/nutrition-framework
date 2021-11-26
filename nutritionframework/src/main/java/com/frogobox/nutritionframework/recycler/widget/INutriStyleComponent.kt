@@ -5,7 +5,7 @@ import android.widget.ProgressBar
 
 /*
  * Created by faisalamir on 09/05/21
- * FrogoRecyclerView
+ * NutriRecyclerView
  * -----------------------------------------
  * Name     : Muhammad Faisal Amir
  * E-mail   : faisalamircs@gmail.com
@@ -18,7 +18,7 @@ import android.widget.ProgressBar
 interface INutriStyleComponent {
 
     // Setup Component Frogo Recycler View
-    fun setupComponentFrogoRecyclerView(typedArray: TypedArray, nutriRecyclerView: NutriRecyclerView)
+    fun setupComponentNutriRecyclerView(typedArray: TypedArray, nutriRecyclerView: NutriRecyclerView)
 
     // Setup Component Frogo Progress Bar
     fun setupComponentProgressBar(typedArray: TypedArray, progressBar: ProgressBar)

@@ -8,12 +8,12 @@ import android.widget.RelativeLayout
 import com.frogobox.nutritionframework.R
 import com.frogobox.nutritionframework.databinding.WidgetNutriProgressRecyclerviewBinding
 import com.frogobox.nutritionframework.recycler.core.NutriSingleRv
-import com.frogobox.nutritionframework.recycler.widget.NutriStyleComponent.setupComponentFrogoRecyclerView
+import com.frogobox.nutritionframework.recycler.widget.NutriStyleComponent.setupComponentNutriRecyclerView
 import com.frogobox.nutritionframework.recycler.widget.NutriStyleComponent.setupComponentProgressBar
 
 /*
  * Created by Faisal Amir on 17/02/2021
- * FrogoRecyclerView Source Code
+ * NutriRecyclerView Source Code
  * -----------------------------------------
  * Name     : Muhammad Faisal Amir
  * E-mail   : faisalamircs@gmail.com
@@ -52,7 +52,7 @@ class NutriProgressRecyclerView @JvmOverloads constructor(
             // setup inner component
             binding.apply {
                 styleArrayRecyclerView?.let { it1 ->
-                    setupComponentFrogoRecyclerView(
+                    setupComponentNutriRecyclerView(
                         it1,
                         widgetFprvRecyclerview
                     )

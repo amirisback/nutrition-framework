@@ -5,7 +5,7 @@ import com.frogobox.nutritionframework.recycler.core.NutriSingleSrv
 
 /*
  * Created by Faisal Amir on 02/06/2020
- * FrogoRecyclerView Source Code
+ * NutriRecyclerView Source Code
  * -----------------------------------------
  * Name     : Muhammad Faisal Amir
  * E-mail   : faisalamircs@gmail.com

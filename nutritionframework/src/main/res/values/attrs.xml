@@ -15,7 +15,7 @@
 
 <resources>
 
-    <!-- frogo_recycler_view attrs -->
+    <!-- nutri_recycler_view attrs -->
     <declare-styleable name="nutri_recycler_view">
         <attr name="frvPaddingTop" format="dimension" />
         <attr name="frvPaddingRight" format="dimension" />
@@ -25,7 +25,7 @@
         <attr name="frvlayoutManager" format="string"/>
     </declare-styleable>
 
-    <!-- frogo_recycler_view attrs -->
+    <!-- nutri_recycler_view attrs -->
     <declare-styleable name="nutri_empty_view">
         <attr name="frv_empty_image_width" format="dimension" />
         <attr name="frv_empty_image_height" format="dimension" />
@@ -36,7 +36,7 @@
         <attr name="frv_empty_subtitle_color" format="reference|color" />
     </declare-styleable>
 
-    <!-- frogo_recycler_view attrs -->
+    <!-- nutri_recycler_view attrs -->
     <declare-styleable name="nutri_progress_bar">
         <attr name="frvProgressHeight" format="dimension"/>
         <attr name="frvProgressWidth" format="dimension"/>

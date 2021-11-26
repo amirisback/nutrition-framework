@@ -1,6 +1,6 @@
 /*
  * Created by faisalamir on 19/09/21
- * FrogoRecyclerView
+ * NutriRecyclerView
  * -----------------------------------------
  * Name     : Muhammad Faisal Amir
  * E-mail   : faisalamircs@gmail.com

@@ -7,7 +7,7 @@ import com.frogobox.nutritionframework.recycler.core.*
  * Created by Faisal Amir
  * FrogoBox Inc License
  * =========================================
- * FrogoRecyclerViewAdapter
+ * NutriRecyclerViewAdapter
  * Copyright (C) 31/12/2019.
  * All rights reserved
  * -----------------------------------------

@@ -7,7 +7,7 @@
     android:background="@color/nutriColorWhite">
 
     <com.frogobox.nutritionframework.recycler.widget.NutriRecyclerView
-        android:id="@+id/frogo_rv_abjad"
+        android:id="@+id/nutri_rv_abjad"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:clipToPadding="false"
@@ -16,8 +16,8 @@
         android:paddingTop="@dimen/nutri_dimen_16dp"/>
 
     <com.frogobox.nutritionframework.recycler.widget.NutriRecyclerView
-        android:id="@+id/frogo_rv"
-        android:layout_below="@id/frogo_rv_abjad"
+        android:id="@+id/nutri_rv"
+        android:layout_below="@id/nutri_rv_abjad"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:clipToPadding="false"

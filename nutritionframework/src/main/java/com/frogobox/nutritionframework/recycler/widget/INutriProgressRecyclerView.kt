@@ -4,7 +4,7 @@ import com.frogobox.nutritionframework.recycler.core.NutriSingleRv
 
 /*
  * Created by faisalamir on 09/05/21
- * FrogoRecyclerView
+ * NutriRecyclerView
  * -----------------------------------------
  * Name     : Muhammad Faisal Amir
  * E-mail   : faisalamircs@gmail.com

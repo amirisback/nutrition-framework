@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/nutriColorWhite">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/nutriColorWhite"
+        android:padding="@dimen/nutri_dimen_16dp">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_with_data"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/nutri_dimen_8dp"
+            android:background="@drawable/nutri_bg_primary_dark_32dp"
+            android:text="With Data (Kotlin Sample)"
+            android:textColor="@color/nutriColorWhite"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_empty_data"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/nutri_dimen_8dp"
+            android:background="@drawable/nutri_bg_primary_dark_32dp"
+            android:text="Empty Data (Java Sample)"
+            android:textColor="@color/nutriColorWhite"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_with_data" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_kotlin_no_adapter"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/nutri_dimen_8dp"
+            android:background="@drawable/nutri_bg_green_32dp"
+            android:text="With Data (Kotlin Sample)"
+            android:textColor="@color/nutriColorWhite"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_java_no_adapter"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/nutri_dimen_8dp"
+            android:background="@drawable/nutri_bg_green_32dp"
+            android:text="Empty Data (Java Sample)"
+            android:textColor="@color/nutriColorWhite"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_kotlin_no_adapter" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="With Adapter"
+            android:textColor="@color/nutriColorBlack"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="No Adapter"
+            android:textColor="@color/nutriColorBlack"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_empty_data" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="No Adapter (Multi-View)"
+            android:textColor="@color/nutriColorBlack"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_java_no_adapter" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_kotlin_multiview"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/nutri_bg_orange_32dp"
+            android:text="Multi View (Kotlin Sample)"
+            android:textColor="@color/nutriColorWhite"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_java_multiview"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/nutri_bg_orange_32dp"
+            android:text="Multi View (Java Sample)"
+            android:textColor="@color/nutriColorWhite"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_kotlin_multiview" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Custom Recycler View"
+            android:textColor="@color/nutriColorBlack"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_java_multiview" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_kotlin_shimmer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/nutri_dimen_8dp"
+            android:background="@drawable/nutri_bg_pink_32dp"
+            android:text="Shimmer Recyclerview (Kotlin Sample)"
+            android:textColor="@color/nutriColorWhite"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_kotlin_progress"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/nutri_dimen_8dp"
+            android:background="@drawable/nutri_bg_pink_32dp"
+            android:text="Progress Recyclerview (Kotlin Sample)"
+            android:textColor="@color/nutriColorWhite"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_kotlin_shimmer" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Nested Recycler View"
+            android:textColor="@color/nutriColorBlack"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_kotlin_progress" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_nested_simple"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/nutri_dimen_8dp"
+            android:background="@drawable/nutri_bg_amber_32dp"
+            android:text="Simple Nested Recycler View"
+            android:textColor="@color/nutriColorWhite"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_nested"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/nutri_dimen_8dp"
+            android:background="@drawable/nutri_bg_amber_32dp"
+            android:text="Nested Recycler View"
+            android:textColor="@color/nutriColorWhite"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_nested_simple" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Jetpack Compose (Experimental)"
+            android:textColor="@color/nutriColorBlack"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_nested" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_jetpack_compose"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/nutri_dimen_8dp"
+            android:background="@drawable/nutri_bg_cyan_32dp"
+            android:text="Frogo Recycler Compose"
+            android:textColor="@color/nutriColorWhite"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>

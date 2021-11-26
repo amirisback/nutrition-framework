@@ -3,6 +3,7 @@ package com.frogobox.nutritionapp.util
 import android.Manifest
 import android.os.Environment
 import com.frogobox.nutritionapp.BuildConfig
+import com.frogobox.nutritionapp.model.People
 
 /**
  * Created by Faisal Amir
@@ -22,6 +23,16 @@ import com.frogobox.nutritionapp.BuildConfig
  *
  */
 object Constant {
+
+    const val FULL_NAME = "Muhammad Faisal Amir"
+
+    fun dummyData(cons : String): MutableList<People> {
+        val listString = mutableListOf<People>()
+        for (i in 1..5) {
+            listString.add(People(cons, ""))
+        }
+        return listString
+    }
 
     object TitleActivity {
         const val ACTIVITY_UI_COMPONENT = "UI Component"

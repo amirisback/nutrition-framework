@@ -8,7 +8,7 @@ import androidx.viewbinding.ViewBinding
 
 /*
  * Created by faisalamir on 24/07/21
- * FrogoRecyclerView
+ * NutriRecyclerView
  * -----------------------------------------
  * Name     : Muhammad Faisal Amir
  * E-mail   : faisalamircs@gmail.com
@@ -20,10 +20,10 @@ import androidx.viewbinding.ViewBinding
  */
 interface INutriBuilderRvBinding<T, VB : ViewBinding> {
 
-    // Setup data FrogoRecyclerView
+    // Setup data NutriRecyclerView
     fun setupData(): List<T>
 
-    // Setup Layout Manager of FrogoRecyclerView
+    // Setup Layout Manager of NutriRecyclerView
     fun setupLayoutManager(context: Context): RecyclerView.LayoutManager
 
     // Setup View Binding

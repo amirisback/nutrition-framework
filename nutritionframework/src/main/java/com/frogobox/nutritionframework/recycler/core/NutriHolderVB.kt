@@ -4,7 +4,7 @@ import androidx.viewbinding.ViewBinding
 
 /*
  * Created by Faisal Amir on 04/02/2021
- * FrogoRecyclerView Source Code
+ * NutriRecyclerView Source Code
  * -----------------------------------------
  * Name     : Muhammad Faisal Amir
  * E-mail   : faisalamircs@gmail.com

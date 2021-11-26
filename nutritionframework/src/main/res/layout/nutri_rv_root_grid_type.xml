@@ -14,12 +14,12 @@
  -->
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/frogo_rv_grid_root"
+    android:id="@+id/nutri_rv_grid_root"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <com.frogobox.nutritionframework.recycler.widget.NutriRecyclerView
-        android:id="@+id/frogo_rv_grid_view"
+        android:id="@+id/nutri_rv_grid_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:clipToPadding="false"
@@ -27,7 +27,7 @@
         android:paddingStart="@dimen/nutri_dimen_16dp"/>
 
     <ProgressBar
-        android:id="@+id/frogo_rv_grid_progress_view"
+        android:id="@+id/nutri_rv_grid_progress_view"
         android:visibility="gone"
         android:layout_width="wrap_content"
         android:layout_centerInParent="true"

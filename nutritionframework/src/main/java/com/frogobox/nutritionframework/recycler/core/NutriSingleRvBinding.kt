@@ -9,7 +9,7 @@ import com.frogobox.nutritionframework.recycler.widget.NutriRecyclerView
 /*
  * Created by Faisal Amir
  * =========================================
- * FrogoRecyclerViewAdapter
+ * NutriRecyclerViewAdapter
  * Copyright (C) 27/04/2020.
  * All rights reserved
  * -----------------------------------------

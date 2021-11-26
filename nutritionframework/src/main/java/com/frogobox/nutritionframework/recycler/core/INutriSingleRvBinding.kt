@@ -6,7 +6,7 @@ import com.frogobox.nutritionframework.recycler.widget.NutriRecyclerView
 /*
  * Created by Faisal Amir
  * =========================================
- * FrogoRecyclerViewAdapter
+ * NutriRecyclerViewAdapter
  * Copyright (C) 27/04/2020.      
  * All rights reserved
  * -----------------------------------------
@@ -20,7 +20,7 @@ import com.frogobox.nutritionframework.recycler.widget.NutriRecyclerView
  */
 interface INutriSingleRvBinding<T, VB : ViewBinding> {
 
-    // Init FrogoRecyclerView
+    // Init NutriRecyclerView
     fun initSingleton(nutriRecyclerView: NutriRecyclerView): NutriSingleRvBinding<T, VB>
 
     // Create Linear Vertical Layout Manager
@@ -55,7 +55,7 @@ interface INutriSingleRvBinding<T, VB : ViewBinding> {
     // Adding Callback for adapter
     fun addCallback(nutriViewAdapterCallback: INutriBindingAdapter<T, VB>): NutriSingleRvBinding<T, VB>
 
-    // Build this FrogoRecyclerView
+    // Build this NutriRecyclerView
     fun build(): NutriSingleRvBinding<T, VB>
 
 }

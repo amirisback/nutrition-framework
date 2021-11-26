@@ -3,7 +3,7 @@ package com.frogobox.nutritionframework.recycler.core
 /*
  * Created by Faisal Amir
  * =========================================
- * FrogoRecyclerViewAdapter
+ * NutriRecyclerViewAdapter
  * Copyright (C) 26/04/2020.      
  * All rights reserved
  * -----------------------------------------

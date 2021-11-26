@@ -8,7 +8,7 @@ import androidx.viewbinding.ViewBinding
  * Created by Faisal Amir
  * FrogoBox Inc License
  * =========================================
- * FrogoRecyclerViewAdapter
+ * NutriRecyclerViewAdapter
  * Copyright (C) 20/12/2019.
  * All rights reserved
  * -----------------------------------------

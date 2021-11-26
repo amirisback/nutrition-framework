@@ -73,7 +73,7 @@ class MealActivity : BaseActivity<ActivityMealBinding>() {
             }
         }
 
-        binding.frogoRvAbjad.injectorBinding<String, ItemMealCategoryBinding>()
+        binding.nutriRvAbjad.injectorBinding<String, ItemMealCategoryBinding>()
             .addData(NutriFunc.arrayAbjad())
             .addCallback(adapterCallback)
             .createLayoutLinearHorizontal(false)
@@ -114,7 +114,7 @@ class MealActivity : BaseActivity<ActivityMealBinding>() {
 
         }
 
-        binding.frogoRv.injectorBinding<Meal, NutriRvGridType2Binding>()
+        binding.nutriRv.injectorBinding<Meal, NutriRvGridType2Binding>()
             .addData(data)
             .addCallback(adapterCallback)
             .createLayoutGrid(2)

@@ -7,7 +7,7 @@ import com.frogobox.nutritionframework.R
 
 /*
  * Created by faisalamir on 09/05/21
- * FrogoRecyclerView
+ * NutriRecyclerView
  * -----------------------------------------
  * Name     : Muhammad Faisal Amir
  * E-mail   : faisalamircs@gmail.com
@@ -19,7 +19,7 @@ import com.frogobox.nutritionframework.R
  */
 object NutriStyleComponent : INutriStyleComponent {
 
-    override fun setupComponentFrogoRecyclerView(
+    override fun setupComponentNutriRecyclerView(
         typedArray: TypedArray,
         nutriRecyclerView: NutriRecyclerView
     ) {

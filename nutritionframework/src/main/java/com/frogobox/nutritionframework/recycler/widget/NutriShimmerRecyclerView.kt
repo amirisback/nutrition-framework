@@ -9,11 +9,11 @@ import com.frogobox.nutritionframework.R
 import com.frogobox.nutritionframework.databinding.WidgetNutriShimmerRecyclerviewBinding
 import com.frogobox.nutritionframework.recycler.core.NutriSingleRv
 import com.frogobox.nutritionframework.recycler.core.NutriSingleSrv
-import com.frogobox.nutritionframework.recycler.widget.NutriStyleComponent.setupComponentFrogoRecyclerView
+import com.frogobox.nutritionframework.recycler.widget.NutriStyleComponent.setupComponentNutriRecyclerView
 
 /*
  * Created by Faisal Amir on 02/06/2020
- * FrogoRecyclerView Source Code
+ * NutriRecyclerView Source Code
  * -----------------------------------------
  * Name     : Muhammad Faisal Amir
  * E-mail   : faisalamircs@gmail.com
@@ -51,13 +51,13 @@ class NutriShimmerRecyclerView @JvmOverloads constructor(
             // setup inner component
             binding.apply {
                 styleArrayRecyclerView?.let { it1 ->
-                    setupComponentFrogoRecyclerView(
+                    setupComponentNutriRecyclerView(
                         it1,
                         widgetFsrvRecyclerview
                     )
                 }
                 styleArrayRecyclerView?.let { it1 ->
-                    setupComponentFrogoRecyclerView(
+                    setupComponentNutriRecyclerView(
                         it1,
                         widgetFsrvShimmerRecyclerview
                     )

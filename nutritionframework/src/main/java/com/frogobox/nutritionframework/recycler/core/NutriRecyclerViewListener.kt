@@ -4,7 +4,7 @@ package com.frogobox.nutritionframework.recycler.core
  * Created by Faisal Amir
  * FrogoBox Inc License
  * =========================================
- * FrogoRecyclerViewAdapter
+ * NutriRecyclerViewAdapter
  * Copyright (C) 20/12/2019.
  * All rights reserved
  * -----------------------------------------

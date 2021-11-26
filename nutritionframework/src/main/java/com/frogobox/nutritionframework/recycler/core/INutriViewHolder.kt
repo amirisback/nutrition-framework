@@ -5,7 +5,7 @@ import android.view.View
 /*
  * Created by Faisal Amir
  * =========================================
- * FrogoRecyclerViewAdapter
+ * NutriRecyclerViewAdapter
  * Copyright (C) 14/04/2020.      
  * All rights reserved
  * -----------------------------------------
