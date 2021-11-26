@@ -31,7 +31,7 @@ val adsize_medium_rectangle: AdSize = AdSize.MEDIUM_RECTANGLE
 val adsize_wide_skycraper: AdSize = AdSize.WIDE_SKYSCRAPER
 
 @Composable
-fun FrogoAdmobBannerView(
+fun NutriAdmobBannerView(
     mAdUnitID: String,
     mAdSize: AdSize,
     modifier: Modifier = Modifier

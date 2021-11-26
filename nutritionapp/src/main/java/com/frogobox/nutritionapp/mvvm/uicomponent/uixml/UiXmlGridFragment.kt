@@ -1,27 +1,27 @@
-package com.frogobox.nutritionapp.mvvm.uixml
+package com.frogobox.nutritionapp.mvvm.uicomponent.uixml
 
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import com.frogobox.nutritionapp.model.LayoutUiXml
 import com.frogobox.nutritionapp.R
 import com.frogobox.nutritionapp.core.BaseFragment
-import com.frogobox.nutritionapp.databinding.FragmentUiXmlRvListBinding
+import com.frogobox.nutritionapp.databinding.FragmentUiXmlRvGridBinding
 import com.frogobox.nutritionframework.recycler.core.INutriViewAdapter
 import com.google.gson.Gson
 
-
-class UiXmlListFragment : BaseFragment<FragmentUiXmlRvListBinding>() {
+class UiXmlGridFragment : BaseFragment<FragmentUiXmlRvGridBinding>() {
 
     override fun setupViewBinding(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): FragmentUiXmlRvListBinding {
-        return FragmentUiXmlRvListBinding.inflate(inflater, container, false)
+    ): FragmentUiXmlRvGridBinding {
+        return FragmentUiXmlRvGridBinding.inflate(inflater, container, false)
     }
 
     override fun setupViewModel() {
@@ -41,16 +41,18 @@ class UiXmlListFragment : BaseFragment<FragmentUiXmlRvListBinding>() {
 
     private fun setupRecyclerView() {
         binding.nutriRv.injector<LayoutUiXml>()
-            .addCustomView(R.layout.nutri_rv_list_type_1)
-            .addData(UiXmlRvConstant.dataRvList())
+            .addCustomView(R.layout.nutri_rv_grid_type_1)
+            .addData(UiXmlRvConstant.dataRvGrid())
             .addCallback(object : INutriViewAdapter<LayoutUiXml> {
                 override fun onItemClicked(data: LayoutUiXml) { intentToLayoutSample(data) }
                 override fun onItemLongClicked(data: LayoutUiXml) {}
                 override fun setupInitComponent(view: View, data: LayoutUiXml) {
-                    view.findViewById<TextView>(R.id.nutri_rv_list_type_1_tv_title).text = data.name
+                    view.findViewById<TextView>(R.id.nutri_rv_grid_type_1_tv_title).text = data.name
+                    view.findViewById<ImageView>(R.id.nutri_rv_grid_type_1_iv_poster)
+                        .setImageResource(R.drawable.ic_artist)
                 }
             })
-            .createLayoutLinearVertical(false)
+            .createLayoutGrid(2)
             .build()
     }
 

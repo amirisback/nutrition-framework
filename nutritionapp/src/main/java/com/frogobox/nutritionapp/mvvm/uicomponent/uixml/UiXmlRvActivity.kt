@@ -1,9 +1,10 @@
-package com.frogobox.nutritionapp.mvvm.uixml
+package com.frogobox.nutritionapp.mvvm.uicomponent.uixml
 
 import android.os.Bundle
 import com.frogobox.nutritionapp.core.BaseActivity
 import com.frogobox.nutritionapp.core.BasePagerAdapter
 import com.frogobox.nutritionapp.databinding.ActivityUiXmlRvBinding
+import com.frogobox.nutritionapp.util.Constant.TitleActivity.ACTIVITY_UI_XML_RV
 
 class UiXmlRvActivity : BaseActivity<ActivityUiXmlRvBinding>() {
 
@@ -15,7 +16,7 @@ class UiXmlRvActivity : BaseActivity<ActivityUiXmlRvBinding>() {
     }
 
     override fun setupUI(savedInstanceState: Bundle?) {
-        setupDetailActivity("List UI RecyclerView")
+        setupDetailActivity(ACTIVITY_UI_XML_RV)
         setupViewPager()
     }
 

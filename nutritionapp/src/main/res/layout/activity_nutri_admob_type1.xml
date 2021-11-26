@@ -1,29 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<!--
- * Created by Faisal Amir
- * 
- * Name     : Muhammad Faisal Amir
- * E-mail   : faisalamircs@gmail.com
- * Github   : github.com/amirisback
- * 
- * Copyright (C) 2021 FrogoBox Inc.      
- * All rights reserved
- *
- -->
-
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".mvvm.main.MainActivity">
+    tools:context=".mvvm.androidmethod.admob.type1.NutriAdmobType1Activity"
+    tools:ignore="MissingDefaultResource">
 
-    <com.frogobox.nutritionframework.recycler.widget.NutriRecyclerView
-        android:id="@+id/rv_news"
-        android:paddingTop="@dimen/nutri_dimen_16dp"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:clipToPadding="false" />
+        android:clipToPadding="false"
+        android:paddingBottom="@dimen/dimen_big_16dp"
+        tools:context=".mvvm.news.NewsActivity" />
 
     <ProgressBar
         android:id="@+id/progress_view"

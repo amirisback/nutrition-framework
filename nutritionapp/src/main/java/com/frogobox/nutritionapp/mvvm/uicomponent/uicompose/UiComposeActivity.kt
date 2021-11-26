@@ -1,4 +1,4 @@
-package com.frogobox.nutritionapp.mvvm.uicompose
+package com.frogobox.nutritionapp.mvvm.uicomponent.uicompose
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity

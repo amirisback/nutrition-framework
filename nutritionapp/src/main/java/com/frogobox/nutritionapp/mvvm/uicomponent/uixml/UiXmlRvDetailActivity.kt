@@ -1,10 +1,10 @@
-package com.frogobox.nutritionapp.mvvm.uixml
+package com.frogobox.nutritionapp.mvvm.uicomponent.uixml
 
 import android.os.Bundle
 import androidx.core.view.updatePadding
-import com.frogobox.nutritionapp.mvvm.uixml.UiXmlRvConstant.TYPE_GRID
-import com.frogobox.nutritionapp.mvvm.uixml.UiXmlRvConstant.dummyData
-import com.frogobox.nutritionapp.mvvm.uixml.UiXmlRvAdapter.frogoRvAdaper
+import com.frogobox.nutritionapp.mvvm.uicomponent.uixml.UiXmlRvConstant.TYPE_GRID
+import com.frogobox.nutritionapp.mvvm.uicomponent.uixml.UiXmlRvConstant.dummyData
+import com.frogobox.nutritionapp.mvvm.uicomponent.uixml.UiXmlRvAdapter.frogoRvAdaper
 import com.frogobox.nutritionapp.model.LayoutUiXml
 import com.frogobox.nutritionapp.core.BaseActivity
 import com.frogobox.nutritionapp.databinding.ActivityUiXmlRvDetailBinding

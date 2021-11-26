@@ -1,4 +1,4 @@
-package com.frogobox.nutritionapp.mvvm.uixml
+package com.frogobox.nutritionapp.mvvm.uicomponent.uixml
 
 import android.content.Context
 import android.view.View

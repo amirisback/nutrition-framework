@@ -1,14 +1,12 @@
 package com.frogobox.nutritionapp.mvvm.nutrition.article
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.TextView
 import com.bumptech.glide.Glide
 import com.frogobox.nutritionapp.R
 import com.frogobox.nutritionapp.core.BaseActivity
-import com.frogobox.nutritionapp.databinding.ActivityArticleBinding
 import com.frogobox.nutritionapp.databinding.ActivityArticleCategoryBinding
 import com.frogobox.nutritionapp.util.Constant
 import com.frogobox.nutritioncore.model.news.Article
@@ -16,7 +14,7 @@ import com.frogobox.nutritionframework.recycler.core.INutriViewAdapter
 import com.google.gson.Gson
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
-class ArticleCategoryActivity  : BaseActivity<ActivityArticleCategoryBinding>() {
+class ArticleCategoryActivity : BaseActivity<ActivityArticleCategoryBinding>() {
 
     private val articleViewModel: ArticleViewModel by viewModel()
 
@@ -72,17 +70,20 @@ class ArticleCategoryActivity  : BaseActivity<ActivityArticleCategoryBinding>() 
             }
 
             override fun setupInitComponent(view: View, data: Article) {
-                view.findViewById<TextView>(R.id.tv_title).text = data.title
-                view.findViewById<TextView>(R.id.tv_description).text = data.description
-                view.findViewById<TextView>(R.id.tv_published).text = data.source?.name ?: "Unknowm"
-                Glide.with(view.context).load(data.urlToImage).into(view.findViewById(R.id.iv_url))
+                view.findViewById<TextView>(R.id.nutri_rv_list_type_11_tv_title).text = data.title
+                view.findViewById<TextView>(R.id.nutri_rv_list_type_11_tv_desc).text =
+                    data.description
+                view.findViewById<TextView>(R.id.nutri_rv_list_type_11_tv_subtitle).text =
+                    data.source?.name ?: "Unknowm"
+                Glide.with(view.context).load(data.urlToImage)
+                    .into(view.findViewById(R.id.nutri_rv_list_type_11_iv_poster))
             }
         }
 
         binding.rvNews
             .injector<Article>()
             .addData(data)
-            .addCustomView(R.layout.list_news_article_vertical)
+            .addCustomView(R.layout.nutri_rv_list_type_11)
             .addEmptyView(null)
             .addCallback(newsAdapter)
             .createLayoutLinearVertical(false)

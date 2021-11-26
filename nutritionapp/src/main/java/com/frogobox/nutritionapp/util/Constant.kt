@@ -24,17 +24,26 @@ import com.frogobox.nutritionapp.BuildConfig
 object Constant {
 
     object TitleActivity {
-        const val ACTIVITY_UI_XML = "UI XML Component Layout"
+        const val ACTIVITY_UI_COMPONENT = "UI Component"
+        const val ACTIVITY_UI_XML_RV = "Item List RecyclerView"
+        const val ACTIVITY_UI_COMPOSE = "Compose (Experimental)"
+
+        const val ACTIVITY_ANDROID_METHOD = "Android Method Function"
+        const val ACTIVITY_ANDROID_METHOD_RV = "Nutri RecyclerView"
+        const val ACTIVITY_ANDROID_METHOD_LOG = "Nutri Log"
+        const val ACTIVITY_ANDROID_METHOD_NOTIF = "Nutri Notification"
+        const val ACTIVITY_ANDROID_METHOD_ADMOB = "Nutri Admob"
+        const val ACTIVITY_ANDROID_METHOD_API_NEWS = "Consumable Nutri News API"
+        const val ACTIVITY_ANDROID_METHOD_API_MEALS = "Consumable Nutri Meals API"
 
         const val ACTIVITY_ARTICLE = "Informasi Seputar Gizi"
 
         const val ACTIVITY_NUTRITION_ARTICLE = "Informasi Seputar Nutrisi"
         const val ACTIVITY_NUTRITION_ARTICLE_DETAIL = "Detail Informasi Nutrisi"
 
-        const val ACTIVITY_CALCULATOR = "Kalkulator Nutrisi"
-        const val ACTIVITY_CALCULATOR_BERAT_BADAN_IDEAL = "Berat Badan Ideal"
-        const val ACTIVITY_CALCULATOR_KEBUTUHAN_ENERGI = "Kebutuhan Energi"
-        const val ACTIVITY_CALCULATOR_INDEX_MASA_TUBUH = "Index Masa Tubuh"
+        const val ACTIVITY_CALCULATOR_BERAT_BADAN_IDEAL = "Kalkulator Berat Badan Ideal"
+        const val ACTIVITY_CALCULATOR_KEBUTUHAN_ENERGI = "Kalkulator Kebutuhan Energi"
+        const val ACTIVITY_CALCULATOR_INDEX_MASA_TUBUH = "Kalkulator Index Masa Tubuh"
 
         const val ACTIVITY_MEAL = "Informasi Resep Makanan"
         const val ACTIVITY_MEAL_DETAIL = "Detail Resep Makanan"

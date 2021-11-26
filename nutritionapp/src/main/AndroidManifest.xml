@@ -20,6 +20,26 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="n">
         <activity
+            android:name=".mvvm.androidmethod.admob.NutriAdmobComposeActivity"
+            android:exported="false"
+            android:label="@string/title_activity_nutri_admob_compose"
+            android:theme="@style/Theme.KickStart.NoActionBar" />
+        <activity
+            android:name=".mvvm.androidmethod.admob.NutriAdmobHybridActivity"
+            android:exported="false" />
+        <activity
+            android:name=".mvvm.androidmethod.admob.type2.NutriAdmobType2Activity"
+            android:exported="false" />
+        <activity
+            android:name=".mvvm.androidmethod.admob.type1.NutriAdmobType1Activity"
+            android:exported="false" />
+        <activity
+            android:name=".mvvm.androidmethod.admob.NutriAdmobSampleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".mvvm.main.AndroidMethodActivity"
+            android:exported="false" />
+        <activity
             android:name=".mvvm.nutrition.meal.MealDetailActivity"
             android:exported="false" />
         <activity
@@ -44,18 +64,15 @@
             android:name=".mvvm.nutrition.general.KebutuhanEnergiActivity"
             android:exported="false" />
         <activity
-            android:name=".mvvm.nutrition.general.CalculatorNutritionActivity"
-            android:exported="false" />
-        <activity
             android:name=".mvvm.nutrition.article.ArticleActivity"
             android:exported="false" />
         <activity
-            android:name=".mvvm.uixml.UiXmlActivity"
+            android:name=".mvvm.main.UiComponentActivity"
             android:exported="true" />
-        <activity android:name=".mvvm.uixml.UiXmlRvActivity" />
-        <activity android:name=".mvvm.uixml.UiXmlRvDetailActivity" />
+        <activity android:name=".mvvm.uicomponent.uixml.UiXmlRvActivity" />
+        <activity android:name=".mvvm.uicomponent.uixml.UiXmlRvDetailActivity" />
         <activity
-            android:name=".mvvm.uicompose.MainComposeActivity"
+            android:name=".mvvm.uicomponent.uicompose.MainComposeActivity"
             android:exported="true"
             android:theme="@style/Theme.KickStart.NoActionBar" />
         <activity android:name=".mvvm.nutrition.article.ArticleDetailActivity" />

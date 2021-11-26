@@ -1,4 +1,4 @@
-package com.frogobox.nutritionapp.mvvm.uixml
+package com.frogobox.nutritionapp.mvvm.uicomponent.uixml
 
 import com.frogobox.nutritionapp.model.LayoutUiXml
 import com.frogobox.nutritionapp.R

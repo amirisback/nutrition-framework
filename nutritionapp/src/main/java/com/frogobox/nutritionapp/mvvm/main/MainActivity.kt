@@ -9,9 +9,10 @@ import com.frogobox.nutritionapp.core.BaseActivity
 import com.frogobox.nutritionapp.databinding.ActivityMainBinding
 import com.frogobox.nutritionapp.model.Menu
 import com.frogobox.nutritionapp.mvvm.nutrition.article.ArticleActivity
-import com.frogobox.nutritionapp.mvvm.nutrition.general.CalculatorNutritionActivity
+import com.frogobox.nutritionapp.mvvm.nutrition.general.BeratBadanIdealActivity
+import com.frogobox.nutritionapp.mvvm.nutrition.general.IndexMasaTubuhActivity
+import com.frogobox.nutritionapp.mvvm.nutrition.general.KebutuhanEnergiActivity
 import com.frogobox.nutritionapp.mvvm.nutrition.meal.MealActivity
-import com.frogobox.nutritionapp.mvvm.uixml.UiXmlActivity
 import com.frogobox.nutritionapp.util.Constant
 import com.frogobox.nutritionframework.recycler.core.INutriViewAdapter
 
@@ -46,10 +47,13 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
 
     private fun data(): MutableList<Menu> {
         val data = mutableListOf<Menu>()
-        data.add(Menu(Constant.TitleActivity.ACTIVITY_UI_XML, Intent(this, UiXmlActivity::class.java)))
+        data.add(Menu(Constant.TitleActivity.ACTIVITY_UI_COMPONENT, Intent(this, UiComponentActivity::class.java)))
+        data.add(Menu(Constant.TitleActivity.ACTIVITY_ANDROID_METHOD, Intent(this, AndroidMethodActivity::class.java)))
         data.add(Menu(Constant.TitleActivity.ACTIVITY_ARTICLE, Intent(this, ArticleActivity::class.java)))
         data.add(Menu(Constant.TitleActivity.ACTIVITY_MEAL, Intent(this, MealActivity::class.java)))
-        data.add(Menu(Constant.TitleActivity.ACTIVITY_CALCULATOR, Intent(this, CalculatorNutritionActivity::class.java)))
+        data.add(Menu(Constant.TitleActivity.ACTIVITY_CALCULATOR_KEBUTUHAN_ENERGI, Intent(this, KebutuhanEnergiActivity::class.java)))
+        data.add(Menu(Constant.TitleActivity.ACTIVITY_CALCULATOR_INDEX_MASA_TUBUH, Intent(this, IndexMasaTubuhActivity::class.java)))
+        data.add(Menu(Constant.TitleActivity.ACTIVITY_CALCULATOR_BERAT_BADAN_IDEAL, Intent(this, BeratBadanIdealActivity::class.java)))
         return data
     }
 
