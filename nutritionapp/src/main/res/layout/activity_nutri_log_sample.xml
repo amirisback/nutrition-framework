@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <Button
+        android:id="@+id/btn_frogolog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Summon NutriLog" />
+
+    <Button
+        android:id="@+id/btn_frogolog_toast"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Summon NutriLog with Toast" />
+
+    <Button
+        android:id="@+id/btn_flog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Summon NLog" />
+
+    <Button
+        android:id="@+id/btn_flog_toast"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Summon NLog with Toast" />
+
+
+</LinearLayout>

@@ -1,6 +1,9 @@
 package com.frogobox.nutritionapp
 
 import android.app.Application
+import android.app.NotificationChannel
+import android.app.NotificationManager
+import android.os.Build
 import com.frogobox.nutritionapp.di.repositoryModule
 import com.frogobox.nutritionapp.di.viewModelModule
 import org.koin.android.ext.koin.androidContext
@@ -23,6 +26,12 @@ import org.koin.core.logger.Level
 
 class NutriApplication : Application() {
 
+    companion object {
+        const val NOTIFICATION_ID = 2
+        const val CHANNEL_ID = "CHANNEL_$NOTIFICATION_ID"
+        const val CHANNEL_NAME = "CHANNEL_NAME_$CHANNEL_ID"
+    }
+
     override fun onCreate() {
         super.onCreate()
         startKoin {
@@ -31,4 +40,16 @@ class NutriApplication : Application() {
             modules(listOf(repositoryModule, viewModelModule))
         }
     }
+
+    private fun createNotificationChannel() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            val channel = NotificationChannel(
+                CHANNEL_ID,
+                CHANNEL_NAME,
+                NotificationManager.IMPORTANCE_HIGH
+            )
+            getSystemService(NotificationManager::class.java).createNotificationChannel(channel)
+        }
+    }
+
 }
