@@ -30,7 +30,9 @@
 
     <TextView
         android:id="@+id/nutri_rv_list_type_2_tv_subtitle"
-        style="@style/nutriTvListSubTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:justificationMode="inter_word"
         tools:text="@tools:sample/lorem/random" />
 
 </LinearLayout>

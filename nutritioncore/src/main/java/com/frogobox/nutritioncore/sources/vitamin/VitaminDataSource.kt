@@ -1,11 +1,13 @@
-package com.frogobox.nutritioncore.method.interfaces
+package com.frogobox.nutritioncore.sources.vitamin
 
 import com.frogobox.nutritioncore.core.NutriResponse
 import com.frogobox.nutritioncore.model.vitamin.VitaminResponse
+import com.frogobox.nutritioncore.util.vitamin.VitaminUrl
+import retrofit2.http.GET
 
 
 /*
- * Created by faisalamir on 12/11/21
+ * Created by faisalamir on 30/11/21
  * NutritionFramework
  * -----------------------------------------
  * Name     : Muhammad Faisal Amir
@@ -17,7 +19,7 @@ import com.frogobox.nutritioncore.model.vitamin.VitaminResponse
  *
  */
 
-interface INutritionApi {
+interface VitaminDataSource {
 
     // Get Vitamin A
     suspend fun getVitaminA(callback: NutriResponse.DataResponse<VitaminResponse>)

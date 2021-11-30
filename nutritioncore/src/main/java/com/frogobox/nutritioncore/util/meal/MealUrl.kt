@@ -14,7 +14,7 @@ package com.frogobox.nutritioncore.util.meal
  */
 object MealUrl {
 
-    const val BASE_URL = "https://www.themealdb.com/"
+    const val BASE_URL = "https://www.themealdb.com"
     const val BASE_PATH = "api/json/v1/"
     const val PATH_API = "{api_key}/"
     const val API_KEY = "1"

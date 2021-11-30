@@ -8,7 +8,11 @@ import com.frogobox.nutritionapp.R
 import com.frogobox.nutritionapp.core.BaseActivity
 import com.frogobox.nutritionapp.databinding.ActivityArticleBinding
 import com.frogobox.nutritionapp.model.Menu
+import com.frogobox.nutritionapp.mvvm.nutrition.vitamin.VitaminActivity
 import com.frogobox.nutritionapp.util.Constant
+import com.frogobox.nutritionapp.util.Constant.Const.CONS_VITAMIN_A
+import com.frogobox.nutritionapp.util.Constant.Const.CONS_VITAMIN_C
+import com.frogobox.nutritionapp.util.Constant.Const.CONS_VITAMIN_E
 import com.frogobox.nutritionapp.util.Constant.Extra.EXTRA_ARTICLE
 import com.frogobox.nutritionapp.util.Constant.Extra.EXTRA_ARTICLE_DETAIL_TITLE
 import com.frogobox.nutritionapp.util.Constant.Extra.EXTRA_ARTICLE_TITLE
@@ -79,30 +83,30 @@ class ArticleActivity : BaseActivity<ActivityArticleBinding>() {
         data.add(
             Menu(
                 ACTIVITY_VITAMIN_ARTICLE_A,
-                intentArticle(
+                intentVitamin(
                     ACTIVITY_VITAMIN_ARTICLE_A,
                     ACTIVITY_VITAMIN_ARTICLE_DETAIL,
-                    "Vitamin A"
+                    CONS_VITAMIN_A
                 )
             )
         )
         data.add(
             Menu(
                 ACTIVITY_VITAMIN_ARTICLE_C,
-                intentArticle(
+                intentVitamin(
                     ACTIVITY_VITAMIN_ARTICLE_C,
                     ACTIVITY_VITAMIN_ARTICLE_DETAIL,
-                    "Vitamin C"
+                    CONS_VITAMIN_C
                 )
             )
         )
         data.add(
             Menu(
                 ACTIVITY_VITAMIN_ARTICLE_E,
-                intentArticle(
+                intentVitamin(
                     ACTIVITY_VITAMIN_ARTICLE_E,
                     ACTIVITY_VITAMIN_ARTICLE_DETAIL,
-                    "Vitamin E"
+                    CONS_VITAMIN_E
                 )
             )
         )
@@ -121,6 +125,13 @@ class ArticleActivity : BaseActivity<ActivityArticleBinding>() {
 
     private fun intentArticle(title: String, titleDetail: String, query: String): Intent {
         return Intent(this, ArticleCategoryActivity::class.java)
+            .putExtra(EXTRA_ARTICLE_TITLE, title)
+            .putExtra(EXTRA_ARTICLE_DETAIL_TITLE, titleDetail)
+            .putExtra(EXTRA_ARTICLE, query)
+    }
+
+    private fun intentVitamin(title: String, titleDetail: String, query: String): Intent {
+        return Intent(this, VitaminActivity::class.java)
             .putExtra(EXTRA_ARTICLE_TITLE, title)
             .putExtra(EXTRA_ARTICLE_DETAIL_TITLE, titleDetail)
             .putExtra(EXTRA_ARTICLE, query)

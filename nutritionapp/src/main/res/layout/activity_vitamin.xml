@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".mvvm.nutrition.vitamin.VitaminActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_title_vitamin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/nutri_dimen_16dp"
+                android:layout_marginTop="@dimen/nutri_dimen_16dp"
+                android:layout_marginEnd="@dimen/nutri_dimen_16dp"
+                android:text="Info Detail "
+                android:textColor="@color/nutriColorBlack"
+                android:textSize="@dimen/nutri_dimen_font_16sp"
+                android:textStyle="bold" />
+
+            <com.frogobox.nutritionframework.recycler.widget.NutriRecyclerView
+                android:id="@+id/rv_vitamin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:paddingTop="@dimen/nutri_dimen_16dp" />
+
+            <TextView
+                android:id="@+id/tv_title_news"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/nutri_dimen_16dp"
+                android:layout_marginEnd="@dimen/nutri_dimen_16dp"
+                android:text="Berita Terkini"
+                android:textColor="@color/nutriColorBlack"
+                android:textSize="@dimen/nutri_dimen_font_16sp"
+                android:textStyle="bold" />
+
+            <com.frogobox.nutritionframework.recycler.widget.NutriRecyclerView
+                android:id="@+id/rv_news"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:nestedScrollingEnabled="false"
+                android:paddingTop="@dimen/nutri_dimen_16dp" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <ProgressBar
+        android:id="@+id/progress_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+</RelativeLayout>

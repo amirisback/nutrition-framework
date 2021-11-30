@@ -1,6 +1,9 @@
 package com.frogobox.nutritioncore.method.function
 
+import com.frogobox.nutritioncore.core.NutriResponse
 import com.frogobox.nutritioncore.method.interfaces.INutritionApi
+import com.frogobox.nutritioncore.model.vitamin.VitaminResponse
+import com.frogobox.nutritioncore.sources.vitamin.VitaminRepository
 
 
 /*
@@ -17,5 +20,17 @@ import com.frogobox.nutritioncore.method.interfaces.INutritionApi
  */
 
 class NutritionApi : INutritionApi {
+
+    override suspend fun getVitaminA(callback: NutriResponse.DataResponse<VitaminResponse>) {
+        VitaminRepository.getVitaminA(callback)
+    }
+
+    override suspend fun getVitaminC(callback: NutriResponse.DataResponse<VitaminResponse>) {
+        VitaminRepository.getVitaminC(callback)
+    }
+
+    override suspend fun getVitaminE(callback: NutriResponse.DataResponse<VitaminResponse>) {
+        VitaminRepository.getVitaminE(callback)
+    }
 
 }

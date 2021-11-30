@@ -14,7 +14,7 @@ package com.frogobox.nutritioncore.util.news
  */
 object NewsUrl {
 
-    const val BASE_URL = "https://newsapi.org/"
+    const val BASE_URL = "https://newsapi.org"
     const val API_KEY = "84d090d0537548ee8ac77620217b1b52"
 
     const val BASE_PATH = "v2/"

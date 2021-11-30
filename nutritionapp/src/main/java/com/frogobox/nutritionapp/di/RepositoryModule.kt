@@ -30,6 +30,10 @@ import org.koin.dsl.module
 val repositoryModule = module {
 
     single {
+        AppDatabase.getInstance(androidContext()).favoriteScriptDao()
+    }
+
+    single {
         DataRepository(RemoteDataSource, get())
     }
 
@@ -47,10 +51,6 @@ val repositoryModule = module {
 
     single {
         ConsumeTheMealDbApi(MealUrl.API_KEY)
-    }
-
-    single {
-        AppDatabase.getInstance(androidContext()).favoriteScriptDao()
     }
 
     single {

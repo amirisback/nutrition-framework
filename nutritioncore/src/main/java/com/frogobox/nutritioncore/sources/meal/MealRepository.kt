@@ -28,7 +28,7 @@ import io.reactivex.schedulers.Schedulers
 object MealRepository : MealDataSource {
 
     private val TAG = MealRepository::class.java.simpleName
-    private var mealApiService = NutriApiClient.create<MealApiService>(MealUrl.BASE_URL)
+    private var mealApiService = NutriApiClient.create<MealApiService>(MealUrl.BASE_URL, true)
 
     override suspend fun searchMeal(
         apiKey: String,

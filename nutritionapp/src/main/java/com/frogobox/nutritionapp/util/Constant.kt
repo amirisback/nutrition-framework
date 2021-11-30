@@ -95,6 +95,10 @@ object Constant {
 
         const val SPLASH_INTERVAL = 1000
 
+        const val CONS_VITAMIN_A = "Vitamin A"
+        const val CONS_VITAMIN_C = "Vitamin C"
+        const val CONS_VITAMIN_E = "Vitamin E"
+
         const val EXTENSION_CSV = ".csv"
         const val BASE_PATH_RAW = "src/com/frogobox/raw"
         const val PATH_DATA_CSV = "/influencers$EXTENSION_CSV"
