@@ -21,7 +21,6 @@
                 android:layout_marginStart="@dimen/nutri_dimen_16dp"
                 android:layout_marginTop="@dimen/nutri_dimen_16dp"
                 android:layout_marginEnd="@dimen/nutri_dimen_16dp"
-                android:text="Info Detail "
                 android:textColor="@color/nutriColorBlack"
                 android:textSize="@dimen/nutri_dimen_font_16sp"
                 android:textStyle="bold" />
@@ -39,7 +38,6 @@
                 android:layout_height="match_parent"
                 android:layout_marginStart="@dimen/nutri_dimen_16dp"
                 android:layout_marginEnd="@dimen/nutri_dimen_16dp"
-                android:text="Berita Terkini"
                 android:textColor="@color/nutriColorBlack"
                 android:textSize="@dimen/nutri_dimen_font_16sp"
                 android:textStyle="bold" />
