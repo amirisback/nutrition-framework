@@ -28,7 +28,7 @@ import io.reactivex.schedulers.Schedulers
 object NewsRepository : NewsDataSource {
 
     private val TAG = NewsRepository::class.java.simpleName
-    private var newsApiService = NutriApiClient.create<NewsApiService>(NewsUrl.BASE_URL)
+    private var newsApiService = NutriApiClient.create<NewsApiService>(NewsUrl.BASE_URL, true)
 
     override suspend fun getTopHeadline(
         apiKey: String,

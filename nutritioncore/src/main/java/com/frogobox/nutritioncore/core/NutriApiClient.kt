@@ -47,13 +47,13 @@ object NutriApiClient {
                 .baseUrl(url)
                 .addConverterFactory(GsonConverterFactory.create())
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
+                .client(mClient)
                 .build().create(T::class.java)
         } else {
             Retrofit.Builder()
                 .baseUrl(url)
                 .addConverterFactory(GsonConverterFactory.create())
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
-                .client(mClient)
                 .build().create(T::class.java)
         }
     }
