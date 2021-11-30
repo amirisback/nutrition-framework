@@ -11,7 +11,7 @@
 This Is Latest Release
 
     ~ Beta Release
-    $version_release = 0.0.2-beta01
+    $version_release = 0.0.2-beta02
 
 What's New??
 
@@ -21,6 +21,7 @@ What's New??
     * Update Compose Component *
     * List Item Compose Desktop and Android *
     * Grid Item Compose Desktop and Android *
+    * Vitamin Function *
 
 ## Screen Shoot Apps - Android
 
@@ -62,14 +63,14 @@ allprojects {
 
     dependencies {
         // library nutrition-framework
-        implementation 'com.github.amirisback:nutrition-framework:0.0.2-beta01'
+        implementation 'com.github.amirisback:nutrition-framework:0.0.2-beta02'
     }
 
 #### <Option 2> Kotlin DSL Gradle (build.gradle.kts)
 
     dependencies {
         // library nutrition-framework
-        implementation("com.github.amirisback:nutrition-framework:0.0.2-beta01")
+        implementation("com.github.amirisback:nutrition-framework:0.0.2-beta02")
     }
 
 ## Application Framework
