@@ -26,7 +26,7 @@ What's New??
 
 | SS 1 | SS 2 | SS 3 | SS 4 |
 |:----:|:----:|:----:|:----:|
-|<img width="200px" height="360px" src="docs/image/ss/ss-1.jpg"> | <img width="200px" height="360px" src="docs/image/ss/ss-2.jpg"> | <img width="200px" height="360px" src="docs/image/ss/ss-3.jpg"> | <img width="200px" height="360px" src="docs/image/ss/ss-4.jpg"> |
+|<img width="200px" height="360px" src="docs/image/ss/ss-1.png"> | <img width="200px" height="360px" src="docs/image/ss/ss-2.png"> | <img width="200px" height="360px" src="docs/image/ss/ss-3.png"> | <img width="200px" height="360px" src="docs/image/ss/ss-4.png"> |
 
 ## Download this project
 
