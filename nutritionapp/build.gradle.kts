@@ -8,14 +8,14 @@ plugins {
 android {
 
     // Declaration admob id for release
-    val releaseAdmobPublisherId = ""
-    val releaseAdmobBanner = ""
-    val releaseAdmobInterstitial = ""
-    val releaseAdmobInterstitialVideo = ""
-    val releaseAdmobRewarded = ""
-    val releaseAdmobRewardedInterstitial = ""
-    val releaseAdmobNativeAdvanced = ""
-    val releaseAdmobNativeAdvancedVideo = ""
+    val releaseAdmobPublisherId = "ca-app-pub-3940256099942544~3347511713"
+    val releaseAdmobBanner = "ca-app-pub-3940256099942544/6300978111"
+    val releaseAdmobInterstitial = "ca-app-pub-3940256099942544/1033173712"
+    val releaseAdmobInterstitialVideo = "ca-app-pub-3940256099942544/8691691433"
+    val releaseAdmobRewarded = "ca-app-pub-3940256099942544/5224354917"
+    val releaseAdmobRewardedInterstitial = "ca-app-pub-3940256099942544/5354046379"
+    val releaseAdmobNativeAdvanced = "ca-app-pub-3940256099942544/2247696110"
+    val releaseAdmobNativeAdvancedVideo = "ca-app-pub-3940256099942544/1044960115"
 
     compileSdk = ProjectSetting.PROJECT_COMPILE_SDK
 
