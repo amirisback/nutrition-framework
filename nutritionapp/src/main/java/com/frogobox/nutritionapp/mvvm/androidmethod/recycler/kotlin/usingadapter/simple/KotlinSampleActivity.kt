@@ -1,6 +1,7 @@
 package com.frogobox.nutritionapp.mvvm.androidmethod.recycler.kotlin.usingadapter.simple
 
 import android.os.Bundle
+import android.view.View
 import android.widget.Toast
 import com.frogobox.nutritionapp.R
 import com.frogobox.nutritionapp.core.BaseActivity
@@ -31,11 +32,11 @@ class KotlinSampleActivity : BaseActivity<ActivityFrogoRvListBinding>() {
             R.layout.nutri_rv_list_type_1,
             dummyData,
             object : NutriRecyclerViewListener<People> {
-                override fun onItemClicked(data: People) {
+                override fun onItemClicked(view: View, data: People, position: Int) {
                     Toast.makeText(this@KotlinSampleActivity, data.name, Toast.LENGTH_SHORT).show()
                 }
 
-                override fun onItemLongClicked(data: People) {
+                override fun onItemLongClicked(view: View, data: People, position: Int) {
                     Toast.makeText(this@KotlinSampleActivity, data.name, Toast.LENGTH_SHORT).show()
                 }
             }

@@ -44,9 +44,9 @@ class UiXmlGridFragment : BaseFragment<FragmentUiXmlRvGridBinding>() {
             .addCustomView(R.layout.nutri_rv_grid_type_1)
             .addData(UiXmlRvConstant.dataRvGrid())
             .addCallback(object : INutriViewAdapter<LayoutUiXml> {
-                override fun onItemClicked(data: LayoutUiXml) { intentToLayoutSample(data) }
-                override fun onItemLongClicked(data: LayoutUiXml) {}
-                override fun setupInitComponent(view: View, data: LayoutUiXml) {
+                override fun onItemClicked(view: View, data: LayoutUiXml, position: Int) { intentToLayoutSample(data) }
+                override fun onItemLongClicked(view: View, data: LayoutUiXml, position: Int) {}
+                override fun setupInitComponent(view: View, data: LayoutUiXml, position: Int) {
                     view.findViewById<TextView>(R.id.nutri_rv_grid_type_1_tv_title).text = data.name
                     view.findViewById<ImageView>(R.id.nutri_rv_grid_type_1_iv_poster)
                         .setImageResource(R.drawable.ic_artist)

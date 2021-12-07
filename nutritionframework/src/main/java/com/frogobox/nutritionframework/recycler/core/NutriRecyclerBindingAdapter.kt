@@ -23,7 +23,7 @@ import com.frogobox.nutritionframework.recycler.core.NutriRvConstant.NUTRI_RV_TA
 abstract class NutriRecyclerBindingAdapter<T, VB : ViewBinding> :
     RecyclerView.Adapter<NutriRecyclerBindingHolder<T, VB>>() {
 
-    protected var viewListener: NutriRecyclerViewListener<T>? = null
+    protected var viewListener: NutriRecyclerBindingListener<T, VB>? = null
     protected val listData = mutableListOf<T>()
 
     override fun getItemCount(): Int {
@@ -32,7 +32,7 @@ abstract class NutriRecyclerBindingAdapter<T, VB : ViewBinding> :
 
     override fun onBindViewHolder(holder: NutriRecyclerBindingHolder<T, VB>, position: Int) {
         NLog.d("$NUTRI_RV_TAG - listData : ${listData.size}")
-        holder.bindItem(listData[position], viewListener)
+        holder.bindItem(listData[position], position, viewListener)
     }
 
     fun setupData(data: List<T>?) {
@@ -43,7 +43,7 @@ abstract class NutriRecyclerBindingAdapter<T, VB : ViewBinding> :
         }
     }
 
-    fun setupListener(listener: NutriRecyclerViewListener<T>?) {
+    fun setupListener(listener: NutriRecyclerBindingListener<T, VB>?) {
         if (listener != null) {
             viewListener = listener
         }
@@ -51,7 +51,7 @@ abstract class NutriRecyclerBindingAdapter<T, VB : ViewBinding> :
 
     fun setupRequirement(
         data: List<T>?,
-        listener: NutriRecyclerViewListener<T>?
+        listener: NutriRecyclerBindingListener<T, VB>?
     ) {
 
         if (listener != null) {

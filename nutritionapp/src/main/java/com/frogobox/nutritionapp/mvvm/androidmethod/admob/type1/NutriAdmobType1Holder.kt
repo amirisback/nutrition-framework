@@ -29,7 +29,7 @@ class NutriAdmobType1Holder(view: View) : NutriAdmobViewHolder<Any>(view) {
     private val tv_desc = view.findViewById<TextView>(R.id.nutri_rv_list_type_11_tv_desc)
     private val iv_poster = view.findViewById<ImageView>(R.id.nutri_rv_list_type_11_iv_poster)
 
-    override fun initComponent(data: Any) {
+    override fun initComponent(data: Any, position: Int) {
         val article = data as Article
         Glide.with(itemView.context).load(article.urlToImage).into(iv_poster)
         tv_title.text = article.title

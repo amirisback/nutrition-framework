@@ -1,6 +1,7 @@
 package com.frogobox.nutritionapp.mvvm.androidmethod.admob.type2
 
 import android.os.Bundle
+import android.view.View
 import androidx.recyclerview.widget.GridLayoutManager
 import com.frogobox.nutritionapp.R
 import com.frogobox.nutritionapp.core.BaseActivity
@@ -47,8 +48,8 @@ class NutriAdmobType2Activity : BaseActivity<ActivityNutriAdmobType2Binding>() {
         val adapter = NutriAdmobType1Adapter()
         adapter.setupRequirement(R.layout.nutri_rv_list_type_11, arrayFrogoAdmobData, object :
             NutriRecyclerViewListener<Any> {
-            override fun onItemClicked(data: Any) {}
-            override fun onItemLongClicked(data: Any) {}
+            override fun onItemClicked(view: View, data: Any, position: Int) {}
+            override fun onItemLongClicked(view: View, data: Any, position: Int) {}
         })
         return adapter
     }

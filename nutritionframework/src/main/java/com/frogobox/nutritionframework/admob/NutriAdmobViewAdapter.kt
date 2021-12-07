@@ -75,7 +75,7 @@ abstract class NutriAdmobViewAdapter<T> : RecyclerView.Adapter<NutriAdmobViewHol
     override fun onBindViewHolder(holder: NutriAdmobViewHolder<T>, position: Int) {
         when (getItemViewType(position)) {
             RECYCLER_VIEW_TYPE_MENU_ITEM -> {
-                holder.bindItem(listData[position], viewListener)
+                holder.bindItem(listData[position], position, viewListener)
             }
             RECYCLER_VIEW_TYPE_BANNER_AD -> {
                 holder.bindItemAdView(listData[position])

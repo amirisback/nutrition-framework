@@ -60,15 +60,27 @@ class MealActivity : BaseActivity<ActivityMealBinding>() {
                 )
             }
 
-            override fun setupInitComponent(binding: ItemMealCategoryBinding, data: String) {
+            override fun setupInitComponent(
+                binding: ItemMealCategoryBinding,
+                data: String,
+                position: Int
+            ) {
                 binding.nutriRvListType12TvTitle.text = data
             }
 
-            override fun onItemClicked(data: String) {
+            override fun onItemClicked(
+                binding: ItemMealCategoryBinding,
+                data: String,
+                position: Int
+            ) {
                 mealViewModel.getListMeals(data)
             }
 
-            override fun onItemLongClicked(data: String) {
+            override fun onItemLongClicked(
+                binding: ItemMealCategoryBinding,
+                data: String,
+                position: Int
+            ) {
                 //
             }
         }
@@ -93,7 +105,11 @@ class MealActivity : BaseActivity<ActivityMealBinding>() {
                 )
             }
 
-            override fun setupInitComponent(binding: NutriRvGridType2Binding, data: Meal) {
+            override fun setupInitComponent(
+                binding: NutriRvGridType2Binding,
+                data: Meal,
+                position: Int
+            ) {
                 binding.apply {
                     Glide.with(root.context).load(data.strMealThumb).into(nutriRvGridType2IvPoster)
                     nutriRvGridType2TvTitle.text = data.strMeal
@@ -101,14 +117,22 @@ class MealActivity : BaseActivity<ActivityMealBinding>() {
                 }
             }
 
-            override fun onItemClicked(data: Meal) {
+            override fun onItemClicked(
+                binding: NutriRvGridType2Binding,
+                data: Meal,
+                position: Int
+            ) {
                 val extraData = Gson().toJson(data)
                 val intent = Intent(this@MealActivity, MealDetailActivity::class.java)
                     .putExtra(Constant.Extra.EXTRA_MEAL_DETAIL, extraData)
                 startActivity(intent)
             }
 
-            override fun onItemLongClicked(data: Meal) {
+            override fun onItemLongClicked(
+                binding: NutriRvGridType2Binding,
+                data: Meal,
+                position: Int
+            ) {
                 data.strMeal?.let { showToast(it) }
             }
 

@@ -42,22 +42,22 @@ public class JavaNoAdapterActivity extends AppCompatActivity {
 
         INutriViewAdapter frogoViewAdapterCallback = new INutriViewAdapter<People>() {
             @Override
-            public void setupInitComponent(@NotNull View view, People data) {
-                // Init component content item recyclerview
-                TextView tvExample = view.findViewById(R.id.nutri_rv_list_type_1_tv_title);
-                tvExample.setText(data.getName());
+            public void onItemLongClicked(@NonNull View view, People data, int position) {
+                // setup item long clicked on frogo recycler view
+                Toast.makeText(JavaNoAdapterActivity.this, data.getName(), Toast.LENGTH_SHORT).show();
             }
 
             @Override
-            public void onItemClicked(People data) {
+            public void onItemClicked(@NonNull View view, People data, int position) {
                 // setup item clicked on frogo recycler view
                 Toast.makeText(JavaNoAdapterActivity.this, data.getName(), Toast.LENGTH_SHORT).show();
             }
 
             @Override
-            public void onItemLongClicked(People data) {
-                // setup item long clicked on frogo recycler view
-                Toast.makeText(JavaNoAdapterActivity.this, data.getName(), Toast.LENGTH_SHORT).show();
+            public void setupInitComponent(@NonNull View view, People data, int position) {
+                // Init component content item recyclerview
+                TextView tvExample = view.findViewById(R.id.nutri_rv_list_type_1_tv_title);
+                tvExample.setText(data.getName());
             }
         };
 

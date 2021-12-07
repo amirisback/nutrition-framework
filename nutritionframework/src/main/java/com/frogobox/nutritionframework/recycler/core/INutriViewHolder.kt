@@ -20,6 +20,6 @@ import android.view.View
 interface INutriViewHolder<T> {
 
     // Setup Init Component on ViewHolder
-    fun setupInitComponent(view: View, data: T)
+    fun setupInitComponent(view: View, data: T, position: Int)
 
 }

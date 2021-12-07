@@ -24,12 +24,12 @@ interface INutriBindingAdapter<T, VB : ViewBinding> {
     fun setViewBinding(parent: ViewGroup): VB
 
     // Setup Init Component on ViewHolder
-    fun setupInitComponent(binding: VB, data: T)
+    fun setupInitComponent(binding: VB, data: T, position: Int)
 
     // Setup item clicked
-    fun onItemClicked(data: T)
+    fun onItemClicked(binding: VB, data: T, position: Int)
 
     // Setup item long clicked
-    fun onItemLongClicked(data: T)
+    fun onItemLongClicked(binding: VB, data: T, position: Int)
 
 }

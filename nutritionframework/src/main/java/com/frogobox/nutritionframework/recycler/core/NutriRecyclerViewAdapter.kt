@@ -93,18 +93,18 @@ abstract class NutriRecyclerViewAdapter<T> :
             if (hasMultiHolder) {
                 if (hasEmptyView) {
                     if (frogoHolder.size != 0) {
-                        holder.bindItem(frogoHolder[position].data, frogoHolder[position].listener)
+                        holder.bindItem(frogoHolder[position].data, position, frogoHolder[position].listener)
                     }
                 } else {
-                    holder.bindItem(frogoHolder[position].data, frogoHolder[position].listener)
+                    holder.bindItem(frogoHolder[position].data, position,frogoHolder[position].listener)
                 }
             } else {
                 if (hasEmptyView) {
                     if (listData.size != 0) {
-                        holder.bindItem(listData[position], viewListener)
+                        holder.bindItem(listData[position],position, viewListener)
                     }
                 } else {
-                    holder.bindItem(listData[position], viewListener)
+                    holder.bindItem(listData[position], position,viewListener)
                 }
             }
         }

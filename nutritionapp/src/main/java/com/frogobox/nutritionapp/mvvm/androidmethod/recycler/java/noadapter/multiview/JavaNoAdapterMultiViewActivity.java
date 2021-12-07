@@ -2,6 +2,7 @@ package com.frogobox.nutritionapp.mvvm.androidmethod.recycler.java.noadapter.mul
 
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -33,7 +34,7 @@ public class JavaNoAdapterMultiViewActivity extends AppCompatActivity {
     }
 
     private static INutriViewHolder<People> firstCallback() {
-        return (view, data) -> {
+        return (view, data, position) -> {
             // Init component content item recyclerview
             TextView title = view.findViewById(R.id.nutri_rv_grid_type_1_tv_title);
             ImageView photo = view.findViewById(R.id.nutri_rv_grid_type_1_iv_poster);
@@ -43,7 +44,7 @@ public class JavaNoAdapterMultiViewActivity extends AppCompatActivity {
     }
 
     private static INutriViewHolder<People> secondCallback() {
-        return (view, data) -> {
+        return (view, data, position) -> {
             // Init component content item recyclerview
             TextView title = view.findViewById(R.id.nutri_rv_grid_type_3_tv_title);
             TextView subTitle = view.findViewById(R.id.nutri_rv_grid_type_3_tv_subtitle);
@@ -59,28 +60,30 @@ public class JavaNoAdapterMultiViewActivity extends AppCompatActivity {
     private NutriRecyclerViewListener<People> firstListenerType() {
         return new NutriRecyclerViewListener<People>() {
             @Override
-            public void onItemLongClicked(People data) {
+            public void onItemLongClicked(@NonNull View view, People data, int position) {
                 Toast.makeText(JavaNoAdapterMultiViewActivity.this, data.getName() + " First", Toast.LENGTH_SHORT).show();
             }
 
             @Override
-            public void onItemClicked(People data) {
+            public void onItemClicked(@NonNull View view, People data, int position) {
                 Toast.makeText(JavaNoAdapterMultiViewActivity.this, "LAYOUT TYPE 1", Toast.LENGTH_SHORT).show();
             }
+
         };
     }
 
     private NutriRecyclerViewListener<People> secondListenerType() {
         return new NutriRecyclerViewListener<People>() {
             @Override
-            public void onItemLongClicked(People data) {
+            public void onItemLongClicked(@NonNull View view, People data, int position) {
                 Toast.makeText(JavaNoAdapterMultiViewActivity.this, data.getName() + " Second", Toast.LENGTH_SHORT).show();
             }
 
             @Override
-            public void onItemClicked(People data) {
+            public void onItemClicked(@NonNull View view, People data, int position) {
                 Toast.makeText(JavaNoAdapterMultiViewActivity.this, "LAYOUT TYPE 2", Toast.LENGTH_SHORT).show();
             }
+
         };
     }
 

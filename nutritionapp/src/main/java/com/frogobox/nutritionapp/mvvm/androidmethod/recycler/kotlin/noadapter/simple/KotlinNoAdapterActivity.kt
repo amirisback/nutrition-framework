@@ -49,17 +49,17 @@ class KotlinNoAdapterActivity : BaseActivity<ActivityBaseBinding>() {
 
         val adapterCallback = object :
             INutriViewAdapter<People> {
-            override fun setupInitComponent(view: View, data: People) {
+            override fun setupInitComponent(view: View, data: People, position: Int) {
                 // Init component content item recyclerview
                 view.findViewById<TextView>(R.id.nutri_rv_list_type_1_tv_title).text = data.name
             }
 
-            override fun onItemClicked(data: People) {
+            override fun onItemClicked(view: View, data: People, position: Int) {
                 // setup item clicked on frogo recycler view
                 showToast(data.name)
             }
 
-            override fun onItemLongClicked(data: People) {
+            override fun onItemLongClicked(view: View, data: People, position: Int) {
                 // setup item long clicked on frogo recycler view
                 showToast(data.name)
             }
@@ -77,7 +77,11 @@ class KotlinNoAdapterActivity : BaseActivity<ActivityBaseBinding>() {
     private fun setupRvInjectorBinding() {
 
         val adapterCallback = object : INutriBindingAdapter<People, NutriRvListType1Binding> {
-            override fun setupInitComponent(binding: NutriRvListType1Binding, data: People) {
+            override fun setupInitComponent(
+                binding: NutriRvListType1Binding,
+                data: People,
+                position: Int
+            ) {
                 binding.nutriRvListType1TvTitle.text = data.name
             }
 
@@ -89,12 +93,20 @@ class KotlinNoAdapterActivity : BaseActivity<ActivityBaseBinding>() {
                 )
             }
 
-            override fun onItemClicked(data: People) {
+            override fun onItemClicked(
+                binding: NutriRvListType1Binding,
+                data: People,
+                position: Int
+            ) {
                 // setup item clicked on frogo recycler view
                 showToast(data.name)
             }
 
-            override fun onItemLongClicked(data: People) {
+            override fun onItemLongClicked(
+                binding: NutriRvListType1Binding,
+                data: People,
+                position: Int
+            ) {
                 // setup item long clicked on frogo recycler view
                 showToast(data.name)
             }
@@ -129,17 +141,17 @@ class KotlinNoAdapterActivity : BaseActivity<ActivityBaseBinding>() {
                 return NutriLayoutManager.linearLayoutVertical(context)
             }
 
-            override fun setupInitComponent(view: View, data: People) {
+            override fun setupInitComponent(view: View, data: People, position: Int) {
                 // Init component content item recyclerview
                 view.findViewById<TextView>(R.id.nutri_rv_list_type_1_tv_title).text = data.name
             }
 
-            override fun onItemClicked(data: People) {
+            override fun onItemClicked(view: View, data: People, position: Int) {
                 // setup item clicked on frogo recycler view
                 showToast(data.name)
             }
 
-            override fun onItemLongClicked(data: People) {
+            override fun onItemLongClicked(view: View, data: People, position: Int) {
                 // setup item long clicked on frogo recycler view
                 showToast(data.name)
             }
@@ -158,7 +170,11 @@ class KotlinNoAdapterActivity : BaseActivity<ActivityBaseBinding>() {
                 return NutriLayoutManager.linearLayoutVertical(context)
             }
 
-            override fun setupInitComponent(binding: NutriRvListType1Binding, data: People) {
+            override fun setupInitComponent(
+                binding: NutriRvListType1Binding,
+                data: People,
+                position: Int
+            ) {
                 binding.nutriRvListType1TvTitle.text = data.name
             }
 
@@ -170,12 +186,20 @@ class KotlinNoAdapterActivity : BaseActivity<ActivityBaseBinding>() {
                 )
             }
 
-            override fun onItemClicked(data: People) {
+            override fun onItemClicked(
+                binding: NutriRvListType1Binding,
+                data: People,
+                position: Int
+            ) {
                 // setup item clicked on frogo recycler view
                 showToast(data.name)
             }
 
-            override fun onItemLongClicked(data: People) {
+            override fun onItemLongClicked(
+                binding: NutriRvListType1Binding,
+                data: People,
+                position: Int
+            ) {
                 // setup item long clicked on frogo recycler view
                 showToast(data.name)
             }

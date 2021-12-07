@@ -46,7 +46,7 @@ public class JavaSampleViewAdapter extends NutriRecyclerViewAdapter<People> {
         }
 
         @Override
-        public void initComponent(People data) {
+        public void initComponent(People data, int position) {
             tvExample.setText(data.getName());
         }
     }

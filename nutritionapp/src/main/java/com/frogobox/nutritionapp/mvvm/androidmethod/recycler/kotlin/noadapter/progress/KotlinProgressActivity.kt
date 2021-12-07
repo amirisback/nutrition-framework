@@ -47,17 +47,17 @@ class KotlinProgressActivity : BaseActivity<ActivityKotlinProgressBinding>() {
 
         val adapterCallback = object :
             INutriViewAdapter<Article> {
-            override fun setupInitComponent(view: View, data: Article) {
+            override fun setupInitComponent(view: View, data: Article, position: Int) {
                 // Init component content item recyclerview
                 view.findViewById<TextView>(R.id.nutri_rv_list_type_1_tv_title).text = data.title
             }
 
-            override fun onItemClicked(data: Article) {
+            override fun onItemClicked(view: View, data: Article, position: Int) {
                 // setup item clicked on frogo recycler view
                 data.title?.let { showToast(it) }
             }
 
-            override fun onItemLongClicked(data: Article) {
+            override fun onItemLongClicked(view: View, data: Article, position: Int) {
                 // setup item long clicked on frogo recycler view
                 data.title?.let { showToast(it) }
             }

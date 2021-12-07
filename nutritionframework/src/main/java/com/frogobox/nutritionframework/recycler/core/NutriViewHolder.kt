@@ -20,8 +20,8 @@ import android.view.View
 class NutriViewHolder<T>(view: View, private val nutriViewHolderCallback: INutriViewHolder<T>?) :
     NutriRecyclerViewHolder<T>(view) {
 
-    override fun initComponent(data: T) {
-        nutriViewHolderCallback?.setupInitComponent(itemView, data)
+    override fun initComponent(data: T, position: Int) {
+        nutriViewHolderCallback?.setupInitComponent(itemView, data, position)
     }
 
 }

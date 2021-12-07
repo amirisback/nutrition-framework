@@ -35,7 +35,7 @@ class NutriViewAdapter<T> : NutriRecyclerViewAdapter<T>() {
                 NutriViewHolder(viewLayout(parent, frogoHolder[viewType].layoutResId), frogoHolder[viewType].callback)
             } else {
                 NutriViewHolder(viewLayout(parent, emptyLayoutResId), object : INutriViewHolder<T>{
-                    override fun setupInitComponent(view: View, data: T) {}
+                    override fun setupInitComponent(view: View, data: T, position: Int) {}
                 })
             }
         } else {

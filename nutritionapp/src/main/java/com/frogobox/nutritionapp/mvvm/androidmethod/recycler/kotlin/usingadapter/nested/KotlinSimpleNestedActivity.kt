@@ -46,11 +46,11 @@ class KotlinSimpleNestedActivity : BaseActivity<ActivityFrogoRvGridBinding>() {
 
             override fun nestedListener(): NutriRecyclerViewListener<Int> {
                 return object : NutriRecyclerViewListener<Int> {
-                    override fun onItemClicked(data: Int) {
+                    override fun onItemClicked(view: View, data: Int, position: Int) {
                         showToast("Click : $data")
                     }
 
-                    override fun onItemLongClicked(data: Int) {
+                    override fun onItemLongClicked(view: View, data: Int, position: Int) {
                         showToast("Long Click : $data")
                     }
                 }
@@ -58,7 +58,7 @@ class KotlinSimpleNestedActivity : BaseActivity<ActivityFrogoRvGridBinding>() {
 
             override fun nestedCallback(): INutriViewHolder<Int> {
                 return object : INutriViewHolder<Int> {
-                    override fun setupInitComponent(view: View, data: Int) {
+                    override fun setupInitComponent(view: View, data: Int, position: Int) {
                         Glide.with(view.context).load(NutriRvConstant.LINK_PHOTO_GITHUB)
                             .into(view.findViewById(R.id.image))
                     }

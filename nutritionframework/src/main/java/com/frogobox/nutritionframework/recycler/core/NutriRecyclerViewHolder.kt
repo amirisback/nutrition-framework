@@ -23,28 +23,32 @@ import androidx.recyclerview.widget.RecyclerView
  */
 abstract class NutriRecyclerViewHolder<T>(view: View) : RecyclerView.ViewHolder(view) {
 
-    abstract fun initComponent(data: T) // component view
+    abstract fun initComponent(data: T, position: Int) // component view
 
     fun getLinearLayoutManager(recyclerView: RecyclerView): LinearLayoutManager {
         return recyclerView.layoutManager as LinearLayoutManager
     }
 
-    fun bindItem(data: T?, listener: NutriRecyclerViewListener<T>?) {
+    fun bindItem(data: T?, position: Int, listener: NutriRecyclerViewListener<T>?) {
         if (data != null) {
-            onItemViewClicked(data, listener)
-            initComponent(data)
+            onItemViewClicked(data, position, listener)
+            initComponent(data, position)
         }
     }
 
-    private fun onItemViewClicked(data: T?, listener: NutriRecyclerViewListener<T>?) {
+    private fun onItemViewClicked(
+        data: T?,
+        position: Int,
+        listener: NutriRecyclerViewListener<T>?
+    ) {
         itemView.setOnClickListener {
             if (data != null) {
-                listener?.onItemClicked(data)
+                listener?.onItemClicked(itemView, data, position)
             }
         }
         itemView.setOnLongClickListener {
             if (data != null) {
-                listener?.onItemLongClicked(data)
+                listener?.onItemLongClicked(itemView, data, position)
             }
             true
         }

@@ -38,7 +38,7 @@ class KotlinSampleViewAdapter : NutriRecyclerViewAdapter<People>() {
 
         private val tvExampleItem = view.findViewById<TextView>(R.id.nutri_rv_list_type_1_tv_title)
 
-        override fun initComponent(data: People) {
+        override fun initComponent(data: People, position: Int) {
             tvExampleItem.text = data.name
         }
     }

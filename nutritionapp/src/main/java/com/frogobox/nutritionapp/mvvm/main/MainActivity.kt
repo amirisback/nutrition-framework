@@ -42,11 +42,11 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
                 .addCustomView(R.layout.nutri_rv_list_type_1)
                 .addData(data())
                 .addCallback(object : INutriViewAdapter<Menu> {
-                    override fun onItemClicked(data: Menu) {
+                    override fun onItemClicked(view: View, data: Menu, position: Int) {
                         startActivity(data.intent)
                     }
-                    override fun onItemLongClicked(data: Menu) {}
-                    override fun setupInitComponent(view: View, data: Menu) {
+                    override fun onItemLongClicked(view: View, data: Menu, position: Int) {}
+                    override fun setupInitComponent(view: View, data: Menu, position: Int) {
                         view.findViewById<TextView>(R.id.nutri_rv_list_type_1_tv_title).text = data.name
                     }
                 })

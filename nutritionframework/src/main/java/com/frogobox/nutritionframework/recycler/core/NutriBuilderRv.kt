@@ -31,20 +31,20 @@ class NutriBuilderRv<T> : NutriBuilderRvBase<T>() {
         val nutriViewAdapter = NutriViewAdapter<T>()
 
         nutriViewAdapter.setCallback(object : INutriViewHolder<T> {
-            override fun setupInitComponent(view: View, data: T) {
-                listener.setupInitComponent(view, data)
+            override fun setupInitComponent(view: View, data: T, position: Int) {
+                listener.setupInitComponent(view, data, position)
             }
         })
 
         nutriViewAdapter.setupRequirement(
             listener.setupCustomView(), listData,
             object : NutriRecyclerViewListener<T> {
-                override fun onItemClicked(data: T) {
-                    listener.onItemClicked(data)
+                override fun onItemClicked(view: View, data: T, position: Int) {
+                    listener.onItemClicked(view, data, position)
                 }
 
-                override fun onItemLongClicked(data: T) {
-                    listener.onItemLongClicked(data)
+                override fun onItemLongClicked(view: View, data: T, position: Int) {
+                    listener.onItemLongClicked(view, data, position)
                 }
             })
 

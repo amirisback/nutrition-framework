@@ -24,6 +24,6 @@ interface INutriBindingHolder<T, VB: ViewBinding> {
     fun setViewBinding(parent: ViewGroup) : VB
 
     // Setup Init Component on ViewHolder
-    fun setupInitComponent(binding: VB, data: T)
+    fun setupInitComponent(binding: VB, data: T, position: Int)
 
 }

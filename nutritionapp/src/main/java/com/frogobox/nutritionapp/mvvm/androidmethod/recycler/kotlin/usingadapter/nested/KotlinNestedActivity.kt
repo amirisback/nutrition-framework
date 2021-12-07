@@ -66,11 +66,11 @@ class KotlinNestedActivity : BaseActivity<ActivityFrogoRvGridBinding>() {
 
             override fun nestedListener(): NutriRecyclerViewListener<Article> {
                 return object : NutriRecyclerViewListener<Article> {
-                    override fun onItemClicked(data: Article) {
+                    override fun onItemClicked(view: View, data: Article, position: Int) {
                         showToast("Click : $data")
                     }
 
-                    override fun onItemLongClicked(data: Article) {
+                    override fun onItemLongClicked(view: View, data: Article, position: Int) {
                         showToast("Long Click : $data")
                     }
                 }
@@ -78,7 +78,7 @@ class KotlinNestedActivity : BaseActivity<ActivityFrogoRvGridBinding>() {
 
             override fun nestedCallback(): INutriViewHolder<Article> {
                 return object : INutriViewHolder<Article> {
-                    override fun setupInitComponent(view: View, data: Article) {
+                    override fun setupInitComponent(view: View, data: Article, position: Int) {
                         val iv = view.findViewById<ImageView>(R.id.nutri_rv_grid_type_3_iv_poster)
                         val tv_title =
                             view.findViewById<TextView>(R.id.nutri_rv_grid_type_3_tv_title)

@@ -16,5 +16,5 @@ import android.view.View
  */
 
 class AdmobViewHolder(view: View) : NutriAdmobViewHolder<Any>(view) {
-    override fun initComponent(data: Any) {}
+    override fun initComponent(data: Any, position: Int) {}
 }

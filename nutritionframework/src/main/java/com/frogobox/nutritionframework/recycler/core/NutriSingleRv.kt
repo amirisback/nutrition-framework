@@ -1,8 +1,8 @@
 package com.frogobox.nutritionframework.recycler.core
 
 import android.view.View
-import com.frogobox.nutritionframework.log.NLog
 import com.frogobox.nutritionframework.R
+import com.frogobox.nutritionframework.log.NLog
 import com.frogobox.nutritionframework.recycler.core.NutriRvConstant.NUTRI_RV_TAG
 import com.frogobox.nutritionframework.recycler.widget.NutriRecyclerView
 
@@ -31,7 +31,7 @@ open class NutriSingleRv<T> : NutriSingleRvBase<T>(), INutriSingleRv<T> {
 
     protected var optionAdapter = ""
     protected var customViewId: Int = 0
-    
+
     override fun initSingleton(nutriRecyclerView: NutriRecyclerView): NutriSingleRv<T> {
         nutriRecycleView = nutriRecyclerView
         nutriViewAdapter = NutriViewAdapter()
@@ -117,20 +117,20 @@ open class NutriSingleRv<T> : NutriSingleRvBase<T>(), INutriSingleRv<T> {
         } else {
             optionAdapter = NutriRvConstant.NUTRI_ADAPTER_R_CLASS
             nutriViewAdapter.setCallback(object : INutriViewHolder<T> {
-                override fun setupInitComponent(view: View, data: T) {
-                    nutriAdapterCallback.setupInitComponent(view, data)
+                override fun setupInitComponent(view: View, data: T, position: Int) {
+                    nutriAdapterCallback.setupInitComponent(view, data, position)
                 }
             })
 
             nutriViewAdapter.setupRequirement(customViewId, listData,
                 object :
                     NutriRecyclerViewListener<T> {
-                    override fun onItemClicked(data: T) {
-                        nutriAdapterCallback.onItemClicked(data)
+                    override fun onItemClicked(view: View, data: T, position: Int) {
+                        nutriAdapterCallback.onItemClicked(view, data, position)
                     }
 
-                    override fun onItemLongClicked(data: T) {
-                        nutriAdapterCallback.onItemLongClicked(data)
+                    override fun onItemLongClicked(view: View, data: T, position: Int) {
+                        nutriAdapterCallback.onItemLongClicked(view, data, position)
                     }
                 })
             nutriViewAdapter.setupEmptyView(emptyViewId)

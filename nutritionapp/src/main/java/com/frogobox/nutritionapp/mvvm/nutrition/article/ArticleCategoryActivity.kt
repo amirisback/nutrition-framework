@@ -57,7 +57,7 @@ class ArticleCategoryActivity : BaseActivity<ActivityArticleCategoryBinding>() {
     private fun setupRvNews(data: List<Article>) {
 
         val newsAdapter = object : INutriViewAdapter<Article> {
-            override fun onItemClicked(data: Article) {
+            override fun onItemClicked(view: View, data: Article, position: Int) {
                 val extraData = Gson().toJson(data)
                 val intent = Intent(this@ArticleCategoryActivity, ArticleDetailActivity::class.java)
                     .putExtra(Constant.Extra.EXTRA_ARTICLE_DETAIL, extraData)
@@ -65,11 +65,11 @@ class ArticleCategoryActivity : BaseActivity<ActivityArticleCategoryBinding>() {
                 startActivity(intent)
             }
 
-            override fun onItemLongClicked(data: Article) {
+            override fun onItemLongClicked(view: View, data: Article, position: Int) {
 
             }
 
-            override fun setupInitComponent(view: View, data: Article) {
+            override fun setupInitComponent(view: View, data: Article, position: Int) {
                 view.findViewById<TextView>(R.id.nutri_rv_list_type_11_tv_title).text = data.title
                 view.findViewById<TextView>(R.id.nutri_rv_list_type_11_tv_desc).text =
                     data.description

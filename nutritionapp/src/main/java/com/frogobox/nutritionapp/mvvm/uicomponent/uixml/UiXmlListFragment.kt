@@ -44,9 +44,9 @@ class UiXmlListFragment : BaseFragment<FragmentUiXmlRvListBinding>() {
             .addCustomView(R.layout.nutri_rv_list_type_1)
             .addData(UiXmlRvConstant.dataRvList())
             .addCallback(object : INutriViewAdapter<LayoutUiXml> {
-                override fun onItemClicked(data: LayoutUiXml) { intentToLayoutSample(data) }
-                override fun onItemLongClicked(data: LayoutUiXml) {}
-                override fun setupInitComponent(view: View, data: LayoutUiXml) {
+                override fun onItemClicked(view: View, data: LayoutUiXml, position: Int) { intentToLayoutSample(data) }
+                override fun onItemLongClicked(view: View, data: LayoutUiXml, position: Int) {}
+                override fun setupInitComponent(view: View, data: LayoutUiXml, position: Int) {
                     view.findViewById<TextView>(R.id.nutri_rv_list_type_1_tv_title).text = data.name
                 }
             })

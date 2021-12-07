@@ -23,8 +23,8 @@ class NutriBindingHolder<T, VB : ViewBinding>(
 ) :
     NutriRecyclerBindingHolder<T, VB>(binding) {
 
-    override fun initComponent(data: T) {
-        nutriViewHolderCallback?.setupInitComponent(binding, data)
+    override fun initComponent(binding: VB, data: T, position: Int) {
+        nutriViewHolderCallback?.setupInitComponent(binding, data, position)
     }
 
 }

@@ -2,6 +2,7 @@ package com.frogobox.nutritionapp.mvvm.androidmethod.recycler.java.usingadapter;
 
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -55,14 +56,16 @@ public class JavaSampleActivity extends AppCompatActivity {
         JavaSampleViewAdapter adapter = new JavaSampleViewAdapter();
         adapter.setupRequirement(R.layout.nutri_rv_list_type_1, listData(), new NutriRecyclerViewListener<People>() {
             @Override
-            public void onItemClicked(People data) {
-                Toast.makeText(JavaSampleActivity.this, data.getName(), Toast.LENGTH_SHORT).show();
+            public void onItemLongClicked(@NonNull View view, People data, int position) {
+                Toast.makeText(JavaSampleActivity.this, data.getName(), Toast.LENGTH_LONG).show();
             }
 
             @Override
-            public void onItemLongClicked(People data) {
-                Toast.makeText(JavaSampleActivity.this, data.getName(), Toast.LENGTH_LONG).show();
+            public void onItemClicked(@NonNull View view, People data, int position) {
+
+                Toast.makeText(JavaSampleActivity.this, data.getName(), Toast.LENGTH_SHORT).show();
             }
+
         });
         adapter.setupEmptyView(null); // Without Custom View
 

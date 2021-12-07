@@ -89,8 +89,8 @@ open class NutriSingleRvBinding<T, VB : ViewBinding> : NutriSingleRvBase<T>(), I
     protected open fun createAdapter() {
         optionAdapter = NutriRvConstant.NUTRI_ADAPTER_R_CLASS
         nutriViewAdapter.setCallback(object : INutriBindingHolder<T, VB> {
-            override fun setupInitComponent(binding: VB, data: T) {
-                nutriAdapterCallback.setupInitComponent(binding, data)
+            override fun setupInitComponent(binding: VB, data: T, position: Int) {
+                nutriAdapterCallback.setupInitComponent(binding, data, position)
             }
 
             override fun setViewBinding(parent: ViewGroup): VB {
@@ -98,15 +98,15 @@ open class NutriSingleRvBinding<T, VB : ViewBinding> : NutriSingleRvBase<T>(), I
             }
         })
 
-        nutriViewAdapter.setupRequirement(listData, object : NutriRecyclerViewListener<T> {
-                override fun onItemClicked(data: T) {
-                    nutriAdapterCallback.onItemClicked(data)
+        nutriViewAdapter.setupRequirement(listData, object : NutriRecyclerBindingListener<T, VB> {
+                override fun onItemClicked(binding: VB, data: T, position: Int) {
+                    nutriAdapterCallback.onItemClicked(binding, data, position)
                 }
 
-                override fun onItemLongClicked(data: T) {
-                    nutriAdapterCallback.onItemLongClicked(data)
+                override fun onItemLongClicked(binding: VB, data: T, position: Int) {
+                    nutriAdapterCallback.onItemLongClicked(binding, data, position)
                 }
-            })
+        })
     }
 
     protected open fun setupInnerAdapter() {
