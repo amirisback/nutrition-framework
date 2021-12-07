@@ -73,12 +73,12 @@ class BuilderActivity : BaseActivity<ActivityBuilderBinding>() {
                         binding.nutriRvSelectedListType1IvSelected.visibility = View.GONE
                         val tempData = BuilderRes(data.name, data.key, data.value, !data.check)
                         notifyListener.nutriNotifyItemChanged(tempData, position)
-                        NLog.d("Status ${listBuilderRes[position].check}")
+                        NLog.d("Status ${notifyListener.nutriNotifyData()[position].check}")
                     } else {
                         binding.nutriRvSelectedListType1IvSelected.visibility = View.VISIBLE
                         val tempData = BuilderRes(data.name, data.key, data.value, !data.check)
                         notifyListener.nutriNotifyItemChanged(tempData, position)
-                        NLog.d("Status ${listBuilderRes[position].check}")
+                        NLog.d("Status ${notifyListener.nutriNotifyData()[position].check}")
                     }
 
                 }

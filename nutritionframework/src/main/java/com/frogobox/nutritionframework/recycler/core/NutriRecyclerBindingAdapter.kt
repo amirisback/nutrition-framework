@@ -27,6 +27,12 @@ abstract class NutriRecyclerBindingAdapter<T, VB : ViewBinding> :
 
     protected var listenerNotify = object : NutriRecyclerNotifyListener<T> {
 
+        override fun nutriNotifyData(): MutableList<T> {
+            NLog.d("$NUTRI_RV_TAG - NutriNotifyListener : nutriNotifyData")
+            NLog.d("$NUTRI_RV_TAG - NutriNotifyListener : nutriNotifyData : ${listData.toString()}")
+            return listData
+        }
+
         override fun nutriNotifyDataSetChanged() {
             notifyDataSetChanged()
             NLog.d("$NUTRI_RV_TAG - NutriNotifyListener : nutriNotifyDataSetChanged")

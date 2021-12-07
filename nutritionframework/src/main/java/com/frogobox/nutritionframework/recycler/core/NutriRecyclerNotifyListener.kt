@@ -15,7 +15,9 @@ package com.frogobox.nutritionframework.recycler.core
  */
 
 interface NutriRecyclerNotifyListener<T> {
-    
+
+    fun nutriNotifyData() : MutableList<T>
+
     fun nutriNotifyDataSetChanged()
     
     fun nutriNotifyItemChanged(data: T, position: Int, payload: Any)
