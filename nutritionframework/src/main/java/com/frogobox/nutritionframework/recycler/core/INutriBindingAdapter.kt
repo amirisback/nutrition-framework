@@ -24,12 +24,27 @@ interface INutriBindingAdapter<T, VB : ViewBinding> {
     fun setViewBinding(parent: ViewGroup): VB
 
     // Setup Init Component on ViewHolder
-    fun setupInitComponent(binding: VB, data: T, position: Int)
+    fun setupInitComponent(
+        binding: VB,
+        data: T,
+        position: Int,
+        notifyListener: NutriRecyclerNotifyListener<T>
+    )
 
     // Setup item clicked
-    fun onItemClicked(binding: VB, data: T, position: Int)
+    fun onItemClicked(
+        binding: VB,
+        data: T,
+        position: Int,
+        notifyListener: NutriRecyclerNotifyListener<T>
+    )
 
     // Setup item long clicked
-    fun onItemLongClicked(binding: VB, data: T, position: Int)
+    fun onItemLongClicked(
+        binding: VB,
+        data: T,
+        position: Int,
+        notifyListener: NutriRecyclerNotifyListener<T>
+    )
 
 }

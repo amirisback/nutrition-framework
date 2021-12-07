@@ -17,6 +17,7 @@ import com.frogobox.nutritionapp.util.Constant.Const.CONS_VITAMIN_E
 import com.frogobox.nutritioncore.model.news.Article
 import com.frogobox.nutritioncore.model.vitamin.VitaminContent
 import com.frogobox.nutritionframework.recycler.core.INutriViewAdapter
+import com.frogobox.nutritionframework.recycler.core.NutriRecyclerNotifyListener
 import com.google.gson.Gson
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -90,7 +91,12 @@ class VitaminActivity : BaseActivity<ActivityVitaminBinding>() {
     private fun setupRvNews(data: List<Article>) {
 
         val newsAdapter = object : INutriViewAdapter<Article> {
-            override fun onItemClicked(view: View, data: Article, position: Int) {
+            override fun onItemClicked(
+                view: View,
+                data: Article,
+                position: Int,
+                notifyListener: NutriRecyclerNotifyListener<Article>
+            ) {
                 val extraData = Gson().toJson(data)
                 val intent = Intent(this@VitaminActivity, ArticleDetailActivity::class.java)
                     .putExtra(Constant.Extra.EXTRA_ARTICLE_DETAIL, extraData)
@@ -98,11 +104,21 @@ class VitaminActivity : BaseActivity<ActivityVitaminBinding>() {
                 startActivity(intent)
             }
 
-            override fun onItemLongClicked(view: View, data: Article, position: Int) {
+            override fun onItemLongClicked(
+                view: View,
+                data: Article,
+                position: Int,
+                notifyListener: NutriRecyclerNotifyListener<Article>
+            ) {
 
             }
 
-            override fun setupInitComponent(view: View, data: Article, position: Int) {
+            override fun setupInitComponent(
+                view: View,
+                data: Article,
+                position: Int,
+                notifyListener: NutriRecyclerNotifyListener<Article>
+            ) {
                 view.findViewById<TextView>(R.id.nutri_rv_list_type_11_tv_title).text = data.title
                 view.findViewById<TextView>(R.id.nutri_rv_list_type_11_tv_desc).text =
                     data.description
@@ -126,13 +142,28 @@ class VitaminActivity : BaseActivity<ActivityVitaminBinding>() {
     private fun setupRvVitamin(data: List<VitaminContent>) {
 
         val vitaminAdapter = object : INutriViewAdapter<VitaminContent> {
-            override fun onItemClicked(view: View, data: VitaminContent, position: Int) {
+            override fun onItemClicked(
+                view: View,
+                data: VitaminContent,
+                position: Int,
+                notifyListener: NutriRecyclerNotifyListener<VitaminContent>
+            ) {
             }
 
-            override fun onItemLongClicked(view: View, data: VitaminContent, position: Int) {
+            override fun onItemLongClicked(
+                view: View,
+                data: VitaminContent,
+                position: Int,
+                notifyListener: NutriRecyclerNotifyListener<VitaminContent>
+            ) {
             }
 
-            override fun setupInitComponent(view: View, data: VitaminContent, position: Int) {
+            override fun setupInitComponent(
+                view: View,
+                data: VitaminContent,
+                position: Int,
+                notifyListener: NutriRecyclerNotifyListener<VitaminContent>
+            ) {
                 view.findViewById<TextView>(R.id.nutri_rv_list_type_2_tv_title).text =
                     data.information
                 view.findViewById<TextView>(R.id.nutri_rv_list_type_2_tv_subtitle).text =

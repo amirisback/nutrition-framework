@@ -20,12 +20,22 @@ import android.view.View
 interface INutriViewAdapter<T> {
 
     // Setup Init Component on ViewHolder
-    fun setupInitComponent(view: View, data: T, position: Int)
+    fun setupInitComponent(
+        view: View,
+        data: T,
+        position: Int,
+        notifyListener: NutriRecyclerNotifyListener<T>
+    )
 
     // Setup item clicked
-    fun onItemClicked(view: View, data: T, position: Int)
+    fun onItemClicked(view: View, data: T, position: Int, notifyListener: NutriRecyclerNotifyListener<T>)
 
     // Setup item long clicked
-    fun onItemLongClicked(view: View, data: T, position: Int)
+    fun onItemLongClicked(
+        view: View,
+        data: T,
+        position: Int,
+        notifyListener: NutriRecyclerNotifyListener<T>
+    )
 
 }

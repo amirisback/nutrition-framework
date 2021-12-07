@@ -31,12 +31,22 @@ interface INutriBuilderRv<T> {
     fun setupLayoutManager(context: Context): RecyclerView.LayoutManager
 
     // Setup Init Component on ViewHolder
-    fun setupInitComponent(view: View, data: T, position: Int)
+    fun setupInitComponent(
+        view: View,
+        data: T,
+        position: Int,
+        listener: NutriRecyclerNotifyListener<T>
+    )
 
     // Setup root item clicked
-    fun onItemClicked(view: View, data: T, position: Int)
+    fun onItemClicked(view: View, data: T, position: Int, listener: NutriRecyclerNotifyListener<T>)
 
     // Setup root item long clicked
-    fun onItemLongClicked(view: View, data: T, position: Int)
+    fun onItemLongClicked(
+        view: View,
+        data: T,
+        position: Int,
+        listener: NutriRecyclerNotifyListener<T>
+    )
 
 }

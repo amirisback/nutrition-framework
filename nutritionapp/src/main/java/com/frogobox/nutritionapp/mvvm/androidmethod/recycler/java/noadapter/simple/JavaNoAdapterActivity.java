@@ -13,6 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.frogobox.nutritionapp.R;
 import com.frogobox.nutritionapp.model.People;
 import com.frogobox.nutritionframework.recycler.core.INutriViewAdapter;
+import com.frogobox.nutritionframework.recycler.core.NutriRecyclerNotifyListener;
 import com.frogobox.nutritionframework.recycler.widget.NutriRecyclerView;
 
 import org.jetbrains.annotations.NotNull;
@@ -42,23 +43,24 @@ public class JavaNoAdapterActivity extends AppCompatActivity {
 
         INutriViewAdapter frogoViewAdapterCallback = new INutriViewAdapter<People>() {
             @Override
-            public void onItemLongClicked(@NonNull View view, People data, int position) {
+            public void onItemLongClicked(@NonNull View view, People data, int position, @NonNull NutriRecyclerNotifyListener<People> notifyListener) {
                 // setup item long clicked on frogo recycler view
                 Toast.makeText(JavaNoAdapterActivity.this, data.getName(), Toast.LENGTH_SHORT).show();
             }
 
             @Override
-            public void onItemClicked(@NonNull View view, People data, int position) {
+            public void onItemClicked(@NonNull View view, People data, int position, @NonNull NutriRecyclerNotifyListener<People> notifyListener) {
                 // setup item clicked on frogo recycler view
                 Toast.makeText(JavaNoAdapterActivity.this, data.getName(), Toast.LENGTH_SHORT).show();
             }
 
             @Override
-            public void setupInitComponent(@NonNull View view, People data, int position) {
+            public void setupInitComponent(@NonNull View view, People data, int position, @NonNull NutriRecyclerNotifyListener<People> notifyListener) {
                 // Init component content item recyclerview
                 TextView tvExample = view.findViewById(R.id.nutri_rv_list_type_1_tv_title);
                 tvExample.setText(data.getName());
             }
+
         };
 
         NutriRecyclerView nutriRecyclerView = findViewById(R.id.nutri_recycler_view);

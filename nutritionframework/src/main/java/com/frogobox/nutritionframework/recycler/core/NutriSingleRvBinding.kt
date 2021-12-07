@@ -21,12 +21,13 @@ import com.frogobox.nutritionframework.recycler.widget.NutriRecyclerView
  * com.frogobox.recycler
  *
  */
-open class NutriSingleRvBinding<T, VB : ViewBinding> : NutriSingleRvBase<T>(), INutriSingleRvBinding<T, VB> {
+open class NutriSingleRvBinding<T, VB : ViewBinding> : NutriSingleRvBase<T>(),
+    INutriSingleRvBinding<T, VB> {
 
     protected lateinit var nutriRecycleView: NutriRecyclerView
     protected lateinit var nutriAdapterCallback: INutriBindingAdapter<T, VB>
     protected lateinit var nutriViewAdapter: NutriBindingAdapter<T, VB>
-    
+
     protected var optionAdapter = ""
 
     override fun initSingleton(nutriRecyclerView: NutriRecyclerView): NutriSingleRvBinding<T, VB> {
@@ -89,8 +90,13 @@ open class NutriSingleRvBinding<T, VB : ViewBinding> : NutriSingleRvBase<T>(), I
     protected open fun createAdapter() {
         optionAdapter = NutriRvConstant.NUTRI_ADAPTER_R_CLASS
         nutriViewAdapter.setCallback(object : INutriBindingHolder<T, VB> {
-            override fun setupInitComponent(binding: VB, data: T, position: Int) {
-                nutriAdapterCallback.setupInitComponent(binding, data, position)
+            override fun setupInitComponent(
+                binding: VB,
+                data: T,
+                position: Int,
+                notifyListener: NutriRecyclerNotifyListener<T>
+            ) {
+                nutriAdapterCallback.setupInitComponent(binding, data, position, notifyListener)
             }
 
             override fun setViewBinding(parent: ViewGroup): VB {
@@ -99,13 +105,23 @@ open class NutriSingleRvBinding<T, VB : ViewBinding> : NutriSingleRvBase<T>(), I
         })
 
         nutriViewAdapter.setupRequirement(listData, object : NutriRecyclerBindingListener<T, VB> {
-                override fun onItemClicked(binding: VB, data: T, position: Int) {
-                    nutriAdapterCallback.onItemClicked(binding, data, position)
-                }
+            override fun onItemClicked(
+                binding: VB,
+                data: T,
+                position: Int,
+                notifyListener: NutriRecyclerNotifyListener<T>
+            ) {
+                nutriAdapterCallback.onItemClicked(binding, data, position, notifyListener)
+            }
 
-                override fun onItemLongClicked(binding: VB, data: T, position: Int) {
-                    nutriAdapterCallback.onItemLongClicked(binding, data, position)
-                }
+            override fun onItemLongClicked(
+                binding: VB,
+                data: T,
+                position: Int,
+                notifyListener: NutriRecyclerNotifyListener<T>
+            ) {
+                nutriAdapterCallback.onItemLongClicked(binding, data, position, notifyListener)
+            }
         })
     }
 

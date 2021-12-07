@@ -13,6 +13,7 @@ import com.frogobox.nutritioncore.model.meal.Meal
 import com.frogobox.nutritioncore.util.NutriFunc
 import com.frogobox.nutritionframework.databinding.NutriRvGridType2Binding
 import com.frogobox.nutritionframework.recycler.core.INutriBindingAdapter
+import com.frogobox.nutritionframework.recycler.core.NutriRecyclerNotifyListener
 import com.google.gson.Gson
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -63,7 +64,8 @@ class MealActivity : BaseActivity<ActivityMealBinding>() {
             override fun setupInitComponent(
                 binding: ItemMealCategoryBinding,
                 data: String,
-                position: Int
+                position: Int,
+                notifyListener: NutriRecyclerNotifyListener<String>
             ) {
                 binding.nutriRvListType12TvTitle.text = data
             }
@@ -71,7 +73,8 @@ class MealActivity : BaseActivity<ActivityMealBinding>() {
             override fun onItemClicked(
                 binding: ItemMealCategoryBinding,
                 data: String,
-                position: Int
+                position: Int,
+                notifyListener: NutriRecyclerNotifyListener<String>
             ) {
                 mealViewModel.getListMeals(data)
             }
@@ -79,7 +82,8 @@ class MealActivity : BaseActivity<ActivityMealBinding>() {
             override fun onItemLongClicked(
                 binding: ItemMealCategoryBinding,
                 data: String,
-                position: Int
+                position: Int,
+                notifyListener: NutriRecyclerNotifyListener<String>
             ) {
                 //
             }
@@ -108,7 +112,8 @@ class MealActivity : BaseActivity<ActivityMealBinding>() {
             override fun setupInitComponent(
                 binding: NutriRvGridType2Binding,
                 data: Meal,
-                position: Int
+                position: Int,
+                notifyListener: NutriRecyclerNotifyListener<Meal>
             ) {
                 binding.apply {
                     Glide.with(root.context).load(data.strMealThumb).into(nutriRvGridType2IvPoster)
@@ -120,7 +125,8 @@ class MealActivity : BaseActivity<ActivityMealBinding>() {
             override fun onItemClicked(
                 binding: NutriRvGridType2Binding,
                 data: Meal,
-                position: Int
+                position: Int,
+                notifyListener: NutriRecyclerNotifyListener<Meal>
             ) {
                 val extraData = Gson().toJson(data)
                 val intent = Intent(this@MealActivity, MealDetailActivity::class.java)
@@ -131,7 +137,8 @@ class MealActivity : BaseActivity<ActivityMealBinding>() {
             override fun onItemLongClicked(
                 binding: NutriRvGridType2Binding,
                 data: Meal,
-                position: Int
+                position: Int,
+                notifyListener: NutriRecyclerNotifyListener<Meal>
             ) {
                 data.strMeal?.let { showToast(it) }
             }

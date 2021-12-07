@@ -37,6 +37,6 @@ class NutriNestedHolder<T>(
         NutriStartSnapHelper().attachToRecyclerView(recyclerView)
     }
 
-    override fun initComponent(data: T, position: Int) {}
+    override fun initComponent(data: T, position: Int, listener: NutriRecyclerNotifyListener<T>) {}
 }
 

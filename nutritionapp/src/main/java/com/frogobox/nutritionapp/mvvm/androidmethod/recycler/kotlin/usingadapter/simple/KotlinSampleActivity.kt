@@ -8,6 +8,7 @@ import com.frogobox.nutritionapp.core.BaseActivity
 import com.frogobox.nutritionapp.databinding.ActivityFrogoRvListBinding
 import com.frogobox.nutritionapp.model.People
 import com.frogobox.nutritionapp.util.Constant
+import com.frogobox.nutritionframework.recycler.core.NutriRecyclerNotifyListener
 import com.frogobox.nutritionframework.recycler.core.NutriRecyclerViewListener
 
 class KotlinSampleActivity : BaseActivity<ActivityFrogoRvListBinding>() {
@@ -32,11 +33,21 @@ class KotlinSampleActivity : BaseActivity<ActivityFrogoRvListBinding>() {
             R.layout.nutri_rv_list_type_1,
             dummyData,
             object : NutriRecyclerViewListener<People> {
-                override fun onItemClicked(view: View, data: People, position: Int) {
+                override fun onItemClicked(
+                    view: View,
+                    data: People,
+                    position: Int,
+                    notifyListener: NutriRecyclerNotifyListener<People>
+                ) {
                     Toast.makeText(this@KotlinSampleActivity, data.name, Toast.LENGTH_SHORT).show()
                 }
 
-                override fun onItemLongClicked(view: View, data: People, position: Int) {
+                override fun onItemLongClicked(
+                    view: View,
+                    data: People,
+                    position: Int,
+                    notifyListener: NutriRecyclerNotifyListener<People>
+                ) {
                     Toast.makeText(this@KotlinSampleActivity, data.name, Toast.LENGTH_SHORT).show()
                 }
             }

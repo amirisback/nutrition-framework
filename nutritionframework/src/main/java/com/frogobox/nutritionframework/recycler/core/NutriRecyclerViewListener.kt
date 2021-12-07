@@ -22,9 +22,14 @@ import android.view.View
 interface NutriRecyclerViewListener<T> {
 
     // on itemview set on click listener
-    fun onItemClicked(view: View, data: T, position: Int)
+    fun onItemClicked(view: View, data: T, position: Int, notifyListener: NutriRecyclerNotifyListener<T>)
 
     // on itemview set on long click listener
-    fun onItemLongClicked(view: View, data: T, position: Int)
+    fun onItemLongClicked(
+        view: View,
+        data: T,
+        position: Int,
+        notifyListener: NutriRecyclerNotifyListener<T>
+    )
 
 }

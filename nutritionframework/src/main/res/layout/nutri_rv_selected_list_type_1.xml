@@ -20,9 +20,14 @@
 
     <TextView
         android:id="@+id/nutri_rv_selected_list_type_1_tv_title"
-        style="@style/nutriTvListTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
         android:layout_marginRight="@dimen/nutri_dimen_16dp"
         android:layout_toLeftOf="@id/nutri_rv_selected_list_type_1_iv_selected"
+        android:maxLines="1"
+        android:textColor="@color/nutriColorPrimary"
+        android:textStyle="bold"
         tools:text="@tools:sample/lorem/random" />
 
     <ImageView

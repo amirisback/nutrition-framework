@@ -14,6 +14,7 @@ import com.frogobox.nutritionapp.util.Constant
 import com.frogobox.nutritionapp.util.Constant.TitleActivity.ACTIVITY_UI_COMPOSE
 import com.frogobox.nutritionapp.util.Constant.TitleActivity.ACTIVITY_UI_XML_RV
 import com.frogobox.nutritionframework.recycler.core.INutriViewAdapter
+import com.frogobox.nutritionframework.recycler.core.NutriRecyclerNotifyListener
 
 class UiComponentActivity : BaseActivity<ActivityUiComponentBinding>() {
 
@@ -29,7 +30,7 @@ class UiComponentActivity : BaseActivity<ActivityUiComponentBinding>() {
         setupRecyclerView()
     }
 
-    private fun data() : MutableList<Menu> {
+    private fun data(): MutableList<Menu> {
         val data = mutableListOf<Menu>()
         data.add(Menu(ACTIVITY_UI_XML_RV, Intent(this, UiXmlRvActivity::class.java)))
         data.add(Menu(ACTIVITY_UI_COMPOSE, Intent(this, MainComposeActivity::class.java)))
@@ -41,16 +42,34 @@ class UiComponentActivity : BaseActivity<ActivityUiComponentBinding>() {
             .addCustomView(R.layout.nutri_rv_list_type_1)
             .addData(data())
             .addCallback(object : INutriViewAdapter<Menu> {
-                override fun onItemClicked(view: View, data: Menu, position: Int) {
+                override fun onItemClicked(
+                    view: View,
+                    data: Menu,
+                    position: Int,
+                    notifyListener: NutriRecyclerNotifyListener<Menu>
+                ) {
                     startActivity(data.intent)
                 }
-                override fun onItemLongClicked(view: View, data: Menu, position: Int) {}
-                override fun setupInitComponent(view: View, data: Menu, position: Int) {
+
+                override fun onItemLongClicked(
+                    view: View,
+                    data: Menu,
+                    position: Int,
+                    notifyListener: NutriRecyclerNotifyListener<Menu>
+                ) {
+                }
+
+                override fun setupInitComponent(
+                    view: View,
+                    data: Menu,
+                    position: Int,
+                    notifyListener: NutriRecyclerNotifyListener<Menu>
+                ) {
                     view.findViewById<TextView>(R.id.nutri_rv_list_type_1_tv_title).text = data.name
                 }
             })
             .createLayoutLinearVertical(false)
             .build()
     }
-    
+
 }

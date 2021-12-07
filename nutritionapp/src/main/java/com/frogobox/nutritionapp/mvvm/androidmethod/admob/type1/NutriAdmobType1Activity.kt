@@ -8,6 +8,7 @@ import com.frogobox.nutritionapp.core.BaseActivity
 import com.frogobox.nutritionapp.databinding.ActivityNutriAdmobType1Binding
 import com.frogobox.nutritionapp.mvvm.nutrition.article.ArticleViewModel
 import com.frogobox.nutritionframework.admob.NutriAdmob.RecyclerView.loadRecyclerBannerAds
+import com.frogobox.nutritionframework.recycler.core.NutriRecyclerNotifyListener
 import com.frogobox.nutritionframework.recycler.core.NutriRecyclerViewListener
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -44,8 +45,21 @@ class NutriAdmobType1Activity : BaseActivity<ActivityNutriAdmobType1Binding>() {
         val adapter = NutriAdmobType1Adapter()
         adapter.setupRequirement(R.layout.nutri_rv_list_type_11, arrayFrogoAdmobData, object :
             NutriRecyclerViewListener<Any> {
-            override fun onItemClicked(view: View, data: Any, position: Int) {}
-            override fun onItemLongClicked(view: View, data: Any, position: Int) {}
+            override fun onItemClicked(
+                view: View,
+                data: Any,
+                position: Int,
+                notifyListener: NutriRecyclerNotifyListener<Any>
+            ) {
+            }
+
+            override fun onItemLongClicked(
+                view: View,
+                data: Any,
+                position: Int,
+                notifyListener: NutriRecyclerNotifyListener<Any>
+            ) {
+            }
         })
         return adapter
     }

@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.frogobox.nutritionapp.R;
 import com.frogobox.nutritionapp.model.People;
+import com.frogobox.nutritionframework.recycler.core.NutriRecyclerNotifyListener;
 import com.frogobox.nutritionframework.recycler.core.NutriRecyclerViewListener;
 import com.frogobox.nutritionframework.recycler.widget.NutriRecyclerView;
 
@@ -56,13 +57,12 @@ public class JavaSampleActivity extends AppCompatActivity {
         JavaSampleViewAdapter adapter = new JavaSampleViewAdapter();
         adapter.setupRequirement(R.layout.nutri_rv_list_type_1, listData(), new NutriRecyclerViewListener<People>() {
             @Override
-            public void onItemLongClicked(@NonNull View view, People data, int position) {
+            public void onItemLongClicked(@NonNull View view, People data, int position, @NonNull NutriRecyclerNotifyListener<People> notifyListener) {
                 Toast.makeText(JavaSampleActivity.this, data.getName(), Toast.LENGTH_LONG).show();
             }
 
             @Override
-            public void onItemClicked(@NonNull View view, People data, int position) {
-
+            public void onItemClicked(@NonNull View view, People data, int position, @NonNull NutriRecyclerNotifyListener<People> notifyListener) {
                 Toast.makeText(JavaSampleActivity.this, data.getName(), Toast.LENGTH_SHORT).show();
             }
 

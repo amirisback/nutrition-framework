@@ -26,6 +26,7 @@ import com.frogobox.nutritionapp.util.Constant.TitleActivity.ACTIVITY_VITAMIN_AR
 import com.frogobox.nutritionapp.util.Constant.TitleActivity.ACTIVITY_VITAMIN_ARTICLE_DETAIL
 import com.frogobox.nutritionapp.util.Constant.TitleActivity.ACTIVITY_VITAMIN_ARTICLE_E
 import com.frogobox.nutritionframework.recycler.core.INutriViewAdapter
+import com.frogobox.nutritionframework.recycler.core.NutriRecyclerNotifyListener
 
 class ArticleActivity : BaseActivity<ActivityArticleBinding>() {
 
@@ -43,11 +44,29 @@ class ArticleActivity : BaseActivity<ActivityArticleBinding>() {
                 .addCustomView(R.layout.nutri_rv_list_type_1)
                 .addData(data())
                 .addCallback(object : INutriViewAdapter<Menu> {
-                    override fun onItemClicked(view: View, data: Menu, position: Int) {
+                    override fun onItemClicked(
+                        view: View,
+                        data: Menu,
+                        position: Int,
+                        notifyListener: NutriRecyclerNotifyListener<Menu>
+                    ) {
                         startActivity(data.intent)
                     }
-                    override fun onItemLongClicked(view: View, data: Menu, position: Int) {}
-                    override fun setupInitComponent(view: View, data: Menu, position: Int) {
+
+                    override fun onItemLongClicked(
+                        view: View,
+                        data: Menu,
+                        position: Int,
+                        notifyListener: NutriRecyclerNotifyListener<Menu>
+                    ) {
+                    }
+
+                    override fun setupInitComponent(
+                        view: View,
+                        data: Menu,
+                        position: Int,
+                        notifyListener: NutriRecyclerNotifyListener<Menu>
+                    ) {
                         view.findViewById<TextView>(R.id.nutri_rv_list_type_1_tv_title).text =
                             data.name
                     }

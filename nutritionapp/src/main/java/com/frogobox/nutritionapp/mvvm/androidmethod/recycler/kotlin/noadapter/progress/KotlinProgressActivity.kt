@@ -9,6 +9,7 @@ import com.frogobox.nutritionapp.databinding.ActivityKotlinProgressBinding
 import com.frogobox.nutritionapp.mvvm.nutrition.article.ArticleViewModel
 import com.frogobox.nutritioncore.model.news.Article
 import com.frogobox.nutritionframework.recycler.core.INutriViewAdapter
+import com.frogobox.nutritionframework.recycler.core.NutriRecyclerNotifyListener
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class KotlinProgressActivity : BaseActivity<ActivityKotlinProgressBinding>() {
@@ -42,22 +43,37 @@ class KotlinProgressActivity : BaseActivity<ActivityKotlinProgressBinding>() {
         setupDetailActivity("Kotlin FrogoProgressRecyclerView Sample")
         setupButtonProgress()
     }
-    
+
     private fun setupFrogoProgressRecyclerView(data: List<Article>) {
 
         val adapterCallback = object :
             INutriViewAdapter<Article> {
-            override fun setupInitComponent(view: View, data: Article, position: Int) {
+            override fun setupInitComponent(
+                view: View,
+                data: Article,
+                position: Int,
+                notifyListener: NutriRecyclerNotifyListener<Article>
+            ) {
                 // Init component content item recyclerview
                 view.findViewById<TextView>(R.id.nutri_rv_list_type_1_tv_title).text = data.title
             }
 
-            override fun onItemClicked(view: View, data: Article, position: Int) {
+            override fun onItemClicked(
+                view: View,
+                data: Article,
+                position: Int,
+                notifyListener: NutriRecyclerNotifyListener<Article>
+            ) {
                 // setup item clicked on frogo recycler view
                 data.title?.let { showToast(it) }
             }
 
-            override fun onItemLongClicked(view: View, data: Article, position: Int) {
+            override fun onItemLongClicked(
+                view: View,
+                data: Article,
+                position: Int,
+                notifyListener: NutriRecyclerNotifyListener<Article>
+            ) {
                 // setup item long clicked on frogo recycler view
                 data.title?.let { showToast(it) }
             }

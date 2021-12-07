@@ -18,12 +18,17 @@ import androidx.viewbinding.ViewBinding
  * com.frogobox.recycler.callback
  * 
  */
-interface INutriBindingHolder<T, VB: ViewBinding> {
+interface INutriBindingHolder<T, VB : ViewBinding> {
 
     // Setup View Binding
-    fun setViewBinding(parent: ViewGroup) : VB
+    fun setViewBinding(parent: ViewGroup): VB
 
     // Setup Init Component on ViewHolder
-    fun setupInitComponent(binding: VB, data: T, position: Int)
+    fun setupInitComponent(
+        binding: VB,
+        data: T,
+        position: Int,
+        notifyListener: NutriRecyclerNotifyListener<T>
+    )
 
 }

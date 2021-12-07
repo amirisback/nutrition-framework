@@ -24,32 +24,33 @@ import androidx.viewbinding.ViewBinding
 abstract class NutriRecyclerBindingHolder<T, VB : ViewBinding>(private val binding: VB) :
     RecyclerView.ViewHolder(binding.root) {
 
-    abstract fun initComponent(binding: VB, data: T, position: Int) // component view
+    abstract fun initComponent(binding: VB, data: T, position: Int, listener: NutriRecyclerNotifyListener<T>) // component view
 
     fun getLinearLayoutManager(recyclerView: RecyclerView): LinearLayoutManager {
         return recyclerView.layoutManager as LinearLayoutManager
     }
 
-    fun bindItem(data: T?, position: Int, listener: NutriRecyclerBindingListener<T, VB>?) {
+    fun bindItem(data: T?, position: Int, listener: NutriRecyclerBindingListener<T, VB>?, notifylistener: NutriRecyclerNotifyListener<T>) {
         if (data != null) {
-            onItemViewClicked(data, position, listener)
-            initComponent(binding, data, position)
+            onItemViewClicked(data, position, listener, notifylistener)
+            initComponent(binding, data, position, notifylistener)
         }
     }
 
     private fun onItemViewClicked(
         data: T?,
         position: Int,
-        listener: NutriRecyclerBindingListener<T, VB>?
+        listener: NutriRecyclerBindingListener<T, VB>?,
+        notifylistener: NutriRecyclerNotifyListener<T>
     ) {
         binding.root.setOnClickListener {
             if (data != null) {
-                listener?.onItemClicked(binding, data, position)
+                listener?.onItemClicked(binding, data, position, notifylistener)
             }
         }
         binding.root.setOnLongClickListener {
             if (data != null) {
-                listener?.onItemLongClicked(binding, data, position)
+                listener?.onItemLongClicked(binding, data, position, notifylistener)
             }
             true
         }

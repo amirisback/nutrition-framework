@@ -20,6 +20,18 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="n">
         <activity
+            android:name=".mvvm.generator.GeneratorActivity"
+            android:exported="false" />
+        <activity
+            android:name=".mvvm.builder.BuilderActivity"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".mvvm.nutrition.vitamin.VitaminActivity"
             android:exported="false" />
         <activity android:name=".mvvm.androidmethod.log.NutriLogSampleActivity" />
@@ -105,11 +117,6 @@
         <activity
             android:name=".mvvm.main.MainActivity"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
 
         <receiver

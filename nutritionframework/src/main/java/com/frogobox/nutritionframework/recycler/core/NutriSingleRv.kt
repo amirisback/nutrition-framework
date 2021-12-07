@@ -117,20 +117,35 @@ open class NutriSingleRv<T> : NutriSingleRvBase<T>(), INutriSingleRv<T> {
         } else {
             optionAdapter = NutriRvConstant.NUTRI_ADAPTER_R_CLASS
             nutriViewAdapter.setCallback(object : INutriViewHolder<T> {
-                override fun setupInitComponent(view: View, data: T, position: Int) {
-                    nutriAdapterCallback.setupInitComponent(view, data, position)
+                override fun setupInitComponent(
+                    view: View,
+                    data: T,
+                    position: Int,
+                    notifyListener: NutriRecyclerNotifyListener<T>
+                ) {
+                    nutriAdapterCallback.setupInitComponent(view, data, position, notifyListener)
                 }
             })
 
             nutriViewAdapter.setupRequirement(customViewId, listData,
                 object :
                     NutriRecyclerViewListener<T> {
-                    override fun onItemClicked(view: View, data: T, position: Int) {
-                        nutriAdapterCallback.onItemClicked(view, data, position)
+                    override fun onItemClicked(
+                        view: View,
+                        data: T,
+                        position: Int,
+                        notifyListener: NutriRecyclerNotifyListener<T>
+                    ) {
+                        nutriAdapterCallback.onItemClicked(view, data, position, notifyListener)
                     }
 
-                    override fun onItemLongClicked(view: View, data: T, position: Int) {
-                        nutriAdapterCallback.onItemLongClicked(view, data, position)
+                    override fun onItemLongClicked(
+                        view: View,
+                        data: T,
+                        position: Int,
+                        notifyListener: NutriRecyclerNotifyListener<T>
+                    ) {
+                        nutriAdapterCallback.onItemLongClicked(view, data, position, notifyListener)
                     }
                 })
             nutriViewAdapter.setupEmptyView(emptyViewId)

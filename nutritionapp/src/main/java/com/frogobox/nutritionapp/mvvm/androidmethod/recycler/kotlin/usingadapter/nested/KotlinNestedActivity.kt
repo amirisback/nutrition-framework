@@ -12,10 +12,7 @@ import com.frogobox.nutritionapp.core.BaseActivity
 import com.frogobox.nutritionapp.databinding.ActivityFrogoRvGridBinding
 import com.frogobox.nutritionapp.mvvm.nutrition.article.ArticleViewModel
 import com.frogobox.nutritioncore.model.news.Article
-import com.frogobox.nutritionframework.recycler.core.INutriNestedHolder
-import com.frogobox.nutritionframework.recycler.core.INutriViewHolder
-import com.frogobox.nutritionframework.recycler.core.NutriNestedAdapter
-import com.frogobox.nutritionframework.recycler.core.NutriRecyclerViewListener
+import com.frogobox.nutritionframework.recycler.core.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class KotlinNestedActivity : BaseActivity<ActivityFrogoRvGridBinding>() {
@@ -66,11 +63,21 @@ class KotlinNestedActivity : BaseActivity<ActivityFrogoRvGridBinding>() {
 
             override fun nestedListener(): NutriRecyclerViewListener<Article> {
                 return object : NutriRecyclerViewListener<Article> {
-                    override fun onItemClicked(view: View, data: Article, position: Int) {
+                    override fun onItemClicked(
+                        view: View,
+                        data: Article,
+                        position: Int,
+                        notifyListener: NutriRecyclerNotifyListener<Article>
+                    ) {
                         showToast("Click : $data")
                     }
 
-                    override fun onItemLongClicked(view: View, data: Article, position: Int) {
+                    override fun onItemLongClicked(
+                        view: View,
+                        data: Article,
+                        position: Int,
+                        notifyListener: NutriRecyclerNotifyListener<Article>
+                    ) {
                         showToast("Long Click : $data")
                     }
                 }
@@ -78,7 +85,12 @@ class KotlinNestedActivity : BaseActivity<ActivityFrogoRvGridBinding>() {
 
             override fun nestedCallback(): INutriViewHolder<Article> {
                 return object : INutriViewHolder<Article> {
-                    override fun setupInitComponent(view: View, data: Article, position: Int) {
+                    override fun setupInitComponent(
+                        view: View,
+                        data: Article,
+                        position: Int,
+                        notifyListener: NutriRecyclerNotifyListener<Article>
+                    ) {
                         val iv = view.findViewById<ImageView>(R.id.nutri_rv_grid_type_3_iv_poster)
                         val tv_title =
                             view.findViewById<TextView>(R.id.nutri_rv_grid_type_3_tv_title)

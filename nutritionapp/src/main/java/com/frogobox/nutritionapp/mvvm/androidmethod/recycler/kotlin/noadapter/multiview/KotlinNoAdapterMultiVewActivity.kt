@@ -10,10 +10,7 @@ import com.frogobox.nutritionapp.core.BaseActivity
 import com.frogobox.nutritionapp.databinding.ActivityFrogoRvGridBinding
 import com.frogobox.nutritionapp.model.People
 import com.frogobox.nutritionapp.util.Constant
-import com.frogobox.nutritionframework.recycler.core.INutriViewHolder
-import com.frogobox.nutritionframework.recycler.core.NutriHolder
-import com.frogobox.nutritionframework.recycler.core.NutriRecyclerViewListener
-import com.frogobox.nutritionframework.recycler.core.NutriRvConstant
+import com.frogobox.nutritionframework.recycler.core.*
 
 class KotlinNoAdapterMultiVewActivity : BaseActivity<ActivityFrogoRvGridBinding>() {
 
@@ -31,7 +28,12 @@ class KotlinNoAdapterMultiVewActivity : BaseActivity<ActivityFrogoRvGridBinding>
 
     private fun firstCallback(): INutriViewHolder<People> {
         return object : INutriViewHolder<People> {
-            override fun setupInitComponent(view: View, data: People, position: Int) {
+            override fun setupInitComponent(
+                view: View,
+                data: People,
+                position: Int,
+                notifyListener: NutriRecyclerNotifyListener<People>
+            ) {
                 // Init component content item recyclerview
                 view.findViewById<TextView>(R.id.nutri_rv_grid_type_1_tv_title).text = data.name
                 Glide.with(view.context).load(NutriRvConstant.LINK_PHOTO_GITHUB)
@@ -42,7 +44,12 @@ class KotlinNoAdapterMultiVewActivity : BaseActivity<ActivityFrogoRvGridBinding>
 
     private fun secondCallback(): INutriViewHolder<People> {
         return object : INutriViewHolder<People> {
-            override fun setupInitComponent(view: View, data: People, position: Int) {
+            override fun setupInitComponent(
+                view: View,
+                data: People,
+                position: Int,
+                notifyListener: NutriRecyclerNotifyListener<People>
+            ) {
                 // Init component content item recyclerview
                 view.findViewById<TextView>(R.id.nutri_rv_grid_type_3_tv_title).text = data.name
                 view.findViewById<TextView>(R.id.nutri_rv_grid_type_3_tv_subtitle).text = data.name
@@ -57,11 +64,21 @@ class KotlinNoAdapterMultiVewActivity : BaseActivity<ActivityFrogoRvGridBinding>
 
     private fun firstListenerType(): NutriRecyclerViewListener<People> {
         return object : NutriRecyclerViewListener<People> {
-            override fun onItemClicked(view: View, data: People, position: Int) {
+            override fun onItemClicked(
+                view: View,
+                data: People,
+                position: Int,
+                notifyListener: NutriRecyclerNotifyListener<People>
+            ) {
                 showToast(data.name + " First")
             }
 
-            override fun onItemLongClicked(view: View, data: People, position: Int) {
+            override fun onItemLongClicked(
+                view: View,
+                data: People,
+                position: Int,
+                notifyListener: NutriRecyclerNotifyListener<People>
+            ) {
                 showToast("LAYOUT TYPE 1")
             }
         }
@@ -69,11 +86,21 @@ class KotlinNoAdapterMultiVewActivity : BaseActivity<ActivityFrogoRvGridBinding>
 
     private fun secondListenerType(): NutriRecyclerViewListener<People> {
         return object : NutriRecyclerViewListener<People> {
-            override fun onItemClicked(view: View, data: People, position: Int) {
+            override fun onItemClicked(
+                view: View,
+                data: People,
+                position: Int,
+                notifyListener: NutriRecyclerNotifyListener<People>
+            ) {
                 showToast(data.name + " Second")
             }
 
-            override fun onItemLongClicked(view: View, data: People, position: Int) {
+            override fun onItemLongClicked(
+                view: View,
+                data: People,
+                position: Int,
+                notifyListener: NutriRecyclerNotifyListener<People>
+            ) {
                 showToast("LAYOUT TYPE 2")
             }
         }

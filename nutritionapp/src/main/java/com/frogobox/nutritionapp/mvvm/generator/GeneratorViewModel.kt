@@ -1,4 +1,4 @@
-package com.frogobox.nutritionapp.mvvm.main
+package com.frogobox.nutritionapp.mvvm.generator
 
 import android.app.Application
 import com.frogobox.nutritionapp.source.DataRepository
@@ -19,7 +19,7 @@ import com.frogobox.nutritionframework.util.NutriSingleLiveEvent
  *
  */
 
-class MainViewModel(
+class GeneratorViewModel(
     private val context: Application,
     private val repository: DataRepository
 ) : NutriViewModel(context) {

@@ -1,5 +1,7 @@
 package com.frogobox.nutritionapp.di
 
+import com.frogobox.nutritionapp.mvvm.builder.BuilderViewModel
+import com.frogobox.nutritionapp.mvvm.generator.GeneratorViewModel
 import com.frogobox.nutritionapp.mvvm.main.MainViewModel
 import com.frogobox.nutritionapp.mvvm.nutrition.article.ArticleViewModel
 import com.frogobox.nutritionapp.mvvm.nutrition.meal.MealViewModel
@@ -37,6 +39,14 @@ val viewModelModule = module {
 
     viewModel {
         MainViewModel(androidApplication(), get())
+    }
+
+    viewModel {
+        BuilderViewModel(androidApplication(), get())
+    }
+
+    viewModel {
+        GeneratorViewModel(androidApplication(), get())
     }
 
 }

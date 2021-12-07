@@ -1,6 +1,5 @@
 package com.frogobox.nutritionframework.recycler.core
 
-import android.view.View
 import androidx.viewbinding.ViewBinding
 
 
@@ -17,13 +16,23 @@ import androidx.viewbinding.ViewBinding
  *
  */
 
-interface NutriRecyclerBindingListener<T, VB: ViewBinding> {
+interface NutriRecyclerBindingListener<T, VB : ViewBinding> {
 
     // on itemview set on click listener
-    fun onItemClicked(binding: VB, data: T, position: Int)
+    fun onItemClicked(
+        binding: VB,
+        data: T,
+        position: Int,
+        notifyListener: NutriRecyclerNotifyListener<T>
+    )
 
     // on itemview set on long click listener
-    fun onItemLongClicked(binding: VB, data: T, position: Int)
+    fun onItemLongClicked(
+        binding: VB,
+        data: T,
+        position: Int,
+        notifyListener: NutriRecyclerNotifyListener<T>
+    )
 
 
 }

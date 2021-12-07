@@ -8,6 +8,7 @@ import androidx.annotation.NonNull;
 
 import com.frogobox.nutritionapp.R;
 import com.frogobox.nutritionapp.model.People;
+import com.frogobox.nutritionframework.recycler.core.NutriRecyclerNotifyListener;
 import com.frogobox.nutritionframework.recycler.core.NutriRecyclerViewAdapter;
 import com.frogobox.nutritionframework.recycler.core.NutriRecyclerViewHolder;
 
@@ -46,7 +47,7 @@ public class JavaSampleViewAdapter extends NutriRecyclerViewAdapter<People> {
         }
 
         @Override
-        public void initComponent(People data, int position) {
+        public void initComponent(People data, int position, @NonNull NutriRecyclerNotifyListener<People> listener) {
             tvExample.setText(data.getName());
         }
     }

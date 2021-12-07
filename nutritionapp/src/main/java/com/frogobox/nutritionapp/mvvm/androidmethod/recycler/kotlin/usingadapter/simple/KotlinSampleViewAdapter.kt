@@ -5,6 +5,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import com.frogobox.nutritionapp.R
 import com.frogobox.nutritionapp.model.People
+import com.frogobox.nutritionframework.recycler.core.NutriRecyclerNotifyListener
 import com.frogobox.nutritionframework.recycler.core.NutriRecyclerViewAdapter
 import com.frogobox.nutritionframework.recycler.core.NutriRecyclerViewHolder
 
@@ -38,7 +39,11 @@ class KotlinSampleViewAdapter : NutriRecyclerViewAdapter<People>() {
 
         private val tvExampleItem = view.findViewById<TextView>(R.id.nutri_rv_list_type_1_tv_title)
 
-        override fun initComponent(data: People, position: Int) {
+        override fun initComponent(
+            data: People,
+            position: Int,
+            listener: NutriRecyclerNotifyListener<People>
+        ) {
             tvExampleItem.text = data.name
         }
     }

@@ -1,6 +1,7 @@
 package com.frogobox.nutritionframework.admob
 
 import android.view.View
+import com.frogobox.nutritionframework.recycler.core.NutriRecyclerNotifyListener
 
 /*
  * Created by Faisal Amir on 31/01/2021
@@ -16,5 +17,10 @@ import android.view.View
  */
 
 class AdmobViewHolder(view: View) : NutriAdmobViewHolder<Any>(view) {
-    override fun initComponent(data: Any, position: Int) {}
+    override fun initComponent(
+        data: Any,
+        position: Int,
+        listener: NutriRecyclerNotifyListener<Any>
+    ) {
+    }
 }

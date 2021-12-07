@@ -48,26 +48,61 @@ class NutriSingleSrv : NutriSingleRv<String>() {
         optionAdapter = NutriRvConstant.NUTRI_ADAPTER_R_CLASS
 
         srvNutriAdapterCallback = object : INutriViewAdapter<String> {
-            override fun setupInitComponent(view: View, data: String, position: Int) {}
-            override fun onItemClicked(view: View, data: String, position: Int) {}
-            override fun onItemLongClicked(view: View, data: String, position: Int) {}
+            override fun setupInitComponent(
+                view: View,
+                data: String,
+                position: Int,
+                notifyListener: NutriRecyclerNotifyListener<String>
+            ) {
+            }
+
+            override fun onItemClicked(
+                view: View,
+                data: String,
+                position: Int,
+                notifyListener: NutriRecyclerNotifyListener<String>
+            ) {
+            }
+
+            override fun onItemLongClicked(
+                view: View,
+                data: String,
+                position: Int,
+                notifyListener: NutriRecyclerNotifyListener<String>
+            ) {
+            }
         }
 
         srvNutriViewAdapter = NutriViewAdapter()
         srvNutriViewAdapter.setCallback(object : INutriViewHolder<String> {
-            override fun setupInitComponent(view: View, data: String, position: Int) {
-                srvNutriAdapterCallback.setupInitComponent(view, data, position)
+            override fun setupInitComponent(
+                view: View,
+                data: String,
+                position: Int,
+                notifyListener: NutriRecyclerNotifyListener<String>
+            ) {
+                srvNutriAdapterCallback.setupInitComponent(view, data, position, notifyListener)
             }
         })
         srvNutriViewAdapter.setupRequirement(srvCustomViewInt, srvListData(),
             object :
                 NutriRecyclerViewListener<String> {
-                override fun onItemClicked(view: View, data: String, position: Int) {
-                    srvNutriAdapterCallback.onItemClicked(view, data, position)
+                override fun onItemClicked(
+                    view: View,
+                    data: String,
+                    position: Int,
+                    notifyListener: NutriRecyclerNotifyListener<String>
+                ) {
+                    srvNutriAdapterCallback.onItemClicked(view, data, position, notifyListener)
                 }
 
-                override fun onItemLongClicked(view: View, data: String, position: Int) {
-                    srvNutriAdapterCallback.onItemLongClicked(view, data, position)
+                override fun onItemLongClicked(
+                    view: View,
+                    data: String,
+                    position: Int,
+                    notifyListener: NutriRecyclerNotifyListener<String>
+                ) {
+                    srvNutriAdapterCallback.onItemLongClicked(view, data, position, notifyListener)
                 }
             })
 

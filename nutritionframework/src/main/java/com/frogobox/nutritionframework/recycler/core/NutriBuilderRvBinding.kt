@@ -1,6 +1,5 @@
 package com.frogobox.nutritionframework.recycler.core
 
-import android.view.View
 import android.view.ViewGroup
 import androidx.viewbinding.ViewBinding
 import com.frogobox.nutritionframework.recycler.widget.NutriRecyclerView
@@ -37,20 +36,37 @@ class NutriBuilderRvBinding<T, VB : ViewBinding> : NutriBuilderRvBase<T>() {
                 return listener.setViewBinding(parent)
             }
 
-            override fun setupInitComponent(binding: VB, data: T, position: Int) {
-                return listener.setupInitComponent(binding, data, position)
+            override fun setupInitComponent(
+                binding: VB,
+                data: T,
+                position: Int,
+                notifyListener: NutriRecyclerNotifyListener<T>
+            ) {
+                return listener.setupInitComponent(binding, data, position, notifyListener)
             }
         })
 
-        frogoBindingAdapter.setupRequirement(listData, object : NutriRecyclerBindingListener<T, VB> {
-            override fun onItemClicked(binding: VB, data: T, position: Int) {
-                listener.onItemClicked(binding, data, position)
-            }
+        frogoBindingAdapter.setupRequirement(
+            listData,
+            object : NutriRecyclerBindingListener<T, VB> {
+                override fun onItemClicked(
+                    binding: VB,
+                    data: T,
+                    position: Int,
+                    notifyListener: NutriRecyclerNotifyListener<T>
+                ) {
+                    listener.onItemClicked(binding, data, position, notifyListener)
+                }
 
-            override fun onItemLongClicked(binding: VB, data: T, position: Int) {
-                listener.onItemLongClicked(binding, data, position)
-            }
-        })
+                override fun onItemLongClicked(
+                    binding: VB,
+                    data: T,
+                    position: Int,
+                    notifyListener: NutriRecyclerNotifyListener<T>
+                ) {
+                    listener.onItemLongClicked(binding, data, position, notifyListener)
+                }
+            })
 
         nutriRecyclerView.adapter = frogoBindingAdapter
         nutriRecyclerView.layoutManager = listener.setupLayoutManager(nutriRecyclerView.context)

@@ -5,10 +5,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.frogobox.nutritionframework.R
 import com.frogobox.nutritionframework.admob.NutriAdmobConstant.RECYCLER_VIEW_TYPE_BANNER_AD
 import com.frogobox.nutritionframework.admob.NutriAdmobConstant.RECYCLER_VIEW_TYPE_MENU_ITEM
-import com.frogobox.nutritionframework.R
 import com.frogobox.nutritionframework.recycler.core.NutriHolder
+import com.frogobox.nutritionframework.recycler.core.NutriRecyclerNotifyListener
 import com.frogobox.nutritionframework.recycler.core.NutriRecyclerViewListener
 
 
@@ -34,6 +35,61 @@ abstract class NutriAdmobViewAdapter<T> : RecyclerView.Adapter<NutriAdmobViewHol
 
     protected var viewCallback: INutriAdmobViewAdapter<T>? = null
     protected var viewListener: NutriRecyclerViewListener<T>? = null
+
+    protected var listenerNotify = object : NutriRecyclerNotifyListener<T> {
+
+        override fun nutriNotifyDataSetChanged() {
+            notifyDataSetChanged()
+        }
+
+        override fun nutriNotifyItemChanged(data: T, position: Int, payload: Any) {
+            listData[position] = data
+            notifyItemChanged(position, payload)
+        }
+
+        override fun nutriNotifyItemChanged(data: T, position: Int) {
+            listData[position] = data
+            notifyItemChanged(position)
+        }
+
+        override fun nutriNotifyItemInserted(data: T, position: Int) {
+            listData.add(position, data)
+            notifyItemInserted(position)
+        }
+
+        override fun nutriNotifyItemMoved(data: T, fromPosition: Int, toPosition: Int) {
+            listData.removeAt(fromPosition)
+            listData.add(toPosition, data)
+            notifyItemMoved(fromPosition, toPosition)
+        }
+
+        override fun nutriNotifyItemRangeChanged(data: List<T>, positionStart: Int, payload: Any) {
+            listData.addAll(positionStart, data)
+            notifyItemRangeChanged(positionStart, data.size, payload)
+        }
+
+        override fun nutriNotifyItemRangeChanged(data: List<T>, positionStart: Int) {
+            listData.addAll(positionStart, data)
+            notifyItemRangeChanged(positionStart, data.size)
+        }
+
+        override fun nutriNotifyItemRangeInserted(data: List<T>, positionStart: Int) {
+            listData.addAll(positionStart, data)
+            notifyItemRangeChanged(positionStart, data.size)
+        }
+
+        override fun nutriNotifyItemRangeRemoved(positionStart: Int, itemCount: Int) {
+            listData.subList(positionStart, (positionStart + itemCount)).clear()
+            notifyItemRangeRemoved(positionStart, itemCount)
+        }
+
+        override fun nutriNotifyItemRemoved(position: Int) {
+            listData.removeAt(position)
+            notifyItemRemoved(position)
+        }
+
+    }
+
 
     protected val frogoHolder = mutableListOf<NutriHolder<T>>()
     protected val listData = mutableListOf<T>()
@@ -75,7 +131,7 @@ abstract class NutriAdmobViewAdapter<T> : RecyclerView.Adapter<NutriAdmobViewHol
     override fun onBindViewHolder(holder: NutriAdmobViewHolder<T>, position: Int) {
         when (getItemViewType(position)) {
             RECYCLER_VIEW_TYPE_MENU_ITEM -> {
-                holder.bindItem(listData[position], position, viewListener)
+                holder.bindItem(listData[position], position, viewListener, listenerNotify)
             }
             RECYCLER_VIEW_TYPE_BANNER_AD -> {
                 holder.bindItemAdView(listData[position])
@@ -122,9 +178,9 @@ abstract class NutriAdmobViewAdapter<T> : RecyclerView.Adapter<NutriAdmobViewHol
     }
 
     fun setupRequirement(
-            customViewInt: Int,
-            listData: List<T>?,
-            listener: NutriRecyclerViewListener<T>?
+        customViewInt: Int,
+        listData: List<T>?,
+        listener: NutriRecyclerViewListener<T>?
     ) {
 
         if (listener != null) {
