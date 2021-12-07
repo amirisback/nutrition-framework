@@ -2,6 +2,7 @@ package com.frogobox.nutritionapp.mvvm.main
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.TextView
 import com.frogobox.nutritionapp.R
@@ -14,19 +15,29 @@ import com.frogobox.nutritionapp.mvvm.nutrition.general.IndexMasaTubuhActivity
 import com.frogobox.nutritionapp.mvvm.nutrition.general.KebutuhanEnergiActivity
 import com.frogobox.nutritionapp.mvvm.nutrition.meal.MealActivity
 import com.frogobox.nutritionapp.util.Constant
+import com.frogobox.nutritionframework.log.NLog
 import com.frogobox.nutritionframework.recycler.core.INutriViewAdapter
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class MainActivity : BaseActivity<ActivityMainBinding>() {
+
+    private val mainViewModel : MainViewModel by viewModel()
 
     override fun setupViewBinding(): ActivityMainBinding {
         return ActivityMainBinding.inflate(layoutInflater)
     }
 
     override fun setupViewModel() {
+        mainViewModel.apply {
+            prefSample.observe(this@MainActivity, {
+                NLog.d("Pref Sample $it")
+            })
+        }
     }
 
     override fun setupUI(savedInstanceState: Bundle?) {
         binding.apply {
+
             mainNutriRv.injector<Menu>()
                 .addCustomView(R.layout.nutri_rv_list_type_1)
                 .addData(data())
@@ -36,8 +47,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
                     }
                     override fun onItemLongClicked(data: Menu) {}
                     override fun setupInitComponent(view: View, data: Menu) {
-                        view.findViewById<TextView>(R.id.nutri_rv_list_type_1_tv_title).text =
-                            data.name
+                        view.findViewById<TextView>(R.id.nutri_rv_list_type_1_tv_title).text = data.name
                     }
                 })
                 .createLayoutLinearVertical(false)

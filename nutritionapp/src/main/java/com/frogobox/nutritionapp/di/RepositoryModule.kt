@@ -5,11 +5,13 @@ import com.frogobox.nutritionapp.source.DataRepository
 import com.frogobox.nutritionapp.source.local.AppDatabase
 import com.frogobox.nutritionapp.source.local.LocalDataSource
 import com.frogobox.nutritionapp.source.remote.RemoteDataSource
+import com.frogobox.nutritionapp.util.Constant
 import com.frogobox.nutritioncore.method.function.ConsumeNewsApi
 import com.frogobox.nutritioncore.method.function.ConsumeTheMealDbApi
 import com.frogobox.nutritioncore.method.function.NutritionApi
 import com.frogobox.nutritioncore.util.meal.MealUrl
 import com.frogobox.nutritioncore.util.news.NewsUrl
+import com.frogobox.nutritionframework.core.NutriPreference
 import com.frogobox.nutritionframework.util.AppExecutors
 import org.koin.android.ext.koin.androidContext
 import org.koin.dsl.module
@@ -42,7 +44,7 @@ val repositoryModule = module {
     }
 
     single {
-        PreferenceManager.getDefaultSharedPreferences(androidContext())
+        NutriPreference(androidContext(), Constant.SharedPref.PREF_NAME)
     }
 
     single {

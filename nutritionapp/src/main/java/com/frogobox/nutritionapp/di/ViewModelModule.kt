@@ -1,5 +1,6 @@
 package com.frogobox.nutritionapp.di
 
+import com.frogobox.nutritionapp.mvvm.main.MainViewModel
 import com.frogobox.nutritionapp.mvvm.nutrition.article.ArticleViewModel
 import com.frogobox.nutritionapp.mvvm.nutrition.meal.MealViewModel
 import com.frogobox.nutritionapp.mvvm.nutrition.vitamin.VitaminViewModel
@@ -32,6 +33,10 @@ val viewModelModule = module {
 
     viewModel {
         VitaminViewModel(androidApplication(), get())
+    }
+
+    viewModel {
+        MainViewModel(androidApplication(), get())
     }
 
 }

@@ -27,7 +27,15 @@ interface DataSource {
 
     // API Server ----------------------------------------------------------------------------------
 
+    // Shared Preference ---------------------------------------------------------------------------
 
+    // Save
+    fun savePrefSample(key: String, value: String)
+
+    // Delete
+
+    // Get
+    fun getPrefSample(key: String) : String
 
     // Room Database -------------------------------------------------------------------------------
 

@@ -1,10 +1,7 @@
 package com.frogobox.nutritionapp.source
 
 
-import android.content.Context
-import com.frogobox.nutritioncore.model.news.ArticleResponse
 import com.frogobox.nutritionapp.model.Favorite
-import com.frogobox.nutritioncore.model.news.SourceResponse
 import com.frogobox.nutritionapp.source.local.LocalDataSource
 import com.frogobox.nutritionapp.source.remote.RemoteDataSource
 
@@ -25,10 +22,18 @@ import com.frogobox.nutritionapp.source.remote.RemoteDataSource
  * com.frogobox.basemusicplayer.source
  *
  */
-open class DataRepository(
+class DataRepository(
     private val remoteDataSource: RemoteDataSource,
     private val localDataSource: LocalDataSource
 ) : DataSource {
+
+    override fun savePrefSample(key: String, value: String) {
+        localDataSource.savePrefSample(key, value)
+    }
+
+    override fun getPrefSample(key: String): String {
+        return localDataSource.getPrefSample(key)
+    }
 
     override fun saveRoomFavorite(data: Favorite): Boolean {
         return localDataSource.saveRoomFavorite(data)

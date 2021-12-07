@@ -32,6 +32,14 @@ import io.reactivex.schedulers.Schedulers
  */
 object RemoteDataSource : DataSource {
 
+    override fun savePrefSample(key: String, value: String) {
+        noAction()
+    }
+
+    override fun getPrefSample(key: String): String {
+        return ""
+    }
+
     override fun saveRoomFavorite(data: Favorite): Boolean {
         return noAction()
     }

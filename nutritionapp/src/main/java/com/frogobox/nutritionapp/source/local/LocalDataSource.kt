@@ -7,6 +7,7 @@ import com.frogobox.nutritionapp.model.Favorite
 import com.frogobox.nutritioncore.model.news.SourceResponse
 import com.frogobox.nutritionapp.source.DataSource
 import com.frogobox.nutritionapp.source.local.dao.FavoriteDao
+import com.frogobox.nutritionframework.core.NutriPreference
 import com.frogobox.nutritionframework.util.AppExecutors
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.disposables.Disposable
@@ -30,9 +31,17 @@ import io.reactivex.disposables.Disposable
  */
 class LocalDataSource(
     private val appExecutors: AppExecutors,
-    private val sharedPreferences: SharedPreferences,
+    private val sharedPreferences: NutriPreference,
     private val favoriteDao: FavoriteDao
 ) : DataSource {
+
+    override fun savePrefSample(key: String, value: String) {
+        sharedPreferences.savePrefString(key, value)
+    }
+
+    override fun getPrefSample(key: String): String {
+        return sharedPreferences.loadPrefString(key)
+    }
 
     override fun saveRoomFavorite(data: Favorite): Boolean {
         return true

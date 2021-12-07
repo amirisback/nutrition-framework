@@ -84,6 +84,10 @@ object Constant {
         const val EXTRA_MEAL_DETAIL = "$BASE_EXTRA.EXTRA_MEAL_DETAIL"
     }
 
+    object SharedPref {
+        const val PREF_NAME = "NUTRITION_PREF_FRAMEWORK"
+    }
+
     object Const {
 
         const val OPTION_GET = "OPTION_GET"

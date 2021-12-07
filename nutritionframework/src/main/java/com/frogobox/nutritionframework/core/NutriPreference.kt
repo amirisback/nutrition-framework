@@ -16,77 +16,71 @@ import android.content.SharedPreferences
  *
  */
 
-object NutriPreference {
+class NutriPreference(private val context: Context, private val prefName: String) {
 
-    fun getSp(context: Context, prefName: String): SharedPreferences {
-        return context.getSharedPreferences(prefName, Context.MODE_PRIVATE)
+    private val sharedPreferences by lazy {
+        context.getSharedPreferences(prefName, Context.MODE_PRIVATE)
+    }
+    
+    private val prefEditor by lazy {
+        sharedPreferences.edit()
     }
 
-    object Save {
-        fun savePrefFloat(
-            sharedPreferences: SharedPreferences,
-            constPref: String,
-            data: Float
-        ) {
-            sharedPreferences.edit().putFloat(constPref, data).apply()
-        }
-
-        fun savePrefInt(sharedPreferences: SharedPreferences, constPref: String, data: Int) {
-            sharedPreferences.edit().putInt(constPref, data).apply()
-        }
-
-        fun savePrefString(
-            sharedPreferences: SharedPreferences,
-            constPref: String,
-            data: String
-        ) {
-            sharedPreferences.edit().putString(constPref, data).apply()
-        }
-
-        fun savePrefBoolean(
-            sharedPreferences: SharedPreferences,
-            constPref: String,
-            data: Boolean
-        ) {
-            sharedPreferences.edit().putBoolean(constPref, data).apply()
-        }
-
-        fun savePrefLong(sharedPreferences: SharedPreferences, constPref: String, data: Long) {
-            sharedPreferences.edit().putLong(constPref, data).apply()
-        }
-
+    fun savePrefFloat(
+        constPref: String,
+        data: Float
+    ) {
+        prefEditor.putFloat(constPref, data).apply()
     }
 
-    object Delete {
-
-        fun deletePref(sharedPreferences: SharedPreferences, constPref: String) {
-            sharedPreferences.edit().remove(constPref).apply()
-        }
-
+    fun savePrefInt(constPref: String, data: Int) {
+        prefEditor.putInt(constPref, data).apply()
     }
 
-    object Load {
+    fun savePrefString(
+        constPref: String,
+        data: String
+    ) {
+        prefEditor.putString(constPref, data).apply()
+    }
 
-        fun loadPrefFloat(sharedPreferences: SharedPreferences, constPref: String): Float {
-            return sharedPreferences.getFloat(constPref, 0f)
-        }
+    fun savePrefBoolean(
+        constPref: String,
+        data: Boolean
+    ) {
+        prefEditor.putBoolean(constPref, data).apply()
+    }
 
-        fun loadPrefString(sharedPreferences: SharedPreferences, constPref: String): String {
-            return sharedPreferences.getString(constPref, "")!!
-        }
+    fun savePrefLong(constPref: String, data: Long) {
+        prefEditor.putLong(constPref, data).apply()
+    }
 
-        fun loadPrefInt(sharedPreferences: SharedPreferences, constPref: String): Int {
-            return sharedPreferences.getInt(constPref, 0)
-        }
+    fun deletePref(constPref: String) {
+        prefEditor.remove(constPref).apply()
+    }
+    
+    fun nukePref(){
+        prefEditor.clear().apply()    
+    }
+    
+    fun loadPrefFloat(constPref: String): Float {
+        return sharedPreferences.getFloat(constPref, 0f)
+    }
 
-        fun loadPrefLong(sharedPreferences: SharedPreferences, constPref: String): Long {
-            return sharedPreferences.getLong(constPref, 0)
-        }
+    fun loadPrefString(constPref: String): String {
+        return sharedPreferences.getString(constPref, "")!!
+    }
 
-        fun loadPrefBoolean(sharedPreferences: SharedPreferences, constPref: String): Boolean {
-            return sharedPreferences.getBoolean(constPref, false)
-        }
+    fun loadPrefInt(constPref: String): Int {
+        return sharedPreferences.getInt(constPref, 0)
+    }
 
+    fun loadPrefLong(constPref: String): Long {
+        return sharedPreferences.getLong(constPref, 0)
+    }
+
+    fun loadPrefBoolean(constPref: String): Boolean {
+        return sharedPreferences.getBoolean(constPref, false)
     }
 
 }
