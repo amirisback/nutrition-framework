@@ -27,12 +27,6 @@
     <dimen name="dimen_navigation_drawer">60dp</dimen>
 
     <dimen name="dimen_elevation">12dp</dimen>
-    <dimen name="dimen_large_64dp">64dp</dimen>
-    <dimen name="dimen_big_ultra_32dp">32dp</dimen>
-    <dimen name="dimen_big_super_24dp">24dp</dimen>
-    <dimen name="dimen_big_16dp">16dp</dimen>
-    <dimen name="dimen_medium_8dp">8dp</dimen>
-    <dimen name="dimen_small_4dp">4dp</dimen>
 
     <dimen name="dimen_view_line">1dp</dimen>
     <dimen name="dimen_weight">0dp</dimen>

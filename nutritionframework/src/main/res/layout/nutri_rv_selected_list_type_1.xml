@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+ * Created by Faisal Amir
+ * 
+ * Name     : Muhammad Faisal Amir
+ * E-mail   : faisalamircs@gmail.com
+ * Github   : github.com/amirisback
+ * 
+ * Copyright (C) 2021 FrogoBox Inc.      
+ * All rights reserved
+ *
+ -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nutri_rv_selected_list_type_1_root_linear_layout"
+    style="@style/nutriLayoutList8dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/nutri_rv_selected_list_type_1_tv_title"
+        style="@style/nutriTvListTitle"
+        android:layout_marginRight="@dimen/nutri_dimen_16dp"
+        android:layout_toLeftOf="@id/nutri_rv_selected_list_type_1_iv_selected"
+        tools:text="@tools:sample/lorem/random" />
+
+    <ImageView
+        android:id="@+id/nutri_rv_selected_list_type_1_iv_selected"
+        android:layout_width="@dimen/nutri_dimen_24dp"
+        android:layout_height="@dimen/nutri_dimen_24dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:contentDescription="selectedItem" />
+
+</RelativeLayout>

@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:clipToPadding="false"
-        android:paddingBottom="@dimen/dimen_big_16dp"
+        android:paddingBottom="@dimen/nutri_dimen_16dp"
         tools:context=".mvvm.news.NewsActivity" />
 
     <ProgressBar

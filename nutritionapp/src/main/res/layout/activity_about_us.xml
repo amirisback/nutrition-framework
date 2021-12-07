@@ -36,6 +36,6 @@
         android:text="@string/about_copyright"
         android:textColor="@color/colorTextBlack"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="@dimen/dimen_big_16dp" />
+        android:layout_marginBottom="@dimen/nutri_dimen_16dp" />
 
 </RelativeLayout>
