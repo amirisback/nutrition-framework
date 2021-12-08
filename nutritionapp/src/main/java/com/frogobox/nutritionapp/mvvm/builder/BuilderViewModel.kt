@@ -27,8 +27,6 @@ class BuilderViewModel(
 ) : NutriViewModel(context) {
 
     var listDataBuilderRes = NutriSingleLiveEvent<MutableList<BuilderRes>>()
-    var prefBuilder = NutriSingleLiveEvent<Boolean>()
-
 
     fun setupDataBuilderRes() {
         val listBuilderRes = mutableListOf<BuilderRes>()
@@ -42,8 +40,8 @@ class BuilderViewModel(
         repository.savePrefBoolean(Constant.SharedPref.KEY_PREF_BUILDER, true)
     }
 
-    fun getPrefBuilder() {
-        prefBuilder.postValue(repository.getPrefBoolean(Constant.SharedPref.KEY_PREF_BUILDER))
+    fun getPrefBuilder(): Boolean {
+        return repository.getPrefBoolean(Constant.SharedPref.KEY_PREF_BUILDER)
     }
 
 }

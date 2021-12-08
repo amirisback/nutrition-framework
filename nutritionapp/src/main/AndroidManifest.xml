@@ -21,10 +21,11 @@
         tools:targetApi="n">
         <activity
             android:name=".mvvm.generator.GeneratorActivity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".mvvm.builder.BuilderActivity"
-            android:exported="true" >
+            android:exported="true"
+            android:theme="@style/Theme.KickStart.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

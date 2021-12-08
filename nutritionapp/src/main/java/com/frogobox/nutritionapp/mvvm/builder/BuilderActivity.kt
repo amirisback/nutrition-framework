@@ -8,7 +8,6 @@ import com.frogobox.nutritionapp.R
 import com.frogobox.nutritionapp.core.BaseActivity
 import com.frogobox.nutritionapp.databinding.ActivityBuilderBinding
 import com.frogobox.nutritionapp.model.BuilderRes
-import com.frogobox.nutritionapp.mvvm.androidmethod.recycler.kotlin.compose.setupData
 import com.frogobox.nutritionapp.mvvm.generator.GeneratorActivity
 import com.frogobox.nutritionframework.databinding.NutriRvSelectedListType1Binding
 import com.frogobox.nutritionframework.log.NLog
@@ -25,19 +24,11 @@ class BuilderActivity : BaseActivity<ActivityBuilderBinding>() {
     }
 
     override fun setupViewModel() {
-
         builderViewModel.apply {
-            setupData()
-            getPrefBuilder()
-        }
+            setupDataBuilderRes()
 
-        builderViewModel.apply {
             listDataBuilderRes.observe(this@BuilderActivity, {
                 setupRv(it)
-            })
-
-            prefBuilder.observe(this@BuilderActivity, {
-                setupGenerated(it)
             })
         }
     }
@@ -49,6 +40,7 @@ class BuilderActivity : BaseActivity<ActivityBuilderBinding>() {
     private fun setupButtonGenerator() {
         binding.btnGenerator.setOnClickListener {
             builderViewModel.savePrefBuilder()
+            baseStartActivity<GeneratorActivity>()
         }
     }
 
@@ -125,6 +117,11 @@ class BuilderActivity : BaseActivity<ActivityBuilderBinding>() {
             baseStartActivity<GeneratorActivity>()
             finish()
         }
+    }
+
+    override fun onStart() {
+        super.onStart()
+        setupGenerated(builderViewModel.getPrefBuilder())
     }
 
 }
