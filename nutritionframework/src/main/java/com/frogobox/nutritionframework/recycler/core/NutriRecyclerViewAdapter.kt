@@ -35,85 +35,47 @@ abstract class NutriRecyclerViewAdapter<T> :
     protected var listenerNotify = object : NutriRecyclerNotifyListener<T> {
 
         override fun nutriNotifyData(): MutableList<T> {
-            return listData
+            return innerNutriNotifyData()
         }
 
         override fun nutriNotifyDataSetChanged() {
-            notifyDataSetChanged()
-            NLog.d("$NUTRI_RV_TAG - NutriNotifyListener : nutriNotifyDataSetChanged")
+            innerNutriNotifyDataSetChanged()
         }
 
         override fun nutriNotifyItemChanged(data: T, position: Int, payload: Any) {
-            listData[position] = data
-            notifyItemChanged(position, payload)
-            NLog.d("$NUTRI_RV_TAG - NutriNotifyListener : nutriNotifyItemChanged")
-            NLog.d("$NUTRI_RV_TAG - NutriNotifyListener : nutriNotifyItemChanged : ${data.toString()}")
-            NLog.d("$NUTRI_RV_TAG - NutriNotifyListener : nutriNotifyItemChanged : $position")
+            innerNutriNotifyItemChanged(data, position, payload)
         }
 
         override fun nutriNotifyItemChanged(data: T, position: Int) {
-            listData[position] = data
-            notifyItemChanged(position)
-            NLog.d("$NUTRI_RV_TAG - NutriNotifyListener : nutriNotifyItemChanged")
-            NLog.d("$NUTRI_RV_TAG - NutriNotifyListener : nutriNotifyItemChanged : ${data.toString()}")
-            NLog.d("$NUTRI_RV_TAG - NutriNotifyListener : nutriNotifyItemChanged : $position")
+            innerNutriNotifyItemChanged(data, position)
         }
 
         override fun nutriNotifyItemInserted(data: T, position: Int) {
-            listData.add(position, data)
-            notifyItemInserted(position)
-            NLog.d("$NUTRI_RV_TAG - NutriNotifyListener : nutriNotifyItemInserted")
-            NLog.d("$NUTRI_RV_TAG - NutriNotifyListener : nutriNotifyItemInserted : ${data.toString()}")
-            NLog.d("$NUTRI_RV_TAG - NutriNotifyListener : nutriNotifyItemInserted : $position")
+            innerNutriNotifyItemInserted(data, position)
         }
 
         override fun nutriNotifyItemMoved(data: T, fromPosition: Int, toPosition: Int) {
-            listData.removeAt(fromPosition)
-            listData.add(toPosition, data)
-            notifyItemMoved(fromPosition, toPosition)
-            NLog.d("$NUTRI_RV_TAG - NutriNotifyListener : nutriNotifyItemMoved")
-            NLog.d("$NUTRI_RV_TAG - NutriNotifyListener : nutriNotifyItemMoved : ${data.toString()}")
-            NLog.d("$NUTRI_RV_TAG - NutriNotifyListener : nutriNotifyItemMoved : $fromPosition")
-            NLog.d("$NUTRI_RV_TAG - NutriNotifyListener : nutriNotifyItemMoved : $toPosition")
+            innerNutriNotifyItemMoved(data, fromPosition, toPosition)
         }
 
         override fun nutriNotifyItemRangeChanged(data: List<T>, positionStart: Int, payload: Any) {
-            listData.addAll(positionStart, data)
-            notifyItemRangeChanged(positionStart, data.size, payload)
-            NLog.d("$NUTRI_RV_TAG - NutriNotifyListener : nutriNotifyItemRangeChanged")
-            NLog.d("$NUTRI_RV_TAG - NutriNotifyListener : nutriNotifyItemRangeChanged : ${data.toString()}")
-            NLog.d("$NUTRI_RV_TAG - NutriNotifyListener : nutriNotifyItemRangeChanged : $positionStart")
+            innerNutriNotifyItemRangeChanged(data, positionStart, payload)
         }
 
         override fun nutriNotifyItemRangeChanged(data: List<T>, positionStart: Int) {
-            listData.addAll(positionStart, data)
-            notifyItemRangeChanged(positionStart, data.size)
-            NLog.d("$NUTRI_RV_TAG - NutriNotifyListener : nutriNotifyItemRangeChanged")
-            NLog.d("$NUTRI_RV_TAG - NutriNotifyListener : nutriNotifyItemRangeChanged : ${data.toString()}")
-            NLog.d("$NUTRI_RV_TAG - NutriNotifyListener : nutriNotifyItemRangeChanged : $positionStart")
+            innerNutriNotifyItemRangeChanged(data, positionStart)
         }
 
         override fun nutriNotifyItemRangeInserted(data: List<T>, positionStart: Int) {
-            listData.addAll(positionStart, data)
-            notifyItemRangeChanged(positionStart, data.size)
-            NLog.d("$NUTRI_RV_TAG - NutriNotifyListener : nutriNotifyItemRangeInserted")
-            NLog.d("$NUTRI_RV_TAG - NutriNotifyListener : nutriNotifyItemRangeChanged : ${data.toString()}")
-            NLog.d("$NUTRI_RV_TAG - NutriNotifyListener : nutriNotifyItemRangeChanged : $positionStart")
+            innerNutriNotifyItemRangeInserted(data, positionStart)
         }
 
         override fun nutriNotifyItemRangeRemoved(positionStart: Int, itemCount: Int) {
-            listData.subList(positionStart, (positionStart + itemCount)).clear()
-            notifyItemRangeRemoved(positionStart, itemCount)
-            NLog.d("$NUTRI_RV_TAG - NutriNotifyListener : nutriNotifyItemRangeRemoved")
-            NLog.d("$NUTRI_RV_TAG - NutriNotifyListener : nutriNotifyItemRangeRemoved : $positionStart")
-            NLog.d("$NUTRI_RV_TAG - NutriNotifyListener : nutriNotifyItemRangeRemoved : $itemCount")
+            innerNutriNotifyItemRangeRemoved(positionStart, itemCount)
         }
 
         override fun nutriNotifyItemRemoved(position: Int) {
-            listData.removeAt(position)
-            notifyItemRemoved(position)
-            NLog.d("$NUTRI_RV_TAG - NutriNotifyListener : nutriNotifyItemRemoved")
-            NLog.d("$NUTRI_RV_TAG - NutriNotifyListener : nutriNotifyItemRemoved : $position")
+            innerNutriNotifyItemRemoved(position)
         }
 
     }
@@ -226,6 +188,99 @@ abstract class NutriRecyclerViewAdapter<T> :
                 nestedHolder.getLinearLayoutManager().findFirstVisibleItemPosition()
         }
         super.onViewRecycled(holder)
+    }
+
+    // Notify Data List
+    fun innerNutriNotifyData(): MutableList<T> {
+        return listData
+    }
+
+    // Notify Data Set Changed
+    fun innerNutriNotifyDataSetChanged() {
+        notifyDataSetChanged()
+        NLog.d("$NUTRI_RV_TAG - NutriNotifyListener : nutriNotifyDataSetChanged")
+    }
+
+    // Notify Data Item Changed
+    fun innerNutriNotifyItemChanged(data: T, position: Int, payload: Any) {
+        listData[position] = data
+        notifyItemChanged(position, payload)
+        NLog.d("$NUTRI_RV_TAG - NutriNotifyListener : nutriNotifyItemChanged")
+        NLog.d("$NUTRI_RV_TAG - NutriNotifyListener : nutriNotifyItemChanged : ${data.toString()}")
+        NLog.d("$NUTRI_RV_TAG - NutriNotifyListener : nutriNotifyItemChanged : $position")
+    }
+
+    // Notify Data Item Changed
+    fun innerNutriNotifyItemChanged(data: T, position: Int) {
+        listData[position] = data
+        notifyItemChanged(position)
+        NLog.d("$NUTRI_RV_TAG - NutriNotifyListener : nutriNotifyItemChanged")
+        NLog.d("$NUTRI_RV_TAG - NutriNotifyListener : nutriNotifyItemChanged : ${data.toString()}")
+        NLog.d("$NUTRI_RV_TAG - NutriNotifyListener : nutriNotifyItemChanged : $position")
+    }
+
+    // Notify Data Item Inserted
+    fun innerNutriNotifyItemInserted(data: T, position: Int) {
+        listData.add(position, data)
+        notifyItemInserted(position)
+        NLog.d("$NUTRI_RV_TAG - NutriNotifyListener : nutriNotifyItemInserted")
+        NLog.d("$NUTRI_RV_TAG - NutriNotifyListener : nutriNotifyItemInserted : ${data.toString()}")
+        NLog.d("$NUTRI_RV_TAG - NutriNotifyListener : nutriNotifyItemInserted : $position")
+    }
+
+    // Notify Data Item Moved
+    fun innerNutriNotifyItemMoved(data: T, fromPosition: Int, toPosition: Int) {
+        listData.removeAt(fromPosition)
+        listData.add(toPosition, data)
+        notifyItemMoved(fromPosition, toPosition)
+        NLog.d("$NUTRI_RV_TAG - NutriNotifyListener : nutriNotifyItemMoved")
+        NLog.d("$NUTRI_RV_TAG - NutriNotifyListener : nutriNotifyItemMoved : ${data.toString()}")
+        NLog.d("$NUTRI_RV_TAG - NutriNotifyListener : nutriNotifyItemMoved : $fromPosition")
+        NLog.d("$NUTRI_RV_TAG - NutriNotifyListener : nutriNotifyItemMoved : $toPosition")
+    }
+
+    // Notify Data Item Range Changed
+    fun innerNutriNotifyItemRangeChanged(data: List<T>, positionStart: Int, payload: Any) {
+        listData.addAll(positionStart, data)
+        notifyItemRangeChanged(positionStart, data.size, payload)
+        NLog.d("$NUTRI_RV_TAG - NutriNotifyListener : nutriNotifyItemRangeChanged")
+        NLog.d("$NUTRI_RV_TAG - NutriNotifyListener : nutriNotifyItemRangeChanged : ${data.toString()}")
+        NLog.d("$NUTRI_RV_TAG - NutriNotifyListener : nutriNotifyItemRangeChanged : $positionStart")
+    }
+
+    // Notify Data Item Range Changed
+    fun innerNutriNotifyItemRangeChanged(data: List<T>, positionStart: Int) {
+        listData.addAll(positionStart, data)
+        notifyItemRangeChanged(positionStart, data.size)
+        NLog.d("$NUTRI_RV_TAG - NutriNotifyListener : nutriNotifyItemRangeChanged")
+        NLog.d("$NUTRI_RV_TAG - NutriNotifyListener : nutriNotifyItemRangeChanged : ${data.toString()}")
+        NLog.d("$NUTRI_RV_TAG - NutriNotifyListener : nutriNotifyItemRangeChanged : $positionStart")
+    }
+
+    // Notify Data Item Range Inserted
+    fun innerNutriNotifyItemRangeInserted(data: List<T>, positionStart: Int) {
+        listData.addAll(positionStart, data)
+        notifyItemRangeChanged(positionStart, data.size)
+        NLog.d("$NUTRI_RV_TAG - NutriNotifyListener : nutriNotifyItemRangeInserted")
+        NLog.d("$NUTRI_RV_TAG - NutriNotifyListener : nutriNotifyItemRangeChanged : ${data.toString()}")
+        NLog.d("$NUTRI_RV_TAG - NutriNotifyListener : nutriNotifyItemRangeChanged : $positionStart")
+    }
+
+    // Notify Data Item Range Removed
+    fun innerNutriNotifyItemRangeRemoved(positionStart: Int, itemCount: Int) {
+        listData.subList(positionStart, (positionStart + itemCount)).clear()
+        notifyItemRangeRemoved(positionStart, itemCount)
+        NLog.d("$NUTRI_RV_TAG - NutriNotifyListener : nutriNotifyItemRangeRemoved")
+        NLog.d("$NUTRI_RV_TAG - NutriNotifyListener : nutriNotifyItemRangeRemoved : $positionStart")
+        NLog.d("$NUTRI_RV_TAG - NutriNotifyListener : nutriNotifyItemRangeRemoved : $itemCount")
+    }
+
+    // Notify Data Item Removed
+    fun innerNutriNotifyItemRemoved(position: Int) {
+        listData.removeAt(position)
+        notifyItemRemoved(position)
+        NLog.d("$NUTRI_RV_TAG - NutriNotifyListener : nutriNotifyItemRemoved")
+        NLog.d("$NUTRI_RV_TAG - NutriNotifyListener : nutriNotifyItemRemoved : $position")
     }
 
     fun layoutHandling() {

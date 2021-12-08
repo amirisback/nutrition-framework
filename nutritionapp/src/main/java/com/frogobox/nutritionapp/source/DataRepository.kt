@@ -92,7 +92,6 @@ class DataRepository(
         return localDataSource.updateRoomFavorite(tableId, title, description, dateTime)
     }
 
-
     override fun deleteRoomFavorite(tableId: Int): Boolean {
         return localDataSource.deleteRoomFavorite(tableId)
     }

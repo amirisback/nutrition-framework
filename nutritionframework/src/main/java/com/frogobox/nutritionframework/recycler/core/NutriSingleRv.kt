@@ -165,4 +165,48 @@ open class NutriSingleRv<T> : NutriSingleRvBase<T>(), INutriSingleRv<T> {
         return this
     }
 
+    override fun nutriNotifyData(): MutableList<T> {
+        return nutriViewAdapter.innerNutriNotifyData()
+    }
+
+    override fun nutriNotifyDataSetChanged() {
+        nutriViewAdapter.innerNutriNotifyDataSetChanged()
+    }
+
+    override fun nutriNotifyItemChanged(data: T, position: Int, payload: Any) {
+        nutriViewAdapter.innerNutriNotifyItemChanged(data, position, payload)
+    }
+
+    override fun nutriNotifyItemChanged(data: T, position: Int) {
+        nutriViewAdapter.innerNutriNotifyItemChanged(data, position)
+    }
+
+    override fun nutriNotifyItemInserted(data: T, position: Int) {
+        nutriViewAdapter.innerNutriNotifyItemInserted(data, position)
+    }
+
+    override fun nutriNotifyItemMoved(data: T, fromPosition: Int, toPosition: Int) {
+        nutriViewAdapter.innerNutriNotifyItemMoved(data, fromPosition, toPosition)
+    }
+
+    override fun nutriNotifyItemRangeChanged(data: List<T>, positionStart: Int, payload: Any) {
+        nutriViewAdapter.innerNutriNotifyItemRangeChanged(data, positionStart, payload)
+    }
+
+    override fun nutriNotifyItemRangeChanged(data: List<T>, positionStart: Int) {
+        nutriViewAdapter.innerNutriNotifyItemRangeChanged(data, positionStart)
+    }
+
+    override fun nutriNotifyItemRangeInserted(data: List<T>, positionStart: Int) {
+        nutriViewAdapter.innerNutriNotifyItemRangeInserted(data, positionStart)
+    }
+
+    override fun nutriNotifyItemRangeRemoved(positionStart: Int, itemCount: Int) {
+        nutriViewAdapter.innerNutriNotifyItemRangeRemoved(positionStart, itemCount)
+    }
+
+    override fun nutriNotifyItemRemoved(position: Int) {
+        nutriViewAdapter.innerNutriNotifyItemRemoved(position)
+    }
+
 }

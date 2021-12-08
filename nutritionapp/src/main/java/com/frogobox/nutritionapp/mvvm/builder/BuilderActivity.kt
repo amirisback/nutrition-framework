@@ -19,6 +19,10 @@ class BuilderActivity : BaseActivity<ActivityBuilderBinding>() {
 
     private val builderViewModel: BuilderViewModel by viewModel()
 
+    private val rvBuilder by lazy {
+        binding.rvBuilderApp.injectorBinding<BuilderRes, NutriRvSelectedListType1Binding>()
+    }
+
     override fun setupViewBinding(): ActivityBuilderBinding {
         return ActivityBuilderBinding.inflate(layoutInflater)
     }
@@ -40,6 +44,7 @@ class BuilderActivity : BaseActivity<ActivityBuilderBinding>() {
     private fun setupButtonGenerator() {
         binding.btnGenerator.setOnClickListener {
             builderViewModel.savePrefBuilder()
+            builderViewModel.savePrefItemBuilder(rvBuilder.nutriNotifyData())
             baseStartActivity<GeneratorActivity>()
         }
     }
@@ -65,7 +70,7 @@ class BuilderActivity : BaseActivity<ActivityBuilderBinding>() {
                     binding.apply {
                         nutriRvSelectedListType1TvTitle.text = data.name
                         nutriRvSelectedListType1IvSelected.setImageResource(R.drawable.ic_nutrition_apps)
-                        if (data.check) {
+                        if (data.value) {
                             binding.nutriRvSelectedListType1IvSelected.visibility = View.VISIBLE
                         } else {
                             binding.nutriRvSelectedListType1IvSelected.visibility = View.GONE
@@ -80,16 +85,16 @@ class BuilderActivity : BaseActivity<ActivityBuilderBinding>() {
                     notifyListener: NutriRecyclerNotifyListener<BuilderRes>
                 ) {
 
-                    if (data.check) {
+                    if (data.value) {
                         binding.nutriRvSelectedListType1IvSelected.visibility = View.GONE
-                        val tempData = BuilderRes(data.name, data.key, data.value, !data.check)
+                        val tempData = BuilderRes(data.name, data.key, !data.value)
                         notifyListener.nutriNotifyItemChanged(tempData, position)
-                        NLog.d("Status ${notifyListener.nutriNotifyData()[position].check}")
+                        NLog.d("Status ${notifyListener.nutriNotifyData()[position].value}")
                     } else {
                         binding.nutriRvSelectedListType1IvSelected.visibility = View.VISIBLE
-                        val tempData = BuilderRes(data.name, data.key, data.value, !data.check)
+                        val tempData = BuilderRes(data.name, data.key, !data.value)
                         notifyListener.nutriNotifyItemChanged(tempData, position)
-                        NLog.d("Status ${notifyListener.nutriNotifyData()[position].check}")
+                        NLog.d("Status ${notifyListener.nutriNotifyData()[position].value}")
                     }
 
                 }
@@ -105,15 +110,14 @@ class BuilderActivity : BaseActivity<ActivityBuilderBinding>() {
 
             }
 
-        binding.rvBuilderApp.injectorBinding<BuilderRes, NutriRvSelectedListType1Binding>()
-            .addData(data)
+        rvBuilder.addData(data)
             .createLayoutLinearVertical(false)
             .addCallback(rvAdapterCallback)
             .build()
     }
 
-    private fun setupGenerated(checkState: Boolean) {
-        if (checkState) {
+    private fun setupGenerated(valueState: Boolean) {
+        if (valueState) {
             baseStartActivity<GeneratorActivity>()
             finish()
         }

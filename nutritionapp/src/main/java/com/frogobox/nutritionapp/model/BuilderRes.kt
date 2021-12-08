@@ -15,8 +15,7 @@ package com.frogobox.nutritionapp.model
  */
 
 data class BuilderRes(
-    var name: String? = "",
-    var key: String? = "",
-    var value: String? = "",
-    var check: Boolean
+    var name: String,
+    var key: String,
+    var value: Boolean
 )

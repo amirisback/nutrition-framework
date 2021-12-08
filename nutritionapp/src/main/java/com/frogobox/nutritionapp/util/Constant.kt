@@ -26,10 +26,10 @@ object Constant {
 
     const val FULL_NAME = "Muhammad Faisal Amir"
 
-    fun dummyData(cons : String): MutableList<People> {
+    fun dummyData(const: String): MutableList<People> {
         val listString = mutableListOf<People>()
         for (i in 1..5) {
-            listString.add(People(cons, ""))
+            listString.add(People(const, ""))
         }
         return listString
     }
@@ -86,9 +86,23 @@ object Constant {
 
     object SharedPref {
         const val PREF_NAME = "NUTRITION_PREF_FRAMEWORK"
-        const val KEY_PREF_BUILDER = "PREF_BUILDER"
+        const val KEY_PREF_BUILDER = "KEY_PREF_BUILDER"
 
-        const val VALUE_PREF_BUILDER = "Builded"
+        const val KEY_PREF_ACTIVITY_UI_COMPONENT = "KEY_PREF_ACTIVITY_UI_COMPONENT"
+        const val KEY_PREF_ACTIVITY_ANDROID_METHOD = "KEY_PREF_ACTIVITY_ANDROID_METHOD"
+        const val KEY_PREF_ACTIVITY_MEAL = "KEY_PREF_ACTIVITY_MEAL"
+
+        const val KEY_PREF_ACTIVITY_CALORIE_ARTICLE = "KEY_PREF_ACTIVITY_CALORIE_ARTICLE"
+        const val KEY_PREF_ACTIVITY_NUTRITION_ARTICLE = "KEY_PREF_ACTIVITY_NUTRITION_ARTICLE"
+
+        const val KEY_PREF_ACTIVITY_VITAMIN_ARTICLE = "KEY_PREF_ACTIVITY_VITAMIN_ARTICLE"
+        const val KEY_PREF_ACTIVITY_VITAMIN_ARTICLE_A = "KEY_PREF_ACTIVITY_VITAMIN_ARTICLE_A"
+        const val KEY_PREF_ACTIVITY_VITAMIN_ARTICLE_C = "KEY_PREF_ACTIVITY_VITAMIN_ARTICLE_C"
+        const val KEY_PREF_ACTIVITY_VITAMIN_ARTICLE_E = "KEY_PREF_ACTIVITY_VITAMIN_ARTICLE_E"
+
+        const val KEY_PREF_ACTIVITY_CALCULATOR_KEBUTUHAN_ENERGI = ""
+        const val KEY_PREF_ACTIVITY_CALCULATOR_INDEX_MASA_TUBUH = ""
+        const val KEY_PREF_ACTIVITY_CALCULATOR_BERAT_BADAN_IDEAL = ""
     }
 
     object Const {

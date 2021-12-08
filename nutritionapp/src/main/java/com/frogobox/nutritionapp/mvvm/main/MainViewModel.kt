@@ -24,14 +24,4 @@ class MainViewModel(
     private val repository: DataRepository
 ) : NutriViewModel(context) {
 
-    var prefSample = NutriSingleLiveEvent<String>()
-
-    fun savePrefSample(key: String, value: String) {
-        repository.savePrefString(key, value)
-    }
-
-    fun getPrefSample(key: String) {
-        prefSample.postValue(repository.getPrefString(key))
-    }
-
 }

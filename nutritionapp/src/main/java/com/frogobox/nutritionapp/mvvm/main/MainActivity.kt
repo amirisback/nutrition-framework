@@ -29,9 +29,6 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
 
     override fun setupViewModel() {
         mainViewModel.apply {
-            prefSample.observe(this@MainActivity, {
-                NLog.d("Pref Sample $it")
-            })
         }
     }
 
