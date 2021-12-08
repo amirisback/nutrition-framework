@@ -8,6 +8,8 @@ import com.frogobox.nutritionapp.R
 import com.frogobox.nutritionapp.core.BaseActivity
 import com.frogobox.nutritionapp.databinding.ActivityBuilderBinding
 import com.frogobox.nutritionapp.model.BuilderRes
+import com.frogobox.nutritionapp.mvvm.androidmethod.recycler.kotlin.compose.setupData
+import com.frogobox.nutritionapp.mvvm.generator.GeneratorActivity
 import com.frogobox.nutritionframework.databinding.NutriRvSelectedListType1Binding
 import com.frogobox.nutritionframework.log.NLog
 import com.frogobox.nutritionframework.recycler.core.INutriBindingAdapter
@@ -17,23 +19,40 @@ import org.koin.androidx.viewmodel.ext.android.viewModel
 class BuilderActivity : BaseActivity<ActivityBuilderBinding>() {
 
     private val builderViewModel: BuilderViewModel by viewModel()
-    private val listBuilderRes = mutableListOf<BuilderRes>()
 
     override fun setupViewBinding(): ActivityBuilderBinding {
         return ActivityBuilderBinding.inflate(layoutInflater)
     }
 
     override fun setupViewModel() {
-        builderViewModel.apply {
 
+        builderViewModel.apply {
+            setupData()
+            getPrefBuilder()
+        }
+
+        builderViewModel.apply {
+            listDataBuilderRes.observe(this@BuilderActivity, {
+                setupRv(it)
+            })
+
+            prefBuilder.observe(this@BuilderActivity, {
+                setupGenerated(it)
+            })
         }
     }
 
     override fun setupUI(savedInstanceState: Bundle?) {
-        setupRv()
+        setupButtonGenerator()
     }
 
-    private fun setupRv() {
+    private fun setupButtonGenerator() {
+        binding.btnGenerator.setOnClickListener {
+            builderViewModel.savePrefBuilder()
+        }
+    }
+
+    private fun setupRv(data: MutableList<BuilderRes>) {
 
         val rvAdapterCallback =
             object : INutriBindingAdapter<BuilderRes, NutriRvSelectedListType1Binding> {
@@ -95,17 +114,17 @@ class BuilderActivity : BaseActivity<ActivityBuilderBinding>() {
             }
 
         binding.rvBuilderApp.injectorBinding<BuilderRes, NutriRvSelectedListType1Binding>()
-            .addData(setupData())
+            .addData(data)
             .createLayoutLinearVertical(false)
             .addCallback(rvAdapterCallback)
             .build()
     }
 
-    private fun setupData(): MutableList<BuilderRes> {
-        listBuilderRes.add(BuilderRes("Vitamin A", "NameApp", "Vitamin A", false))
-        listBuilderRes.add(BuilderRes("Vitamin C", "NameApp", "Vitamin C", false))
-        listBuilderRes.add(BuilderRes("Vitamin E", "NameApp", "Vitamin E", false))
-        return listBuilderRes
+    private fun setupGenerated(checkState: Boolean) {
+        if (checkState) {
+            baseStartActivity<GeneratorActivity>()
+            finish()
+        }
     }
 
 }

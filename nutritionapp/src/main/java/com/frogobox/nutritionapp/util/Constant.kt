@@ -86,6 +86,9 @@ object Constant {
 
     object SharedPref {
         const val PREF_NAME = "NUTRITION_PREF_FRAMEWORK"
+        const val KEY_PREF_BUILDER = "PREF_BUILDER"
+
+        const val VALUE_PREF_BUILDER = "Builded"
     }
 
     object Const {

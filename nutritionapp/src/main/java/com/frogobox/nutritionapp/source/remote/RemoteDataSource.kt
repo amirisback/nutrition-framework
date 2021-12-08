@@ -1,17 +1,8 @@
 package com.frogobox.nutritionapp.source.remote
 
-import android.content.Context
-import com.frogobox.nutritioncore.util.news.NewsUrl
 import com.frogobox.nutritionapp.model.Favorite
 import com.frogobox.nutritionapp.source.DataSource
-import com.frogobox.nutritioncore.core.NutriApiCallback
-import com.frogobox.nutritioncore.model.news.ArticleResponse
-import com.frogobox.nutritioncore.model.news.SourceResponse
-import com.frogobox.nutritioncore.sources.news.NewsApiService
-import com.frogobox.nutritionframework.core.NutriApiClient
 import com.frogobox.nutritionframework.util.NutriSingleFunc.noAction
-import io.reactivex.android.schedulers.AndroidSchedulers
-import io.reactivex.schedulers.Schedulers
 
 /**
  * Created by Faisal Amir
@@ -32,12 +23,52 @@ import io.reactivex.schedulers.Schedulers
  */
 object RemoteDataSource : DataSource {
 
-    override fun savePrefSample(key: String, value: String) {
+    override fun savePrefString(key: String, value: String) {
         noAction()
     }
 
-    override fun getPrefSample(key: String): String {
+    override fun savePrefLong(key: String, value: Long) {
+        noAction()
+    }
+
+    override fun savePrefFloat(key: String, value: Float) {
+        noAction()
+    }
+
+    override fun savePrefInt(key: String, value: Int) {
+        noAction()
+    }
+
+    override fun savePrefBoolean(key: String, value: Boolean) {
+        noAction()
+    }
+
+    override fun deletePref(key: String) {
+        noAction()
+    }
+
+    override fun nukePref() {
+        noAction()
+    }
+
+    override fun getPrefString(key: String): String {
         return ""
+    }
+
+    override fun getPrefLong(key: String): Long {
+        return 0
+    }
+
+    override fun getPrefFloat(key: String): Float {
+        return 0f
+    }
+
+    override fun getPrefInt(key: String): Int {
+        return 0
+    }
+
+    override fun getPrefBoolean(key: String): Boolean {
+        return false
     }
 
     override fun saveRoomFavorite(data: Favorite): Boolean {

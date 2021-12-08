@@ -27,11 +27,11 @@ class GeneratorViewModel(
     var prefSample = NutriSingleLiveEvent<String>()
 
     fun savePrefSample(key: String, value: String) {
-        repository.savePrefSample(key, value)
+        repository.savePrefString(key, value)
     }
 
     fun getPrefSample(key: String) {
-        prefSample.postValue(repository.getPrefSample(key))
+        prefSample.postValue(repository.getPrefString(key))
     }
 
 }

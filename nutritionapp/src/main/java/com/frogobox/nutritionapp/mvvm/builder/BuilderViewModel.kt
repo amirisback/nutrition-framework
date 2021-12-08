@@ -1,7 +1,9 @@
 package com.frogobox.nutritionapp.mvvm.builder
 
 import android.app.Application
+import com.frogobox.nutritionapp.model.BuilderRes
 import com.frogobox.nutritionapp.source.DataRepository
+import com.frogobox.nutritionapp.util.Constant
 import com.frogobox.nutritionframework.core.NutriViewModel
 import com.frogobox.nutritionframework.util.NutriSingleLiveEvent
 
@@ -24,14 +26,24 @@ class BuilderViewModel(
     private val repository: DataRepository
 ) : NutriViewModel(context) {
 
-    var prefSample = NutriSingleLiveEvent<String>()
+    var listDataBuilderRes = NutriSingleLiveEvent<MutableList<BuilderRes>>()
+    var prefBuilder = NutriSingleLiveEvent<Boolean>()
 
-    fun savePrefSample(key: String, value: String) {
-        repository.savePrefSample(key, value)
+
+    fun setupDataBuilderRes() {
+        val listBuilderRes = mutableListOf<BuilderRes>()
+        listBuilderRes.add(BuilderRes("Vitamin A", "NameApp", "Vitamin A", false))
+        listBuilderRes.add(BuilderRes("Vitamin C", "NameApp", "Vitamin C", false))
+        listBuilderRes.add(BuilderRes("Vitamin E", "NameApp", "Vitamin E", false))
+        listDataBuilderRes.postValue(listBuilderRes)
     }
 
-    fun getPrefSample(key: String) {
-        prefSample.postValue(repository.getPrefSample(key))
+    fun savePrefBuilder() {
+        repository.savePrefBoolean(Constant.SharedPref.KEY_PREF_BUILDER, true)
+    }
+
+    fun getPrefBuilder() {
+        prefBuilder.postValue(repository.getPrefBoolean(Constant.SharedPref.KEY_PREF_BUILDER))
     }
 
 }

@@ -38,6 +38,10 @@ abstract class NutriAdmobViewAdapter<T> : RecyclerView.Adapter<NutriAdmobViewHol
 
     protected var listenerNotify = object : NutriRecyclerNotifyListener<T> {
 
+        override fun nutriNotifyData(): MutableList<T> {
+            return listData
+        }
+
         override fun nutriNotifyDataSetChanged() {
             notifyDataSetChanged()
         }

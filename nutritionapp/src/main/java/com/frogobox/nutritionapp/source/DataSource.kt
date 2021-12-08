@@ -30,12 +30,24 @@ interface DataSource {
     // Shared Preference ---------------------------------------------------------------------------
 
     // Save
-    fun savePrefSample(key: String, value: String)
+    fun savePrefString(key: String, value: String)
+    fun savePrefLong(key: String, value: Long)
+    fun savePrefFloat(key: String, value: Float)
+    fun savePrefInt(key: String, value: Int)
+    fun savePrefBoolean(key: String, value: Boolean)
 
     // Delete
+    fun deletePref(key: String)
+
+    // Nuke
+    fun nukePref()
 
     // Get
-    fun getPrefSample(key: String) : String
+    fun getPrefString(key: String) : String
+    fun getPrefLong(key: String) : Long
+    fun getPrefFloat(key: String) : Float
+    fun getPrefInt(key: String) : Int
+    fun getPrefBoolean(key: String) : Boolean
 
     // Room Database -------------------------------------------------------------------------------
 

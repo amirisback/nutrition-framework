@@ -1,10 +1,6 @@
 package com.frogobox.nutritionapp.source.local
 
-import android.content.Context
-import android.content.SharedPreferences
-import com.frogobox.nutritioncore.model.news.ArticleResponse
 import com.frogobox.nutritionapp.model.Favorite
-import com.frogobox.nutritioncore.model.news.SourceResponse
 import com.frogobox.nutritionapp.source.DataSource
 import com.frogobox.nutritionapp.source.local.dao.FavoriteDao
 import com.frogobox.nutritionframework.core.NutriPreference
@@ -35,12 +31,52 @@ class LocalDataSource(
     private val favoriteDao: FavoriteDao
 ) : DataSource {
 
-    override fun savePrefSample(key: String, value: String) {
+    override fun savePrefString(key: String, value: String) {
         sharedPreferences.savePrefString(key, value)
     }
 
-    override fun getPrefSample(key: String): String {
+    override fun savePrefLong(key: String, value: Long) {
+        sharedPreferences.savePrefLong(key, value)
+    }
+
+    override fun savePrefFloat(key: String, value: Float) {
+        sharedPreferences.savePrefFloat(key, value)
+    }
+
+    override fun savePrefInt(key: String, value: Int) {
+        sharedPreferences.savePrefInt(key, value)
+    }
+
+    override fun savePrefBoolean(key: String, value: Boolean) {
+        sharedPreferences.savePrefBoolean(key, value)
+    }
+
+    override fun deletePref(key: String) {
+        sharedPreferences.deletePref(key)
+    }
+
+    override fun nukePref() {
+        sharedPreferences.nukePref()
+    }
+
+    override fun getPrefString(key: String): String {
         return sharedPreferences.loadPrefString(key)
+    }
+
+    override fun getPrefLong(key: String): Long {
+        return sharedPreferences.loadPrefLong(key)
+    }
+
+    override fun getPrefFloat(key: String): Float {
+        return sharedPreferences.loadPrefFloat(key)
+    }
+
+    override fun getPrefInt(key: String): Int {
+        return sharedPreferences.loadPrefInt(key)
+    }
+
+    override fun getPrefBoolean(key: String): Boolean {
+        return sharedPreferences.loadPrefBoolean(key)
     }
 
     override fun saveRoomFavorite(data: Favorite): Boolean {
