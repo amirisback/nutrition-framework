@@ -26,4 +26,6 @@ object MealUrl {
     const val URL_LIST = "$BASE_PATH$PATH_API" + "list.php"
     const val URL_FILTER = "$BASE_PATH$PATH_API" + "filter.php"
 
+    // Please Add Your Code Under This Line --------------------------------------------------------
+
 }

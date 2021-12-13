@@ -27,4 +27,6 @@ object NewsUrl {
     const val URL_EVERYTHING = "$BASE_PATH$PATH_EVERYTHING"
     const val URL_SOURCES = "$BASE_PATH$PATH_SOURCES"
 
+    // Please Add Your Code Under This Line --------------------------------------------------------
+
 }

@@ -132,4 +132,7 @@ abstract class BaseFragment<VB : ViewBinding> : Fragment(), IBaseFragment {
         this.startActivity(intent)
     }
 
+    // Please Add Your Code Under This Line --------------------------------------------------------
+
+
 }

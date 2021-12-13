@@ -61,4 +61,7 @@ abstract class NutriApiCallback<M> : Observer<M> {
         }
 
     }
+
+    // Please Add Your Code Under This Line --------------------------------------------------------
+
 }

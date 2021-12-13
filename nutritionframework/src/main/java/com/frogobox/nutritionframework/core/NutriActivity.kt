@@ -55,7 +55,7 @@ abstract class NutriActivity<VB : ViewBinding> : AppCompatActivity(), INutriActi
         Log.d(TAG, "View Binding : ${binding::class.java.simpleName}")
     }
 
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
         return true
     }
 
@@ -216,5 +216,7 @@ abstract class NutriActivity<VB : ViewBinding> : AppCompatActivity(), INutriActi
     override fun showApkSignatures() {
         apkSignatures.forEach { Log.d(TAG,"Signature This Apps : $it") }
     }
+
+    // Please Add Your Code Under This Line --------------------------------------------------------
 
 }

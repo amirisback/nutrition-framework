@@ -56,4 +56,7 @@ class NutriSingleLiveEvent<T> : MutableLiveData<T>() {
     companion object {
         private const val TAG = "SingleLiveEvent"
     }
+
+    // Please Add Your Code Under This Line --------------------------------------------------------
+
 }

@@ -83,4 +83,6 @@ class NutriPreference(private val context: Context, private val prefName: String
         return sharedPreferences.getBoolean(key, false)
     }
 
+    // Please Add Your Code Under This Line --------------------------------------------------------
+
 }

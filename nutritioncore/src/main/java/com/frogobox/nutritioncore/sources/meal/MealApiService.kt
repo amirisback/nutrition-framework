@@ -100,4 +100,6 @@ interface MealApiService {
         @Query(MealConstant.QUERY_AREA) area: String
     ): Observable<MealResponse<MealFilter>>
 
+    // Please Add Your Code Under This Line --------------------------------------------------------
+
 }

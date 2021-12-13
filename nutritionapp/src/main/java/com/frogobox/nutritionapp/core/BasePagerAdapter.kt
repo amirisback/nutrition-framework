@@ -41,4 +41,7 @@ class BasePagerAdapter(fragmentActivity: FragmentActivity) : FragmentStateAdapte
         return fragments.size
     }
 
+    // Please Add Your Code Under This Line --------------------------------------------------------
+
+
 }

@@ -123,4 +123,6 @@ abstract class NutriFragment<VB : ViewBinding> : Fragment(), INutriFragment {
         this.startActivity(intent)
     }
 
+    // Please Add Your Code Under This Line --------------------------------------------------------
+
 }

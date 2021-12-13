@@ -47,4 +47,6 @@ object ProjectSetting {
     const val PROJECT_VERSION_CODE = (VERSION_MAJOR * 100) + (VERSION_MINOR * 10) + (VERSION_PATCH * 1)
     const val PROJECT_VERSION_NAME = "$VERSION_MAJOR.$VERSION_MINOR.$VERSION_PATCH"
 
+    // Please Add Your Code Under This Line --------------------------------------------------------
+
 }

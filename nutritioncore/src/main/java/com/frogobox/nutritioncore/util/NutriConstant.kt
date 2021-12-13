@@ -36,4 +36,6 @@ object NutriConstant {
         const val CSV = ".csv"
     }
 
+    // Please Add Your Code Under This Line --------------------------------------------------------
+
 }

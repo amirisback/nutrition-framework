@@ -86,4 +86,7 @@ abstract class NutriLocalCallback<M> : SingleObserver<M> {
             else -> onCallbackError(-1, e.message ?: "Unknown error occured")
         }
     }
+
+    // Please Add Your Code Under This Line --------------------------------------------------------
+
 }

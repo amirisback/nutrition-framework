@@ -167,4 +167,6 @@ interface DataSource {
     interface DeleteRoomDataCallBack<T> : NutriResponse.DataResponse<T>
     // ---------------------------------------------------------------------------------------------
 
+    // Please Add Your Code Under This Line --------------------------------------------------------
+
 }

@@ -35,22 +35,6 @@ val repositoryModule = module {
     }
 
     single {
-        RemoteDataSource(get(), get(), get())
-    }
-
-    single {
-        DataRepository(get(), get())
-    }
-
-    single {
-        LocalDataSource(AppExecutors(), get(), get())
-    }
-
-    single {
-        NutriPreference(androidContext(), Constant.SharedPref.PREF_NAME)
-    }
-
-    single {
         ConsumeNewsApi(NewsUrl.API_KEY)
     }
 
@@ -61,5 +45,23 @@ val repositoryModule = module {
     single {
         NutritionApi()
     }
+
+    single {
+        NutriPreference(androidContext(), Constant.SharedPref.PREF_NAME)
+    }
+
+    single {
+        RemoteDataSource(get(), get(), get())
+    }
+
+    single {
+        LocalDataSource(AppExecutors(), get(), get())
+    }
+
+    single {
+        DataRepository(get(), get())
+    }
+
+    // Please Add Your Code Under This Line --------------------------------------------------------
 
 }

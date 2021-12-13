@@ -14,4 +14,6 @@ package com.frogobox.nutritionframework.core
  */
 interface INutriComposeActivity {
 
+    // Please Add Your Code Under This Line --------------------------------------------------------
+
 }

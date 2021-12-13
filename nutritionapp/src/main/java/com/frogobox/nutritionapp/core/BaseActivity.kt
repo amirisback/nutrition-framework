@@ -142,4 +142,6 @@ abstract class BaseActivity<VB: ViewBinding> : NutriAdmobActivity(), IBaseActivi
         }.attach()
     }
 
+    // Please Add Your Code Under This Line --------------------------------------------------------
+
 }

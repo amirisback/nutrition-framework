@@ -84,4 +84,7 @@ class ConsumeTheMealDbApi(private val apiKey: String) : IConsumeTheMealDbApi {
     ) {
         repository.filterByArea(apiKey, area, callback)
     }
+
+    // Please Add Your Code Under This Line --------------------------------------------------------
+
 }

@@ -20,4 +20,7 @@ abstract class NutriViewModel(application: Application) : AndroidViewModel(appli
     var eventShowProgress = NutriSingleLiveEvent<Boolean>()
     var eventEmptyData = NutriSingleLiveEvent<Boolean>()
     var eventFailed = NutriSingleLiveEvent<String>()
+
+    // Please Add Your Code Under This Line --------------------------------------------------------
+
 }

@@ -35,4 +35,7 @@ interface IBaseFragment {
 
     fun <Model> baseNewInstance(argsKey: String, data: Model)
 
+    // Please Add Your Code Under This Line --------------------------------------------------------
+
+
 }

@@ -16,4 +16,6 @@ import androidx.activity.ComponentActivity
  */
 class NutriComposeActivity : ComponentActivity(), INutriComposeActivity {
 
+    // Please Add Your Code Under This Line --------------------------------------------------------
+
 }

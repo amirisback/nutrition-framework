@@ -32,4 +32,6 @@ class NutriPagerHelper(fragmentManager: FragmentManager): FragmentPagerAdapter(f
         titles.add(title)
     }
 
+    // Please Add Your Code Under This Line --------------------------------------------------------
+
 }

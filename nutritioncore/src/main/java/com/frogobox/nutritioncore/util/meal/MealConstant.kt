@@ -31,4 +31,6 @@ object MealConstant {
 
     const val VALUE_LIST = "list"
 
+    // Please Add Your Code Under This Line --------------------------------------------------------
+
 }

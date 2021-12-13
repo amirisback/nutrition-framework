@@ -32,4 +32,7 @@ interface IBaseActivity {
 
     fun <Model> baseFragmentNewInstance(fragment: BaseFragment<*>, argumentKey: String, extraDataResult: Model)
 
+    // Please Add Your Code Under This Line --------------------------------------------------------
+
+
 }

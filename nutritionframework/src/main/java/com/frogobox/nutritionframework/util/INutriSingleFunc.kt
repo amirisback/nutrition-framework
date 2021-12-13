@@ -43,4 +43,6 @@ interface INutriSingleFunc {
 
     fun waitingMoment(delay: Long, listener:() -> Unit)
 
+    // Please Add Your Code Under This Line --------------------------------------------------------
+
 }

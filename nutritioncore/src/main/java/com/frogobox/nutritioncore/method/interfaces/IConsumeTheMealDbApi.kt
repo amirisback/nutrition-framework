@@ -56,4 +56,6 @@ interface IConsumeTheMealDbApi {
     // Filter by Area
     suspend fun filterByArea(area: String, callback: NutriResponse.DataResponse<MealResponse<MealFilter>>)
 
+    // Please Add Your Code Under This Line --------------------------------------------------------
+
 }
