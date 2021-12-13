@@ -12,20 +12,14 @@
  */
 
 object ProjectSetting {
-    // project settings
-    const val NAME_APP = "Nutrition Framework"
 
-    val NAME_APK = NAME_APP.toLowerCase().replace(" ", "-")
-    val NAME_DB = NAME_APP.toLowerCase().replace(" ", "_")
-    val DB = "\"$NAME_DB.db\""
+    // Customize Project Setting -------------------------------------------------------------------
+    const val NAME_APP = "Nutrition Framework"
 
     const val APP_DOMAIN = "com"
     const val APP_PLAY_CONSOLE = "frogobox"
 
     const val APP_NAME = "nutritionapp"
-
-    const val LIBRARY_NAME_FRAMEWORK = "nutritionframework"
-    const val LIBRARY_NAME_CORE = "nutritioncore"
 
     const val VERSION_MAJOR = 0
     const val VERSION_MINOR = 0
@@ -33,6 +27,16 @@ object ProjectSetting {
 
     const val PROJECT_COMPILE_SDK = 31
     const val PROJECT_MIN_SDK = 21
+
+    // Default Project Setting (Do not Changed it) -------------------------------------------------
+
+    val NAME_APK = NAME_APP.toLowerCase().replace(" ", "-")
+    val NAME_DB = NAME_APP.toLowerCase().replace(" ", "_")
+    val DB = "\"$NAME_DB.db\""
+
+    const val LIBRARY_NAME_FRAMEWORK = "nutritionframework"
+    const val LIBRARY_NAME_CORE = "nutritioncore"
+
     const val PROJECT_TARGET_SDK = PROJECT_COMPILE_SDK
 
     const val PROJECT_APP_ID = "$APP_DOMAIN.$APP_PLAY_CONSOLE.$APP_NAME"
