@@ -33,4 +33,8 @@ class NutritionApi : INutritionApi {
         VitaminRepository.getVitaminE(callback)
     }
 
+    override fun getBMI(weightKg: Double, heightCm: Double): Double {
+        return weightKg / heightCm / heightCm * 10000
+    }
+
 }

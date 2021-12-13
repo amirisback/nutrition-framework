@@ -2,6 +2,7 @@ package com.frogobox.nutritionapp.mvvm.nutrition.meal
 
 import android.app.Application
 import androidx.lifecycle.viewModelScope
+import com.frogobox.nutritionapp.source.DataRepository
 import com.frogobox.nutritioncore.core.NutriResponse
 import com.frogobox.nutritioncore.method.function.ConsumeTheMealDbApi
 import com.frogobox.nutritioncore.model.meal.Meal
@@ -26,14 +27,14 @@ import kotlinx.coroutines.launch
 
 class MealViewModel(
     private val context: Application,
-    private val consumeTheMealDbApi: ConsumeTheMealDbApi
+    private val repository: DataRepository
 ) : NutriViewModel(context) {
 
     val listData = NutriSingleLiveEvent<List<Meal>>()
 
     fun getListMeals(firstLetter: String) {
         viewModelScope.launch {
-            consumeTheMealDbApi.listAllMeal(
+            repository.listAllMeal(
                 firstLetter,
                 object : NutriResponse.DataResponse<MealResponse<Meal>> {
                     override fun onSuccess(data: MealResponse<Meal>) {

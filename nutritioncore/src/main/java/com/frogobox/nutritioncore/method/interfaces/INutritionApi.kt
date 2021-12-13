@@ -28,4 +28,7 @@ interface INutritionApi {
     // Get Vitamin E
     suspend fun getVitaminE(callback: NutriResponse.DataResponse<VitaminResponse>)
 
+    // Get BMI Kg/m2
+    fun getBMI(weightKg: Double, heightCm: Double) : Double
+
 }

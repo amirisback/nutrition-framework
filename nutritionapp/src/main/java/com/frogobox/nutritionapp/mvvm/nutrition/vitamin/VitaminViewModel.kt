@@ -2,6 +2,7 @@ package com.frogobox.nutritionapp.mvvm.nutrition.vitamin
 
 import android.app.Application
 import androidx.lifecycle.viewModelScope
+import com.frogobox.nutritionapp.source.DataRepository
 import com.frogobox.nutritioncore.core.NutriResponse
 import com.frogobox.nutritioncore.method.function.NutritionApi
 import com.frogobox.nutritioncore.model.vitamin.VitaminResponse
@@ -25,7 +26,7 @@ import kotlinx.coroutines.launch
 
 class VitaminViewModel(
     private val context: Application,
-    private val nutritionApi: NutritionApi
+    private val repository: DataRepository
 ) :
     NutriViewModel(context) {
 
@@ -33,7 +34,7 @@ class VitaminViewModel(
 
     fun getVitaminA() {
         viewModelScope.launch {
-            nutritionApi.getVitaminA(object : NutriResponse.DataResponse<VitaminResponse> {
+            repository.getVitaminA(object : NutriResponse.DataResponse<VitaminResponse> {
                 override fun onSuccess(data: VitaminResponse) {
                     dataVitamin.postValue(data)
                 }
@@ -62,7 +63,7 @@ class VitaminViewModel(
 
     fun getVitaminC() {
         viewModelScope.launch {
-            nutritionApi.getVitaminC(object : NutriResponse.DataResponse<VitaminResponse> {
+            repository.getVitaminC(object : NutriResponse.DataResponse<VitaminResponse> {
                 override fun onSuccess(data: VitaminResponse) {
                     dataVitamin.postValue(data)
                 }
@@ -91,7 +92,7 @@ class VitaminViewModel(
 
     fun getVitaminE() {
         viewModelScope.launch {
-            nutritionApi.getVitaminE(object : NutriResponse.DataResponse<VitaminResponse> {
+            repository.getVitaminE(object : NutriResponse.DataResponse<VitaminResponse> {
                 override fun onSuccess(data: VitaminResponse) {
                     dataVitamin.postValue(data)
                 }

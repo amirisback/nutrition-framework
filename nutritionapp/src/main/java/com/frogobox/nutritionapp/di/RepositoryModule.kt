@@ -1,6 +1,5 @@
 package com.frogobox.nutritionapp.di
 
-import androidx.preference.PreferenceManager
 import com.frogobox.nutritionapp.source.DataRepository
 import com.frogobox.nutritionapp.source.local.AppDatabase
 import com.frogobox.nutritionapp.source.local.LocalDataSource
@@ -36,7 +35,11 @@ val repositoryModule = module {
     }
 
     single {
-        DataRepository(RemoteDataSource, get())
+        RemoteDataSource(get(), get(), get())
+    }
+
+    single {
+        DataRepository(get(), get())
     }
 
     single {

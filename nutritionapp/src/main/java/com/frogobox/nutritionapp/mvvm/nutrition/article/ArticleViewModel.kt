@@ -2,6 +2,7 @@ package com.frogobox.nutritionapp.mvvm.nutrition.article
 
 import android.app.Application
 import androidx.lifecycle.viewModelScope
+import com.frogobox.nutritionapp.source.DataRepository
 import com.frogobox.nutritionapp.source.DataSource
 import com.frogobox.nutritioncore.method.function.ConsumeNewsApi
 import com.frogobox.nutritioncore.model.news.ArticleResponse
@@ -26,7 +27,7 @@ import kotlinx.coroutines.launch
 
 class ArticleViewModel(
     private val context: Application,
-    private val consumeNewsApi: ConsumeNewsApi
+    private val repository: DataRepository
 ) :
     NutriViewModel(context) {
 
@@ -34,7 +35,7 @@ class ArticleViewModel(
 
     fun getEverythings(query: String) {
         viewModelScope.launch {
-            consumeNewsApi.getEverythings(
+            repository.getEverythings(
                 query,
                 null,
                 null,
