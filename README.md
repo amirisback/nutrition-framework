@@ -81,7 +81,7 @@ allprojects {
 - SK TA [Click Here](https://github.com/amirisback/nutrition-framework/raw/master/docs/bundle/Muhammad%20Faisal%20Amir_1301198497_SK_TA.pdf)
 - General [Click Here](https://github.com/amirisback/nutrition-framework/tree/master/docs)
 - Bundle [Click Here](https://github.com/amirisback/nutrition-framework/tree/master/docs/bundle)
-- Guide [Click Here](https://github.com/amirisback/nutrition-framework/tree/master/docs/guide)
+- Guide Proposal[Click Here](https://github.com/amirisback/nutrition-framework/tree/master/docs/guide)
 - Journal List [Click Here](https://github.com/amirisback/nutrition-framework/tree/master/docs/journal)
 - Theory [Click Here](https://github.com/amirisback/nutrition-framework/tree/master/docs/theory)
 - Proposal [Click Here](https://github.com/amirisback/nutrition-framework/tree/master/docs/proposal)
