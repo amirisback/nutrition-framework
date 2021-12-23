@@ -121,7 +121,7 @@ afterEvaluate {
 
                 // Library Name / Module Name (Example : "androidfirstlib")
                 // NOTE : Different ArtifactId For Each Library / Module, So That Each Library Is Not Overwritten
-                artifactId = ProjectSetting.LIBRARY_NAME_FRAMEWORK
+                artifactId = ProjectSetting.PACKAGE_NAME_LIBRARY_FRAMEWORK
 
                 // Version Library Name (Example : "1.0.0")
                 version = ProjectSetting.PROJECT_VERSION_NAME

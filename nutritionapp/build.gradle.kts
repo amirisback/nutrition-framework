@@ -198,7 +198,7 @@ dependencies {
     implementation("io.coil-kt:coil-compose:1.4.0")
 
     testImplementation("junit:junit:4.13.2")
-    testImplementation("androidx.room:room-testing:2.3.0")
+    testImplementation("androidx.room:room-testing:2.4.0")
     testImplementation("io.insert-koin:koin-test:${Dependency.KOIN_VERSION}")
 
     androidTestImplementation("androidx.room:room-testing:2.4.0")

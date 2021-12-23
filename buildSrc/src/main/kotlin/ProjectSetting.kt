@@ -18,12 +18,11 @@ object ProjectSetting {
 
     const val APP_DOMAIN = "com"
     const val APP_PLAY_CONSOLE = "frogobox"
+    const val BASE_PACKAGE = "nutrition"
 
-    const val APP_NAME = "nutritionapp"
-
-    const val VERSION_MAJOR = 0
+    const val VERSION_MAJOR = 1
     const val VERSION_MINOR = 0
-    const val VERSION_PATCH = 2
+    const val VERSION_PATCH = 0
 
     const val PROJECT_COMPILE_SDK = 31
     const val PROJECT_MIN_SDK = 21
@@ -34,15 +33,16 @@ object ProjectSetting {
     val NAME_DB = NAME_APP.toLowerCase().replace(" ", "_")
     val DB = "\"$NAME_DB.db\""
 
-    const val LIBRARY_NAME_FRAMEWORK = "nutritionframework"
-    const val LIBRARY_NAME_CORE = "nutritioncore"
-
     const val PROJECT_TARGET_SDK = PROJECT_COMPILE_SDK
 
-    const val PROJECT_APP_ID = "$APP_DOMAIN.$APP_PLAY_CONSOLE.$APP_NAME"
+    const val PACKAGE_NAME_APP = "${BASE_PACKAGE}app"
+    const val PACKAGE_NAME_LIBRARY_CORE = "${BASE_PACKAGE}core"
+    const val PACKAGE_NAME_LIBRARY_FRAMEWORK = "${BASE_PACKAGE}framework"
 
-    const val PROJECT_LIB_ID_FRAMEWORK = "$APP_DOMAIN.$APP_PLAY_CONSOLE.$LIBRARY_NAME_FRAMEWORK"
-    const val PROJECT_LIB_ID_CORE = "$APP_DOMAIN.$APP_PLAY_CONSOLE.$LIBRARY_NAME_CORE"
+    const val PROJECT_APP_ID = "$APP_DOMAIN.$APP_PLAY_CONSOLE.$PACKAGE_NAME_APP"
+
+    const val PROJECT_LIB_ID_FRAMEWORK = "$APP_DOMAIN.$APP_PLAY_CONSOLE.$PACKAGE_NAME_LIBRARY_FRAMEWORK"
+    const val PROJECT_LIB_ID_CORE = "$APP_DOMAIN.$APP_PLAY_CONSOLE.$PACKAGE_NAME_LIBRARY_CORE"
 
     const val PROJECT_VERSION_CODE = (VERSION_MAJOR * 100) + (VERSION_MINOR * 10) + (VERSION_PATCH * 1)
     const val PROJECT_VERSION_NAME = "$VERSION_MAJOR.$VERSION_MINOR.$VERSION_PATCH"
