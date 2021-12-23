@@ -1,4 +1,4 @@
-package com.frogobox.nutritioncore.core
+package com.frogobox.nutritioncore.sources
 
 import com.google.gson.annotations.SerializedName
 

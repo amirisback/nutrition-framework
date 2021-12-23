@@ -1,15 +1,12 @@
 package com.frogobox.nutritionapp.mvvm.nutrition.meal
 
 import android.app.Application
-import androidx.lifecycle.viewModelScope
 import com.frogobox.nutritionapp.source.DataRepository
-import com.frogobox.nutritioncore.core.NutriResponse
-import com.frogobox.nutritioncore.method.function.ConsumeTheMealDbApi
+import com.frogobox.nutritioncore.sources.NutriResponse
 import com.frogobox.nutritioncore.model.meal.Meal
 import com.frogobox.nutritioncore.model.meal.MealResponse
 import com.frogobox.nutritionframework.core.NutriViewModel
 import com.frogobox.nutritionframework.util.NutriSingleLiveEvent
-import kotlinx.coroutines.launch
 
 
 /*
@@ -33,35 +30,33 @@ class MealViewModel(
     val listData = NutriSingleLiveEvent<List<Meal>>()
 
     fun getListMeals(firstLetter: String) {
-        viewModelScope.launch {
-            repository.listAllMeal(
-                firstLetter,
-                object : NutriResponse.DataResponse<MealResponse<Meal>> {
-                    override fun onSuccess(data: MealResponse<Meal>) {
-                        // on Success Request
-                        data.meals?.let { listData.postValue(it) }
-                    }
+        repository.listAllMeal(
+            firstLetter,
+            object : NutriResponse.DataResponse<MealResponse<Meal>> {
+                override fun onSuccess(data: MealResponse<Meal>) {
+                    // on Success Request
+                    data.meals?.let { listData.postValue(it) }
+                }
 
-                    override fun onFailed(statusCode: Int, errorMessage: String?) {
-                        // on Failed
-                        eventFailed.postValue(errorMessage)
-                    }
+                override fun onFailed(statusCode: Int, errorMessage: String?) {
+                    // on Failed
+                    eventFailed.postValue(errorMessage)
+                }
 
-                    override fun onShowProgress() {
-                        // Show Your Progress View
-                        eventShowProgress.postValue(true)
-                    }
+                override fun onShowProgress() {
+                    // Show Your Progress View
+                    eventShowProgress.postValue(true)
+                }
 
-                    override fun onHideProgress() {
-                        // Hide Your Progress View
-                        eventShowProgress.postValue(false)
-                    }
+                override fun onHideProgress() {
+                    // Hide Your Progress View
+                    eventShowProgress.postValue(false)
+                }
 
-                    override fun onEmpty() {
-                        //
-                    }
-                })
-        }
+                override fun onEmpty() {
+                    //
+                }
+            })
     }
 
 

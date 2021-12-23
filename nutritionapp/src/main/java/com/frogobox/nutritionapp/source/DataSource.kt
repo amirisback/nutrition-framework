@@ -1,9 +1,8 @@
 package com.frogobox.nutritionapp.source
 
-import android.content.Context
 import com.frogobox.nutritioncore.model.news.ArticleResponse
 import com.frogobox.nutritionapp.model.Favorite
-import com.frogobox.nutritioncore.core.NutriResponse
+import com.frogobox.nutritioncore.sources.NutriResponse
 import com.frogobox.nutritioncore.model.meal.*
 import com.frogobox.nutritioncore.model.news.SourceResponse
 import com.frogobox.nutritioncore.model.vitamin.VitaminResponse
@@ -30,7 +29,7 @@ interface DataSource {
     // API Server ----------------------------------------------------------------------------------
 
     // Get Top Headline
-    suspend fun getTopHeadline(
+    fun getTopHeadline(
         q: String?,
         sources: String?,
         category: String?,
@@ -41,7 +40,7 @@ interface DataSource {
     )
 
     // Get Everythings
-    suspend fun getEverythings(
+    fun getEverythings(
         q: String?,
         from: String?,
         to: String?,
@@ -57,7 +56,7 @@ interface DataSource {
     )
 
     // Get Sources
-    suspend fun getSources(
+    fun getSources(
         language: String,
         country: String,
         category: String,
@@ -65,46 +64,46 @@ interface DataSource {
     )
 
     // Search meal by name
-    suspend fun searchMeal(mealName: String, callback: NutriResponse.DataResponse<MealResponse<Meal>>)
+    fun searchMeal(mealName: String, callback: NutriResponse.DataResponse<MealResponse<Meal>>)
 
     // List all meals by first letter
-    suspend fun listAllMeal(firstLetter: String, callback: NutriResponse.DataResponse<MealResponse<Meal>>)
+    fun listAllMeal(firstLetter: String, callback: NutriResponse.DataResponse<MealResponse<Meal>>)
 
     // Lookup full meal details by id
-    suspend fun lookupFullMeal(idMeal: String, callback: NutriResponse.DataResponse<MealResponse<Meal>>)
+    fun lookupFullMeal(idMeal: String, callback: NutriResponse.DataResponse<MealResponse<Meal>>)
 
     // Lookup a single random meal
-    suspend fun lookupRandomMeal(callback: NutriResponse.DataResponse<MealResponse<Meal>>)
+    fun lookupRandomMeal(callback: NutriResponse.DataResponse<MealResponse<Meal>>)
 
     // List all meal categories
-    suspend fun listMealCategories(callback: NutriResponse.DataResponse<CategoryResponse>)
+    fun listMealCategories(callback: NutriResponse.DataResponse<CategoryResponse>)
 
     // List all Categories
-    suspend fun listAllCateories(callback: NutriResponse.DataResponse<MealResponse<Category>>)
+    fun listAllCateories(callback: NutriResponse.DataResponse<MealResponse<Category>>)
 
     // List all Area
-    suspend fun listAllArea(callback: NutriResponse.DataResponse<MealResponse<Area>>)
+    fun listAllArea(callback: NutriResponse.DataResponse<MealResponse<Area>>)
 
     // List all Ingredients
-    suspend fun listAllIngredients(callback: NutriResponse.DataResponse<MealResponse<Ingredient>>)
+    fun listAllIngredients(callback: NutriResponse.DataResponse<MealResponse<Ingredient>>)
 
     // Filter by main ingredient
-    suspend fun filterByIngredient(ingredient: String, callback: NutriResponse.DataResponse<MealResponse<MealFilter>>)
+    fun filterByIngredient(ingredient: String, callback: NutriResponse.DataResponse<MealResponse<MealFilter>>)
 
     // Filter by Category
-    suspend fun filterByCategory(category: String, callback: NutriResponse.DataResponse<MealResponse<MealFilter>>)
+    fun filterByCategory(category: String, callback: NutriResponse.DataResponse<MealResponse<MealFilter>>)
 
     // Filter by Area
-    suspend fun filterByArea(area: String, callback: NutriResponse.DataResponse<MealResponse<MealFilter>>)
+    fun filterByArea(area: String, callback: NutriResponse.DataResponse<MealResponse<MealFilter>>)
 
     // Get Vitamin A
-    suspend fun getVitaminA(callback: NutriResponse.DataResponse<VitaminResponse>)
+    fun getVitaminA(callback: NutriResponse.DataResponse<VitaminResponse>)
 
     // Get Vitamin C
-    suspend fun getVitaminC(callback: NutriResponse.DataResponse<VitaminResponse>)
+    fun getVitaminC(callback: NutriResponse.DataResponse<VitaminResponse>)
 
     // Get Vitamin E
-    suspend fun getVitaminE(callback: NutriResponse.DataResponse<VitaminResponse>)
+    fun getVitaminE(callback: NutriResponse.DataResponse<VitaminResponse>)
 
     // Get BMI Kg/m2
     fun getBMI(weightKg: Double, heightCm: Double) : Double

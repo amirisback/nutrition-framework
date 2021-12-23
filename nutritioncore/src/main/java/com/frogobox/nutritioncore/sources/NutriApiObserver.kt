@@ -1,4 +1,4 @@
-package com.frogobox.nutritioncore.core
+package com.frogobox.nutritioncore.sources
 
 import io.reactivex.Observer
 import io.reactivex.disposables.Disposable
@@ -18,7 +18,7 @@ import java.net.UnknownHostException
  * All rights reserved
  *
  */
-abstract class NutriApiCallback<M> : Observer<M> {
+abstract class NutriApiObserver<M> : Observer<M> {
 
     abstract fun onSuccess(data: M)
 

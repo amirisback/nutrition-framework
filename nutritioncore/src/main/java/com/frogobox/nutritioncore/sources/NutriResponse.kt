@@ -1,4 +1,4 @@
-package com.frogobox.nutritioncore.core
+package com.frogobox.nutritioncore.sources
 
 /*
  * Created by faisalamir on 26/07/21

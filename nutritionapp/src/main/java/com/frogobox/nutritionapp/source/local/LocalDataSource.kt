@@ -3,7 +3,7 @@ package com.frogobox.nutritionapp.source.local
 import com.frogobox.nutritionapp.model.Favorite
 import com.frogobox.nutritionapp.source.DataSource
 import com.frogobox.nutritionapp.source.local.dao.FavoriteDao
-import com.frogobox.nutritioncore.core.NutriResponse
+import com.frogobox.nutritioncore.sources.NutriResponse
 import com.frogobox.nutritioncore.model.meal.*
 import com.frogobox.nutritioncore.model.news.ArticleResponse
 import com.frogobox.nutritioncore.model.news.SourceResponse
@@ -37,7 +37,7 @@ class LocalDataSource(
     private val favoriteDao: FavoriteDao
 ) : DataSource {
 
-    override suspend fun getTopHeadline(
+    override fun getTopHeadline(
         q: String?,
         sources: String?,
         category: String?,
@@ -49,7 +49,7 @@ class LocalDataSource(
         noAction()
     }
 
-    override suspend fun getEverythings(
+    override fun getEverythings(
         q: String?,
         from: String?,
         to: String?,
@@ -66,7 +66,7 @@ class LocalDataSource(
         noAction()
     }
 
-    override suspend fun getSources(
+    override fun getSources(
         language: String,
         country: String,
         category: String,
@@ -75,77 +75,77 @@ class LocalDataSource(
         noAction()
     }
 
-    override suspend fun searchMeal(
+    override fun searchMeal(
         mealName: String,
         callback: NutriResponse.DataResponse<MealResponse<Meal>>
     ) {
         noAction()
     }
 
-    override suspend fun listAllMeal(
+    override fun listAllMeal(
         firstLetter: String,
         callback: NutriResponse.DataResponse<MealResponse<Meal>>
     ) {
         noAction()
     }
 
-    override suspend fun lookupFullMeal(
+    override fun lookupFullMeal(
         idMeal: String,
         callback: NutriResponse.DataResponse<MealResponse<Meal>>
     ) {
         noAction()
     }
 
-    override suspend fun lookupRandomMeal(callback: NutriResponse.DataResponse<MealResponse<Meal>>) {
+    override fun lookupRandomMeal(callback: NutriResponse.DataResponse<MealResponse<Meal>>) {
         noAction()
     }
 
-    override suspend fun listMealCategories(callback: NutriResponse.DataResponse<CategoryResponse>) {
+    override fun listMealCategories(callback: NutriResponse.DataResponse<CategoryResponse>) {
         noAction()
     }
 
-    override suspend fun listAllCateories(callback: NutriResponse.DataResponse<MealResponse<Category>>) {
+    override fun listAllCateories(callback: NutriResponse.DataResponse<MealResponse<Category>>) {
         noAction()
     }
 
-    override suspend fun listAllArea(callback: NutriResponse.DataResponse<MealResponse<Area>>) {
+    override fun listAllArea(callback: NutriResponse.DataResponse<MealResponse<Area>>) {
         noAction()
     }
 
-    override suspend fun listAllIngredients(callback: NutriResponse.DataResponse<MealResponse<Ingredient>>) {
+    override fun listAllIngredients(callback: NutriResponse.DataResponse<MealResponse<Ingredient>>) {
         noAction()
     }
 
-    override suspend fun filterByIngredient(
+    override fun filterByIngredient(
         ingredient: String,
         callback: NutriResponse.DataResponse<MealResponse<MealFilter>>
     ) {
         noAction()
     }
 
-    override suspend fun filterByCategory(
+    override fun filterByCategory(
         category: String,
         callback: NutriResponse.DataResponse<MealResponse<MealFilter>>
     ) {
         noAction()
     }
 
-    override suspend fun filterByArea(
+    override fun filterByArea(
         area: String,
         callback: NutriResponse.DataResponse<MealResponse<MealFilter>>
     ) {
         noAction()
     }
 
-    override suspend fun getVitaminA(callback: NutriResponse.DataResponse<VitaminResponse>) {
+    override fun getVitaminA(callback: NutriResponse.DataResponse<VitaminResponse>) {
         noAction()
     }
 
-    override suspend fun getVitaminC(callback: NutriResponse.DataResponse<VitaminResponse>) {
+    override fun getVitaminC(callback: NutriResponse.DataResponse<VitaminResponse>) {
         noAction()
     }
 
-    override suspend fun getVitaminE(callback: NutriResponse.DataResponse<VitaminResponse>) {
+    override fun getVitaminE(callback: NutriResponse.DataResponse<VitaminResponse>) {
         noAction()
     }
 

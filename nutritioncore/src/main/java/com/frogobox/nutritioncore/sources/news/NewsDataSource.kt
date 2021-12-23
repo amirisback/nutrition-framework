@@ -1,6 +1,6 @@
 package com.frogobox.nutritioncore.sources.news
 
-import com.frogobox.nutritioncore.core.NutriResponse
+import com.frogobox.nutritioncore.sources.NutriResponse
 import com.frogobox.nutritioncore.model.news.ArticleResponse
 import com.frogobox.nutritioncore.model.news.SourceResponse
 
@@ -24,7 +24,7 @@ import com.frogobox.nutritioncore.model.news.SourceResponse
 interface NewsDataSource {
 
     // Get Top Headline
-    suspend fun getTopHeadline(
+    fun getTopHeadline(
         apiKey: String,
         q: String?,
         sources: String?,
@@ -36,7 +36,7 @@ interface NewsDataSource {
     )
 
     // Get Everythings
-    suspend fun getEverythings(
+    fun getEverythings(
         apiKey: String,
         q: String?,
         from: String?,
@@ -53,7 +53,7 @@ interface NewsDataSource {
     )
 
     // Get Sources
-    suspend fun getSources(
+    fun getSources(
         apiKey: String,
         language: String,
         country: String,

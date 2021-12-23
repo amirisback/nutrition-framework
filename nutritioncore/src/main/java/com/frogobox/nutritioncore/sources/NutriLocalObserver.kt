@@ -1,4 +1,4 @@
-package com.frogobox.nutritioncore.core
+package com.frogobox.nutritioncore.sources
 
 import com.google.gson.Gson
 import io.reactivex.SingleObserver
@@ -19,15 +19,13 @@ import java.net.UnknownHostException
  * All rights reserved
  *
  */
-abstract class NutriLocalCallback<M> : SingleObserver<M> {
+abstract class NutriLocalObserver<M> : SingleObserver<M> {
 
     abstract fun onCallbackSucces(data: M)
     abstract fun onCallbackError(code: Int, errorMessage: String)
     abstract fun onAddSubscribe(disposable: Disposable)
-    abstract fun onCompleted()
 
     override fun onSuccess(t: M) {
-        onCompleted()
         if (t == null) {
             onCallbackError(200, "Data is empty")
         } else {
@@ -40,7 +38,6 @@ abstract class NutriLocalCallback<M> : SingleObserver<M> {
     }
 
     override fun onError(e: Throwable) {
-        onCompleted()
         e.printStackTrace()
         when (e) {
             is HttpException -> {

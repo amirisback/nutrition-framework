@@ -1,8 +1,8 @@
 package com.frogobox.nutritioncore.sources.meal
 
-import com.frogobox.nutritioncore.core.NutriApiCallback
-import com.frogobox.nutritioncore.core.NutriApiClient
-import com.frogobox.nutritioncore.core.NutriResponse
+import com.frogobox.nutritioncore.sources.NutriApiClient
+import com.frogobox.nutritioncore.sources.NutriApiObserver
+import com.frogobox.nutritioncore.sources.NutriResponse
 import com.frogobox.nutritioncore.model.meal.*
 import com.frogobox.nutritioncore.util.meal.MealConstant
 import com.frogobox.nutritioncore.util.meal.MealUrl
@@ -30,7 +30,7 @@ object MealRepository : MealDataSource {
     private val TAG = MealRepository::class.java.simpleName
     private var mealApiService = NutriApiClient.create<MealApiService>(MealUrl.BASE_URL, true)
 
-    override suspend fun searchMeal(
+    override fun searchMeal(
         apiKey: String,
         mealName: String,
         callback: NutriResponse.DataResponse<MealResponse<Meal>>
@@ -42,9 +42,13 @@ object MealRepository : MealDataSource {
             .doOnSubscribe { callback.onShowProgress() }
             .doOnTerminate { callback.onHideProgress() }
             .observeOn(Schedulers.single())
-            .subscribe(object : NutriApiCallback<MealResponse<Meal>>() {
+            .subscribe(object : NutriApiObserver<MealResponse<Meal>>() {
                 override fun onSuccess(data: MealResponse<Meal>) {
-                    callback.onSuccess(data)
+                    if (data.meals?.size == 0) {
+                        callback.onEmpty()
+                    } else {
+                        callback.onSuccess(data)
+                    }
                 }
 
                 override fun onFailure(code: Int, errorMessage: String) {
@@ -54,7 +58,7 @@ object MealRepository : MealDataSource {
 
     }
 
-    override suspend fun listAllMeal(
+    override fun listAllMeal(
         apiKey: String,
         firstLetter: String,
         callback: NutriResponse.DataResponse<MealResponse<Meal>>
@@ -66,9 +70,13 @@ object MealRepository : MealDataSource {
             .doOnSubscribe { callback.onShowProgress() }
             .doOnTerminate { callback.onHideProgress() }
             .observeOn(Schedulers.single())
-            .subscribe(object : NutriApiCallback<MealResponse<Meal>>() {
+            .subscribe(object : NutriApiObserver<MealResponse<Meal>>() {
                 override fun onSuccess(data: MealResponse<Meal>) {
-                    callback.onSuccess(data)
+                    if (data.meals?.size == 0) {
+                        callback.onEmpty()
+                    } else {
+                        callback.onSuccess(data)
+                    }
                 }
 
                 override fun onFailure(code: Int, errorMessage: String) {
@@ -77,7 +85,7 @@ object MealRepository : MealDataSource {
             })
     }
 
-    override suspend fun lookupFullMeal(
+    override fun lookupFullMeal(
         apiKey: String,
         idMeal: String,
         callback: NutriResponse.DataResponse<MealResponse<Meal>>
@@ -89,9 +97,13 @@ object MealRepository : MealDataSource {
             .doOnSubscribe { callback.onShowProgress() }
             .doOnTerminate { callback.onHideProgress() }
             .observeOn(Schedulers.single())
-            .subscribe(object : NutriApiCallback<MealResponse<Meal>>() {
+            .subscribe(object : NutriApiObserver<MealResponse<Meal>>() {
                 override fun onSuccess(data: MealResponse<Meal>) {
-                    callback.onSuccess(data)
+                    if (data.meals?.size == 0) {
+                        callback.onEmpty()
+                    } else {
+                        callback.onSuccess(data)
+                    }
                 }
 
                 override fun onFailure(code: Int, errorMessage: String) {
@@ -100,7 +112,7 @@ object MealRepository : MealDataSource {
             })
     }
 
-    override suspend fun lookupRandomMeal(
+    override fun lookupRandomMeal(
         apiKey: String,
         callback: NutriResponse.DataResponse<MealResponse<Meal>>
     ) {
@@ -111,9 +123,13 @@ object MealRepository : MealDataSource {
             .doOnSubscribe { callback.onShowProgress() }
             .doOnTerminate { callback.onHideProgress() }
             .observeOn(Schedulers.single())
-            .subscribe(object : NutriApiCallback<MealResponse<Meal>>() {
+            .subscribe(object : NutriApiObserver<MealResponse<Meal>>() {
                 override fun onSuccess(data: MealResponse<Meal>) {
-                    callback.onSuccess(data)
+                    if (data.meals?.size == 0) {
+                        callback.onEmpty()
+                    } else {
+                        callback.onSuccess(data)
+                    }
                 }
 
                 override fun onFailure(code: Int, errorMessage: String) {
@@ -122,7 +138,7 @@ object MealRepository : MealDataSource {
             })
     }
 
-    override suspend fun listMealCategories(
+    override fun listMealCategories(
         apiKey: String,
         callback: NutriResponse.DataResponse<CategoryResponse>
     ) {
@@ -133,9 +149,13 @@ object MealRepository : MealDataSource {
             .doOnSubscribe { callback.onShowProgress() }
             .doOnTerminate { callback.onHideProgress() }
             .observeOn(Schedulers.single())
-            .subscribe(object : NutriApiCallback<CategoryResponse>() {
+            .subscribe(object : NutriApiObserver<CategoryResponse>() {
                 override fun onSuccess(data: CategoryResponse) {
-                    callback.onSuccess(data)
+                    if (data.categories?.size == 0) {
+                        callback.onEmpty()
+                    } else {
+                        callback.onSuccess(data)
+                    }
                 }
 
                 override fun onFailure(code: Int, errorMessage: String) {
@@ -144,7 +164,7 @@ object MealRepository : MealDataSource {
             })
     }
 
-    override suspend fun listAllCateories(
+    override fun listAllCateories(
         apiKey: String,
         callback: NutriResponse.DataResponse<MealResponse<Category>>
     ) {
@@ -155,9 +175,13 @@ object MealRepository : MealDataSource {
             .doOnSubscribe { callback.onShowProgress() }
             .doOnTerminate { callback.onHideProgress() }
             .observeOn(Schedulers.single())
-            .subscribe(object : NutriApiCallback<MealResponse<Category>>() {
+            .subscribe(object : NutriApiObserver<MealResponse<Category>>() {
                 override fun onSuccess(data: MealResponse<Category>) {
-                    callback.onSuccess(data)
+                    if (data.meals?.size == 0) {
+                        callback.onEmpty()
+                    } else {
+                        callback.onSuccess(data)
+                    }
                 }
 
                 override fun onFailure(code: Int, errorMessage: String) {
@@ -166,7 +190,7 @@ object MealRepository : MealDataSource {
             })
     }
 
-    override suspend fun listAllArea(
+    override fun listAllArea(
         apiKey: String,
         callback: NutriResponse.DataResponse<MealResponse<Area>>
     ) {
@@ -177,9 +201,13 @@ object MealRepository : MealDataSource {
             .doOnSubscribe { callback.onShowProgress() }
             .doOnTerminate { callback.onHideProgress() }
             .observeOn(Schedulers.single())
-            .subscribe(object : NutriApiCallback<MealResponse<Area>>() {
+            .subscribe(object : NutriApiObserver<MealResponse<Area>>() {
                 override fun onSuccess(data: MealResponse<Area>) {
-                    callback.onSuccess(data)
+                    if (data.meals?.size == 0) {
+                        callback.onEmpty()
+                    } else {
+                        callback.onSuccess(data)
+                    }
                 }
 
                 override fun onFailure(code: Int, errorMessage: String) {
@@ -190,7 +218,7 @@ object MealRepository : MealDataSource {
             })
     }
 
-    override suspend fun listAllIngredients(
+    override fun listAllIngredients(
         apiKey: String,
         callback: NutriResponse.DataResponse<MealResponse<Ingredient>>
     ) {
@@ -201,9 +229,13 @@ object MealRepository : MealDataSource {
             .doOnSubscribe { callback.onShowProgress() }
             .doOnTerminate { callback.onHideProgress() }
             .observeOn(Schedulers.single())
-            .subscribe(object : NutriApiCallback<MealResponse<Ingredient>>() {
+            .subscribe(object : NutriApiObserver<MealResponse<Ingredient>>() {
                 override fun onSuccess(data: MealResponse<Ingredient>) {
-                    callback.onSuccess(data)
+                    if (data.meals?.size == 0) {
+                        callback.onEmpty()
+                    } else {
+                        callback.onSuccess(data)
+                    }
                 }
 
                 override fun onFailure(code: Int, errorMessage: String) {
@@ -212,7 +244,7 @@ object MealRepository : MealDataSource {
             })
     }
 
-    override suspend fun filterByIngredient(
+    override fun filterByIngredient(
         apiKey: String,
         ingredient: String,
         callback: NutriResponse.DataResponse<MealResponse<MealFilter>>
@@ -224,9 +256,13 @@ object MealRepository : MealDataSource {
             .doOnSubscribe { callback.onShowProgress() }
             .doOnTerminate { callback.onHideProgress() }
             .observeOn(Schedulers.single())
-            .subscribe(object : NutriApiCallback<MealResponse<MealFilter>>() {
+            .subscribe(object : NutriApiObserver<MealResponse<MealFilter>>() {
                 override fun onSuccess(data: MealResponse<MealFilter>) {
-                    callback.onSuccess(data)
+                    if (data.meals?.size == 0) {
+                        callback.onEmpty()
+                    } else {
+                        callback.onSuccess(data)
+                    }
                 }
 
                 override fun onFailure(code: Int, errorMessage: String) {
@@ -235,7 +271,7 @@ object MealRepository : MealDataSource {
             })
     }
 
-    override suspend fun filterByCategory(
+    override fun filterByCategory(
         apiKey: String,
         category: String,
         callback: NutriResponse.DataResponse<MealResponse<MealFilter>>
@@ -247,9 +283,13 @@ object MealRepository : MealDataSource {
             .doOnSubscribe { callback.onShowProgress() }
             .doOnTerminate { callback.onHideProgress() }
             .observeOn(Schedulers.single())
-            .subscribe(object : NutriApiCallback<MealResponse<MealFilter>>() {
+            .subscribe(object : NutriApiObserver<MealResponse<MealFilter>>() {
                 override fun onSuccess(data: MealResponse<MealFilter>) {
-                    callback.onSuccess(data)
+                    if (data.meals?.size == 0) {
+                        callback.onEmpty()
+                    } else {
+                        callback.onSuccess(data)
+                    }
                 }
 
                 override fun onFailure(code: Int, errorMessage: String) {
@@ -258,7 +298,7 @@ object MealRepository : MealDataSource {
             })
     }
 
-    override suspend fun filterByArea(
+    override fun filterByArea(
         apiKey: String,
         area: String,
         callback: NutriResponse.DataResponse<MealResponse<MealFilter>>
@@ -270,9 +310,13 @@ object MealRepository : MealDataSource {
             .doOnSubscribe { callback.onShowProgress() }
             .doOnTerminate { callback.onHideProgress() }
             .observeOn(Schedulers.single())
-            .subscribe(object : NutriApiCallback<MealResponse<MealFilter>>() {
+            .subscribe(object : NutriApiObserver<MealResponse<MealFilter>>() {
                 override fun onSuccess(data: MealResponse<MealFilter>) {
-                    callback.onSuccess(data)
+                    if (data.meals?.size == 0) {
+                        callback.onEmpty()
+                    } else {
+                        callback.onSuccess(data)
+                    }
                 }
 
                 override fun onFailure(code: Int, errorMessage: String) {

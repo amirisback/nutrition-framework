@@ -1,6 +1,6 @@
 package com.frogobox.nutritioncore.method.interfaces
 
-import com.frogobox.nutritioncore.core.NutriResponse
+import com.frogobox.nutritioncore.sources.NutriResponse
 import com.frogobox.nutritioncore.model.news.ArticleResponse
 import com.frogobox.nutritioncore.model.news.SourceResponse
 
@@ -25,7 +25,7 @@ import com.frogobox.nutritioncore.model.news.SourceResponse
 interface IConsumeNewsApi {
 
     // Get Top Headline
-    suspend fun getTopHeadline(
+    fun getTopHeadline(
         q: String?,
         sources: String?,
         category: String?,
@@ -36,7 +36,7 @@ interface IConsumeNewsApi {
     )
 
     // Get Everythings
-    suspend fun getEverythings(
+    fun getEverythings(
         q: String?,
         from: String?,
         to: String?,
@@ -52,7 +52,7 @@ interface IConsumeNewsApi {
     )
 
     // Get Sources
-    suspend fun getSources(
+    fun getSources(
         language: String,
         country: String,
         category: String,

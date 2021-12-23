@@ -1,4 +1,4 @@
-package com.frogobox.nutritioncore.core
+package com.frogobox.nutritioncore.sources
 
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor

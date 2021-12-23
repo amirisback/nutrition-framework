@@ -1,9 +1,9 @@
 package com.frogobox.nutritioncore.sources.news
 
 import com.frogobox.nutritioncore.util.news.NewsUrl
-import com.frogobox.nutritioncore.core.NutriApiCallback
-import com.frogobox.nutritioncore.core.NutriApiClient
-import com.frogobox.nutritioncore.core.NutriResponse
+import com.frogobox.nutritioncore.sources.NutriApiObserver
+import com.frogobox.nutritioncore.sources.NutriApiClient
+import com.frogobox.nutritioncore.sources.NutriResponse
 import com.frogobox.nutritioncore.model.news.ArticleResponse
 import com.frogobox.nutritioncore.model.news.SourceResponse
 import io.reactivex.schedulers.Schedulers
@@ -30,7 +30,7 @@ object NewsRepository : NewsDataSource {
     private val TAG = NewsRepository::class.java.simpleName
     private var newsApiService = NutriApiClient.create<NewsApiService>(NewsUrl.BASE_URL, true)
 
-    override suspend fun getTopHeadline(
+    override fun getTopHeadline(
         apiKey: String,
         q: String?,
         sources: String?,
@@ -45,9 +45,13 @@ object NewsRepository : NewsDataSource {
             .doOnSubscribe { callback.onShowProgress() }
             .doOnTerminate { callback.onHideProgress() }
             .observeOn(Schedulers.single())
-            .subscribe(object : NutriApiCallback<ArticleResponse>() {
+            .subscribe(object : NutriApiObserver<ArticleResponse>() {
                 override fun onSuccess(data: ArticleResponse) {
-                    callback.onSuccess(data)
+                    if (data.articles?.size == 0) {
+                        callback.onEmpty()
+                    } else {
+                        callback.onSuccess(data)
+                    }
                 }
 
                 override fun onFailure(code: Int, errorMessage: String) {
@@ -56,7 +60,7 @@ object NewsRepository : NewsDataSource {
             })
     }
 
-    override suspend fun getEverythings(
+    override fun getEverythings(
         apiKey: String,
         q: String?,
         from: String?,
@@ -89,9 +93,13 @@ object NewsRepository : NewsDataSource {
             .doOnSubscribe { callback.onShowProgress() }
             .doOnTerminate { callback.onHideProgress() }
             .observeOn(Schedulers.single())
-            .subscribe(object : NutriApiCallback<ArticleResponse>() {
+            .subscribe(object : NutriApiObserver<ArticleResponse>() {
                 override fun onSuccess(data: ArticleResponse) {
-                    callback.onSuccess(data)
+                    if (data.articles?.size == 0) {
+                        callback.onEmpty()
+                    } else {
+                        callback.onSuccess(data)
+                    }
                 }
 
                 override fun onFailure(code: Int, errorMessage: String) {
@@ -100,7 +108,7 @@ object NewsRepository : NewsDataSource {
             })
     }
 
-    override suspend fun getSources(
+    override fun getSources(
         apiKey: String,
         language: String,
         country: String,
@@ -112,9 +120,13 @@ object NewsRepository : NewsDataSource {
             .doOnSubscribe { callback.onShowProgress() }
             .doOnTerminate { callback.onHideProgress() }
             .observeOn(Schedulers.single())
-            .subscribe(object : NutriApiCallback<SourceResponse>() {
+            .subscribe(object : NutriApiObserver<SourceResponse>() {
                 override fun onSuccess(data: SourceResponse) {
-                    callback.onSuccess(data)
+                    if (data.sources?.size == 0) {
+                        callback.onEmpty()
+                    } else {
+                        callback.onSuccess(data)
+                    }
                 }
 
                 override fun onFailure(code: Int, errorMessage: String) {

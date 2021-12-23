@@ -3,8 +3,7 @@ package com.frogobox.nutritionapp.mvvm.nutrition.vitamin
 import android.app.Application
 import androidx.lifecycle.viewModelScope
 import com.frogobox.nutritionapp.source.DataRepository
-import com.frogobox.nutritioncore.core.NutriResponse
-import com.frogobox.nutritioncore.method.function.NutritionApi
+import com.frogobox.nutritioncore.sources.NutriResponse
 import com.frogobox.nutritioncore.model.vitamin.VitaminResponse
 import com.frogobox.nutritionframework.core.NutriViewModel
 import com.frogobox.nutritionframework.util.NutriSingleLiveEvent
@@ -33,32 +32,30 @@ class VitaminViewModel(
     val dataVitamin = NutriSingleLiveEvent<VitaminResponse>()
 
     fun getVitaminA() {
-        viewModelScope.launch {
-            repository.getVitaminA(object : NutriResponse.DataResponse<VitaminResponse> {
-                override fun onSuccess(data: VitaminResponse) {
-                    dataVitamin.postValue(data)
-                }
+        repository.getVitaminA(object : NutriResponse.DataResponse<VitaminResponse> {
+            override fun onSuccess(data: VitaminResponse) {
+                dataVitamin.postValue(data)
+            }
 
-                override fun onFailed(statusCode: Int, errorMessage: String?) {
-                    // on Failed
-                    eventFailed.postValue(errorMessage)
-                }
+            override fun onFailed(statusCode: Int, errorMessage: String?) {
+                // on Failed
+                eventFailed.postValue(errorMessage)
+            }
 
-                override fun onShowProgress() {
-                    // Show Your Progress View
-                    eventShowProgress.postValue(true)
-                }
+            override fun onShowProgress() {
+                // Show Your Progress View
+                eventShowProgress.postValue(true)
+            }
 
-                override fun onHideProgress() {
-                    // Hide Your Progress View
-                    eventShowProgress.postValue(false)
-                }
+            override fun onHideProgress() {
+                // Hide Your Progress View
+                eventShowProgress.postValue(false)
+            }
 
-                override fun onEmpty() {
-                    //
-                }
-            })
-        }
+            override fun onEmpty() {
+                //
+            }
+        })
     }
 
     fun getVitaminC() {

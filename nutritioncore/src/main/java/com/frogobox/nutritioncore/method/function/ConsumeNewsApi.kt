@@ -1,6 +1,6 @@
 package com.frogobox.nutritioncore.method.function
 
-import com.frogobox.nutritioncore.core.NutriResponse
+import com.frogobox.nutritioncore.sources.NutriResponse
 import com.frogobox.nutritioncore.method.interfaces.IConsumeNewsApi
 import com.frogobox.nutritioncore.model.news.ArticleResponse
 import com.frogobox.nutritioncore.model.news.SourceResponse
@@ -27,7 +27,7 @@ class ConsumeNewsApi(private val apiKey: String) : IConsumeNewsApi {
 
     private val newsRepository = NewsRepository
 
-    override suspend fun getTopHeadline(
+    override fun getTopHeadline(
         q: String?,
         sources: String?,
         category: String?,
@@ -48,7 +48,7 @@ class ConsumeNewsApi(private val apiKey: String) : IConsumeNewsApi {
         )
     }
 
-    override suspend fun getEverythings(
+    override fun getEverythings(
         q: String?,
         from: String?,
         to: String?,
@@ -79,7 +79,7 @@ class ConsumeNewsApi(private val apiKey: String) : IConsumeNewsApi {
         )
     }
 
-    override suspend fun getSources(
+    override fun getSources(
         language: String,
         country: String,
         category: String,

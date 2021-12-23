@@ -34,37 +34,37 @@ class ArticleViewModel(
     var topHeadlineLive = NutriSingleLiveEvent<ArticleResponse>()
 
     fun getEverythings(query: String) {
-        viewModelScope.launch {
-            repository.getEverythings(
-                query,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                NewsConstant.COUNTRY_ID,
-                null,
-                null,
-                null,
-                object : DataSource.GetRemoteCallback<ArticleResponse> {
-                    override fun onShowProgress() {
-                        eventShowProgress.postValue(true)
-                    }
-
-                    override fun onHideProgress() {
-                        eventShowProgress.postValue(false)
-                    }
-
-                    override fun onEmpty() {}
-
-                    override fun onSuccess(data: ArticleResponse) {
-                        topHeadlineLive.postValue(data)
-                    }
-
-                    override fun onFailed(statusCode: Int, errorMessage: String?) {}
+        repository.getEverythings(
+            query,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            NewsConstant.COUNTRY_ID,
+            null,
+            null,
+            null,
+            object : DataSource.GetRemoteCallback<ArticleResponse> {
+                override fun onShowProgress() {
+                    eventShowProgress.postValue(true)
                 }
-            )
-        }
+
+                override fun onHideProgress() {
+                    eventShowProgress.postValue(false)
+                }
+
+                override fun onEmpty() {
+                    eventEmptyData.postValue(true)
+                }
+
+                override fun onSuccess(data: ArticleResponse) {
+                    topHeadlineLive.postValue(data)
+                }
+
+                override fun onFailed(statusCode: Int, errorMessage: String?) {}
+            }
+        )
     }
 }

@@ -1,9 +1,7 @@
 package com.frogobox.nutritioncore.sources.vitamin
 
-import com.frogobox.nutritioncore.core.NutriResponse
+import com.frogobox.nutritioncore.sources.NutriResponse
 import com.frogobox.nutritioncore.model.vitamin.VitaminResponse
-import com.frogobox.nutritioncore.util.vitamin.VitaminUrl
-import retrofit2.http.GET
 
 
 /*
@@ -22,13 +20,13 @@ import retrofit2.http.GET
 interface VitaminDataSource {
 
     // Get Vitamin A
-    suspend fun getVitaminA(callback: NutriResponse.DataResponse<VitaminResponse>)
+    fun getVitaminA(callback: NutriResponse.DataResponse<VitaminResponse>)
 
     // Get Vitamin C
-    suspend fun getVitaminC(callback: NutriResponse.DataResponse<VitaminResponse>)
+    fun getVitaminC(callback: NutriResponse.DataResponse<VitaminResponse>)
 
     // Get Vitamin E
-    suspend fun getVitaminE(callback: NutriResponse.DataResponse<VitaminResponse>)
+    fun getVitaminE(callback: NutriResponse.DataResponse<VitaminResponse>)
 
     // Please Add Your Code Under This Line --------------------------------------------------------
 
