@@ -121,10 +121,6 @@ android {
         jvmTarget = JavaVersion.VERSION_11.toString()
     }
 
-    packagingOptions {
-        exclude("META-INF/*")
-    }
-
 }
 
 dependencies {
