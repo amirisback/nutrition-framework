@@ -2,7 +2,7 @@ package com.frogobox.nutritionapp.mvvm.nutrition.general
 
 import android.os.Bundle
 import com.frogobox.nutritionapp.core.BaseActivity
-import com.frogobox.nutritionapp.databinding.ActivityBeratBadanIdealBinding
+import com.frogobox.nutritionframework.databinding.ActivityBeratBadanIdealBinding
 import com.frogobox.nutritionapp.util.Constant
 
 class BeratBadanIdealActivity : BaseActivity<ActivityBeratBadanIdealBinding>() {

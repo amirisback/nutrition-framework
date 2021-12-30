@@ -6,8 +6,8 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import com.bumptech.glide.Glide
 import com.frogobox.nutritionapp.core.BaseActivity
-import com.frogobox.nutritionapp.databinding.ActivityMealBinding
-import com.frogobox.nutritionapp.databinding.ItemMealCategoryBinding
+import com.frogobox.nutritionframework.databinding.ActivityMealBinding
+import com.frogobox.nutritionframework.databinding.ItemMealCategoryBinding
 import com.frogobox.nutritionapp.util.Constant
 import com.frogobox.nutritioncore.model.meal.Meal
 import com.frogobox.nutritioncore.util.NutriFunc

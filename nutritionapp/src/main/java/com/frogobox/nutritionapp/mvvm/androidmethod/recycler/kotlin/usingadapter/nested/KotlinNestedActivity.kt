@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
 import com.frogobox.nutritionapp.R
 import com.frogobox.nutritionapp.core.BaseActivity
-import com.frogobox.nutritionapp.databinding.ActivityFrogoRvGridBinding
+import com.frogobox.nutritionframework.databinding.ActivityFrogoRvGridBinding
 import com.frogobox.nutritionapp.mvvm.nutrition.article.ArticleViewModel
 import com.frogobox.nutritioncore.model.news.Article
 import com.frogobox.nutritionframework.recycler.core.*

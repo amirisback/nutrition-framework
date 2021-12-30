@@ -2,7 +2,7 @@ package com.frogobox.nutritionapp.mvvm.androidmethod.recycler
 
 import android.os.Bundle
 import com.frogobox.nutritionapp.core.BaseActivity
-import com.frogobox.nutritionapp.databinding.ActivityNutriRecyclerSampleBinding
+import com.frogobox.nutritionframework.databinding.ActivityNutriRecyclerSampleBinding
 import com.frogobox.nutritionapp.mvvm.androidmethod.recycler.java.noadapter.multiview.JavaNoAdapterMultiViewActivity
 import com.frogobox.nutritionapp.mvvm.androidmethod.recycler.java.noadapter.simple.JavaNoAdapterActivity
 import com.frogobox.nutritionapp.mvvm.androidmethod.recycler.java.usingadapter.JavaSampleActivity

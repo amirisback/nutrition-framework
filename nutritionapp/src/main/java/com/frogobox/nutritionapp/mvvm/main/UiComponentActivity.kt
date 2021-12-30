@@ -6,7 +6,7 @@ import android.view.View
 import android.widget.TextView
 import com.frogobox.nutritionapp.R
 import com.frogobox.nutritionapp.core.BaseActivity
-import com.frogobox.nutritionapp.databinding.ActivityUiComponentBinding
+import com.frogobox.nutritionframework.databinding.ActivityUiComponentBinding
 import com.frogobox.nutritionapp.model.Menu
 import com.frogobox.nutritionapp.mvvm.uicomponent.uicompose.MainComposeActivity
 import com.frogobox.nutritionapp.mvvm.uicomponent.uixml.UiXmlRvActivity

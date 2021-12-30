@@ -9,7 +9,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.frogobox.nutritionapp.R
 import com.frogobox.nutritionapp.core.BaseActivity
-import com.frogobox.nutritionapp.databinding.ActivityBaseBinding
+import com.frogobox.nutritionframework.databinding.ActivityBaseBinding
 import com.frogobox.nutritionapp.model.People
 import com.frogobox.nutritionapp.util.Constant
 import com.frogobox.nutritionframework.databinding.NutriRvListType1Binding

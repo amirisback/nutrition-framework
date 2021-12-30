@@ -9,7 +9,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import com.frogobox.nutritionapp.R
 import com.frogobox.nutritionapp.core.BaseFragment
-import com.frogobox.nutritionapp.databinding.FragmentUiXmlRvGridBinding
+import com.frogobox.nutritionframework.databinding.FragmentUiXmlRvGridBinding
 import com.frogobox.nutritionapp.model.LayoutUiXml
 import com.frogobox.nutritionframework.recycler.core.INutriViewAdapter
 import com.frogobox.nutritionframework.recycler.core.NutriRecyclerNotifyListener

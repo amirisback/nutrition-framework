@@ -3,7 +3,7 @@ package com.frogobox.nutritionapp.mvvm.uicomponent.uixml
 import android.os.Bundle
 import com.frogobox.nutritionapp.core.BaseActivity
 import com.frogobox.nutritionapp.core.BasePagerAdapter
-import com.frogobox.nutritionapp.databinding.ActivityUiXmlRvBinding
+import com.frogobox.nutritionframework.databinding.ActivityUiXmlRvBinding
 import com.frogobox.nutritionapp.util.Constant.TitleActivity.ACTIVITY_UI_XML_RV
 
 class UiXmlRvActivity : BaseActivity<ActivityUiXmlRvBinding>() {

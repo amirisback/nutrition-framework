@@ -2,7 +2,7 @@ package com.frogobox.nutritionapp.mvvm.androidmethod.log
 
 import android.os.Bundle
 import com.frogobox.nutritionapp.core.BaseActivity
-import com.frogobox.nutritionapp.databinding.ActivityNutriLogSampleBinding
+import com.frogobox.nutritionframework.databinding.ActivityNutriLogSampleBinding
 import com.frogobox.nutritionframework.log.NLog
 import com.frogobox.nutritionframework.log.NutriLog
 

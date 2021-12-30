@@ -2,7 +2,7 @@ package com.frogobox.nutritionapp.mvvm.nutrition.vitamin
 
 import android.os.Bundle
 import com.frogobox.nutritionapp.core.BaseActivity
-import com.frogobox.nutritionapp.databinding.ActivityVitaminSolveBinding
+import com.frogobox.nutritionframework.databinding.ActivityVitaminSolveBinding
 import com.frogobox.nutritionapp.util.Constant
 
 class VitaminSolveActivity : BaseActivity<ActivityVitaminSolveBinding>() {

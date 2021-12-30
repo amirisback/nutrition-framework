@@ -6,7 +6,7 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import com.frogobox.nutritionapp.R
 import com.frogobox.nutritionapp.core.BaseActivity
-import com.frogobox.nutritionapp.databinding.ActivityNutriAdmobHybridBinding
+import com.frogobox.nutritionframework.databinding.ActivityNutriAdmobHybridBinding
 
 class NutriAdmobHybridActivity : BaseActivity<ActivityNutriAdmobHybridBinding>() {
 

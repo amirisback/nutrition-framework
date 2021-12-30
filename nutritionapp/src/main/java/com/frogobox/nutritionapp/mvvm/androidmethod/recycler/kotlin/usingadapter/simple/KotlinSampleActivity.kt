@@ -5,7 +5,7 @@ import android.view.View
 import android.widget.Toast
 import com.frogobox.nutritionapp.R
 import com.frogobox.nutritionapp.core.BaseActivity
-import com.frogobox.nutritionapp.databinding.ActivityFrogoRvListBinding
+import com.frogobox.nutritionframework.databinding.ActivityFrogoRvListBinding
 import com.frogobox.nutritionapp.model.People
 import com.frogobox.nutritionapp.util.Constant
 import com.frogobox.nutritionframework.recycler.core.NutriRecyclerNotifyListener

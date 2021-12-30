@@ -9,7 +9,7 @@ import android.widget.RemoteViews
 import com.frogobox.nutritionapp.NutriApplication
 import com.frogobox.nutritionapp.R
 import com.frogobox.nutritionapp.core.BaseActivity
-import com.frogobox.nutritionapp.databinding.ActivityNutriNotificationSampleBinding
+import com.frogobox.nutritionframework.databinding.ActivityNutriNotificationSampleBinding
 import com.frogobox.nutritionapp.mvvm.androidmethod.notification.custom.CustomNotifActivity
 import com.frogobox.nutritionapp.mvvm.androidmethod.notification.stack.StackNotifActivity
 import com.frogobox.nutritionframework.notification.NutriNotifCustomContentViewListener

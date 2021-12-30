@@ -2,7 +2,7 @@ package com.frogobox.nutritionapp.mvvm.nutrition.general
 
 import android.os.Bundle
 import com.frogobox.nutritionapp.core.BaseActivity
-import com.frogobox.nutritionapp.databinding.ActivityKebutuhanEnergiBinding
+import com.frogobox.nutritionframework.databinding.ActivityKebutuhanEnergiBinding
 import com.frogobox.nutritionapp.util.Constant
 
 class KebutuhanEnergiActivity : BaseActivity<ActivityKebutuhanEnergiBinding>() {

@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.widget.Toast
 import com.frogobox.nutritionapp.R
 import com.frogobox.nutritionapp.core.BaseActivity
-import com.frogobox.nutritionapp.databinding.ActivityReplyBinding
+import com.frogobox.nutritionframework.databinding.ActivityReplyBinding
 import com.frogobox.nutritionapp.mvvm.androidmethod.notification.custom.NotificationService.Companion.CHANNEL_ID
 import com.frogobox.nutritionapp.mvvm.androidmethod.notification.custom.NotificationService.Companion.CHANNEL_NAME
 import com.frogobox.nutritionapp.mvvm.androidmethod.notification.custom.NotificationService.Companion.REPLY_ACTION

@@ -1,7 +1,7 @@
 package com.frogobox.nutritionapp.di
 
-import com.frogobox.nutritionapp.mvvm.builder.BuilderViewModel
-import com.frogobox.nutritionapp.mvvm.generator.GeneratorViewModel
+import com.frogobox.nutritionapp.mvvm.main.builder.BuilderViewModel
+import com.frogobox.nutritionapp.mvvm.main.generator.GeneratorViewModel
 import com.frogobox.nutritionapp.mvvm.main.MainViewModel
 import com.frogobox.nutritionapp.mvvm.nutrition.article.ArticleViewModel
 import com.frogobox.nutritionapp.mvvm.nutrition.meal.MealViewModel

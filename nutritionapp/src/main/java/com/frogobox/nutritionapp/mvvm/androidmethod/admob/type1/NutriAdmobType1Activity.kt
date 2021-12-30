@@ -5,7 +5,7 @@ import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.frogobox.nutritionapp.R
 import com.frogobox.nutritionapp.core.BaseActivity
-import com.frogobox.nutritionapp.databinding.ActivityNutriAdmobType1Binding
+import com.frogobox.nutritionframework.databinding.ActivityNutriAdmobType1Binding
 import com.frogobox.nutritionapp.mvvm.nutrition.article.ArticleViewModel
 import com.frogobox.nutritionframework.admob.NutriAdmob.RecyclerView.loadRecyclerBannerAds
 import com.frogobox.nutritionframework.recycler.core.NutriRecyclerNotifyListener

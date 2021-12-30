@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import com.frogobox.nutritionapp.R
 import com.frogobox.nutritionapp.core.BaseFragment
-import com.frogobox.nutritionapp.databinding.FragmentUiXmlRvListBinding
+import com.frogobox.nutritionframework.databinding.FragmentUiXmlRvListBinding
 import com.frogobox.nutritionapp.model.LayoutUiXml
 import com.frogobox.nutritionframework.recycler.core.INutriViewAdapter
 import com.frogobox.nutritionframework.recycler.core.NutriRecyclerNotifyListener

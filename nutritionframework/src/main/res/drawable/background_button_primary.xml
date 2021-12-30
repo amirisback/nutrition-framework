@@ -23,10 +23,10 @@
 
     <stroke
         android:width="@dimen/nutri_dimen_2dp"
-        android:color="?attr/colorPrimary" />
+        android:color="@color/colorPrimary" />
     <corners
         android:radius="@dimen/nutri_dimen_8dp"/>
 
-    <solid android:color="?attr/colorPrimary"/>
+    <solid android:color="@color/colorPrimary"/>
 
 </shape>

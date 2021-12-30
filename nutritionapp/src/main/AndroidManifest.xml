@@ -25,7 +25,7 @@
             android:exported="true" />
 
         <activity
-            android:name=".mvvm.builder.BuilderActivity"
+            android:name=".mvvm.main.builder.BuilderActivity"
             android:exported="true"
             android:theme="@style/Theme.KickStart.NoActionBar">
             <intent-filter>
@@ -35,7 +35,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".mvvm.generator.GeneratorActivity" />
+        <activity android:name=".mvvm.main.generator.GeneratorActivity" />
 
         <activity android:name=".mvvm.androidmethod.log.NutriLogSampleActivity" />
 

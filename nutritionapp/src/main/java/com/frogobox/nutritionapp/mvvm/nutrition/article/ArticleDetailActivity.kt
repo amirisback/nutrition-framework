@@ -3,7 +3,7 @@ package com.frogobox.nutritionapp.mvvm.nutrition.article
 import android.os.Bundle
 import com.bumptech.glide.Glide
 import com.frogobox.nutritionapp.core.BaseActivity
-import com.frogobox.nutritionapp.databinding.ActivityArticleDetailBinding
+import com.frogobox.nutritionframework.databinding.ActivityArticleDetailBinding
 import com.frogobox.nutritionapp.util.Constant
 import com.frogobox.nutritioncore.model.news.Article
 import com.google.gson.Gson

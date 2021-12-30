@@ -1,4 +1,4 @@
-package com.frogobox.nutritionapp.mvvm.generator
+package com.frogobox.nutritionapp.mvvm.main.generator
 
 import android.app.Application
 import android.content.Intent

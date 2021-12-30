@@ -8,7 +8,7 @@ import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
 import com.frogobox.nutritionapp.R
 import com.frogobox.nutritionapp.core.BaseActivity
-import com.frogobox.nutritionapp.databinding.ActivityStackNotifBinding
+import com.frogobox.nutritionframework.databinding.ActivityStackNotifBinding
 import com.frogobox.nutritionframework.notification.NutriNotifInboxStyleListener
 import com.frogobox.nutritionframework.notification.NutriNotification
 

@@ -3,7 +3,7 @@ package com.frogobox.nutritionapp.mvvm.androidmethod.notification.custom
 import android.content.Intent
 import android.os.Bundle
 import com.frogobox.nutritionapp.core.BaseActivity
-import com.frogobox.nutritionapp.databinding.ActivityCustomNotifBinding
+import com.frogobox.nutritionframework.databinding.ActivityCustomNotifBinding
 
 class CustomNotifActivity : BaseActivity<ActivityCustomNotifBinding>() {
 

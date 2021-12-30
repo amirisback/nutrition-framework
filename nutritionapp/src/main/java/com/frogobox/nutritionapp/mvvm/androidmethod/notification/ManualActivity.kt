@@ -9,7 +9,7 @@ import androidx.core.app.NotificationManagerCompat
 import com.frogobox.nutritionapp.NutriApplication
 import com.frogobox.nutritionapp.R
 import com.frogobox.nutritionapp.core.BaseActivity
-import com.frogobox.nutritionapp.databinding.ActivityManualBinding
+import com.frogobox.nutritionframework.databinding.ActivityManualBinding
 
 /*
  * Created by faisalamir on 19/08/21

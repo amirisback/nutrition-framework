@@ -7,7 +7,7 @@ import android.widget.TextView
 import com.bumptech.glide.Glide
 import com.frogobox.nutritionapp.R
 import com.frogobox.nutritionapp.core.BaseActivity
-import com.frogobox.nutritionapp.databinding.ActivityVitaminBinding
+import com.frogobox.nutritionframework.databinding.ActivityVitaminBinding
 import com.frogobox.nutritionapp.mvvm.nutrition.article.ArticleDetailActivity
 import com.frogobox.nutritionapp.mvvm.nutrition.article.ArticleViewModel
 import com.frogobox.nutritionapp.util.Constant

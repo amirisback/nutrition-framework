@@ -1,4 +1,4 @@
-package com.frogobox.nutritionapp.mvvm.builder
+package com.frogobox.nutritionapp.mvvm.main.builder
 
 import android.app.Application
 import com.frogobox.nutritionapp.core.BaseViewModel

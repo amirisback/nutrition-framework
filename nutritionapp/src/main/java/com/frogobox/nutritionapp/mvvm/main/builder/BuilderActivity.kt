@@ -1,4 +1,4 @@
-package com.frogobox.nutritionapp.mvvm.builder
+package com.frogobox.nutritionapp.mvvm.main.builder
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,7 +8,7 @@ import com.frogobox.nutritionapp.R
 import com.frogobox.nutritionapp.core.BaseActivity
 import com.frogobox.nutritionapp.databinding.ActivityBuilderBinding
 import com.frogobox.nutritionapp.model.BuilderRes
-import com.frogobox.nutritionapp.mvvm.generator.GeneratorActivity
+import com.frogobox.nutritionapp.mvvm.main.generator.GeneratorActivity
 import com.frogobox.nutritionframework.databinding.NutriRvSelectedListType1Binding
 import com.frogobox.nutritionframework.log.NLog
 import com.frogobox.nutritionframework.recycler.core.INutriBindingAdapter

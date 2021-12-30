@@ -1,4 +1,4 @@
-package com.frogobox.nutritionapp.mvvm.generator
+package com.frogobox.nutritionapp.mvvm.main.generator
 
 import android.os.Bundle
 import android.view.View
@@ -7,7 +7,7 @@ import com.frogobox.nutritionapp.R
 import com.frogobox.nutritionapp.core.BaseActivity
 import com.frogobox.nutritionapp.databinding.ActivityGeneratorBinding
 import com.frogobox.nutritionapp.model.Menu
-import com.frogobox.nutritionapp.mvvm.builder.BuilderActivity
+import com.frogobox.nutritionapp.mvvm.main.builder.BuilderActivity
 import com.frogobox.nutritionframework.recycler.core.INutriViewAdapter
 import com.frogobox.nutritionframework.recycler.core.NutriRecyclerNotifyListener
 import org.koin.androidx.viewmodel.ext.android.viewModel

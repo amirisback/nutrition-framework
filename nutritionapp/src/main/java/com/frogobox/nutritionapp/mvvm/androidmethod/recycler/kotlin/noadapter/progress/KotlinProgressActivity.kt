@@ -5,7 +5,7 @@ import android.view.View
 import android.widget.TextView
 import com.frogobox.nutritionapp.R
 import com.frogobox.nutritionapp.core.BaseActivity
-import com.frogobox.nutritionapp.databinding.ActivityKotlinProgressBinding
+import com.frogobox.nutritionframework.databinding.ActivityKotlinProgressBinding
 import com.frogobox.nutritionapp.mvvm.nutrition.article.ArticleViewModel
 import com.frogobox.nutritioncore.model.news.Article
 import com.frogobox.nutritionframework.recycler.core.INutriViewAdapter

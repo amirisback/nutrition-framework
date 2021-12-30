@@ -2,7 +2,7 @@ package com.frogobox.nutritionapp.mvvm.nutrition.general
 
 import android.os.Bundle
 import com.frogobox.nutritionapp.core.BaseActivity
-import com.frogobox.nutritionapp.databinding.ActivityIndexMasaTubuhBinding
+import com.frogobox.nutritionframework.databinding.ActivityIndexMasaTubuhBinding
 import com.frogobox.nutritionapp.util.Constant
 
 class IndexMasaTubuhActivity : BaseActivity<ActivityIndexMasaTubuhBinding>() {

@@ -6,7 +6,7 @@ import android.view.View
 import android.widget.TextView
 import com.frogobox.nutritionapp.R
 import com.frogobox.nutritionapp.core.BaseActivity
-import com.frogobox.nutritionapp.databinding.ActivityArticleBinding
+import com.frogobox.nutritionframework.databinding.ActivityArticleBinding
 import com.frogobox.nutritionapp.model.Menu
 import com.frogobox.nutritionapp.mvvm.nutrition.vitamin.VitaminActivity
 import com.frogobox.nutritionapp.util.Constant

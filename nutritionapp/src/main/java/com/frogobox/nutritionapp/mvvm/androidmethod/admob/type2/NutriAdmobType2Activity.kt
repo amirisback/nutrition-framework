@@ -5,7 +5,7 @@ import android.view.View
 import androidx.recyclerview.widget.GridLayoutManager
 import com.frogobox.nutritionapp.R
 import com.frogobox.nutritionapp.core.BaseActivity
-import com.frogobox.nutritionapp.databinding.ActivityNutriAdmobType2Binding
+import com.frogobox.nutritionframework.databinding.ActivityNutriAdmobType2Binding
 import com.frogobox.nutritionapp.mvvm.androidmethod.admob.type1.NutriAdmobType1Adapter
 import com.frogobox.nutritionapp.mvvm.nutrition.article.ArticleViewModel
 import com.frogobox.nutritionframework.admob.NutriAdmob

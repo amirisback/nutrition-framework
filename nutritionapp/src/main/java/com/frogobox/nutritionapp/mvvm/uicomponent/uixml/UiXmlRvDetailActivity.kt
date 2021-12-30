@@ -7,7 +7,7 @@ import com.frogobox.nutritionapp.mvvm.uicomponent.uixml.UiXmlRvConstant.dummyDat
 import com.frogobox.nutritionapp.mvvm.uicomponent.uixml.UiXmlRvAdapter.frogoRvAdaper
 import com.frogobox.nutritionapp.model.LayoutUiXml
 import com.frogobox.nutritionapp.core.BaseActivity
-import com.frogobox.nutritionapp.databinding.ActivityUiXmlRvDetailBinding
+import com.frogobox.nutritionframework.databinding.ActivityUiXmlRvDetailBinding
 import com.frogobox.nutritionframework.recycler.core.INutriViewAdapter
 import com.google.gson.Gson
 
