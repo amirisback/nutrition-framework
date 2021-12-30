@@ -16,13 +16,13 @@ object ProjectSetting {
     // Customize Project Setting -------------------------------------------------------------------
     const val NAME_APP = "Nutrition Framework"
 
-    const val APP_DOMAIN = "com"
-    const val APP_PLAY_CONSOLE = "frogobox"
-    const val BASE_PACKAGE = "nutrition"
+    private const val APP_DOMAIN = "com"
+    private const val APP_PLAY_CONSOLE = "frogobox"
+    private const val BASE_PACKAGE = "nutrition"
 
-    const val VERSION_MAJOR = 1
-    const val VERSION_MINOR = 0
-    const val VERSION_PATCH = 0
+    private const val VERSION_MAJOR = 1
+    private const val VERSION_MINOR = 0
+    private const val VERSION_PATCH = 0
 
     const val PROJECT_COMPILE_SDK = 31
     const val PROJECT_MIN_SDK = 21

@@ -11,7 +11,7 @@
 This Is Latest Release
 
     ~ Beta Release
-    $version_release = 1.0.0-beta01
+    $version_release = 1.0.0-beta02
 
 What's New??
 
@@ -64,14 +64,14 @@ allprojects {
 
     dependencies {
         // library nutrition-framework
-        implementation 'com.github.amirisback:nutrition-framework:1.0.0-beta01'
+        implementation 'com.github.amirisback:nutrition-framework:1.0.0-beta02'
     }
 
 #### <Option 2> Kotlin DSL Gradle (build.gradle.kts)
 
     dependencies {
         // library nutrition-framework
-        implementation("com.github.amirisback:nutrition-framework:1.0.0-beta01")
+        implementation("com.github.amirisback:nutrition-framework:1.0.0-beta02")
     }
 
 ## Application Framework
@@ -81,7 +81,7 @@ allprojects {
 - SK TA [Click Here](https://github.com/amirisback/nutrition-framework/raw/master/docs/bundle/Muhammad%20Faisal%20Amir_1301198497_SK_TA.pdf)
 - General [Click Here](https://github.com/amirisback/nutrition-framework/tree/master/docs)
 - Bundle [Click Here](https://github.com/amirisback/nutrition-framework/tree/master/docs/bundle)
-- Guide Proposal[Click Here](https://github.com/amirisback/nutrition-framework/tree/master/docs/guide)
+- Guide Proposal [Click Here](https://github.com/amirisback/nutrition-framework/tree/master/docs/guide)
 - Journal List [Click Here](https://github.com/amirisback/nutrition-framework/tree/master/docs/journal)
 - Theory [Click Here](https://github.com/amirisback/nutrition-framework/tree/master/docs/theory)
 - Proposal [Click Here](https://github.com/amirisback/nutrition-framework/tree/master/docs/proposal)
