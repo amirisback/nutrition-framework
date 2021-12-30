@@ -2,7 +2,7 @@ plugins {
     id("com.android.library")
     id("kotlin-android")
     id("kotlin-kapt")
-    id("org.jetbrains.compose") version Dependency.COMPOSE_MULTIPLATFORM_VERSION
+    id("org.jetbrains.compose") version DependencyGradle.COMPOSE_MULTIPLATFORM_VERSION
     `maven-publish`
 }
 
@@ -57,17 +57,17 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.0")
     implementation("androidx.lifecycle:lifecycle-extensions:2.2.0")
 
-    implementation("com.google.code.gson:gson:2.8.9")
+    implementation("com.google.code.gson:gson:${DependencyGradle.GSON_VERSION}")
     implementation("com.google.android.material:material:1.4.0")
     implementation("com.google.android.gms:play-services-ads:20.5.0")
 
     implementation("com.squareup.okhttp3:okhttp:5.0.0-alpha.2")
     implementation("com.squareup.okhttp3:logging-interceptor:4.9.3")
 
-    implementation("com.squareup.retrofit2:retrofit:2.9.0")
-    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
-    implementation("com.squareup.retrofit2:adapter-rxjava:2.9.0")
-    implementation("com.squareup.retrofit2:adapter-rxjava2:2.9.0")
+    implementation("com.squareup.retrofit2:retrofit:${DependencyGradle.RETROFIT_VERSION}")
+    implementation("com.squareup.retrofit2:converter-gson:${DependencyGradle.RETROFIT_VERSION}")
+    implementation("com.squareup.retrofit2:adapter-rxjava:${DependencyGradle.RETROFIT_VERSION}")
+    implementation("com.squareup.retrofit2:adapter-rxjava2:${DependencyGradle.RETROFIT_VERSION}")
 
     implementation("io.reactivex.rxjava2:rxandroid:2.1.1")
     implementation("io.reactivex.rxjava2:rxjava:2.2.21")
@@ -82,8 +82,8 @@ dependencies {
     implementation("com.readystatesoftware.chuck:library:1.1.0")
 
     api("com.google.dagger:dagger:2.38.1")
-    api("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.2")
-    api("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.2")
+    api("org.jetbrains.kotlinx:kotlinx-coroutines-core:${DependencyGradle.COROUTINES_VERSION}")
+    api("org.jetbrains.kotlinx:kotlinx-coroutines-android:${DependencyGradle.COROUTINES_VERSION}")
 
     kapt("androidx.lifecycle:lifecycle-compiler:2.4.0")
     kapt("com.google.dagger:dagger-compiler:2.37")

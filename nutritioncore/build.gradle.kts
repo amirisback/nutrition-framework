@@ -3,7 +3,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 plugins {
     java
     kotlin("jvm")
-    id("org.jetbrains.compose") version Dependency.COMPOSE_MULTIPLATFORM_VERSION
+    id("org.jetbrains.compose") version DependencyGradle.COMPOSE_MULTIPLATFORM_VERSION
     `maven-publish`
 }
 
@@ -28,16 +28,17 @@ dependencies {
     implementation(compose.material)
     implementation(compose.materialIconsExtended)
 
-    implementation("com.google.code.gson:gson:2.8.9")
+    implementation("com.google.code.gson:gson:${DependencyGradle.GSON_VERSION}")
 
     implementation("com.squareup.okhttp3:okhttp:5.0.0-alpha.2")
     implementation("com.squareup.okhttp3:logging-interceptor:4.9.3")
-    implementation("com.squareup.retrofit2:retrofit:2.9.0")
-    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
-    implementation("com.squareup.retrofit2:adapter-rxjava:2.9.0")
-    implementation("com.squareup.retrofit2:adapter-rxjava2:2.9.0")
 
-    implementation("io.insert-koin:koin-core:${Dependency.KOIN_VERSION}") // Koin core features
+    implementation("com.squareup.retrofit2:retrofit:${DependencyGradle.RETROFIT_VERSION}")
+    implementation("com.squareup.retrofit2:converter-gson:${DependencyGradle.RETROFIT_VERSION}")
+    implementation("com.squareup.retrofit2:adapter-rxjava:${DependencyGradle.RETROFIT_VERSION}")
+    implementation("com.squareup.retrofit2:adapter-rxjava2:${DependencyGradle.RETROFIT_VERSION}")
+
+    implementation("io.insert-koin:koin-core:${DependencyGradle.KOIN_VERSION}") // Koin core features
 
     implementation("io.reactivex.rxjava2:rxjava:2.2.21")
 }
