@@ -4,8 +4,11 @@
 [![JitPack](https://jitpack.io/v/amirisback/nutrition-framework.svg?style=flat-square)](https://jitpack.io/#amirisback/nutrition-framework)
 - Pengembang Framework untuk Membuat Aplikasi Seputar Permasalahan Gizi berbasis Platform Android
 - General Framework for Application Development Around Nutrition Using the Android Platform, Skripsi S1 Muhammad Faisal Amir from Telkom University
-- [Consumer android from nutrition-framework API](https://github.com/amirisback/nutrition-framework-app)
-- [Consumer desktop from nutrition-framework API](https://github.com/amirisback/nutrition-framework-desktop)
+- Test Case Android - nf-testcase-app-consume-library [Click Here](https://github.com/amirisback/nf-testcase-app-consume-library)
+- Test Case Android - nf-testcase-app-no-framework [Click Here](https://github.com/amirisback/nf-testcase-app-no-framework)
+- Test Case Android - nf-testcase-googlesample [Click Here](https://github.com/amirisback/nf-testcase-googlesample)
+- Test Case Android - nf-testcase-googlesample-consume-library [Click Here](https://github.com/amirisback/nf-testcase-googlesample-consume-library)
+- Test Case Desktop - nutrition-framework-desktop [Click Here](https://github.com/amirisback/nutrition-framework-desktop)
 
 ## Version Release
 This Is Latest Release
@@ -92,7 +95,8 @@ allprojects {
 - Diagram on Draw Io [Click Here](https://drive.google.com/file/d/1OCsoqVV3UYnLxpUK9jYm2yNjcFj9sUPP/view?usp=sharing)
 - Research Nutrition Apps [Click Here](https://docs.google.com/spreadsheets/d/1t0aWoMrBEVfeZTIV438V8P0YMeGUK2VV_HHC7qnZUtU/edit?usp=sharing)
 - Final Task [Click Here](https://github.com/amirisback/nutrition-framework/raw/master/docs/Muhammad%20Faisal%20Amir_1301198497_TUGAS_AKHIR.docx)
-- HKI [Certificate]() [Link Url]()
+- HKI Certificate [Click Here](https://github.com/amirisback/nutrition-framework/blob/master/docs/hki-license/HCAP1512210222_ki_file_cert.pdf)
+- HKI Link URL [Click Here](https://pdki-indonesia.dgip.go.id/detail/EC00202180905?type=copyright&keyword=generator+aplikasi+micronutrient)
 
 ## Telkom University Lecturers
 - Dana Sulistyo Kusumo, S.T., M.T., PhD. - danakusumo@telkomuniversity.ac.id
