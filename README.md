@@ -156,8 +156,18 @@ Min API level is set to 21, so the presented approach is suitable for over 94% o
 - ComposeCookBook ( [Gurupreet Singh](https://github.com/Gurupreet) - [Project](https://github.com/Gurupreet/ComposeCookBook) )
 - PeopleInSpace ( [John O'Reilly](https://github.com/joreilly) - [Project](https://github.com/joreilly/PeopleInSpace) )
 
+## Colaborator
+Name Of Contribute
+- Dana Sulistyo Kusumo, S.T., M.T., PhD. - danakusumo@telkomuniversity.ac.id
+- Shinta Yulia Puspitasari, S.T., M.T. - shintayulia@telkomuniversity.ac.id
+- Muhammad Faisal Amir - faisalamircs@telkomuniversity.ac.id
+
 ## Attention !!!
 - Please enjoy and don't forget fork and give a star
 - Don't Forget Follow My Github Account
 
-![ScreenShoot Apps](docs/image/mad_score.png?raw=true)
+## Mad Score Card
+![Mad Score](docs/image/mad_score.png?raw=true)
+
+## HKI Certificate
+![HKI Certificate](docs/image/hki-certificate.png?raw=true)
