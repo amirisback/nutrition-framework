@@ -4,11 +4,11 @@
 [![JitPack](https://jitpack.io/v/amirisback/nutrition-framework.svg?style=flat-square)](https://jitpack.io/#amirisback/nutrition-framework)
 - Pengembang Framework untuk Membuat Aplikasi Seputar Permasalahan Gizi berbasis Platform Android
 - General Framework for Application Development Around Nutrition Using the Android Platform, Skripsi S1 Muhammad Faisal Amir from Telkom University
-- Test Case Android - nf-testcase-app-consume-library [Click Here](https://github.com/amirisback/nf-testcase-app-consume-library)
-- Test Case Android - nf-testcase-app-no-framework [Click Here](https://github.com/amirisback/nf-testcase-app-no-framework)
-- Test Case Android - nf-testcase-googlesample [Click Here](https://github.com/amirisback/nf-testcase-googlesample)
-- Test Case Android - nf-testcase-googlesample-consume-library [Click Here](https://github.com/amirisback/nf-testcase-googlesample-consume-library)
-- Test Case Desktop - nutrition-framework-desktop [Click Here](https://github.com/amirisback/nutrition-framework-desktop)
+- Test Case Android [Click Here](https://github.com/amirisback/nf-testcase-app-consume-library) - nf-testcase-app-consume-library
+- Test Case Android [Click Here](https://github.com/amirisback/nf-testcase-app-no-framework) - nf-testcase-app-no-framework
+- Test Case Android [Click Here](https://github.com/amirisback/nf-testcase-googlesample) - nf-testcase-googlesample
+- Test Case Android [Click Here](https://github.com/amirisback/nf-testcase-googlesample-consume-library) - nf-testcase-googlesample-consume-library
+- Test Case Desktop [Click Here](https://github.com/amirisback/nutrition-framework-desktop) - nutrition-framework-desktop
 
 ## Version Release
 This Is Latest Release
