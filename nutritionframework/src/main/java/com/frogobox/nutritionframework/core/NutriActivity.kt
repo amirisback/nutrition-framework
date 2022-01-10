@@ -11,6 +11,7 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.viewbinding.ViewBinding
+import com.frogobox.nutritionframework.log.NLog
 import com.github.javiersantos.piracychecker.*
 import com.github.javiersantos.piracychecker.enums.Display
 import com.github.javiersantos.piracychecker.enums.InstallerID
@@ -36,9 +37,9 @@ abstract class NutriActivity<VB : ViewBinding> : AppCompatActivity(), INutriActi
 
     protected val frogoActivity by lazy { this }
 
-    protected var piracyCheckerDisplay = Display.DIALOG
+    protected val binding: VB by lazy { setupViewBinding() }
 
-    protected lateinit var binding: VB
+    protected var piracyCheckerDisplay = Display.DIALOG
 
     abstract fun setupViewBinding(): VB
 
@@ -48,11 +49,10 @@ abstract class NutriActivity<VB : ViewBinding> : AppCompatActivity(), INutriActi
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = setupViewBinding()
         setContentView(binding.root)
         setupViewModel()
         setupUI(savedInstanceState)
-        Log.d(TAG, "View Binding : ${binding::class.java.simpleName}")
+        NLog.d("$TAG : View Binding : ${binding::class.java.simpleName}")
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -214,7 +214,7 @@ abstract class NutriActivity<VB : ViewBinding> : AppCompatActivity(), INutriActi
     }
 
     override fun showApkSignatures() {
-        apkSignatures.forEach { Log.d(TAG,"Signature This Apps : $it") }
+        apkSignatures.forEach { Log.d(TAG, "Signature This Apps : $it") }
     }
 
     // Please Add Your Code Under This Line --------------------------------------------------------

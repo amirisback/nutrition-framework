@@ -2,6 +2,7 @@
 
 ## About This Project (work-in-progress 👷🔧️👷‍♀️⛏)
 [![JitPack](https://jitpack.io/v/amirisback/nutrition-framework.svg?style=flat-square)](https://jitpack.io/#amirisback/nutrition-framework)
+- Generator Aplikasi MicroNutrient
 - Pengembang Framework untuk Membuat Aplikasi Seputar Permasalahan Gizi berbasis Platform Android
 - General Framework for Application Development Around Nutrition Using the Android Platform, Skripsi S1 Muhammad Faisal Amir from Telkom University
 - Test Case Android [Click Here](https://github.com/amirisback/nf-testcase-app-consume-library) - nf-testcase-app-consume-library
