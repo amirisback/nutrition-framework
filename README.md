@@ -15,11 +15,10 @@
 This Is Latest Release
 
     ~ Beta Release
-    $version_release = 1.0.0-beta02
+    $version_release = 1.0.0
 
 What's New??
 
-    * Beta Release *
     * Multi Platform Library *
     * Compose UI Multi Platform *
     * Update Compose Component *
@@ -68,14 +67,14 @@ allprojects {
 
     dependencies {
         // library nutrition-framework
-        implementation 'com.github.amirisback:nutrition-framework:1.0.0-beta02'
+        implementation 'com.github.amirisback:nutrition-framework:1.0.0'
     }
 
 #### <Option 2> Kotlin DSL Gradle (build.gradle.kts)
 
     dependencies {
         // library nutrition-framework
-        implementation("com.github.amirisback:nutrition-framework:1.0.0-beta02")
+        implementation("com.github.amirisback:nutrition-framework:1.0.0")
     }
 
 ## Application Framework
@@ -169,6 +168,9 @@ Name Of Contribute
 
 ## Mad Score Card
 ![Mad Score](docs/image/mad_score.png?raw=true)
+
+## Profiler
+![Profiler](docs/image/profiler.png?raw=true)
 
 ## HKI Certificate
 ![HKI Certificate](docs/image/hki-certificate.png?raw=true)
