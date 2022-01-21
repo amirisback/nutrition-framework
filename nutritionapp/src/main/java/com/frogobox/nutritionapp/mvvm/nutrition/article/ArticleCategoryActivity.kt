@@ -1,15 +1,21 @@
 package com.frogobox.nutritionapp.mvvm.nutrition.article
 
+import android.app.SearchManager
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.view.View
 import android.widget.TextView
+import androidx.appcompat.widget.SearchView
 import com.bumptech.glide.Glide
 import com.frogobox.nutritionapp.R
 import com.frogobox.nutritionapp.core.BaseActivity
-import com.frogobox.nutritionframework.databinding.ActivityArticleCategoryBinding
 import com.frogobox.nutritionapp.util.Constant
 import com.frogobox.nutritioncore.model.news.Article
+import com.frogobox.nutritionframework.databinding.ActivityArticleCategoryBinding
+import com.frogobox.nutritionframework.log.NLog
 import com.frogobox.nutritionframework.recycler.core.INutriViewAdapter
 import com.frogobox.nutritionframework.recycler.core.NutriRecyclerNotifyListener
 import com.google.gson.Gson
@@ -105,5 +111,32 @@ class ArticleCategoryActivity : BaseActivity<ActivityArticleCategoryBinding>() {
             .createLayoutLinearVertical(false)
             .build()
     }
+
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        menuInflater.inflate(R.menu.menu_search, menu)
+
+        val searchItem: MenuItem? = menu.findItem(R.id.action_search)
+        val searchManager = getSystemService(Context.SEARCH_SERVICE) as SearchManager
+        val searchView: SearchView = searchItem?.actionView as SearchView
+
+        searchView.setSearchableInfo(searchManager.getSearchableInfo(componentName))
+
+        searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+            override fun onQueryTextSubmit(query: String?): Boolean {
+                query?.let { NLog.d(it) }
+                query?.let { articleViewModel.getEverythings(it) }
+                return true
+            }
+
+            override fun onQueryTextChange(newText: String?): Boolean {
+                newText?.let { NLog.d(it) }
+                newText?.let { articleViewModel.getEverythings(it) }
+                return true
+            }
+
+        })
+        return super.onCreateOptionsMenu(menu)
+    }
+
 
 }
