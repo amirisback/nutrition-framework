@@ -1,6 +1,6 @@
 ![ScreenShoot Apps](docs/image/banner.png?raw=true)
 
-## About This Project (work-in-progress 👷🔧️👷‍♀️⛏)
+## About This Project (release-and-work-in-progress 👷🔧️👷‍♀️⛏)
 [![JitPack](https://jitpack.io/v/amirisback/nutrition-framework.svg?style=flat-square)](https://jitpack.io/#amirisback/nutrition-framework)
 - Generator Aplikasi MicroNutrient
 - Pengembang Framework untuk Membuat Aplikasi Seputar Permasalahan Gizi berbasis Platform Android
@@ -95,7 +95,7 @@ allprojects {
 - Diagram on Draw Io [Click Here](https://drive.google.com/file/d/1OCsoqVV3UYnLxpUK9jYm2yNjcFj9sUPP/view?usp=sharing)
 - Research Nutrition Apps [Click Here](https://docs.google.com/spreadsheets/d/1t0aWoMrBEVfeZTIV438V8P0YMeGUK2VV_HHC7qnZUtU/edit?usp=sharing)
 
-###
+### Final Task (Tugas Akhir)
 - SK Tugas Akhir [Click Here](https://github.com/amirisback/nutrition-framework/tree/master/docs/dokumen-penting)
 - Important Document [Click Here](https://github.com/amirisback/nutrition-framework/tree/master/docs/pengganti-sidang)
 - Final Task Journal [Click Here](https://github.com/amirisback/nutrition-framework/raw/master/docs/pengganti-sidang/Muhammad%20Faisal%20Amir_1301198497_TUGAS_AKHIR.docx)
