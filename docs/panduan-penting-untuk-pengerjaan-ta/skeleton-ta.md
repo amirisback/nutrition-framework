@@ -1,0 +1,9 @@
+- Gizi secara umum
+  - Defini Gizi
+  - hal - hal yang berkaitan dengan gizi
+- Permsalahan Tentang Gizi (Sebutkan)
+- Bisa diselesaikan dengan bantuan aplikasi
+- kenapa harus aplikasi (data pengguna android di indonesia)
+- Framework 
+  - hal - hal yang di hasilkan framework
+  - output - output

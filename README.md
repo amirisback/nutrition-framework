@@ -5,6 +5,9 @@
 - Generator Aplikasi MicroNutrient
 - Pengembang Framework untuk Membuat Aplikasi Seputar Permasalahan Gizi berbasis Platform Android
 - General Framework for Application Development Around Nutrition Using the Android Platform, Skripsi S1 Muhammad Faisal Amir from Telkom University
+- Privacy Policy [Click Here](https://github.com/amirisback/nutrition-framework/blob/master/docs/privacy-policy/privacy_policy.pdf)
+
+## Test Case Framework
 - Test Case Android [Click Here](https://github.com/amirisback/nf-testcase-app-consume-library) - nf-testcase-app-consume-library
 - Test Case Android [Click Here](https://github.com/amirisback/nf-testcase-app-no-framework) - nf-testcase-app-no-framework
 - Test Case Android [Click Here](https://github.com/amirisback/nf-testcase-googlesample) - nf-testcase-googlesample
@@ -81,21 +84,22 @@ allprojects {
 ![ScreenShoot Apps](docs/image/skeleton-component.png?raw=true)
 
 ## Documentation
-- SK TA [Click Here](https://github.com/amirisback/nutrition-framework/raw/master/docs/bundle/Muhammad%20Faisal%20Amir_1301198497_SK_TA.pdf)
-- General [Click Here](https://github.com/amirisback/nutrition-framework/tree/master/docs)
-- Bundle [Click Here](https://github.com/amirisback/nutrition-framework/tree/master/docs/bundle)
-- Guide Proposal [Click Here](https://github.com/amirisback/nutrition-framework/tree/master/docs/guide)
-- Journal List [Click Here](https://github.com/amirisback/nutrition-framework/tree/master/docs/journal)
-- Theory [Click Here](https://github.com/amirisback/nutrition-framework/tree/master/docs/theory)
-- Proposal [Click Here](https://github.com/amirisback/nutrition-framework/tree/master/docs/proposal)
-- Guidance [Click Here](https://github.com/amirisback/nutrition-framework/tree/master/docs/guidance)
+
+### Research Data
 - Image [Click Here](https://github.com/amirisback/nutrition-framework/tree/master/docs/image)
+- Proposal [Click Here](https://github.com/amirisback/nutrition-framework/tree/master/docs/proposal)
+- Guidance [Click Here](https://github.com/amirisback/nutrition-framework/tree/master/docs/bimbingan)
+- Journal List [Click Here](https://github.com/amirisback/nutrition-framework/tree/master/docs/journal)
 - Design on Figma [Click Here](https://www.figma.com/file/Ons8XY0YvxecwC71Aa92Qj/TA?node-id=0%3A1)
 - Sheet Feedback [Click Here](https://docs.google.com/spreadsheets/d/1P8U2lu8odQJwLPD3QiSJGJXAgocdc_H5j7PdT23lPZc/edit#gid=0)
 - Diagram on Draw Io [Click Here](https://drive.google.com/file/d/1OCsoqVV3UYnLxpUK9jYm2yNjcFj9sUPP/view?usp=sharing)
 - Research Nutrition Apps [Click Here](https://docs.google.com/spreadsheets/d/1t0aWoMrBEVfeZTIV438V8P0YMeGUK2VV_HHC7qnZUtU/edit?usp=sharing)
-- Final Task [Click Here](https://github.com/amirisback/nutrition-framework/raw/master/docs/Muhammad%20Faisal%20Amir_1301198497_TUGAS_AKHIR.docx)
-- HKI Certificate [Click Here](https://github.com/amirisback/nutrition-framework/blob/master/docs/hki-license/HCAP1512210222_ki_file_cert.pdf)
+
+###
+- SK Tugas Akhir [Click Here](https://github.com/amirisback/nutrition-framework/tree/master/docs/dokumen-penting)
+- Important Document [Click Here](https://github.com/amirisback/nutrition-framework/tree/master/docs/pengganti-sidang)
+- Final Task Journal [Click Here](https://github.com/amirisback/nutrition-framework/raw/master/docs/pengganti-sidang/Muhammad%20Faisal%20Amir_1301198497_TUGAS_AKHIR.docx)
+- HKI Certificate [Click Here](https://github.com/amirisback/nutrition-framework/blob/master/docs/pengganti-sidang/hki-license/HCAP1512210222_ki_file_cert.pdf)
 - HKI Link URL [Click Here](https://pdki-indonesia.dgip.go.id/detail/EC00202180905?type=copyright&keyword=generator+aplikasi+micronutrient)
 
 ## Telkom University Lecturers
