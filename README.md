@@ -141,24 +141,90 @@ Min API level is set to 21, so the presented approach is suitable for over 94% o
 -   [Coil](https://coil-kt.github.io/coil/) - Coroutine Image Loader
 
 ## Inpiration
-- frogo-log ( [Muhammad Faisal Amir](https://github.com/amirisback) - [Project](https://github.com/amirisback/frogo-log) )
-- frogo-admob ( [Muhammad Faisal Amir](https://github.com/amirisback) - [Project](https://github.com/amirisback/frogo-admob) )
-- frogo-recycler-view ( [Muhammad Faisal Amir](https://github.com/amirisback) - [Project](https://github.com/amirisback/frogo-recycler-view) )
-- frogo-notification ( [Muhammad Faisal Amir](https://github.com/amirisback) - [Project](https://github.com/amirisback/frogo-notification) )
 
-- android-kick-start ( [Muhammad Faisal Amir](https://github.com/amirisback) - [Project](https://github.com/amirisback/android-kick-start) )
-- android-kick-start-modular ( [Muhammad Faisal Amir](https://github.com/amirisback) - [Project](https://github.com/amirisback/android-kick-start-modular) )
-- desktop-experimental-catalgoue ( [Muhammad Faisal Amir](https://github.com/amirisback) - [Project](https://github.com/amirisback/desktop-experimental-catalgoue) )
-- jitpack-library-kotlin-dsl-guide( [Muhammad Faisal Amir](https://github.com/amirisback) - [Project](https://github.com/amirisback/jitpack-library-kotlin-dsl-guide) )
 
-- frogo-android-sdk ( [Frogobox](https://github.com/frogobox) - [Project](https://github.com/frogobox/frogo-android-sdk) )
-- frogo-android-ui-kit ( [Frogobox](https://github.com/frogobox) - [Project](https://github.com/frogobox/frogo-android-ui-kit) )
-- frogo-consume-api ( [Frogobox](https://github.com/frogobox) - [Project](https://github.com/frogobox/frogo-consume-api) )
-
-- color-console ( [Nazmul Idris](https://github.com/nazmulidris) - [Project](https://github.com/nazmulidris/color-console) )
-- ComposeReorderable ( [Andre Claßen](https://github.com/aclassen) - [Project](https://github.com/aclassen/ComposeReorderable) )
-- ComposeCookBook ( [Gurupreet Singh](https://github.com/Gurupreet) - [Project](https://github.com/Gurupreet/ComposeCookBook) )
-- PeopleInSpace ( [John O'Reilly](https://github.com/joreilly) - [Project](https://github.com/joreilly/PeopleInSpace) )
+<table>
+    <tr>
+        <th>No</th>
+        <th>Github Username</th>
+        <th>Project</th>
+    </tr>
+    <tr>
+        <td>1.</td>
+        <td><a href="https://github.com/amirisback">Muhammad Faisal Amir</a></td>
+        <td><a href="https://github.com/amirisback/frogo-log">frogo-log</a></td>
+    </tr>
+    <tr>
+        <td>2.</td>
+        <td><a href="https://github.com/amirisback">Muhammad Faisal Amir</a></td>
+        <td><a href="https://github.com/amirisback/frogo-admob">frogo-admob</a></td>
+    </tr>
+    <tr>
+        <td>3.</td>
+        <td><a href="https://github.com/amirisback">Muhammad Faisal Amir</a></td>
+        <td><a href="https://github.com/amirisback/frogo-recycler-view">frogo-recycler-view</a></td>
+    </tr>
+    <tr>
+        <td>4.</td>
+        <td><a href="https://github.com/amirisback">Muhammad Faisal Amir</a></td>
+        <td><a href="https://github.com/amirisback/frogo-notification">frogo-notification</a></td>
+    </tr>
+    <tr>
+        <td>5.</td>
+        <td><a href="https://github.com/amirisback">Muhammad Faisal Amir</a></td>
+        <td><a href="https://github.com/amirisback/android-kick-start">android-kick-start</a></td>
+    </tr>
+    <tr>
+        <td>6.</td>
+        <td><a href="https://github.com/amirisback">Muhammad Faisal Amir</a></td>
+        <td><a href="https://github.com/amirisback/android-kick-start-modular">android-kick-start-modular</a></td>
+    </tr>
+    <tr>
+        <td>7.</td>
+        <td><a href="https://github.com/amirisback">Muhammad Faisal Amir</a></td>
+        <td><a href="https://github.com/amirisback/desktop-experimental-catalgoue">desktop-experimental-catalgoue</a></td>
+    </tr>
+    <tr>
+        <td>8.</td>
+        <td><a href="https://github.com/amirisback">Muhammad Faisal Amir</a></td>
+        <td><a href="https://github.com/amirisback/jitpack-library-kotlin-dsl-guide">jitpack-library-kotlin-dsl-guide</a></td>
+    </tr>
+    <tr>
+        <td>9.</td>
+        <td><a href="https://github.com/frogobox">Frogobox</a></td>
+        <td><a href="https://github.com/frogobox/frogo-android-sdk">frogo-android-sdk</a></td>
+    </tr>
+    <tr>
+        <td>10.</td>
+        <td><a href="https://github.com/frogobox">Frogobox</a></td>
+        <td><a href="https://github.com/frogobox/frogo-android-ui-kit">frogo-android-ui-kit</a></td>
+    </tr>
+    <tr>
+        <td>11.</td>
+        <td><a href="https://github.com/frogobox">Frogobox</a></td>
+        <td><a href="https://github.com/frogobox/frogo-consume-api">frogo-consume-api</a></td>
+    </tr>
+    <tr>
+        <td>12.</td>
+        <td><a href="https://github.com/nazmulidris">Nazmul Idris</a></td>
+        <td><a href="https://github.com/nazmulidris/color-console">color-console</a></td>
+    </tr>
+    <tr>
+        <td>13.</td>
+        <td><a href="https://github.com/aclassen">Andre Claßen</a></td>
+        <td><a href="https://github.com/aclassen/ComposeReorderable">ComposeReorderable</a></td>
+    </tr>
+    <tr>
+        <td>14.</td>
+        <td><a href="https://github.com/Gurupreet">Gurupreet Singh</a></td>
+        <td><a href="https://github.com/Gurupreet/ComposeCookBook">ComposeCookBook</a></td>
+    </tr>
+    <tr>
+        <td>15.</td>
+        <td><a href="https://github.com/joreilly">John O'Reilly</a></td>
+        <td><a href="https://github.com/joreilly/PeopleInSpace">PeopleInSpace</a></td>
+    </tr>
+</table>
 
 ## Colaborator
 Name Of Contribute
