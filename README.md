@@ -8,14 +8,6 @@
 - General Framework for Application Development Around Nutrition Using the Android Platform, Skripsi S1 Muhammad Faisal Amir from Telkom University
 - Privacy Policy [Click Here](https://github.com/amirisback/nutrition-framework/blob/master/docs/privacy-policy/privacy_policy.pdf)
 
-## Test Case Framework
-- Scenario Test [Click Here](https://github.com/amirisback/nutrition-framework/tree/master/docs/scenario-test)
-- Test Case Android [nf-testcase-app-consume-library](https://github.com/amirisback/nf-testcase-app-consume-library)
-- Test Case Android [nf-testcase-app-no-framework](https://github.com/amirisback/nf-testcase-app-no-framework)
-- Test Case Android [nf-testcase-googlesample](https://github.com/amirisback/nf-testcase-googlesample)
-- Test Case Android [nf-testcase-googlesample-consume-library](https://github.com/amirisback/nf-testcase-googlesample-consume-library)
-- Test Case Desktop [nutrition-framework-desktop](https://github.com/amirisback/nutrition-framework-desktop)
-
 ## Version Release
 This Is Latest Release
 
@@ -84,6 +76,16 @@ allprojects {
 
 ## Application Framework
 ![ScreenShoot Apps](docs/image/skeleton-component.png?raw=true)
+
+## Test Case Framework
+- Scenario Test [Click Here](https://github.com/amirisback/nutrition-framework/tree/master/docs/scenario-test)
+- Android
+    - Test Case Android [nf-testcase-app-consume-library](https://github.com/amirisback/nf-testcase-app-consume-library)
+    - Test Case Android [nf-testcase-app-no-framework](https://github.com/amirisback/nf-testcase-app-no-framework)
+    - Test Case Android [nf-testcase-googlesample](https://github.com/amirisback/nf-testcase-googlesample)
+    - Test Case Android [nf-testcase-googlesample-consume-library](https://github.com/amirisback/nf-testcase-googlesample-consume-library)
+- Desktop
+    - Test Case Desktop [nutrition-framework-desktop](https://github.com/amirisback/nutrition-framework-desktop)
 
 ## Documentation
 
