@@ -92,3 +92,8 @@
 #### Test Case 2 (TC-2)
 - TC-2-A : Mencari daftar item dengan keyword "vitamin", "nutrisi", "kalori"
 - TC-2-B : Pilih item dari daftar yang di tampilkan
+
+### Result
+
+#### Photo Documentation Test
+![ScreenShoot Apps](https://raw.githubusercontent.com/amirisback/nutrition-framework/master/docs/scenario-test/doing-testing.jpeg?raw=true)
