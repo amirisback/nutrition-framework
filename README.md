@@ -145,7 +145,7 @@ Min API level is set to 21, so the presented approach is suitable for over 94% o
 
 <table>
     <tr>
-        <th>No</th>
+        <th>No.</th>
         <th>Github Name / Organization</th>
         <th>Github Project</th>
     </tr>
