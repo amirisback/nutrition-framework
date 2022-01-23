@@ -13,8 +13,9 @@
 - Kemudian di check menggunakan profiler
 
 ### Specification Device Test (Android Phone)
+Using 2 Android Phone (Redmi Note 10 5G - Xiaomi M2103K19G) and (Oppo CPH1729)
 
-#### Redmi Note 10 5G - Xiaomi M2103K19G
+- Redmi Note 10 5G - Xiaomi M2103K19G
 <table>
     <tr>
         <th>No.</th>
@@ -48,7 +49,7 @@
     </tr>
 </table>
 
-#### Oppo CPH1729
+- Oppo CPH1729
 
 <table>
     <tr>
