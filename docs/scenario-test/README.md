@@ -85,13 +85,13 @@
 
 ### Test Case
 
-#### Test Case 1 (TC-1)
-- TC-1-A : Menampilkan Daftar Item
-- TC-1-B : Pilih item dari daftar yang di tampilkan
+- Test Case 1 (TC-1)
+    - TC-1-A : Menampilkan Daftar Item
+    - TC-1-B : Pilih item dari daftar yang di tampilkan
 
-#### Test Case 2 (TC-2)
-- TC-2-A : Mencari daftar item dengan keyword "vitamin", "nutrisi", "kalori"
-- TC-2-B : Pilih item dari daftar yang di tampilkan
+- Test Case 2 (TC-2)
+    - TC-2-A : Mencari daftar item dengan keyword "vitamin", "nutrisi", "kalori"
+    - TC-2-B : Pilih item dari daftar yang di tampilkan
 
 ### Result
 
