@@ -91,7 +91,7 @@ Using 2 Android Phone (Redmi Note 10 5G - Xiaomi M2103K19G) and (Oppo CPH1729)
     - TC-1-B : Pilih item dari daftar yang di tampilkan
 
 - Test Case 2 (TC-2)
-    - TC-2-A : Mencari daftar item dengan keyword "vitamin", "nutrisi", "kalori"
+    - TC-2-A : Mencari daftar item dengan keyword "vitamin"
     - TC-2-B : Pilih item dari daftar yang di tampilkan
 
 ### Result
