@@ -50,15 +50,15 @@ dependencies {
     implementation(project(":nutritioncore"))
 
     implementation("androidx.core:core-ktx:1.7.0")
-    implementation("androidx.appcompat:appcompat:1.4.0")
-    implementation("androidx.constraintlayout:constraintlayout:2.1.2")
+    implementation("androidx.appcompat:appcompat:1.4.1")
+    implementation("androidx.constraintlayout:constraintlayout:2.1.3")
 
     implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.4.0")
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.0")
     implementation("androidx.lifecycle:lifecycle-extensions:2.2.0")
 
     implementation("com.google.code.gson:gson:${DependencyGradle.GSON_VERSION}")
-    implementation("com.google.android.material:material:1.4.0")
+    implementation("com.google.android.material:material:1.5.0")
     implementation("com.google.android.gms:play-services-ads:20.5.0")
 
     implementation("com.squareup.okhttp3:okhttp:5.0.0-alpha.2")
