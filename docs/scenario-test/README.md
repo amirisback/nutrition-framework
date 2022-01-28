@@ -96,29 +96,29 @@ Using 2 Android Phone (Redmi Note 10 5G - Xiaomi M2103K19G) and (Oppo CPH1729)
 
 ### Result
 
-- Profiler Test Case 1 (TC-1) [more details](https://github.com/amirisback/nutrition-framework/tree/master/docs/scenario-test/result-profiler-TC-1)
+- Profiler Test Case 1 (TC-1) [more details](https://github.com/amirisback/nutrition-framework/tree/master/docs/scenario-test/result-profiler-test-case-1)
 
 <table>
     <tr>
-        <th><a href="https://github.com/amirisback/nutrition-framework/tree/master/docs/scenario-test/result-profiler-TC-1/redmi-note-10-5G">Redmi Note 10 5G - Xiaomi M2103K19G</a></th>
-        <th><a href="https://github.com/amirisback/nutrition-framework/tree/master/docs/scenario-test/result-profiler-TC-1/oppo-CPH1729">Oppo CPH1729</a></th>
+        <th><a href="https://github.com/amirisback/nutrition-framework/tree/master/docs/scenario-test/result-profiler-test-case-1/redmi-note-10-5G">Redmi Note 10 5G - Xiaomi M2103K19G</a></th>
+        <th><a href="https://github.com/amirisback/nutrition-framework/tree/master/docs/scenario-test/result-profiler-test-case-1/oppo-CPH1729">Oppo CPH1729</a></th>
     </tr>
     <tr>
-        <td><img src="https://raw.githubusercontent.com/amirisback/nutrition-framework/master/docs/scenario-test/result-profiler-TC-1/redmi-note-10-5G/TC-1-all-general.png"></td>
-        <td><img src="https://raw.githubusercontent.com/amirisback/nutrition-framework/master/docs/scenario-test/result-profiler-TC-1/oppo-CPH1729/TC-1-all-general.png"></td>
+        <td><img src="https://raw.githubusercontent.com/amirisback/nutrition-framework/master/docs/scenario-test/result-profiler-test-case-1/redmi-note-10-5G/test-case-1-all-general.png"></td>
+        <td><img src="https://raw.githubusercontent.com/amirisback/nutrition-framework/master/docs/scenario-test/result-profiler-test-case-1/oppo-CPH1729/test-case-1-all-general.png"></td>
     </tr>
 </table>
 
-- Profiler Test Case 2 (TC-2) [more details](https://github.com/amirisback/nutrition-framework/tree/master/docs/scenario-test/result-profiler-TC-2)
+- Profiler Test Case 2 (TC-2) [more details](https://github.com/amirisback/nutrition-framework/tree/master/docs/scenario-test/result-profiler-test-case-2)
 
 <table>
     <tr>
-        <th><a href="https://github.com/amirisback/nutrition-framework/tree/master/docs/scenario-test/result-profiler-TC-2/redmi-note-10-5G">Redmi Note 10 5G - Xiaomi M2103K19G</a></th>
-        <th><a href="https://github.com/amirisback/nutrition-framework/tree/master/docs/scenario-test/result-profiler-TC-2/oppo-CPH1729">Oppo CPH1729</a></th>
+        <th><a href="https://github.com/amirisback/nutrition-framework/tree/master/docs/scenario-test/result-profiler-test-case-2/redmi-note-10-5G">Redmi Note 10 5G - Xiaomi M2103K19G</a></th>
+        <th><a href="https://github.com/amirisback/nutrition-framework/tree/master/docs/scenario-test/result-profiler-test-case-2/oppo-CPH1729">Oppo CPH1729</a></th>
     </tr>
     <tr>
-        <td><img src="https://raw.githubusercontent.com/amirisback/nutrition-framework/master/docs/scenario-test/result-profiler-TC-2/redmi-note-10-5G/TC-2-all-general.png"></td>
-        <td><img src="https://raw.githubusercontent.com/amirisback/nutrition-framework/master/docs/scenario-test/result-profiler-TC-2/oppo-CPH1729/TC-2-all-general.png"></td>
+        <td><img src="https://raw.githubusercontent.com/amirisback/nutrition-framework/master/docs/scenario-test/result-profiler-test-case-2/redmi-note-10-5G/test-case-2-all-general.png"></td>
+        <td><img src="https://raw.githubusercontent.com/amirisback/nutrition-framework/master/docs/scenario-test/result-profiler-test-case-2/oppo-CPH1729/test-case-2-all-general.png"></td>
     </tr>
 </table>
 
@@ -137,7 +137,7 @@ Using 2 Android Phone (Redmi Note 10 5G - Xiaomi M2103K19G) and (Oppo CPH1729)
     </tr>
     <tr>
         <td>1</td> <!-- No -->
-        <td>Redmi Note 10 5G - Xiaomi M2103K19G</td> <!-- Device -->
+        <td>Redmi Note 10 5G</td> <!-- Device -->
         <td>TC-1-A</td> <!-- Test Case -->
         <td></td> <!-- CPU Usage -->
         <td></td> <!-- Memory Usage -->
@@ -148,7 +148,7 @@ Using 2 Android Phone (Redmi Note 10 5G - Xiaomi M2103K19G) and (Oppo CPH1729)
     </tr>
     <tr>
         <td>2</td> <!-- No -->
-        <td>Redmi Note 10 5G - Xiaomi M2103K19G</td> <!-- Device -->
+        <td>Redmi Note 10 5G</td> <!-- Device -->
         <td>TC-1-B</td> <!-- Test Case -->
         <td></td> <!-- CPU Usage -->
         <td></td> <!-- Memory Usage -->
@@ -159,7 +159,7 @@ Using 2 Android Phone (Redmi Note 10 5G - Xiaomi M2103K19G) and (Oppo CPH1729)
     </tr>
     <tr>
         <td>3</td> <!-- No -->
-        <td>Redmi Note 10 5G - Xiaomi M2103K19G</td> <!-- Device -->
+        <td>Redmi Note 10 5G</td> <!-- Device -->
         <td>TC-2-A</td> <!-- Test Case -->
         <td></td> <!-- CPU Usage -->
         <td></td> <!-- Memory Usage -->
@@ -170,7 +170,7 @@ Using 2 Android Phone (Redmi Note 10 5G - Xiaomi M2103K19G) and (Oppo CPH1729)
     </tr>
     <tr>
         <td>4</td> <!-- No -->
-        <td>Redmi Note 10 5G - Xiaomi M2103K19G</td> <!-- Device -->
+        <td>Redmi Note 10 5G</td> <!-- Device -->
         <td>TC-2-B</td> <!-- Test Case -->
         <td></td> <!-- CPU Usage -->
         <td></td> <!-- Memory Usage -->
