@@ -122,5 +122,108 @@ Using 2 Android Phone (Redmi Note 10 5G - Xiaomi M2103K19G) and (Oppo CPH1729)
     </tr>
 </table>
 
+- Profiler Performance Test Resume
+<table>
+	<tr>
+        <th>No</th>
+        <th>Device</th>
+        <th>Test Case</th>
+        <th>CPU Usage</th>
+        <th>Memory Usage</th>
+        <th>Network Usage Send</th>
+        <th>Network Usage Received</th>
+        <th>Energy Usage</th>
+        <th>Execution Time</th>
+    </tr>
+    <tr>
+        <td>1</td> <!-- No -->
+        <td>Redmi Note 10 5G - Xiaomi M2103K19G</td> <!-- Device -->
+        <td>Test-Case-1-A</td> <!-- Test Case -->
+        <td></td> <!-- CPU Usage -->
+        <td></td> <!-- Memory Usage -->
+        <td></td> <!-- Network Usage Send -->
+        <td></td> <!-- Network Usage Received -->
+        <td></td> <!-- Energy Usage -->
+        <td></td> <!-- Execution Time -->
+    </tr>
+    <tr>
+        <td>2</td> <!-- No -->
+        <td>Redmi Note 10 5G - Xiaomi M2103K19G</td> <!-- Device -->
+        <td>Test-Case-1-B</td> <!-- Test Case -->
+        <td></td> <!-- CPU Usage -->
+        <td></td> <!-- Memory Usage -->
+        <td></td> <!-- Network Usage Send -->
+        <td></td> <!-- Network Usage Received -->
+        <td></td> <!-- Energy Usage -->
+        <td></td> <!-- Execution Time -->
+    </tr>
+    <tr>
+        <td>3</td> <!-- No -->
+        <td>Redmi Note 10 5G - Xiaomi M2103K19G</td> <!-- Device -->
+        <td>Test-Case-2-A</td> <!-- Test Case -->
+        <td></td> <!-- CPU Usage -->
+        <td></td> <!-- Memory Usage -->
+        <td></td> <!-- Network Usage Send -->
+        <td></td> <!-- Network Usage Received -->
+        <td></td> <!-- Energy Usage -->
+        <td></td> <!-- Execution Time -->
+    </tr>
+    <tr>
+        <td>4</td> <!-- No -->
+        <td>Redmi Note 10 5G - Xiaomi M2103K19G</td> <!-- Device -->
+        <td>Test-Case-2-B</td> <!-- Test Case -->
+        <td></td> <!-- CPU Usage -->
+        <td></td> <!-- Memory Usage -->
+        <td></td> <!-- Network Usage Send -->
+        <td></td> <!-- Network Usage Received -->
+        <td></td> <!-- Energy Usage -->
+        <td></td> <!-- Execution Time -->
+    </tr>
+    <tr>
+        <td>5</td> <!-- No -->
+        <td>Oppo CPH1729</td> <!-- Device -->
+        <td>Test-Case-1-A</td> <!-- Test Case -->
+        <td></td> <!-- CPU Usage -->
+        <td></td> <!-- Memory Usage -->
+        <td></td> <!-- Network Usage Send -->
+        <td></td> <!-- Network Usage Received -->
+        <td></td> <!-- Energy Usage -->
+        <td></td> <!-- Execution Time -->
+    </tr>
+    <tr>
+        <td>6</td> <!-- No -->
+        <td>Oppo CPH1729</td> <!-- Device -->
+        <td>Test-Case-1-B</td> <!-- Test Case -->
+        <td></td> <!-- CPU Usage -->
+        <td></td> <!-- Memory Usage -->
+        <td></td> <!-- Network Usage Send -->
+        <td></td> <!-- Network Usage Received -->
+        <td></td> <!-- Energy Usage -->
+        <td></td> <!-- Execution Time -->
+    </tr>
+    <tr>
+        <td>7</td> <!-- No -->
+        <td>Oppo CPH1729</td> <!-- Device -->
+        <td>Test-Case-2-A</td> <!-- Test Case -->
+        <td></td> <!-- CPU Usage -->
+        <td></td> <!-- Memory Usage -->
+        <td></td> <!-- Network Usage Send -->
+        <td></td> <!-- Network Usage Received -->
+        <td></td> <!-- Energy Usage -->
+        <td></td> <!-- Execution Time -->
+    </tr>
+    <tr>
+        <td>8</td> <!-- No -->
+        <td>Oppo CPH1729</td> <!-- Device -->
+        <td>Test-Case-2-B</td> <!-- Test Case -->
+        <td></td> <!-- CPU Usage -->
+        <td></td> <!-- Memory Usage -->
+        <td></td> <!-- Network Usage Send -->
+        <td></td> <!-- Network Usage Received -->
+        <td></td> <!-- Energy Usage -->
+        <td></td> <!-- Execution Time -->
+    </tr>
+</table>
+
 - Photo Documentation Test
 ![ScreenShoot Apps](https://raw.githubusercontent.com/amirisback/nutrition-framework/master/docs/scenario-test/doing-testing.jpeg?raw=true)
