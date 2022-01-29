@@ -109,6 +109,7 @@ allprojects {
 ## Telkom University Lecturers
 - Dana Sulistyo Kusumo, S.T., M.T., PhD. - danakusumo@telkomuniversity.ac.id
 - Shinta Yulia Puspitasari, S.T., M.T. - shintayulia@telkomuniversity.ac.id
+- HASMAWATI, S.Kom., M. Kom. (NIP. 15900049-1)
 
 ## Problem
 Membuat beberapa aplikasi tentang beberapa nutrisi. <br>
