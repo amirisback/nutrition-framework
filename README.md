@@ -6,7 +6,7 @@
 - Generator Aplikasi MicroNutrient
 - Pengembang Framework untuk Membuat Aplikasi Seputar Permasalahan Gizi berbasis Platform Android
 - General Framework for Application Development Around Nutrition Using the Android Platform, Skripsi S1 Muhammad Faisal Amir from Telkom University
-- Privacy Policy [Click Here](https://github.com/amirisback/nutrition-framework/blob/master/docs/privacy-policy/privacy_policy.pdf)
+- Privacy Policy [Click Here](https://github.com/amirisback/nutrition-framework/blob/master/PRIVACY-POLICY.md)
 
 ## Version Release
 This Is Latest Release
@@ -107,9 +107,9 @@ allprojects {
 - HKI Link URL [Click Here](https://pdki-indonesia.dgip.go.id/detail/EC00202180905?type=copyright&keyword=generator+aplikasi+micronutrient)
 
 ## Telkom University Lecturers
-- Dana Sulistyo Kusumo, S.T., M.T., PhD. - danakusumo@telkomuniversity.ac.id
-- Shinta Yulia Puspitasari, S.T., M.T. - shintayulia@telkomuniversity.ac.id
-- HASMAWATI, S.Kom., M. Kom. (NIP. 15900049-1)
+- Dana Sulistyo Kusumo, S.T., M.T., PhD. (NIP. ) - danakusumo@telkomuniversity.ac.id
+- Shinta Yulia Puspitasari, S.T., M.T. (NIP. )- shintayulia@telkomuniversity.ac.id
+- Hasmawati, S.Kom., M. Kom. (NIP. 15900049-1)
 
 ## Problem
 Membuat beberapa aplikasi tentang beberapa nutrisi. <br>
