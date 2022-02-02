@@ -77,6 +77,12 @@ allprojects {
 ## Application Framework
 ![ScreenShoot Apps](docs/image/skeleton-component.png?raw=true)
 
+## User Manual Protocol
+- How To Generate New Project [Klik Disini](https://github.com/amirisback/nutrition-framework/wiki/How-To-Generate-New-Project)
+- How To Start Project [Klik Disini](https://github.com/amirisback/nutrition-framework/wiki/How-To-Start)
+- Android Library Implementation [Klik Disini](https://github.com/amirisback/nutrition-framework/wiki/Implementasi-Code-Framework-Android-Library)
+- Desktop Library Implementation [Klik Disini](https://github.com/amirisback/nutrition-framework/wiki/Implementasi-Code-Framework-Desktop-Library)
+
 ## Test Case Framework
 - Scenario Test [Click Here](https://github.com/amirisback/nutrition-framework/tree/master/docs/scenario-test)
 - Android
