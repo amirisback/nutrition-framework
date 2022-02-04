@@ -85,6 +85,7 @@ allprojects {
 
 ## Test Case Framework
 - Scenario Test [Click Here](https://github.com/amirisback/nutrition-framework/tree/master/docs/scenario-test)
+- Report All Test [Click Here](https://github.com/amirisback/nutrition-framework/blob/master/docs/scenario-test/report-profiler-test.xlsx?raw=true)
 - Android
     - Test Case Android [nf-testcase-app-consume-library](https://github.com/amirisback/nf-testcase-app-consume-library)
     - Test Case Android [nf-testcase-app-no-framework](https://github.com/amirisback/nf-testcase-app-no-framework)
@@ -106,7 +107,6 @@ allprojects {
 - Research Nutrition Apps [Click Here](https://docs.google.com/spreadsheets/d/1t0aWoMrBEVfeZTIV438V8P0YMeGUK2VV_HHC7qnZUtU/edit?usp=sharing)
 
 ### Final Task (Tugas Akhir)
-- SK Tugas Akhir [Click Here](https://github.com/amirisback/nutrition-framework/tree/master/docs/dokumen-penting)
 - Important Document [Click Here](https://github.com/amirisback/nutrition-framework/tree/master/docs/pengganti-sidang)
 - Final Task Journal [Click Here](https://github.com/amirisback/nutrition-framework/raw/master/docs/pengganti-sidang/Muhammad%20Faisal%20Amir_1301198497_TUGAS_AKHIR.docx)
 - HKI Certificate [Click Here](https://github.com/amirisback/nutrition-framework/blob/master/docs/pengganti-sidang/hki-license/HCAP1512210222_ki_file_cert.pdf)
@@ -116,14 +116,6 @@ allprojects {
 - DAS - Dana Sulistyo Kusumo, S.T., M.T., PhD. (NIP. 02780011) - danakusumo@telkomuniversity.ac.id
 - SYP - Shinta Yulia Puspitasari, S.T., M.T. (NIP. 13880046)- shintayulia@telkomuniversity.ac.id
 - HMT - Hasmawati, S.Kom., M. Kom. (NIP. 15900049)
-
-## Problem
-Membuat beberapa aplikasi tentang beberapa nutrisi. <br>
-- Self assesment (Penyakit bawaan / tidak, profiling orang untuk aplikasi,
-- Kategori (Contoh : Vitamin D, sehat perlu suplemen)
-- Rekomendasi makanan / obat, rekomendasi penangan
-- 1 Aplikasi bisa di edit / customize dengan berbagai macam keluhan
-- Jika di website yaitu bootstrap
 
 ## Screen Shoot Apps - Desktop
 ![ScreenShoot Apps](docs/image/ss/ss-desktop.png?raw=true)
