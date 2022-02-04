@@ -113,9 +113,9 @@ allprojects {
 - HKI Link URL [Click Here](https://pdki-indonesia.dgip.go.id/detail/EC00202180905?type=copyright&keyword=generator+aplikasi+micronutrient)
 
 ## Telkom University Lecturers
-- Dana Sulistyo Kusumo, S.T., M.T., PhD. (NIP. ) - danakusumo@telkomuniversity.ac.id
-- Shinta Yulia Puspitasari, S.T., M.T. (NIP. )- shintayulia@telkomuniversity.ac.id
-- Hasmawati, S.Kom., M. Kom. (NIP. 15900049-1)
+- DAS - Dana Sulistyo Kusumo, S.T., M.T., PhD. (NIP. 02780011) - danakusumo@telkomuniversity.ac.id
+- SYP - Shinta Yulia Puspitasari, S.T., M.T. (NIP. 13880046)- shintayulia@telkomuniversity.ac.id
+- HMT - Hasmawati, S.Kom., M. Kom. (NIP. 15900049)
 
 ## Problem
 Membuat beberapa aplikasi tentang beberapa nutrisi. <br>
