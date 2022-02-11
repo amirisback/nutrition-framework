@@ -39,8 +39,9 @@ jobs:
         run: ./gradlew assemble
 
       # Create Bundle AAB Release
+      # Noted [module-name]:bundleRelease
       - name: Build app bundle release (AAB)
-        run: ./gradlew app:bundleRelease
+        run: ./gradlew nutritionapp:bundleRelease
 
       # Upload Artifact Build
       - name: Upload debug build APK
