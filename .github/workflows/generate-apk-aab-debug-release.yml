@@ -39,13 +39,14 @@ jobs:
         run: ./gradlew assemble
 
       # Create Bundle AAB Release
-      # Noted [module-name]:bundleRelease
+      # Noted for main module build [module-name]:bundleRelease
       - name: Build app bundle release (AAB)
         run: ./gradlew nutritionapp:bundleRelease
 
       # Upload Artifact Build
+      # Noted For Output [module-name]/build/outputs/
       - name: Upload debug build APK
         uses: actions/upload-artifact@v2
         with:
           name: App bundle(s) and APK(s) generated
-          path: app/build/outputs/
+          path: nutritionapp/build/outputs/
