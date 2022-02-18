@@ -100,7 +100,7 @@ allprojects {
 - Image [Click Here](https://github.com/amirisback/nutrition-framework/tree/master/docs/image)
 - Proposal [Click Here](https://github.com/amirisback/nutrition-framework/tree/master/docs/proposal)
 - Guidance [Click Here](https://github.com/amirisback/nutrition-framework/tree/master/docs/bimbingan)
-- Journal List [Click Here](https://github.com/amirisback/nutrition-framework/tree/master/docs/journal)
+- Journal Guidline [Click Here](https://github.com/amirisback/nutrition-framework/tree/master/docs/jurnal-acuan)
 - Design on Figma [Click Here](https://www.figma.com/file/Ons8XY0YvxecwC71Aa92Qj/TA?node-id=0%3A1)
 - Sheet Feedback [Click Here](https://docs.google.com/spreadsheets/d/1P8U2lu8odQJwLPD3QiSJGJXAgocdc_H5j7PdT23lPZc/edit#gid=0)
 - Diagram on Draw Io [Click Here](https://drive.google.com/file/d/1OCsoqVV3UYnLxpUK9jYm2yNjcFj9sUPP/view?usp=sharing)
@@ -108,8 +108,8 @@ allprojects {
 
 ### Final Task (Tugas Akhir)
 - Important Document [Click Here](https://github.com/amirisback/nutrition-framework/tree/master/docs/pengganti-sidang)
-- Journal [Click Here](https://github.com/amirisback/nutrition-framework/raw/master/docs/pengganti-sidang/Muhammad%20Faisal%20Amir_1301198497_Laporan_TA)
-- HKI Certificate [Click Here](https://github.com/amirisback/nutrition-framework/blob/master/docs/pengganti-sidang/hki-license/2122-1_02_TAHKI_01_1301198497.pdf)
+- Journal [Click Here](https://github.com/amirisback/nutrition-framework/blob/master/docs/pengganti-sidang/Muhammad%20Faisal%20Amir_1301198497_Laporan_TA.pdf)
+- HKI Certificate [Click Here](https://github.com/amirisback/nutrition-framework/blob/master/docs/pengganti-sidang/kelengkapan-hki/2122-1_02_TAHKI_01_1301198497.pdf)
 - HKI Link URL [Click Here](https://pdki-indonesia.dgip.go.id/detail/EC00202180905?type=copyright&keyword=generator+aplikasi+micronutrient)
 - Slide Presentasi [Click Here](https://docs.google.com/presentation/d/12kmmpXcHClVqapPHyhkMgV1aC2vENhD6EjkcO2tIvfM/edit?usp=sharing)
 
