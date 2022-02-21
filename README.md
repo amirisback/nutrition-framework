@@ -108,7 +108,7 @@ allprojects {
 
 ### Final Task (Tugas Akhir)
 - Important Document [Click Here](https://github.com/amirisback/nutrition-framework/tree/master/docs/pengganti-sidang)
-- Journal [Click Here](https://github.com/amirisback/nutrition-framework/blob/master/docs/pengganti-sidang/Muhammad%20Faisal%20Amir_1301198497_Laporan_TA.pdf)
+- Journal [Click Here](https://github.com/amirisback/nutrition-framework/blob/master/docs/pengganti-sidang/Jurnal_TA.pdf)
 - HKI Certificate [Click Here](https://github.com/amirisback/nutrition-framework/blob/master/docs/pengganti-sidang/kelengkapan-hki/2122-1_02_TAHKI_01_1301198497.pdf)
 - HKI Link URL [Click Here](https://pdki-indonesia.dgip.go.id/detail/EC00202180905?type=copyright&keyword=generator+aplikasi+micronutrient)
 - Slide Presentation [Click Here](https://docs.google.com/presentation/d/12kmmpXcHClVqapPHyhkMgV1aC2vENhD6EjkcO2tIvfM/edit?usp=sharing)
