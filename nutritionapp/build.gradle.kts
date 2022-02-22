@@ -121,18 +121,18 @@ dependencies {
     implementation("androidx.fragment:fragment-ktx:${DependencyGradle.FRAGMENT_KTX_VERSION}")
     
     implementation("androidx.core:core-ktx:1.7.0")
-    implementation("androidx.preference:preference-ktx:1.1.1")
+    implementation("androidx.preference:preference-ktx:1.2.0")
 
     implementation("androidx.lifecycle:lifecycle-extensions:2.2.0")
-    implementation("androidx.lifecycle:lifecycle-livedata-core-ktx:2.4.0")
-    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.4.0")
-    implementation("androidx.lifecycle:lifecycle-reactivestreams-ktx:2.4.0")
-    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.4.0")
-    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.0")
+    implementation("androidx.lifecycle:lifecycle-livedata-core-ktx:2.4.1")
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.4.1")
+    implementation("androidx.lifecycle:lifecycle-reactivestreams-ktx:2.4.1")
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.4.1")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.1")
 
-    implementation("androidx.navigation:navigation-runtime-ktx:2.3.5")
-    implementation("androidx.navigation:navigation-fragment-ktx:2.3.5")
-    implementation("androidx.navigation:navigation-ui-ktx:2.3.5")
+    implementation("androidx.navigation:navigation-runtime-ktx:2.4.1")
+    implementation("androidx.navigation:navigation-fragment-ktx:2.4.1")
+    implementation("androidx.navigation:navigation-ui-ktx:2.4.1")
 
     implementation("androidx.collection:collection-ktx:1.2.0")
 
@@ -171,7 +171,7 @@ dependencies {
     api("org.jetbrains.kotlinx:kotlinx-coroutines-core:${DependencyGradle.COROUTINES_VERSION}")
     api("org.jetbrains.kotlinx:kotlinx-coroutines-android:${DependencyGradle.COROUTINES_VERSION}")
 
-    kapt("androidx.lifecycle:lifecycle-compiler:2.4.0")
+    kapt("androidx.lifecycle:lifecycle-compiler:2.4.1")
     kapt("androidx.room:room-compiler:${DependencyGradle.ROOM_VERSION}")
     kapt("com.google.dagger:dagger-compiler:2.37")
     kapt("com.github.bumptech.glide:compiler:4.12.0")

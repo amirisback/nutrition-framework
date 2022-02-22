@@ -53,8 +53,8 @@ dependencies {
     implementation("androidx.appcompat:appcompat:1.4.1")
     implementation("androidx.constraintlayout:constraintlayout:2.1.3")
 
-    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.4.0")
-    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.0")
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.4.1")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.1")
     implementation("androidx.lifecycle:lifecycle-extensions:2.2.0")
 
     implementation("com.google.code.gson:gson:${DependencyGradle.GSON_VERSION}")
@@ -85,7 +85,7 @@ dependencies {
     api("org.jetbrains.kotlinx:kotlinx-coroutines-core:${DependencyGradle.COROUTINES_VERSION}")
     api("org.jetbrains.kotlinx:kotlinx-coroutines-android:${DependencyGradle.COROUTINES_VERSION}")
 
-    kapt("androidx.lifecycle:lifecycle-compiler:2.4.0")
+    kapt("androidx.lifecycle:lifecycle-compiler:2.4.1")
     kapt("com.google.dagger:dagger-compiler:2.37")
     kapt("com.github.bumptech.glide:compiler:4.12.0")
 
