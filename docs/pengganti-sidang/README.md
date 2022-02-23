@@ -1,7 +1,0 @@
-## Tahapan Pendaftaran Skema Pengganti Sidang (Publikasi/HKI):
-- Lengkapi dokumen sesuai informasi pada https://bit.ly/FFIFSyaratPenggantiSidang2020 . Pakta integritas yang ditanda tangani pembimbing(template bisa diunduh pada url: https://bit.ly/2NjpxmR).
-- Buka iGracias, pada menu TA/PA, ajukan persetujuan sidang, kemudian konfirmasikan kepada pembimbing anda untuk mendapat approval.
-- Pembimbing menyetujui pengajuan sidang anda di iGracias (Screen capture laman iGracias bukti persetujuan sidang dan lampirkan pada dokumen kelengkapan pendaftaran sidang).
-- Daftar Sidang Via iGracias (Screen capture laman iGracias bukti daftar sidang dan lampirkan pada dokumen kelengkapan pendaftaran sidang).
-- Lengkapi Formulir Izin Pendaftaran Sidang dari dosen wali anda (cek Panduan Tugas Akhir bisa bisa anda akses di: https://sonia.soc.telkomuniversity.ac.id/ cek dengan nama file Buku Panduan Tugas Akhir v2020).
-- Setelah mendapat persetujuan pembimbing, isi form http://bit.ly/FIFPendaftaranSidang untuk kebutuhan validasi nilai pada Sidang Akademik, validasi dokumen skema pengganti sidang dan penjadwalan seminar internal (khusus Jurnal dan HKI dan/atau international conference, untuk international conference upayakan sudah melaksanakan presentasi pada conference tersebut).
