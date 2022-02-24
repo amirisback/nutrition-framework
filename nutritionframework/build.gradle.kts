@@ -59,7 +59,7 @@ dependencies {
 
     implementation("com.google.code.gson:gson:${DependencyGradle.GSON_VERSION}")
     implementation("com.google.android.material:material:1.5.0")
-    implementation("com.google.android.gms:play-services-ads:20.5.0")
+    implementation("com.google.android.gms:play-services-ads:20.6.0")
 
     implementation("com.squareup.okhttp3:okhttp:5.0.0-alpha.2")
     implementation("com.squareup.okhttp3:logging-interceptor:4.9.3")
