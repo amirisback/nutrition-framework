@@ -243,13 +243,16 @@ Name Of Contribute
 - Don't Forget Follow My Github Account
 
 ## Mad Score Card
-![Mad Score](docs/image/mad_score.png?raw=true)
+![Mad Score](https://github.com/amirisback/nutrition-framework/blob/master/docs/image/mad_score.png?raw=true)
 
 ## Profiler
-![Profiler](docs/image/profiler.png?raw=true)
+![Profiler](https://github.com/amirisback/nutrition-framework/blob/master/docs/image/profiler.png?raw=true)
 
 ## HKI Certificate
-![HKI Certificate](docs/image/hki-certificate.png?raw=true)
+![HKI Certificate](https://github.com/amirisback/nutrition-framework/blob/master/docs/image/hki-certificate.png?raw=true)
 
 ## Internal Presentation
-![Internal Presentation](docs/image/seminar-internal.png?raw=true)
+![Internal Presentation](https://github.com/amirisback/nutrition-framework/blob/master/docs/image/seminar-internal.png?raw=true)
+
+## Poster Ilmiah
+![Poster Ilmiah](https://github.com/amirisback/nutrition-framework/blob/master/docs/poster-ilmiah/poster-nutrition-framework.jpg?raw=true)
