@@ -11,8 +11,9 @@ import com.frogobox.nutritioncore.model.vitamin.VitaminResponse
 import com.frogobox.nutritionframework.core.NutriPreference
 import com.frogobox.nutritionframework.util.AppExecutors
 import com.frogobox.nutritionframework.util.NutriSingleFunc.noAction
-import io.reactivex.disposables.CompositeDisposable
-import io.reactivex.disposables.Disposable
+import io.reactivex.rxjava3.disposables.CompositeDisposable
+import io.reactivex.rxjava3.disposables.Disposable
+
 
 /**
  * Created by Faisal Amir

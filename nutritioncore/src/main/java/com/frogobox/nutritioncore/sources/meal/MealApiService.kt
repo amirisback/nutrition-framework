@@ -3,7 +3,7 @@ package com.frogobox.nutritioncore.sources.meal
 import com.frogobox.nutritioncore.model.meal.*
 import com.frogobox.nutritioncore.util.meal.MealConstant
 import com.frogobox.nutritioncore.util.meal.MealUrl
-import io.reactivex.Observable
+import io.reactivex.rxjava3.core.Observable
 import retrofit2.http.GET
 import retrofit2.http.Path
 import retrofit2.http.Query

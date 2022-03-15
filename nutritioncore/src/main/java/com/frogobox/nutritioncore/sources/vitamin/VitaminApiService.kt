@@ -2,7 +2,7 @@ package com.frogobox.nutritioncore.sources.vitamin
 
 import com.frogobox.nutritioncore.model.vitamin.VitaminResponse
 import com.frogobox.nutritioncore.util.vitamin.VitaminUrl
-import io.reactivex.Observable
+import io.reactivex.rxjava3.core.Observable
 import retrofit2.http.GET
 
 

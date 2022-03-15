@@ -5,7 +5,7 @@ import com.frogobox.nutritioncore.sources.NutriApiClient
 import com.frogobox.nutritioncore.sources.NutriResponse
 import com.frogobox.nutritioncore.model.vitamin.VitaminResponse
 import com.frogobox.nutritioncore.util.vitamin.VitaminUrl
-import io.reactivex.schedulers.Schedulers
+import io.reactivex.rxjava3.schedulers.Schedulers
 
 
 /*

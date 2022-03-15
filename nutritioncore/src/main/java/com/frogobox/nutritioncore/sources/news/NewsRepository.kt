@@ -6,7 +6,7 @@ import com.frogobox.nutritioncore.sources.NutriApiClient
 import com.frogobox.nutritioncore.sources.NutriResponse
 import com.frogobox.nutritioncore.model.news.ArticleResponse
 import com.frogobox.nutritioncore.model.news.SourceResponse
-import io.reactivex.schedulers.Schedulers
+import io.reactivex.rxjava3.schedulers.Schedulers
 
 /**
  * Created by Faisal Amir

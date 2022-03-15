@@ -6,7 +6,7 @@ import com.frogobox.nutritioncore.sources.NutriResponse
 import com.frogobox.nutritioncore.model.meal.*
 import com.frogobox.nutritioncore.util.meal.MealConstant
 import com.frogobox.nutritioncore.util.meal.MealUrl
-import io.reactivex.schedulers.Schedulers
+import io.reactivex.rxjava3.schedulers.Schedulers
 
 /**
  * Created by Faisal Amir
