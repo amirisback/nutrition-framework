@@ -3,6 +3,9 @@
 ## About This Project (release-and-work-in-progress 👷🔧️👷‍♀️⛏)
 [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-nutrition--framework-brightgreen.svg?style=flat-square)](https://android-arsenal.com/details/1/8370)
 [![JitPack](https://jitpack.io/v/amirisback/nutrition-framework.svg?style=flat-square)](https://jitpack.io/#amirisback/nutrition-framework)
+[![Android CI](https://github.com/amirisback/nutrition-framework/actions/workflows/android-ci.yml/badge.svg)](https://github.com/amirisback/nutrition-framework/actions/workflows/android-ci.yml)
+[![Scan with Detekt](https://github.com/amirisback/nutrition-framework/actions/workflows/detekt-analysis.yml/badge.svg)](https://github.com/amirisback/nutrition-framework/actions/workflows/detekt-analysis.yml)
+[![pages-build-deployment](https://github.com/amirisback/nutrition-framework/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/amirisback/nutrition-framework/actions/workflows/pages/pages-build-deployment)
 - Generator Aplikasi MicroNutrient
 - Pengembang Framework untuk Membuat Aplikasi Seputar Permasalahan Gizi berbasis Platform Android
 - General Framework for Application Development Around Nutrition Using the Android Platform, Skripsi S1 Muhammad Faisal Amir from Telkom University
