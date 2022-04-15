@@ -21,24 +21,24 @@ tasks.withType<KotlinCompile>() {
 
 dependencies {
 
-    implementation(compose.ui)
-    implementation(compose.runtime)
-    implementation(compose.preview)
-    implementation(compose.uiTooling)
-    implementation(compose.material)
-    implementation(compose.materialIconsExtended)
+    api(compose.ui)
+    api(compose.runtime)
+    api(compose.preview)
+    api(compose.uiTooling)
+    api(compose.material)
+    api(compose.materialIconsExtended)
 
-    implementation(Square.okhttp)
-    implementation(Square.okhttpLogging)
+    api(Square.OkHttp.okhttp)
+    api(Square.OkHttp.loggingInterceptor)
 
-    implementation(Square.Retrofit2.retrofit)
-    implementation(Square.Retrofit2.converterGson)
-    implementation(Square.Retrofit2.adapterRxJava3)
+    api(Square.Retrofit2.retrofit)
+    api(Square.Retrofit2.converterGson)
+    api(Square.Retrofit2.adapterRxJava3)
 
-    implementation(Google.gson)
-    implementation(Koin.core)
+    api(Google.gson)
+    api(Koin.core)
 
-    implementation(Reactivex.rxJava3)
+    api(Reactivex.rxJava3)
 
 }
 
@@ -67,7 +67,7 @@ publishing {
     }
 
     repositories {
-        maven { url = uri("https://jitpack.io") }
+        maven("https://jitpack.io")
     }
 
 }

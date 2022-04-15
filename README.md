@@ -14,7 +14,7 @@
 This Is Latest Release
 
     ~ Beta Release
-    $version_release = 1.0.0
+    $version_release = 2.0.0
 
 What's New??
 
@@ -55,7 +55,7 @@ What's New??
 allprojects {
     repositories {
         ...
-        maven { url = uri("https://jitpack.io") }
+        maven("https://jitpack.io")
     }
 }
 ```
@@ -66,14 +66,14 @@ allprojects {
 
     dependencies {
         // library nutrition-framework
-        implementation 'com.github.amirisback:nutrition-framework:1.0.0'
+        implementation 'com.github.amirisback:nutrition-framework:2.0.0'
     }
 
 #### <Option 2> Kotlin DSL Gradle (build.gradle.kts)
 
     dependencies {
         // library nutrition-framework
-        implementation("com.github.amirisback:nutrition-framework:1.0.0")
+        implementation("com.github.amirisback:nutrition-framework:2.0.0")
     }
 
 ## Application Framework

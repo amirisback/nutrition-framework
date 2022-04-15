@@ -40,50 +40,50 @@ android {
 
 dependencies {
 
-    implementation(project(":nutritioncore"))
+    api(project(":nutritioncore"))
 
-    implementation(compose.ui)
-    implementation(compose.runtime)
-    implementation(compose.preview)
-    implementation(compose.uiTooling)
-    implementation(compose.material)
-    implementation(compose.materialIconsExtended)
+    api(compose.ui)
+    api(compose.runtime)
+    api(compose.preview)
+    api(compose.uiTooling)
+    api(compose.material)
+    api(compose.materialIconsExtended)
 
-    implementation(Androidx.appCompat)
-    implementation(Androidx.constraintLayout)
-    implementation(Androidx.Core.ktx)
-    implementation(Androidx.Lifecycle.livedataKtx)
-    implementation(Androidx.Lifecycle.viewmodelKtx)
-    implementation(Androidx.Lifecycle.runtimeKtx)
+    api(Androidx.appCompat)
+    api(Androidx.constraintLayout)
+    api(Androidx.Core.ktx)
+    api(Androidx.Lifecycle.livedataKtx)
+    api(Androidx.Lifecycle.viewmodelKtx)
+    api(Androidx.Lifecycle.runtimeKtx)
 
-    implementation(Google.admob)
-    implementation(Google.gson)
-    implementation(Google.material)
+    api(Google.admob)
+    api(Google.gson)
+    api(Google.material)
 
-    implementation(Square.okhttp)
-    implementation(Square.okhttpLogging)
+    api(Square.OkHttp.okhttp)
+    api(Square.OkHttp.loggingInterceptor)
 
-    implementation(Square.Retrofit2.retrofit)
-    implementation(Square.Retrofit2.converterGson)
-    implementation(Square.Retrofit2.adapterRxJava3)
+    api(Square.Retrofit2.retrofit)
+    api(Square.Retrofit2.converterGson)
+    api(Square.Retrofit2.adapterRxJava3)
 
-    implementation(Reactivex.rxAndroid3)
-    implementation(Reactivex.rxJava3)
+    api(Reactivex.rxAndroid3)
+    api(Reactivex.rxJava3)
 
-    implementation(Util.glide)
-    implementation(Util.hdodenhofCircleImageView)
+    api(GitHub.glide)
+    api(GitHub.chucker)
 
-    implementation(Util.chucker)
+    api(Util.hdodenhofCircleImageView)
 
-    implementation("io.coil-kt:coil-compose:1.4.0")
-    implementation("com.github.javiersantos:PiracyChecker:1.2.8")
-    implementation("com.facebook.shimmer:shimmer:0.5.0")
+    api("io.coil-kt:coil-compose:1.4.0")
+    api("com.github.javiersantos:PiracyChecker:1.2.8")
+    api("com.facebook.shimmer:shimmer:0.5.0")
 
     api(JetBrains.coroutinesCore)
     api(JetBrains.coroutinesAndroid)
 
     kapt(Androidx.Lifecycle.compiler)
-    kapt(Util.glideCompiler)
+    kapt(GitHub.glideCompiler)
 
     debugImplementation(compose.ui)
     debugImplementation(compose.uiTooling)

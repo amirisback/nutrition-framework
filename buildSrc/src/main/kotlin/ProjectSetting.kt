@@ -20,7 +20,7 @@ object ProjectSetting {
     private const val APP_PLAY_CONSOLE = "frogobox"
     private const val BASE_PACKAGE = "nutrition"
 
-    private const val VERSION_MAJOR = 1
+    private const val VERSION_MAJOR = 2
     private const val VERSION_MINOR = 0
     private const val VERSION_PATCH = 0
 
