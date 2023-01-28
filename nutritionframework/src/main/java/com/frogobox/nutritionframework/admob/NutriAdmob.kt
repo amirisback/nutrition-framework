@@ -131,7 +131,7 @@ object NutriAdmob : INutriAdmob {
                         setupInterstitial(activity)
                     }
 
-                    override fun onAdFailedToShowFullScreenContent(adError: AdError?) {
+                    override fun onAdFailedToShowFullScreenContent(p0: AdError) {
                         NLog.d("Ad failed to show.")
                         // Don't forget to set the ad reference to null so you
                         // don't show the ad a second time.
@@ -174,7 +174,7 @@ object NutriAdmob : INutriAdmob {
                                     NLog.d("Ad was shown.")
                                 }
 
-                                override fun onAdFailedToShowFullScreenContent(adError: AdError?) {
+                                override fun onAdFailedToShowFullScreenContent(p0: AdError) {
                                     // Called when ad fails to show.
                                     NLog.d("Ad failed to show.")
                                 }
@@ -274,7 +274,7 @@ object NutriAdmob : INutriAdmob {
             var i = 0
             while (i <= recyclerViewDataList.size) {
                 val adView = AdView(context)
-                adView.adSize = AdSize.BANNER
+                // adView.adSize = AdSize.BANNER
                 adView.adUnitId = mAdUnitIdBanner
                 recyclerViewDataList.add(i, adView)
                 i += RECYCLER_VIEW_ITEMS_PER_AD

@@ -24,7 +24,7 @@ object ProjectSetting {
     private const val VERSION_MINOR = 0
     private const val VERSION_PATCH = 0
 
-    const val PROJECT_COMPILE_SDK = 31
+    const val PROJECT_COMPILE_SDK = 33
     const val PROJECT_MIN_SDK = 21
 
     // Key Store

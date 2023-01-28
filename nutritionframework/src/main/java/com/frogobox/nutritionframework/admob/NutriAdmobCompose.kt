@@ -41,7 +41,7 @@ fun NutriAdmobBannerView(
         factory = { context ->
             NLog.d("FrogoAdmobBannerView")
             AdView(context).apply {
-                adSize = mAdSize
+
                 adUnitId = mAdUnitID
                 loadAd(AdRequest.Builder().build())
             }

@@ -6,6 +6,7 @@ import androidx.compose.foundation.gestures.ScrollableDefaults
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.lazy.*
+import androidx.compose.foundation.lazy.grid.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -102,15 +103,15 @@ fun <T> NutriLazyFixedGrid(
     data: List<T>,
     spanCount: Int,
     modifier: Modifier = Modifier,
-    state: LazyListState = rememberLazyListState(),
+    state: LazyGridState = rememberLazyGridState(),
     contentPadding: PaddingValues = PaddingValues(0.dp),
-    content: @Composable() LazyGridScope.(data: T) -> Unit
+    content: @Composable() LazyGridItemScope.(data: T) -> Unit
 ) {
     LazyVerticalGrid(
         modifier = modifier,
         state = state,
         contentPadding = contentPadding,
-        cells = GridCells.Fixed(spanCount)
+        columns = GridCells.Fixed(spanCount)
     ) {
         items(data.size) { index ->
             content(data[index])
@@ -129,15 +130,15 @@ fun <T> NutriLazyAdaptiveGrid(
     data: List<T>,
     minSize: Dp,
     modifier: Modifier = Modifier,
-    state: LazyListState = rememberLazyListState(),
+    state: LazyGridState = rememberLazyGridState(),
     contentPadding: PaddingValues = PaddingValues(0.dp),
-    content: @Composable() LazyGridScope.(data: T) -> Unit
+    content: @Composable() LazyGridItemScope.(data: T) -> Unit
 ) {
     LazyVerticalGrid(
         modifier = modifier,
         state = state,
         contentPadding = contentPadding,
-        cells = GridCells.Adaptive(minSize)
+        columns = GridCells.Adaptive(minSize)
     ) {
         items(data.size) { index ->
             content(data[index])
